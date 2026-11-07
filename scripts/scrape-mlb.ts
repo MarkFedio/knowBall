@@ -428,47 +428,41 @@ async function run() {
     const debutYear = person.debut ? parseInt(person.debut.split('-')[0], 10) : 0;
     const finalYear = person.finalGame ? parseInt(person.finalGame.split('-')[0], 10) : debutYear;
 
-    // Filter criteria:
-    // Only include players active from 1950 onward, OR Hall of Famers, OR award winners, OR 1,000+ hits / 50+ saves
+    // Must have officially debuted in an MLB game
+    if (!person.debut && !debutYear) continue;
+
+    const appInfo = appMap.get(playerId);
+    // Must have at least one recorded appearance with a team
+    if (!appInfo || appInfo.teams.size === 0) continue;
+
     const isHOF = hofSet.has(playerId);
     const awardsInfo = playerAwards.get(playerId) || { mvp: 0, roty: false, cyYoung: 0 };
-    const hasMajorAward = awardsInfo.mvp > 0 || awardsInfo.roty || awardsInfo.cyYoung > 0;
     const battingStats = battingMap.get(playerId) || { hits: 0, steals: 0, hr: 0, games: 0 };
     const pitchingStats = pitchingMap.get(playerId) || { saves: 0, strikeouts: 0, wins: 0, games: 0 };
-
     const totalGames = Math.max(battingStats.games, pitchingStats.games);
-
-    // Filter threshold for game database quality:
-    const isNotable =
-      isHOF ||
-      hasMajorAward ||
-      battingStats.hits >= 500 ||
-      battingStats.steals >= 100 ||
-      pitchingStats.saves >= 50 ||
-      pitchingStats.wins >= 50 ||
-      (debutYear >= 1970 && totalGames >= 150);
-
-    if (!isNotable) continue;
-
-    const appInfo = appMap.get(playerId) || {
-      teams: new Set<string>(),
-      teamNames: new Set<string>(),
-      markets: new Set<string>(),
-      positions: new Set<string>(),
-      championships: 0,
-    };
 
     const collegeInfo = playerCollegeMap.get(playerId);
 
     // Calculate popularity score (1 to 100)
-    let popularity = 40;
-    if (isHOF) popularity += 30;
-    if (awardsInfo.mvp > 0) popularity += 25;
+    // Cup-of-coffee players start at 5; legends rise to 100
+    let popularity = 5;
+    if (totalGames >= 50) popularity += 5;
+    if (totalGames >= 200) popularity += 10;
+    if (totalGames >= 800) popularity += 15;
+    if (totalGames >= 1500) popularity += 15;
+    if (battingStats.hits >= 1000) popularity += 10;
+    if (battingStats.hits >= 2000) popularity += 15;
     if (battingStats.hits >= 3000) popularity += 25;
+    if (battingStats.steals >= 300) popularity += 15;
     if (battingStats.steals >= 500) popularity += 20;
+    if (pitchingStats.saves >= 100) popularity += 10;
     if (pitchingStats.saves >= 300) popularity += 20;
-    if (debutYear >= 2000) popularity += 10;
-    popularity = Math.min(100, Math.max(10, popularity));
+    if (awardsInfo.roty) popularity += 15;
+    if (awardsInfo.cyYoung > 0) popularity += 20;
+    if (awardsInfo.mvp > 0) popularity += 25;
+    if (isHOF) popularity += 30;
+    if (debutYear >= 2000) popularity += 5;
+    popularity = Math.min(100, Math.max(1, popularity));
 
     athletes.push({
       id: `ath_mlb_${playerId}`,
