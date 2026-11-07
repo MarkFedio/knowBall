@@ -38,17 +38,50 @@ export const SearchModal: React.FC<SearchModalProps> = ({
 
   const filteredAthletes = useMemo(() => {
     if (!query.trim()) {
-      // Suggest top popular athletes when query is empty
-      return ATHLETES.filter((a) => !guessedAthleteIds.has(a.id)).slice(0, 10);
+      // Suggest top legendary/popular athletes when query is empty
+      return [...ATHLETES]
+        .filter((a) => !guessedAthleteIds.has(a.id))
+        .sort((a, b) => (b.popularityScore || 50) - (a.popularityScore || 50))
+        .slice(0, 10);
     }
-    const q = query.toLowerCase();
-    return ATHLETES.filter(
-      (a) =>
-        !guessedAthleteIds.has(a.id) &&
-        (a.name.toLowerCase().includes(q) ||
-          a.teamNames.some((t) => t.toLowerCase().includes(q)) ||
-          a.college?.toLowerCase().includes(q))
-    ).slice(0, 12);
+
+    const q = query.toLowerCase().trim();
+    const scoredMatches: { athlete: Athlete; score: number }[] = [];
+
+    for (const a of ATHLETES) {
+      if (guessedAthleteIds.has(a.id)) continue;
+
+      const nameLower = a.name.toLowerCase();
+      let matchScore = 0;
+
+      if (nameLower === q) {
+        matchScore = 1000;
+      } else if (nameLower.startsWith(q)) {
+        matchScore = 500;
+      } else {
+        const parts = nameLower.split(' ');
+        if (parts.some((part) => part.startsWith(q))) {
+          matchScore = 400; // Last name or first name starts with query
+        } else if (nameLower.includes(q)) {
+          matchScore = 200;
+        } else if (a.teamNames.some((t) => t.toLowerCase().includes(q))) {
+          matchScore = 60;
+        } else if (a.college?.toLowerCase().includes(q)) {
+          matchScore = 40;
+        }
+      }
+
+      if (matchScore > 0) {
+        // Boost by popularity score so legends/known stars show up first
+        const totalScore = matchScore + (a.popularityScore || 50);
+        scoredMatches.push({ athlete: a, score: totalScore });
+      }
+    }
+
+    return scoredMatches
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 15)
+      .map((m) => m.athlete);
   }, [query, guessedAthleteIds]);
 
   if (!isOpen) return null;
