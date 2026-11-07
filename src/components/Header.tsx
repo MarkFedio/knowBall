@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, ChevronDown } from 'lucide-react';
+import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import { PlayMode, Sport, DailyPuzzle } from '@/types';
 import { PUZZLE_PRESETS } from '@/lib/gridGenerator';
 
@@ -11,6 +11,8 @@ interface HeaderProps {
   onNewRandomPuzzle: () => void;
   onGiveUp: () => void;
   isGameOver: boolean;
+  soundEnabled: boolean;
+  onToggleSound: () => void;
   playMode: PlayMode;
   onToggleMode: (mode: PlayMode) => void;
   guessesUsed: number;
@@ -33,6 +35,8 @@ export const Header: React.FC<HeaderProps> = ({
   onNewRandomPuzzle,
   onGiveUp,
   isGameOver,
+  soundEnabled,
+  onToggleSound,
   playMode,
   onToggleMode,
   guessesUsed,
@@ -115,6 +119,15 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="hidden md:inline">Reveal Answers</span>
             </button>
           )}
+
+          {/* Sound Toggle */}
+          <button
+            onClick={onToggleSound}
+            title={soundEnabled ? 'Mute Sounds' : 'Unmute Sounds'}
+            className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-2 text-zinc-300 transition hover:bg-zinc-800 hover:text-white"
+          >
+            {soundEnabled ? <Volume2 className="h-4 w-4 text-emerald-400" /> : <VolumeX className="h-4 w-4 text-zinc-500" />}
+          </button>
 
           {/* Action Icons */}
           <button

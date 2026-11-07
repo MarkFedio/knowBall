@@ -9,6 +9,7 @@ import { SearchModal } from '@/components/SearchModal';
 import { StatsModal } from '@/components/StatsModal';
 import { HowToPlayModal } from '@/components/HowToPlayModal';
 import { CellSolutionsModal } from '@/components/CellSolutionsModal';
+import { sound } from '@/lib/sound';
 
 export default function Home() {
   const [currentPuzzle, setCurrentPuzzle] = useState<DailyPuzzle>(PUZZLE_PRESETS[0]);
@@ -30,6 +31,7 @@ export default function Home() {
   const [guessesUsed, setGuessesUsed] = useState<number>(0);
   const [strikesUsed, setStrikesUsed] = useState<number>(0);
   const [hasGivenUp, setHasGivenUp] = useState<boolean>(false);
+  const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
 
   // Modals
   const [activeCell, setActiveCell] = useState<{ row: number; col: number } | null>(null);
@@ -102,6 +104,7 @@ export default function Home() {
   useEffect(() => {
     const correctCount = cells.flat().filter((c) => c.isCorrect).length;
     if (correctCount === 16) {
+      sound.playVictory();
       triggerConfetti();
       const timer = setTimeout(() => setIsStatsOpen(true), 600);
       return () => clearTimeout(timer);
@@ -124,6 +127,8 @@ export default function Home() {
     if (!activeCell) return;
     const { row, col } = activeCell;
 
+    sound.playSuccess();
+
     setCells((prev) => {
       const next = prev.map((r) => [...r]);
       next[row][col] = {
@@ -145,6 +150,8 @@ export default function Home() {
   const handleGuessFailure = (athlete: Athlete) => {
     if (!activeCell) return;
     const { row, col } = activeCell;
+
+    sound.playError();
 
     if (playMode === 'IMMACULATE') {
       setCells((prev) => {
@@ -236,6 +243,12 @@ export default function Home() {
           onNewRandomPuzzle={handleNewRandomPuzzle}
           onGiveUp={handleGiveUp}
           isGameOver={isGameOver}
+          soundEnabled={soundEnabled}
+          onToggleSound={() => {
+            const next = !soundEnabled;
+            setSoundEnabled(next);
+            sound.enabled = next;
+          }}
           playMode={playMode}
           onToggleMode={(mode) => {
             if (guessesUsed === 0 && strikesUsed === 0) {
