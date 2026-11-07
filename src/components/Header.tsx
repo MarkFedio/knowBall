@@ -1,10 +1,16 @@
 'use client';
 
 import React from 'react';
-import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles } from 'lucide-react';
-import { PlayMode, Sport } from '@/types';
+import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, ChevronDown } from 'lucide-react';
+import { PlayMode, Sport, DailyPuzzle } from '@/types';
+import { PUZZLE_PRESETS } from '@/lib/gridGenerator';
 
 interface HeaderProps {
+  currentPuzzle: DailyPuzzle;
+  onSelectPreset: (preset: DailyPuzzle) => void;
+  onNewRandomPuzzle: () => void;
+  onGiveUp: () => void;
+  isGameOver: boolean;
   playMode: PlayMode;
   onToggleMode: (mode: PlayMode) => void;
   guessesUsed: number;
@@ -22,6 +28,11 @@ interface HeaderProps {
 const ALL_SPORTS: Sport[] = ['NFL', 'NBA', 'MLB', 'NHL'];
 
 export const Header: React.FC<HeaderProps> = ({
+  currentPuzzle,
+  onSelectPreset,
+  onNewRandomPuzzle,
+  onGiveUp,
+  isGameOver,
   playMode,
   onToggleMode,
   guessesUsed,
@@ -38,10 +49,10 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="w-full max-w-5xl mx-auto mb-6 flex flex-col gap-4">
       {/* Top Navbar */}
-      <div className="flex items-center justify-between border-b border-zinc-800/80 pb-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-zinc-800/80 pb-4">
         {/* Brand */}
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 via-cyan-500 to-blue-600 font-black text-black shadow-lg shadow-emerald-500/20">
+        <div className="flex items-center gap-3 w-full sm:w-auto">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 via-cyan-500 to-blue-600 font-black text-black shadow-lg shadow-emerald-500/20">
             4×4
           </div>
           <div>
@@ -57,29 +68,75 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex items-center gap-2">
+        {/* Puzzle Selector & Generator Controls */}
+        <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-end">
+          {/* Preset Dropdown */}
+          <div className="relative">
+            <select
+              value={currentPuzzle.id}
+              onChange={(e) => {
+                const found = PUZZLE_PRESETS.find((p) => p.id === e.target.value);
+                if (found) onSelectPreset(found);
+              }}
+              className="appearance-none rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 pl-3 pr-8 text-xs font-semibold text-zinc-200 outline-none hover:border-zinc-700 cursor-pointer"
+            >
+              {PUZZLE_PRESETS.map((p) => (
+                <option key={p.id} value={p.id} className="bg-zinc-950 text-zinc-200">
+                  {p.title}
+                </option>
+              ))}
+              {currentPuzzle.id.startsWith('puzzle_random') && (
+                <option value={currentPuzzle.id} className="bg-zinc-950 text-zinc-200">
+                  {currentPuzzle.title}
+                </option>
+              )}
+            </select>
+            <ChevronDown className="pointer-events-none absolute right-2.5 top-3 h-3.5 w-3.5 text-zinc-400" />
+          </div>
+
+          {/* Random Board Button */}
+          <button
+            onClick={onNewRandomPuzzle}
+            title="Generate Random Solvable Grid"
+            className="flex items-center gap-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-3 py-2 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-500/20"
+          >
+            <Dices className="h-4 w-4" />
+            <span className="hidden md:inline">Random Grid</span>
+          </button>
+
+          {/* Give Up / Reveal Answers */}
+          {!isGameOver && (
+            <button
+              onClick={onGiveUp}
+              title="Give Up & Reveal Answers"
+              className="flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-semibold text-zinc-400 transition hover:border-rose-500/40 hover:bg-rose-500/10 hover:text-rose-300"
+            >
+              <Eye className="h-4 w-4" />
+              <span className="hidden md:inline">Reveal Answers</span>
+            </button>
+          )}
+
+          {/* Action Icons */}
           <button
             onClick={onOpenHowToPlay}
             title="How to Play"
-            className="flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-semibold text-zinc-300 transition hover:bg-zinc-800 hover:text-white"
+            className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-2 text-zinc-300 transition hover:bg-zinc-800 hover:text-white"
           >
-            <HelpCircle className="h-4 w-4 text-zinc-400" />
-            <span className="hidden sm:inline">Rules</span>
+            <HelpCircle className="h-4 w-4" />
           </button>
 
           <button
             onClick={onOpenStats}
-            title="Summary & Share"
-            className="flex items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-2 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
+            title="Stats & Share"
+            className="flex items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
           >
             <Trophy className="h-4 w-4 text-emerald-400" />
-            <span>Stats</span>
+            <span className="hidden sm:inline">Stats</span>
           </button>
 
           <button
             onClick={onResetGame}
-            title="Reset Game"
+            title="Reset Board"
             className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-2 text-zinc-400 transition hover:bg-zinc-800 hover:text-white"
           >
             <RotateCcw className="h-4 w-4" />

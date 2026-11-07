@@ -95,7 +95,7 @@ export const CATEGORIES: Record<string, Category> = {
   },
 
   // ==========================================
-  // 3. METRO / MARKET (Any sport in that city!)
+  // 3. METRO / MARKET
   // ==========================================
   METRO_BOSTON: {
     id: 'metro_boston',
@@ -153,6 +153,22 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Lions, Pistons, Tigers, or Red Wings',
     matches: (a) => a.markets.includes('DET'),
   },
+  METRO_FLORIDA: {
+    id: 'metro_florida',
+    name: 'Played for a Florida Team',
+    shortName: 'Played in Florida',
+    type: 'METRO',
+    description: 'Dolphins, Bucs, Jags, Heat, Magic, Marlins, Rays, Lightning, Panthers',
+    matches: (a) => a.markets.includes('FLA') || a.markets.includes('MIA') || a.markets.includes('TB'),
+  },
+  METRO_TEXAS: {
+    id: 'metro_texas',
+    name: 'Played for a Texas Team',
+    shortName: 'Played in Texas',
+    type: 'METRO',
+    description: 'Cowboys, Texans, Oilers, Rockets, Spurs, Mavericks, Rangers, Astros, Stars',
+    matches: (a) => a.markets.includes('DAL') || a.markets.includes('HOU') || a.markets.includes('SA'),
+  },
 
   // ==========================================
   // 4. ACCOLADES & MILESTONES
@@ -164,6 +180,14 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'ACCOLADE',
     description: 'Won Super Bowl, NBA Finals, World Series, Stanley Cup, etc.',
     matches: (a) => a.championships > 0,
+  },
+  ACCOLADE_MULTI_CHAMP: {
+    id: 'accolade_multi_champ',
+    name: 'Won 3+ Championships',
+    shortName: '3+ Championships',
+    type: 'ACCOLADE',
+    description: 'Won 3 or more World Championships across their pro career',
+    matches: (a) => a.championships >= 3,
   },
   ACCOLADE_MVP: {
     id: 'accolade_mvp',
@@ -206,7 +230,7 @@ export const CATEGORIES: Record<string, Category> = {
     name: 'Attended an SEC School',
     shortName: 'SEC School',
     type: 'BACKGROUND',
-    description: 'Attended a member of the Southeastern Conference (LSU, Alabama, Florida, Georgia, Kentucky, etc.)',
+    description: 'Attended an SEC member school (LSU, Alabama, Florida, Georgia, Kentucky, Auburn, Tennessee, etc.)',
     matches: (a) => a.collegeConference === 'SEC',
   },
   COLLEGE_BIG_TEN: {
@@ -214,8 +238,16 @@ export const CATEGORIES: Record<string, Category> = {
     name: 'Attended a Big Ten School',
     shortName: 'Big Ten School',
     type: 'BACKGROUND',
-    description: 'Attended Michigan, Ohio State, Penn State, Indiana, Wisconsin, etc.',
+    description: 'Attended Michigan, Ohio State, Penn State, Indiana, Wisconsin, Illinois, etc.',
     matches: (a) => a.collegeConference === 'Big Ten',
+  },
+  COLLEGE_ACC: {
+    id: 'college_acc',
+    name: 'Attended an ACC School',
+    shortName: 'ACC School',
+    type: 'BACKGROUND',
+    description: 'Attended North Carolina, Duke, Florida State, Miami, Virginia, Wake Forest, etc.',
+    matches: (a) => a.collegeConference === 'ACC',
   },
 
   // ==========================================
@@ -229,6 +261,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Wore jersey number 23 or 24 for at least one pro season',
     matches: (a) => a.jerseyNumbers.includes(23) || a.jerseyNumbers.includes(24),
   },
+  NUMBER_SINGLE_DIGIT: {
+    id: 'number_single_digit',
+    name: 'Wore Single Digit Number (#1-#9)',
+    shortName: 'Wore #1–#9',
+    type: 'NUMBER_ERA',
+    description: 'Wore a single digit jersey number (1 through 9)',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 1 && n <= 9),
+  },
   ERA_ACTIVE_2020S: {
     id: 'era_active_2020s',
     name: 'Active in 2020s',
@@ -236,5 +276,13 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'NUMBER_ERA',
     description: 'Played at least one regular-season or playoff game in 2020 or later',
     matches: (a) => a.activeYears[1] >= 2020,
+  },
+  ERA_15_SEASONS: {
+    id: 'era_15_seasons',
+    name: 'Played 15+ Seasons',
+    shortName: '15+ Seasons',
+    type: 'NUMBER_ERA',
+    description: 'Career spanned 15 or more calendar years at the pro level',
+    matches: (a) => a.activeYears[1] - a.activeYears[0] >= 14,
   },
 };

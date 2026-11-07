@@ -40,14 +40,19 @@ export const Grid: React.FC<GridProps> = ({
       {/* 5 columns: 1 for Row headers + 4 for Columns */}
       <div className="grid grid-cols-5 gap-2 sm:gap-3 min-w-[620px]">
         {/* Top Left Corner */}
-        <div className="flex items-center justify-center p-2 rounded-xl bg-zinc-900/40 border border-zinc-800/60">
+        <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-zinc-900/40 border border-zinc-800/60 text-center">
           <span className="text-[11px] font-black uppercase tracking-widest text-zinc-500">
             4×4 MATRIX
           </span>
+          {isGameOver && (
+            <span className="text-[9px] font-bold text-cyan-400 mt-0.5">
+              Click to Inspect
+            </span>
+          )}
         </div>
 
         {/* Column Headers */}
-        {colCategories.map((col, cIdx) => {
+        {colCategories.map((col) => {
           const typeMeta = CATEGORY_TYPE_LABELS[col.type] || { label: col.type, color: 'text-zinc-400 bg-zinc-800' };
           return (
             <div
@@ -88,20 +93,21 @@ export const Grid: React.FC<GridProps> = ({
               {/* 4 Cells for this Row */}
               {colCategories.map((col, cIdx) => {
                 const cell = cells[rIdx][cIdx];
-                const canClick = !cell.isCorrect && !cell.isBurnt && !isGameOver;
+                const canPlayGuess = !cell.isCorrect && !cell.isBurnt && !isGameOver;
 
                 return (
                   <button
                     key={`${rIdx}-${cIdx}`}
-                    disabled={!canClick}
                     onClick={() => onCellClick(rIdx, cIdx)}
                     className={`relative flex flex-col items-center justify-center p-2.5 rounded-xl border min-h-[105px] transition duration-150 select-none ${
                       cell.isCorrect
-                        ? 'bg-emerald-950/30 border-emerald-500/50 hover:border-emerald-400'
+                        ? 'bg-emerald-950/30 border-emerald-500/50 hover:border-emerald-400 cursor-pointer'
                         : cell.isBurnt
-                        ? 'bg-rose-950/20 border-rose-500/40 cursor-not-allowed'
-                        : canClick
+                        ? 'bg-rose-950/20 border-rose-500/40 hover:border-rose-400 cursor-pointer'
+                        : canPlayGuess
                         ? 'bg-zinc-900/60 border-zinc-800/80 hover:bg-zinc-800/80 hover:border-emerald-500/60 cursor-pointer shadow-sm active:scale-[0.98]'
+                        : isGameOver
+                        ? 'bg-zinc-900/40 border-zinc-800 hover:border-cyan-500/50 cursor-pointer'
                         : 'bg-zinc-950/40 border-zinc-900 cursor-not-allowed opacity-50'
                     }`}
                   >
@@ -136,7 +142,14 @@ export const Grid: React.FC<GridProps> = ({
                       <div className="flex flex-col items-center justify-center text-rose-500">
                         <span className="text-2xl font-black leading-none">✕</span>
                         <span className="text-[10px] font-bold uppercase tracking-wider text-rose-400/80 mt-1">
-                          Burnt
+                          {isGameOver ? 'See Answers' : 'Burnt'}
+                        </span>
+                      </div>
+                    ) : isGameOver ? (
+                      <div className="flex flex-col items-center justify-center text-cyan-400/70 hover:text-cyan-300">
+                        <span className="text-sm font-semibold">Empty</span>
+                        <span className="text-[9px] uppercase tracking-wider text-cyan-400/60 mt-0.5">
+                          See Answers
                         </span>
                       </div>
                     ) : (

@@ -1,16 +1,17 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { SAMPLE_PUZZLE } from '@/data/puzzles';
-import { Athlete, CellState, PlayMode, Sport } from '@/types';
+import { Athlete, CellState, PlayMode, Sport, DailyPuzzle } from '@/types';
+import { PUZZLE_PRESETS, generateProceduralPuzzle } from '@/lib/gridGenerator';
 import { Header } from '@/components/Header';
 import { Grid } from '@/components/Grid';
 import { SearchModal } from '@/components/SearchModal';
 import { StatsModal } from '@/components/StatsModal';
 import { HowToPlayModal } from '@/components/HowToPlayModal';
+import { CellSolutionsModal } from '@/components/CellSolutionsModal';
 
 export default function Home() {
-  const puzzle = SAMPLE_PUZZLE;
+  const [currentPuzzle, setCurrentPuzzle] = useState<DailyPuzzle>(PUZZLE_PRESETS[0]);
 
   // 4x4 Grid State
   const [cells, setCells] = useState<CellState[][]>(() =>
@@ -28,9 +29,11 @@ export default function Home() {
   const [guessedAthleteIds, setGuessedAthleteIds] = useState<Set<string>>(new Set());
   const [guessesUsed, setGuessesUsed] = useState<number>(0);
   const [strikesUsed, setStrikesUsed] = useState<number>(0);
+  const [hasGivenUp, setHasGivenUp] = useState<boolean>(false);
 
   // Modals
   const [activeCell, setActiveCell] = useState<{ row: number; col: number } | null>(null);
+  const [inspectCell, setInspectCell] = useState<{ row: number; col: number } | null>(null);
   const [isHowToPlayOpen, setIsHowToPlayOpen] = useState(false);
   const [isStatsOpen, setIsStatsOpen] = useState(false);
 
@@ -52,6 +55,7 @@ export default function Home() {
   const maxStrikes = 4;
 
   const isGameOver = useMemo(() => {
+    if (hasGivenUp) return true;
     const correctCount = cells.flat().filter((c) => c.isCorrect).length;
     if (correctCount === 16) return true;
     if (playMode === 'IMMACULATE') {
@@ -59,7 +63,7 @@ export default function Home() {
     } else {
       return strikesUsed >= maxStrikes;
     }
-  }, [cells, playMode, guessesUsed, strikesUsed]);
+  }, [cells, playMode, guessesUsed, strikesUsed, hasGivenUp]);
 
   // Total Rarity Score calculation
   const totalRarityScore = useMemo(() => {
@@ -89,12 +93,12 @@ export default function Home() {
           origin: { y: 0.6 },
         });
       } catch {
-        // Ignore fallback
+        // Fallback
       }
     }
   };
 
-  // Check for win
+  // Check for 16/16 win
   useEffect(() => {
     const correctCount = cells.flat().filter((c) => c.isCorrect).length;
     if (correctCount === 16) {
@@ -105,7 +109,14 @@ export default function Home() {
   }, [cells]);
 
   const handleCellClick = (row: number, col: number) => {
-    if (isGameOver) return;
+    if (isGameOver) {
+      // If game is over, clicking any cell opens the solutions inspector
+      setInspectCell({ row, col });
+      return;
+    }
+
+    const cell = cells[row][col];
+    if (cell.isCorrect || cell.isBurnt) return;
     setActiveCell({ row, col });
   };
 
@@ -136,7 +147,6 @@ export default function Home() {
     const { row, col } = activeCell;
 
     if (playMode === 'IMMACULATE') {
-      // In Immaculate mode, an incorrect guess burns the cell permanently
       setCells((prev) => {
         const next = prev.map((r) => [...r]);
         next[row][col] = {
@@ -150,11 +160,9 @@ export default function Home() {
       setGuessesUsed((prev) => prev + 1);
       setActiveCell(null);
     } else {
-      // In Strikes mode, increments strikes
       const nextStrikes = strikesUsed + 1;
       setStrikesUsed(nextStrikes);
       if (nextStrikes >= maxStrikes) {
-        // Burn all remaining empty cells on game over
         setCells((prev) =>
           prev.map((r) =>
             r.map((c) => (c.isCorrect ? c : { ...c, isBurnt: true }))
@@ -165,7 +173,7 @@ export default function Home() {
     }
   };
 
-  const handleResetGame = () => {
+  const resetBoard = (newPuzzle?: DailyPuzzle) => {
     setCells(
       Array.from({ length: 4 }, (_, r) =>
         Array.from({ length: 4 }, (_, c) => ({
@@ -179,14 +187,55 @@ export default function Home() {
     setGuessedAthleteIds(new Set());
     setGuessesUsed(0);
     setStrikesUsed(0);
+    setHasGivenUp(false);
     setActiveCell(null);
+    setInspectCell(null);
+    if (newPuzzle) {
+      setCurrentPuzzle(newPuzzle);
+    }
+  };
+
+  const handleSelectPreset = (preset: DailyPuzzle) => {
+    if (guessesUsed > 0 || strikesUsed > 0) {
+      if (confirm('Changing puzzles will reset your current progress. Continue?')) {
+        resetBoard(preset);
+      }
+    } else {
+      resetBoard(preset);
+    }
+  };
+
+  const handleNewRandomPuzzle = () => {
+    if (guessesUsed > 0 || strikesUsed > 0) {
+      if (!confirm('Generate a new random grid and reset progress?')) return;
+    }
+    const randomPuzzle = generateProceduralPuzzle();
+    resetBoard(randomPuzzle);
+  };
+
+  const handleGiveUp = () => {
+    if (confirm('Reveal all answers and finish this game?')) {
+      setHasGivenUp(true);
+      // Mark unfilled cells as burnt
+      setCells((prev) =>
+        prev.map((r) =>
+          r.map((c) => (c.isCorrect ? c : { ...c, isBurnt: true }))
+        )
+      );
+      setIsStatsOpen(true);
+    }
   };
 
   return (
     <main className="min-h-screen bg-black text-zinc-100 flex flex-col justify-between px-3 sm:px-6 py-6 font-sans">
       <div className="flex-1 flex flex-col items-center">
-        {/* Header with Title, Mode Toggle, and Counters */}
+        {/* Header with Preset Selector, Mode Switcher, and Counters */}
         <Header
+          currentPuzzle={currentPuzzle}
+          onSelectPreset={handleSelectPreset}
+          onNewRandomPuzzle={handleNewRandomPuzzle}
+          onGiveUp={handleGiveUp}
+          isGameOver={isGameOver}
           playMode={playMode}
           onToggleMode={(mode) => {
             if (guessesUsed === 0 && strikesUsed === 0) {
@@ -194,7 +243,7 @@ export default function Home() {
             } else {
               if (confirm('Switching modes will restart your current board. Continue?')) {
                 setPlayMode(mode);
-                handleResetGame();
+                resetBoard();
               }
             }
           }}
@@ -208,28 +257,28 @@ export default function Home() {
           onOpenHowToPlay={() => setIsHowToPlayOpen(true)}
           onOpenStats={() => setIsStatsOpen(true)}
           onResetGame={() => {
-            if (confirm('Are you sure you want to reset the grid?')) {
-              handleResetGame();
+            if (confirm('Reset this board?')) {
+              resetBoard();
             }
           }}
         />
 
         {/* The 4x4 Grid Board */}
         <Grid
-          rowCategories={puzzle.rowCategories}
-          colCategories={puzzle.colCategories}
+          rowCategories={currentPuzzle.rowCategories}
+          colCategories={currentPuzzle.colCategories}
           cells={cells}
           onCellClick={handleCellClick}
           isGameOver={isGameOver}
         />
 
-        {/* Game Over Notice Bar */}
+        {/* Post-Game Notice & Inspector Tip */}
         {isGameOver && (
           <div className="w-full max-w-xl mt-4 p-4 rounded-2xl border border-zinc-800 bg-zinc-900/90 text-center animate-in fade-in slide-in-from-bottom-2">
             <h3 className="font-bold text-base text-zinc-100">
               {cells.flat().filter((c) => c.isCorrect).length === 16
                 ? '🎉 Immaculate Perfection! You solved all 16 cells!'
-                : 'Game Over! You reached the guess limit.'}
+                : 'Game Finished! Click any cell above to inspect all valid answers.'}
             </h3>
             <p className="text-xs text-zinc-400 mt-1">
               Final Rarity Score: <span className="font-mono text-emerald-400 font-bold">{totalRarityScore.toFixed(1)}</span>
@@ -242,7 +291,13 @@ export default function Home() {
                 View Stats & Share
               </button>
               <button
-                onClick={handleResetGame}
+                onClick={handleNewRandomPuzzle}
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500 text-black hover:bg-cyan-400 transition"
+              >
+                Next Random Grid
+              </button>
+              <button
+                onClick={() => resetBoard()}
                 className="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-800 text-zinc-200 hover:bg-zinc-700 transition"
               >
                 Play Again
@@ -261,12 +316,23 @@ export default function Home() {
       {activeCell && (
         <SearchModal
           isOpen={!!activeCell}
-          rowCategory={puzzle.rowCategories[activeCell.row]}
-          colCategory={puzzle.colCategories[activeCell.col]}
+          rowCategory={currentPuzzle.rowCategories[activeCell.row]}
+          colCategory={currentPuzzle.colCategories[activeCell.col]}
           guessedAthleteIds={guessedAthleteIds}
           onClose={() => setActiveCell(null)}
           onGuessSuccess={handleGuessSuccess}
           onGuessFailure={handleGuessFailure}
+        />
+      )}
+
+      {/* Cell Solutions Inspector Modal (When clicked after game over or to inspect) */}
+      {inspectCell && (
+        <CellSolutionsModal
+          isOpen={!!inspectCell}
+          rowCategory={currentPuzzle.rowCategories[inspectCell.row]}
+          colCategory={currentPuzzle.colCategories[inspectCell.col]}
+          userGuessedAthlete={cells[inspectCell.row][inspectCell.col]?.athlete}
+          onClose={() => setInspectCell(null)}
         />
       )}
 
