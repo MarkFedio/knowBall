@@ -50429,7 +50429,7 @@
     "draftPick": 121,
     "draftRound": 4,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -50438,7 +50438,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -86997,7 +86999,7 @@
     ],
     "college": "UCLA; Duke",
     "collegeConference": "ACC",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -87006,7 +87008,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -100411,7 +100415,7 @@
     "draftPick": 108,
     "draftRound": 4,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -100420,7 +100424,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -125412,7 +125418,7 @@
     ],
     "college": "Oregon",
     "collegeConference": "Pac-12",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -125421,7 +125427,9 @@
       "turnovers": 6
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -128342,7 +128350,7 @@
     "draftPick": 137,
     "draftRound": 4,
     "draftYear": 2021,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -128351,7 +128359,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -131947,7 +131957,7 @@
     "draftPick": 109,
     "draftRound": 4,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -131956,7 +131966,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -172096,7 +172108,7 @@
     "draftPick": 52,
     "draftRound": 2,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -172105,7 +172117,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -217989,7 +218003,7 @@
     "draftPick": 9,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -217998,7 +218012,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -253550,7 +253566,7 @@
     "draftPick": 149,
     "draftRound": 5,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -253559,7 +253575,9 @@
       "turnovers": 2
     },
     "popularityScore": 65,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -300244,7 +300262,7 @@
     "draftPick": 20,
     "draftRound": 1,
     "draftYear": 2019,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -300253,7 +300271,9 @@
       "turnovers": 2
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -392224,7 +392244,7 @@
     "draftPick": 37,
     "draftRound": 2,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -392233,7 +392253,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -399367,7 +399389,7 @@
     "draftPick": 49,
     "draftRound": 2,
     "draftYear": 2013,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -399376,7 +399398,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -423742,7 +423766,7 @@
     "draftPick": 81,
     "draftRound": 3,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -423751,7 +423775,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -462983,7 +463009,7 @@
     "draftPick": 144,
     "draftRound": 5,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -462992,7 +463018,9 @@
       "turnovers": 50
     },
     "popularityScore": 55,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -500030,7 +500058,7 @@
     "draftPick": 113,
     "draftRound": 4,
     "draftYear": 2017,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -500039,7 +500067,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -529631,7 +529661,7 @@
     "draftPick": 71,
     "draftRound": 3,
     "draftYear": 2019,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -529640,7 +529670,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -606140,7 +606172,7 @@
     "draftPick": 69,
     "draftRound": 3,
     "draftYear": 2015,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -606149,7 +606181,9 @@
       "turnovers": 2
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -611955,7 +611989,7 @@
     "draftPick": 108,
     "draftRound": 4,
     "draftYear": 2019,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -611964,7 +611998,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -613775,7 +613811,7 @@
     "draftPick": 72,
     "draftRound": 3,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -613784,7 +613820,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -621887,7 +621925,7 @@
     "draftPick": 40,
     "draftRound": 2,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -621896,7 +621934,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -662193,7 +662233,7 @@
     "draftPick": 237,
     "draftRound": 7,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -662202,7 +662242,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -676415,7 +676457,7 @@
     "draftPick": 64,
     "draftRound": 2,
     "draftYear": 2019,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -676424,7 +676466,9 @@
       "turnovers": 14
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -715450,7 +715494,7 @@
     "draftPick": 16,
     "draftRound": 1,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -715459,7 +715503,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -719557,7 +719603,7 @@
       2
     ],
     "college": "Marist",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -719566,7 +719612,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -738465,7 +738513,7 @@
     "draftPick": 48,
     "draftRound": 2,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -738474,7 +738522,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -749060,7 +749110,7 @@
     "draftPick": 154,
     "draftRound": 5,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -749069,7 +749119,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -816721,7 +816773,7 @@
     "draftPick": 49,
     "draftRound": 2,
     "draftYear": 2016,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -816730,7 +816782,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -913327,7 +913381,7 @@
     "draftPick": 39,
     "draftRound": 2,
     "draftYear": 2013,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -913336,7 +913390,9 @@
       "turnovers": 184
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -924652,7 +924708,7 @@
     "draftPick": 20,
     "draftRound": 1,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -924661,7 +924717,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -945798,7 +945856,7 @@
     ],
     "college": "Penn State",
     "collegeConference": "Big Ten",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -945807,7 +945865,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -993750,7 +993810,7 @@
     "draftPick": 28,
     "draftRound": 1,
     "draftYear": 2015,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -993759,7 +993819,9 @@
       "turnovers": 0
     },
     "popularityScore": 65,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1027293,7 +1027355,7 @@
     "draftPick": 41,
     "draftRound": 2,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1027302,7 +1027364,9 @@
       "turnovers": 0
     },
     "popularityScore": 80,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1078294,7 +1078358,7 @@
     "draftPick": 6,
     "draftRound": 1,
     "draftYear": 2015,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1078303,7 +1078367,9 @@
       "turnovers": 0
     },
     "popularityScore": 65,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1097304,7 +1097370,7 @@
     "draftPick": 5,
     "draftRound": 1,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1097313,7 +1097379,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1103045,7 +1103113,7 @@
     "draftPick": 153,
     "draftRound": 5,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1103054,7 +1103122,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1113043,7 +1113113,7 @@
     "draftPick": 233,
     "draftRound": 7,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1113052,7 +1113122,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "SEA"
+    ],
     "mvpMarkets": []
   },
   {

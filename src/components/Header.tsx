@@ -137,11 +137,11 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="hidden sm:block h-7 w-px bg-zinc-800/80 mx-0.5" />
 
           {/* Play Mode Switcher (Ball Knower vs Casual) */}
-          <div className="flex rounded-lg bg-zinc-950/70 p-0.5 border border-zinc-800/80 text-[11px]">
+          <div className="flex rounded-lg bg-zinc-950/70 p-0.5 border border-zinc-800/80 text-[10px] sm:text-[11px] shrink-0">
             <button
               onClick={() => onToggleMode('IMMACULATE')}
               title="Ball Knower: 16 Guesses, 0 Strikes"
-              className={`flex items-center gap-1 px-2 py-1 rounded-md font-bold transition ${
+              className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
                 playMode === 'IMMACULATE'
                   ? isScoreboard
                     ? 'bg-amber-400 text-black shadow-sm'
@@ -151,13 +151,13 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
-              <Flame className="h-3 w-3" />
+              <Flame className="h-3 w-3 shrink-0" />
               <span>Ball Knower</span>
             </button>
             <button
               onClick={() => onToggleMode('STRIKES')}
               title="Casual Mode: 4 Strikes Allowed"
-              className={`flex items-center gap-1 px-2 py-1 rounded-md font-bold transition ${
+              className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
                 playMode === 'STRIKES'
                   ? isScoreboard
                     ? 'bg-amber-400 text-black shadow-sm'
@@ -235,15 +235,18 @@ export const Header: React.FC<HeaderProps> = ({
         {/* ---------------------------------------------------- */}
         {/* SECTION 4: GRAND SLAM & 4 LEAGUE TOKENS              */}
         {/* ---------------------------------------------------- */}
-        <div className="flex items-center gap-2 shrink-0">
-          <div className="flex flex-col items-end sm:items-center">
-            <div className="flex items-center gap-1 text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
-              <Sparkles
-                className={`w-2.5 h-2.5 ${hasGrandSlam ? 'text-emerald-400 animate-pulse' : 'text-amber-400'}`}
-              />
-              <span>GRAND SLAM</span>
+        <div className="flex items-center shrink-0">
+          <div className="flex flex-col w-full min-w-[124px]">
+            {/* Title & Pill Header */}
+            <div className="flex items-center justify-between w-full text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
+              <div className="flex items-center gap-1">
+                <Sparkles
+                  className={`w-2.5 h-2.5 ${hasGrandSlam ? 'text-emerald-400 animate-pulse' : 'text-amber-400'}`}
+                />
+                <span>GRAND SLAM</span>
+              </div>
               <span
-                className={`ml-0.5 px-1 py-0.2 rounded border text-[9px] font-mono transition-all ${
+                className={`ml-1 px-1.5 py-0.5 rounded border text-[9px] font-mono transition-all ${
                   hasGrandSlam
                     ? 'bg-emerald-500/25 border-emerald-400 text-emerald-300 font-bold shadow-[0_0_8px_rgba(52,211,153,0.5)]'
                     : 'bg-amber-500/15 border-amber-500/40 text-amber-200'
@@ -253,15 +256,15 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
 
-            {/* 4 League Medallions */}
-            <div className="flex items-center gap-1 mt-1">
+            {/* 4 League Medallions: Spanning full width under text */}
+            <div className="flex items-center justify-between w-full mt-1.5 px-0.5">
               {ALL_SPORTS.map((sport) => {
                 const isUsed = sportsUsed.has(sport);
                 return (
                   <LeagueIcon
                     key={sport}
                     sport={sport}
-                    size="sm"
+                    size="md"
                     variant="circle"
                     active={isUsed}
                   />
@@ -277,7 +280,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* ---------------------------------------------------- */}
         {/* SECTION 5: ACTION SUITE TOOLBAR                      */}
         {/* ---------------------------------------------------- */}
-        <div className="flex items-center gap-1.5 ml-auto sm:ml-0 shrink-0">
+        <div className="w-full sm:w-auto flex items-center justify-start gap-1.5 shrink-0 mt-1 sm:mt-0">
           {/* Theme Switcher */}
           {onToggleTheme && (
             <button

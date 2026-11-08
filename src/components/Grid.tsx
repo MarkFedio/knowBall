@@ -114,7 +114,7 @@ export const Grid: React.FC<GridProps> = ({
                 }`}
               >
                 {/* Help Hint Icon Indicator */}
-                <span className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5 opacity-30 sm:opacity-40 group-hover:opacity-100 transition-opacity">
+                <span className="hidden sm:inline-block absolute top-1 right-1 sm:top-1.5 sm:right-1.5 opacity-30 sm:opacity-40 group-hover:opacity-100 transition-opacity">
                   <HelpCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-cyan-400/80" />
                 </span>
 
@@ -125,7 +125,7 @@ export const Grid: React.FC<GridProps> = ({
 
                 {/* Bold Category Name */}
                 <h3
-                  className={`text-[9px] sm:text-xs font-black uppercase tracking-wider leading-[1.1] sm:leading-tight line-clamp-2 ${
+                  className={`text-[7px] min-[390px]:text-[8px] sm:text-xs font-black uppercase tracking-tight sm:tracking-wider leading-[1.05] sm:leading-tight line-clamp-2 break-normal [word-break:keep-all] px-0.5 ${
                     isColHighlighted && isScoreboard
                       ? 'text-amber-300'
                       : isColHighlighted && isNeon
@@ -167,7 +167,7 @@ export const Grid: React.FC<GridProps> = ({
                   }`}
                 >
                   {/* Help Hint Icon Indicator */}
-                  <span className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5 opacity-30 sm:opacity-40 group-hover:opacity-100 transition-opacity">
+                  <span className="hidden sm:inline-block absolute top-1 right-1 sm:top-1.5 sm:right-1.5 opacity-30 sm:opacity-40 group-hover:opacity-100 transition-opacity">
                     <HelpCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-cyan-400/80" />
                   </span>
 
@@ -178,7 +178,7 @@ export const Grid: React.FC<GridProps> = ({
 
                   {/* Bold Category Name */}
                   <h3
-                    className={`text-[9px] sm:text-xs font-black uppercase tracking-wider leading-[1.1] sm:leading-tight line-clamp-2 ${
+                    className={`text-[7px] min-[390px]:text-[8px] sm:text-xs font-black uppercase tracking-tight sm:tracking-wider leading-[1.05] sm:leading-tight line-clamp-2 break-normal [word-break:keep-all] px-0.5 ${
                       isRowHighlighted && isScoreboard
                         ? 'text-amber-300'
                         : isRowHighlighted && isNeon

@@ -5,6 +5,8 @@
 // Common sports nicknames & aliases mapped to canonical search terms
 export const NICKNAME_ALIASES: Record<string, string> = {
   // Basketball
+  'aunonoby': 'og anunoby',
+  'og aunonoby': 'og anunoby',
   'steph curry': 'stephen curry',
   'magic johnson': 'earvin johnson',
   'magic': 'earvin johnson',
@@ -30,6 +32,10 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'bam adebayo': 'edrice adebayo',
 
   // Baseball
+  'kike hernandez': 'enrique hernandez',
+  'kike': 'enrique hernandez',
+  'kiké hernandez': 'enrique hernandez',
+  'kiké': 'enrique hernandez',
   'a-rod': 'alex rodriguez',
   'arod': 'alex rodriguez',
   'mookie betts': 'markus betts',
