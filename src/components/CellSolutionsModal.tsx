@@ -4,6 +4,7 @@ import React from 'react';
 import { X, Search, CheckCircle2 } from 'lucide-react';
 import { Athlete, Category, Sport } from '@/types';
 import { getAllSolutionsForCell } from '@/lib/gridGenerator';
+import { getRarityTier } from '@/lib/rarityUtils';
 
 interface CellSolutionsModalProps {
   isOpen: boolean;
@@ -118,9 +119,15 @@ export const CellSolutionsModal: React.FC<CellSolutionsModalProps> = ({
 
                   {/* Rarity Score */}
                   <div className="text-right">
-                    <span className="rounded-full bg-zinc-800/80 px-2.5 py-1 font-mono text-xs font-bold text-zinc-300 border border-zinc-700/50">
-                      {rarity.toFixed(1)}% rarity
-                    </span>
+                    {(() => {
+                      const tier = getRarityTier(rarity);
+                      return (
+                        <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-mono text-xs font-bold border ${tier.badgeClass}`}>
+                          {tier.prefixIcon && <span>{tier.prefixIcon}</span>}
+                          <span>{rarity.toFixed(1)}%</span>
+                        </span>
+                      );
+                    })()}
                   </div>
                 </div>
               );

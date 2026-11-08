@@ -172,8 +172,8 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm animate-fade-in">
-      <div className="relative flex max-h-[85vh] w-full max-w-xl flex-col rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/35 p-4 backdrop-blur-[2px] transition-opacity duration-200">
+      <div className="relative flex max-h-[85vh] w-full max-w-xl flex-col rounded-2xl border border-zinc-700/80 bg-zinc-950/95 p-6 shadow-2xl backdrop-blur-md">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 rounded-lg p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white"

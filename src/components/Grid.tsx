@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Category, CellState, Sport } from '@/types';
+import { getRarityTier } from '@/lib/rarityUtils';
 
 interface GridProps {
   rowCategories: Category[];
@@ -37,9 +38,9 @@ export const Grid: React.FC<GridProps> = ({
   activeCell,
 }) => {
   return (
-    <div className="w-full max-w-5xl mx-auto overflow-x-auto pb-4">
+    <div className="w-full max-w-5xl mx-auto overflow-x-auto pb-4 scrollbar-thin">
       {/* 5 columns: 1 for Row headers + 4 for Columns */}
-      <div className="grid grid-cols-5 gap-2 sm:gap-3 min-w-[620px]">
+      <div className="grid grid-cols-5 gap-1.5 sm:gap-3 min-w-[500px] sm:min-w-[620px]">
         {/* Top Left Corner */}
         <div className="flex flex-col items-center justify-center p-2 rounded-xl bg-zinc-900/40 border border-zinc-800/60 text-center">
           <span className="text-[11px] font-black uppercase tracking-widest text-zinc-500">
@@ -140,34 +141,43 @@ export const Grid: React.FC<GridProps> = ({
                     }`}
                   >
                     {cell.isCorrect && cell.athlete ? (
-                      <div className="flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-200">
-                        {/* Athlete Name */}
-                        <span className="font-extrabold text-xs sm:text-sm text-zinc-50 leading-snug line-clamp-1">
-                          {cell.athlete.name}
-                        </span>
+                      (() => {
+                        const tier = getRarityTier(cell.rarity);
+                        return (
+                          <div className="flex flex-col items-center text-center animate-in fade-in zoom-in-90 duration-300">
+                            {/* Athlete Name */}
+                            <span className="font-extrabold text-xs sm:text-sm text-zinc-50 leading-snug line-clamp-1">
+                              {cell.athlete.name}
+                            </span>
 
-                        {/* Sport Badges */}
-                        <div className="flex flex-wrap justify-center gap-1 mt-1">
-                          {cell.athlete.sports.map((sport) => {
-                            const style = SPORT_COLORS[sport];
-                            return (
-                              <span
-                                key={sport}
-                                className={`rounded px-1.5 py-0.2 text-[9px] font-bold border ${style.bg} ${style.text} ${style.border}`}
-                              >
-                                {sport}
-                              </span>
-                            );
-                          })}
-                        </div>
+                            {/* Sport Badges */}
+                            <div className="flex flex-wrap justify-center gap-1 mt-1">
+                              {cell.athlete.sports.map((sport) => {
+                                const style = SPORT_COLORS[sport];
+                                return (
+                                  <span
+                                    key={sport}
+                                    className={`rounded px-1.5 py-0.2 text-[9px] font-bold border ${style.bg} ${style.text} ${style.border}`}
+                                  >
+                                    {sport}
+                                  </span>
+                                );
+                              })}
+                            </div>
 
-                        {/* Rarity Score Pill */}
-                        <span className="mt-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-                          {cell.rarity?.toFixed(1)}% rarity
-                        </span>
-                      </div>
+                            {/* Dynamic Rarity Tier Pill */}
+                            <span
+                              title={`${tier.label} (${cell.rarity?.toFixed(1)}% pick rate)`}
+                              className={`mt-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold border flex items-center gap-1 ${tier.badgeClass}`}
+                            >
+                              {tier.prefixIcon && <span>{tier.prefixIcon}</span>}
+                              <span>{cell.rarity?.toFixed(1)}%</span>
+                            </span>
+                          </div>
+                        );
+                      })()
                     ) : cell.isBurnt ? (
-                      <div className="flex flex-col items-center justify-center animate-in fade-in zoom-in-95 duration-200">
+                      <div className="flex flex-col items-center justify-center animate-in fade-in zoom-in-90 duration-300">
                         <span className="text-2xl font-black text-rose-500/80">✕</span>
                         <span className="text-[10px] font-bold tracking-wider text-rose-400/80 uppercase mt-0.5">
                           BURNT

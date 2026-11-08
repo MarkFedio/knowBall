@@ -111,10 +111,19 @@ export default function Home() {
     }
   };
 
-  // Load saved puzzle state and career stats on mount or when puzzle changes
+  // Load saved puzzle state, sound preference, and career stats on mount or when puzzle changes
   useEffect(() => {
     const stats = loadCareerStats();
     setCareerStats(stats);
+
+    if (typeof window !== 'undefined') {
+      const savedSound = window.localStorage.getItem('sportsgrid_sound_enabled');
+      if (savedSound !== null) {
+        const enabled = savedSound === 'true';
+        setSoundEnabled(enabled);
+        sound.enabled = enabled;
+      }
+    }
 
     const saved = loadGameState(currentPuzzle.id);
     if (saved) {
@@ -194,6 +203,13 @@ export default function Home() {
     const { row, col } = activeCell;
 
     sound.playSuccess();
+    if (typeof window !== 'undefined' && 'vibrate' in navigator) {
+      try {
+        navigator.vibrate(25);
+      } catch {
+        // Fallback
+      }
+    }
 
     setCells((prev) => {
       const next = prev.map((r) => [...r]);
@@ -218,6 +234,13 @@ export default function Home() {
     const { row, col } = activeCell;
 
     sound.playError();
+    if (typeof window !== 'undefined' && 'vibrate' in navigator) {
+      try {
+        navigator.vibrate([40, 40, 40]);
+      } catch {
+        // Fallback
+      }
+    }
 
     if (playMode === 'IMMACULATE') {
       setCells((prev) => {
@@ -305,6 +328,13 @@ export default function Home() {
             const next = !soundEnabled;
             setSoundEnabled(next);
             sound.enabled = next;
+            if (typeof window !== 'undefined') {
+              try {
+                window.localStorage.setItem('sportsgrid_sound_enabled', String(next));
+              } catch {
+                // Fallback
+              }
+            }
           }}
           playMode={playMode}
           onToggleMode={(mode) => {

@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, Volume2, VolumeX } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, Volume2, VolumeX, Clock } from 'lucide-react';
 import { PlayMode, Sport, DailyPuzzle } from '@/types';
 
 interface HeaderProps {
@@ -47,6 +47,26 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenStats,
   onResetGame,
 }) => {
+  const [timeLeft, setTimeLeft] = useState<string>('');
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const now = new Date();
+      const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+      const diffMs = tomorrow.getTime() - now.getTime();
+      const hours = Math.floor(diffMs / (1000 * 60 * 60));
+      const mins = Math.floor((diffMs / (1000 * 60)) % 60);
+      const secs = Math.floor((diffMs / 1000) % 60);
+      setTimeLeft(
+        `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+      );
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="w-full max-w-5xl mx-auto mb-6 flex flex-col gap-4">
       {/* Top Navbar */}
@@ -75,6 +95,15 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 px-3 text-xs font-semibold text-zinc-200">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>{currentPuzzle.title}</span>
+          </div>
+
+          {/* Midnight Countdown Clock */}
+          <div
+            title="Time remaining until the next daily SportsGrid drops at midnight"
+            className="hidden sm:flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 px-2.5 text-xs font-mono text-zinc-400"
+          >
+            <Clock className="h-3.5 w-3.5 text-zinc-500" />
+            <span>{timeLeft || '24:00:00'}</span>
           </div>
 
           {/* Random Board Button */}
