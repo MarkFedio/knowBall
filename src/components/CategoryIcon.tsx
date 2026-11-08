@@ -68,12 +68,7 @@ export const CategoryIcon: React.FC<CategoryIconProps> = ({ category, className 
     );
   }
 
-  // 3. Draft Pedigree (#1 Overall, Top 10, 1st Round)
-  if (catId.includes('draft')) {
-    return <Award className={`${className} text-emerald-300 drop-shadow-[0_0_8px_rgba(110,231,183,0.5)]`} />;
-  }
-
-  // 4. Career Franchises (Journeyman vs 1-Franchise)
+  // 3. Career Franchises (Journeyman vs 1-Franchise)
   if (catId.includes('teams') || catId.includes('franchise')) {
     if (catId.includes('one_franchise')) {
       return <ShieldCheck className={`${className} text-amber-300 drop-shadow-[0_0_8px_rgba(252,211,77,0.5)]`} />;
@@ -81,8 +76,14 @@ export const CategoryIcon: React.FC<CategoryIconProps> = ({ category, className 
     return <Shuffle className={`${className} text-indigo-300 drop-shadow-[0_0_8px_rgba(165,180,252,0.5)]`} />;
   }
 
-  // 5. Longevity / 15+ Seasons / Decades & Eras
-  if (catId.includes('2010s') || catId.includes('2000s') || catId.includes('1990s') || catId.includes('2020s')) {
+  // 4. Longevity / 10+ or 15+ Seasons / Decades & Eras
+  if (
+    catId.includes('2020s') ||
+    catId.includes('2010s') ||
+    catId.includes('2000s') ||
+    catId.includes('1990s') ||
+    catId.includes('1980s')
+  ) {
     return <Calendar className={`${className} text-sky-300 drop-shadow-[0_0_8px_rgba(125,211,252,0.5)]`} />;
   }
   if (

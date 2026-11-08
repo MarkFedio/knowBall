@@ -12,6 +12,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: '500+ career stolen bases (MLB) or 500+ defensive steals (NBA)',
     matches: (a) => (a.stats.steals ?? 0) >= 500,
   },
+  STAT_STEALS_100: {
+    id: 'stat_steals_100',
+    name: '100+ Career Steals (MLB/NBA)',
+    shortName: '100+ Steals',
+    type: 'CROSS_STAT',
+    description: '100+ career stolen bases (MLB) or 100+ defensive steals (NBA)',
+    matches: (a) => (a.stats.steals ?? 0) >= 100,
+  },
   STAT_ASSISTS_1000: {
     id: 'stat_assists_1000',
     name: '1,000+ Career Assists (NBA/NHL)',
@@ -19,6 +27,14 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'CROSS_STAT',
     description: '1,000+ career assists in NBA or NHL',
     matches: (a) => (a.stats.assists ?? 0) >= 1000,
+  },
+  STAT_ASSISTS_500: {
+    id: 'stat_assists_500',
+    name: '500+ Career Assists (NBA/NHL)',
+    shortName: '500+ Assists',
+    type: 'CROSS_STAT',
+    description: '500+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 500,
   },
   STAT_POINTS_10K: {
     id: 'stat_points_10k',
@@ -206,6 +222,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Won Super Bowl, NBA Finals, World Series, Stanley Cup, etc.',
     matches: (a) => a.championships > 0,
   },
+  ACCOLADE_MULTI_CHAMP_2: {
+    id: 'accolade_multi_champ_2',
+    name: 'Won 2+ Championships',
+    shortName: '2+ Championships',
+    type: 'ACCOLADE',
+    description: 'Won 2 or more World Championships / Rings across their pro career',
+    matches: (a) => a.championships >= 2,
+  },
   ACCOLADE_MULTI_CHAMP: {
     id: 'accolade_multi_champ',
     name: 'Won 3+ Championships',
@@ -238,30 +262,6 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Named Rookie of the Year in their primary league',
     matches: (a) => a.rookieOfTheYear,
   },
-  DRAFT_FIRST_OVERALL: {
-    id: 'draft_first_overall',
-    name: 'Selected #1 Overall in Draft',
-    shortName: '#1 Overall Pick',
-    type: 'BACKGROUND',
-    description: 'Selected 1st overall in NFL, NBA, MLB, or NHL Draft',
-    matches: (a) => a.draftPick === 1,
-  },
-  DRAFT_TOP_10: {
-    id: 'draft_top_10',
-    name: 'Selected in Top 10 of Pro Draft',
-    shortName: 'Top 10 Pick',
-    type: 'BACKGROUND',
-    description: 'Selected with a Top 10 overall pick in their respective draft',
-    matches: (a) => a.draftPick !== undefined && a.draftPick <= 10,
-  },
-  DRAFT_FIRST_ROUND: {
-    id: 'draft_first_round',
-    name: 'Selected in 1st Round of Draft',
-    shortName: '1st Round Pick',
-    type: 'BACKGROUND',
-    description: 'Selected in the 1st round (Picks 1–32) of pro draft',
-    matches: (a) => (a.draftPick !== undefined && a.draftPick <= 32) || a.draftRound === 1,
-  },
   CAREER_3_TEAMS: {
     id: 'career_3_teams',
     name: 'Played for 3+ Franchises',
@@ -278,6 +278,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Appeared in pro regular-season or playoff games for at least 4 distinct teams',
     matches: (a) => a.teams.length >= 4,
   },
+  CAREER_5_TEAMS: {
+    id: 'career_5_teams',
+    name: 'Played for 5+ Franchises',
+    shortName: '5+ Franchises',
+    type: 'BACKGROUND',
+    description: 'Appeared in pro regular-season or playoff games for at least 5 distinct teams',
+    matches: (a) => a.teams.length >= 5,
+  },
   CAREER_ONE_FRANCHISE: {
     id: 'career_one_franchise',
     name: 'One-Franchise Legend (8+ Yrs)',
@@ -288,59 +296,7 @@ export const CATEGORIES: Record<string, Category> = {
   },
 
   // ==========================================
-  // 5. BACKGROUND & COLLEGES
-  // ==========================================
-  COLLEGE_SEC: {
-    id: 'college_sec',
-    name: 'Attended an SEC School',
-    shortName: 'SEC School',
-    type: 'BACKGROUND',
-    description: 'Attended an SEC member school (LSU, Alabama, Florida, Georgia, Kentucky, Auburn, Tennessee, etc.)',
-    matches: (a) => a.collegeConference === 'SEC',
-  },
-  COLLEGE_BIG_TEN: {
-    id: 'college_big_ten',
-    name: 'Attended a Big Ten School',
-    shortName: 'Big Ten School',
-    type: 'BACKGROUND',
-    description: 'Attended Michigan, Ohio State, Penn State, Indiana, Wisconsin, Illinois, etc.',
-    matches: (a) => a.collegeConference === 'Big Ten',
-  },
-  COLLEGE_SEC_OR_BIG_TEN: {
-    id: 'college_sec_or_big_ten',
-    name: 'Attended SEC or Big Ten School',
-    shortName: 'SEC / Big Ten',
-    type: 'BACKGROUND',
-    description: 'Attended an SEC or Big Ten university',
-    matches: (a) => a.collegeConference === 'SEC' || a.collegeConference === 'Big Ten',
-  },
-  COLLEGE_ACC: {
-    id: 'college_acc',
-    name: 'Attended an ACC School',
-    shortName: 'ACC School',
-    type: 'BACKGROUND',
-    description: 'Attended North Carolina, Duke, Florida State, Miami, Virginia, Wake Forest, etc.',
-    matches: (a) => a.collegeConference === 'ACC',
-  },
-  COLLEGE_PAC_12: {
-    id: 'college_pac_12',
-    name: 'Attended Pac-12 / Pac-10 School',
-    shortName: 'Pac-12 School',
-    type: 'BACKGROUND',
-    description: 'Attended UCLA, USC, Stanford, Cal, Oregon, Washington, Arizona, etc.',
-    matches: (a) => a.collegeConference === 'Pac-12' || a.collegeConference === 'Pac-10',
-  },
-  COLLEGE_BIG_12: {
-    id: 'college_big_12',
-    name: 'Attended Big 12 School',
-    shortName: 'Big 12 School',
-    type: 'BACKGROUND',
-    description: 'Attended Texas, Oklahoma, Kansas, Texas Tech, Baylor, Oklahoma State, etc.',
-    matches: (a) => a.collegeConference === 'Big 12',
-  },
-
-  // ==========================================
-  // 6. NUMBERS & ERAS
+  // 5. NUMBERS & ERAS
   // ==========================================
   NUMBER_23_OR_24: {
     id: 'number_23_or_24',
@@ -389,6 +345,22 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'NUMBER_ERA',
     description: 'Played at least one pro game between 1990 and 1999',
     matches: (a) => a.activeYears[0] <= 1999 && a.activeYears[1] >= 1990,
+  },
+  ERA_1980S: {
+    id: 'era_1980s',
+    name: 'Active in the 1980s',
+    shortName: '1980s Era',
+    type: 'NUMBER_ERA',
+    description: 'Played at least one pro game between 1980 and 1989',
+    matches: (a) => a.activeYears[0] <= 1989 && a.activeYears[1] >= 1980,
+  },
+  ERA_10_SEASONS: {
+    id: 'era_10_seasons',
+    name: 'Played 10+ Seasons',
+    shortName: '10+ Seasons',
+    type: 'NUMBER_ERA',
+    description: 'Career spanned 10 or more calendar years at the pro level',
+    matches: (a) => a.activeYears[1] - a.activeYears[0] >= 9,
   },
   ERA_15_SEASONS: {
     id: 'era_15_seasons',

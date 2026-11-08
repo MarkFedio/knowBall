@@ -20,7 +20,7 @@ import { LeagueIcon } from './LeagueIcon';
 interface HeaderProps {
   currentPuzzle: DailyPuzzle;
   onNewRandomPuzzle: () => void;
-  onOpenArchive: () => void;
+  onOpenArchive?: () => void;
   onGiveUp: () => void;
   isGameOver: boolean;
   soundEnabled: boolean;
@@ -198,18 +198,8 @@ export const Header: React.FC<HeaderProps> = ({
           )}
         </div>
 
-        {/* Right: Actions (Archive, Random, Stats, Help, Audio, Reset, Give Up) */}
+        {/* Right: Actions (Random, Reveal, Audio, Help, Stats, Reset) */}
         <div className="flex items-center gap-1.5 ml-auto">
-          {/* Past Grids */}
-          <button
-            onClick={onOpenArchive}
-            title="Browse and play past daily SportsGrids"
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-zinc-900/90 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-700 transition font-medium"
-          >
-            <Calendar className="h-3.5 w-3.5 text-cyan-400" />
-            <span className="hidden md:inline text-[11px]">Past Grids</span>
-          </button>
-
           {/* Random Board */}
           <button
             onClick={onNewRandomPuzzle}
