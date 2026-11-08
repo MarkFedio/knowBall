@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { X, Search, AlertCircle, CornerDownLeft, Sparkles, HelpCircle } from 'lucide-react';
 import { Athlete, Category, Sport } from '@/types';
 import { ATHLETES } from '@/data/athletes';
-import { validateGuess, getMetroChampIntersection } from '@/data/puzzles';
+import { validateGuess, getMetroSingleEventIntersection } from '@/data/puzzles';
 import {
   normalizeSearchString,
   resolveAlias,
@@ -59,8 +59,8 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [infoCategory, setInfoCategory] = useState<Category | null>(null);
 
-  const metroChampInfo = useMemo(
-    () => getMetroChampIntersection(rowCategory, colCategory),
+  const metroSingleEventInfo = useMemo(
+    () => getMetroSingleEventIntersection(rowCategory, colCategory),
     [rowCategory, colCategory]
   );
 
@@ -218,18 +218,21 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           </div>
 
           {/* Immaculate Grid Rule Clarification Banner (Right Below Selection) */}
-          {metroChampInfo && (
+          {metroSingleEventInfo && (
             <div className="mt-2.5 flex items-start gap-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 p-2.5 sm:p-3 text-xs text-amber-200 animate-in fade-in duration-200">
               <Sparkles className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
               <div className="leading-relaxed">
                 <span className="font-bold text-amber-300 uppercase tracking-wide text-[10px] block mb-0.5">
                   Immaculate Grid Rule
                 </span>
-                Player must have won a World Championship / Ring{' '}
+                Player must have won a {metroSingleEventInfo.accoladeLabel}{' '}
                 <strong className="text-white underline decoration-amber-400 underline-offset-2">
-                  while playing for a {metroChampInfo.metroLabel} team
+                  while playing for a {metroSingleEventInfo.metroLabel} team
                 </strong>
-                . (Winning a title elsewhere and later playing for {metroChampInfo.metroLabel} does not qualify).
+                .{' '}
+                <span className="text-amber-200/80">
+                  ({metroSingleEventInfo.accoladeType === 'CHAMPION' ? 'Winning a title' : 'Winning an MVP'} elsewhere and later playing for {metroSingleEventInfo.metroLabel} does not qualify).
+                </span>
               </div>
             </div>
           )}

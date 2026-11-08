@@ -61,50 +61,70 @@ const METRO_MARKET_CODES: Record<string, { codes: string[]; label: string }> = {
   metro_canada: { codes: ['TOR', 'MTL', 'VAN', 'CAL', 'EDM', 'OTT', 'WPG', 'CAN'], label: 'Canadian' },
 };
 
-const CHAMPIONSHIP_CATEGORY_IDS = new Set([
-  'accolade_champion',
-  'accolade_multi_champ_2',
-  'accolade_multi_champ',
-  'accolade_multi_champ_4',
-]);
+// Single-event honors that require achieving the milestone WHILE with that team/market:
+// - A Championship ('accolade_champion')
+// - An MVP Award ('accolade_mvp')
+// Note: Career-wide cumulative categories (e.g. 'Won 2+ Championships', 'Won 4+ Championships', 'Hall of Fame')
+// do NOT enforce one team.
+export type SingleEventAccoladeType = 'CHAMPION' | 'MVP';
+
+export interface MetroSingleEventIntersection {
+  metroId: string;
+  metroLabel: string;
+  accoladeType: SingleEventAccoladeType;
+  accoladeLabel: string;
+}
+
+const SINGLE_EVENT_ACCOLADES: Record<string, { type: SingleEventAccoladeType; label: string }> = {
+  accolade_champion: { type: 'CHAMPION', label: 'World Championship / Ring' },
+  accolade_mvp: { type: 'MVP', label: 'League MVP Award' },
+};
 
 /**
- * Returns metadata if a row/col pair intersects a Metro market with a Championship accolade.
+ * Returns metadata if a row/col pair intersects a Metro market with a single-event accolade
+ * (a Championship, an MVP, etc.).
+ * Career-cumulative categories (e.g. 2+, 3+, 4+ championships) return null.
  */
-export function getMetroChampIntersection(
+export function getMetroSingleEventIntersection(
   rowCat: Category,
   colCat: Category
-): { metroId: string; metroLabel: string; champId: string } | null {
+): MetroSingleEventIntersection | null {
   const isMetroRow = rowCat.type === 'METRO';
   const isMetroCol = colCat.type === 'METRO';
-  const isChampRow = CHAMPIONSHIP_CATEGORY_IDS.has(rowCat.id.toLowerCase());
-  const isChampCol = CHAMPIONSHIP_CATEGORY_IDS.has(colCat.id.toLowerCase());
+  const rowAccolade = SINGLE_EVENT_ACCOLADES[rowCat.id.toLowerCase()];
+  const colAccolade = SINGLE_EVENT_ACCOLADES[colCat.id.toLowerCase()];
 
-  if (isMetroRow && isChampCol) {
+  if (isMetroRow && colAccolade) {
     const meta = METRO_MARKET_CODES[rowCat.id.toLowerCase()];
     return {
       metroId: rowCat.id.toLowerCase(),
       metroLabel: meta?.label || rowCat.shortName,
-      champId: colCat.id.toLowerCase(),
+      accoladeType: colAccolade.type,
+      accoladeLabel: colAccolade.label,
     };
   }
 
-  if (isMetroCol && isChampRow) {
+  if (isMetroCol && rowAccolade) {
     const meta = METRO_MARKET_CODES[colCat.id.toLowerCase()];
     return {
       metroId: colCat.id.toLowerCase(),
       metroLabel: meta?.label || colCat.shortName,
-      champId: rowCat.id.toLowerCase(),
+      accoladeType: rowAccolade.type,
+      accoladeLabel: rowAccolade.label,
     };
   }
 
   return null;
 }
 
+// Alias for backwards compatibility
+export const getMetroChampIntersection = getMetroSingleEventIntersection;
+
 /**
  * Validates an athlete against cell criteria, enforcing Immaculate Grid rules:
- * When a Metro/Team intersects with a Championship, the player must have won
- * the championship while playing for a team in that market.
+ * Only single-event awards (a Championship, an MVP, etc.) enforce achieving the milestone
+ * while playing for that specific team/market. Career-wide cumulative categories like
+ * "Won 2+ Championships", "Won 4+ Championships", or "Hall of Fame" do NOT enforce one team.
  */
 export function doesAthleteMatchCell(
   rowCat: Category,
@@ -116,19 +136,29 @@ export function doesAthleteMatchCell(
   }
 
   // Immaculate Grid Rule:
-  // When a Metro category intersects with a World Championship category,
-  // player must have won the championship while on a team in that metro market!
-  const intersection = getMetroChampIntersection(rowCat, colCat);
+  // Only single-event awards enforce one team!
+  const intersection = getMetroSingleEventIntersection(rowCat, colCat);
   if (intersection) {
     const meta = METRO_MARKET_CODES[intersection.metroId];
     if (meta) {
-      const champMarkets = athlete.championshipMarkets || [];
-      const wonInMarket = champMarkets.some((m) => meta.codes.includes(m));
-      if (!wonInMarket) {
-        return {
-          isMatch: false,
-          failureReason: `${athlete.name} won a championship, but not while playing for a ${meta.label} team.`,
-        };
+      if (intersection.accoladeType === 'CHAMPION') {
+        const champMarkets = athlete.championshipMarkets || [];
+        const wonInMarket = champMarkets.some((m) => meta.codes.includes(m));
+        if (!wonInMarket) {
+          return {
+            isMatch: false,
+            failureReason: `${athlete.name} won a championship, but not while playing for a ${meta.label} team.`,
+          };
+        }
+      } else if (intersection.accoladeType === 'MVP') {
+        const mvpMarkets = athlete.mvpMarkets || [];
+        const wonInMarket = mvpMarkets.some((m) => meta.codes.includes(m));
+        if (!wonInMarket) {
+          return {
+            isMatch: false,
+            failureReason: `${athlete.name} won an MVP award, but not while playing for a ${meta.label} team.`,
+          };
+        }
       }
     }
   }

@@ -92,6 +92,58 @@ const NFL_MARKETS: Record<string, string> = {
   TEN: 'TEN', OTL: 'TEN'
 };
 
+const NFL_MVP_MARKETS: Record<string, string> = {
+  'jim brown': 'CLE',
+  'johnny unitas': 'BAL',
+  'norm van brocklin': 'PHI',
+  'paul hornung': 'GB',
+  'jim taylor': 'GB',
+  'y.a. tittle': 'NY',
+  'bart starr': 'GB',
+  'earl morrall': 'BAL',
+  'roman gabriel': 'LA',
+  'john brodie': 'BAY',
+  'alan page': 'MIN',
+  'larry brown': 'WAS',
+  'o.j. simpson': 'NY',
+  'ken stabler': 'BAY',
+  'fran tarkenton': 'MIN',
+  'bert jones': 'BAL',
+  'walter payton': 'CHI',
+  'terry bradshaw': 'PIT',
+  'earl campbell': 'HOU',
+  'brian sipe': 'CLE',
+  'ken anderson': 'CIN',
+  'mark moseley': 'WAS',
+  'joe theismann': 'WAS',
+  'dan marino': 'FLA',
+  'marcus allen': 'LA',
+  'lawrence taylor': 'NY',
+  'john elway': 'DEN',
+  'boomer esiason': 'CIN',
+  'joe montana': 'BAY',
+  'thurman thomas': 'NY',
+  'steve young': 'BAY',
+  'emmitt smith': 'DAL',
+  'brett favre': 'MIL',
+  'barry sanders': 'DET',
+  'terrell davis': 'DEN',
+  'kurt warner': 'STL',
+  'marshall faulk': 'STL',
+  'rich gannon': 'BAY',
+  'peyton manning': 'IND',
+  'steve mcnair': 'TEN',
+  'shaun alexander': 'SEA',
+  'ladainian tomlinson': 'SD',
+  'tom brady': 'BOS',
+  'aaron rodgers': 'MIL',
+  'adrian peterson': 'MIN',
+  'cam newton': 'CAR',
+  'matt ryan': 'ATL',
+  'patrick mahomes': 'KC',
+  'lamar jackson': 'BAL',
+};
+
 // -------------------------------------------------------------
 // 4. NHL MARKETS & STANLEY CUPS
 // -------------------------------------------------------------
@@ -124,8 +176,50 @@ const NHL_MARKETS: Record<string, string> = {
   VAN: 'CAN', BUF: 'NY', MIN: 'MIN', CBJ: 'OHIO', NSH: 'TEN'
 };
 
+const NHL_MVP_MARKETS: Record<string, string[]> = {
+  'wayne gretzky': ['CAN', 'LA'],
+  'mario lemieux': ['PIT'],
+  'bobby orr': ['BOS'],
+  'gordie howe': ['DET'],
+  'eddie shore': ['BOS'],
+  'bobby clarke': ['PHI'],
+  'alexander ovechkin': ['WAS'],
+  'alex ovechkin': ['WAS'],
+  'connor mcdavid': ['CAN'],
+  'howie morenz': ['CAN'],
+  'dominik hasek': ['NY'],
+  'sidney crosby': ['PIT'],
+  'mark messier': ['CAN', 'NY'],
+  'phil esposito': ['BOS'],
+  'stan mikita': ['CHI'],
+  'bobby hull': ['CHI'],
+  'jean beliveau': ['CAN'],
+  'bill cowley': ['BOS'],
+  'nels stewart': ['CAN'],
+  'evgeni malkin': ['PIT'],
+  'sergei fedorov': ['DET'],
+  'eric lindros': ['PHI'],
+  'jaromir jagr': ['PIT'],
+  'chris pronger': ['STL'],
+  'joe sakic': ['DEN'],
+  'peter forsberg': ['DEN'],
+  'martin st. louis': ['FLA'],
+  'joe thornton': ['BOS', 'BAY'],
+  'henrik sedin': ['CAN'],
+  'corey perry': ['LA'],
+  'patrick kane': ['CHI'],
+  'taylor hall': ['NY'],
+  'nikita kucherov': ['FLA'],
+  'leon draisaitl': ['CAN'],
+  'auston matthews': ['TOR', 'CAN'],
+  'nathan mackinnon': ['DEN'],
+  'carey price': ['CAN'],
+  'jose theodore': ['CAN'],
+  'brett hull': ['STL'],
+};
+
 async function main() {
-  console.log('=== Enriching Athlete Championship Markets ===');
+  console.log('=== Enriching Athlete Championship & MVP Markets ===');
 
   // 1. Process MLB
   console.log('Processing MLB...');
@@ -141,38 +235,56 @@ async function main() {
   }
 
   const mlbAppsCsv = fs.readFileSync('.cache/mlb/appearances.csv', 'utf-8').split('\n');
-  const mlbAppsHeaders = mlbAppsCsv[0].split(',');
-  const pIdMlbIdx = mlbAppsHeaders.indexOf('playerID');
-  const tIdMlbIdx = mlbAppsHeaders.indexOf('teamID');
-  const yIdMlbIdx = mlbAppsHeaders.indexOf('yearID');
-
+  const mlbAppMap = new Map<string, string>();
   const mlbChampsByPlayer = new Map<string, Set<string>>();
+
   for (let i = 1; i < mlbAppsCsv.length; i++) {
     const parts = mlbAppsCsv[i].split(',');
-    if (wsWinners.has(`${parts[tIdMlbIdx]}-${parts[yIdMlbIdx]}`)) {
-      const pId = parts[pIdMlbIdx];
-      const set = mlbChampsByPlayer.get(pId) || new Set();
-      const market = MLB_MARKETS[parts[tIdMlbIdx]];
-      if (market) set.add(market);
-      mlbChampsByPlayer.set(pId, set);
+    if (parts.length >= 4) {
+      const year = parts[0];
+      const team = parts[1];
+      const pId = parts[3];
+      mlbAppMap.set(`${pId}-${year}`, team);
+
+      if (wsWinners.has(`${team}-${year}`)) {
+        const set = mlbChampsByPlayer.get(pId) || new Set();
+        const market = MLB_MARKETS[team];
+        if (market) set.add(market);
+        mlbChampsByPlayer.set(pId, set);
+      }
+    }
+  }
+
+  // MLB MVPs
+  const mlbAwardsCsv = fs.readFileSync('.cache/mlb/awards.csv', 'utf-8').split('\n');
+  const mlbMvpByPlayer = new Map<string, Set<string>>();
+  for (let i = 1; i < mlbAwardsCsv.length; i++) {
+    const parts = mlbAwardsCsv[i].split(',');
+    if (parts[1] === 'Most Valuable Player') {
+      const pId = parts[0];
+      const year = parts[2];
+      const team = mlbAppMap.get(`${pId}-${year}`);
+      if (team) {
+        const market = MLB_MARKETS[team];
+        const set = mlbMvpByPlayer.get(pId) || new Set();
+        if (market) set.add(market);
+        mlbMvpByPlayer.set(pId, set);
+      }
     }
   }
 
   const mlbFile = 'src/data/athletes-mlb.json';
   const mlbAthletes = JSON.parse(fs.readFileSync(mlbFile, 'utf-8'));
-  let mlbEnriched = 0;
   mlbAthletes.forEach((a: any) => {
     const rawId = a.id.replace('ath_mlb_', '');
-    const set = mlbChampsByPlayer.get(rawId);
-    if (set && set.size > 0) {
-      a.championshipMarkets = Array.from(set);
-      mlbEnriched++;
-    } else {
-      a.championshipMarkets = [];
-    }
+    const champSet = mlbChampsByPlayer.get(rawId);
+    a.championshipMarkets = champSet && champSet.size > 0 ? Array.from(champSet) : [];
+
+    const mvpSet = mlbMvpByPlayer.get(rawId);
+    a.mvpMarkets = mvpSet && mvpSet.size > 0 ? Array.from(mvpSet) : [];
   });
   fs.writeFileSync(mlbFile, JSON.stringify(mlbAthletes, null, 2), 'utf-8');
-  console.log(`Enriched ${mlbEnriched} MLB athletes with championshipMarkets.`);
+  console.log(`Updated MLB athletes with championshipMarkets and mvpMarkets.`);
 
   // 2. Process NBA
   console.log('Processing NBA...');
@@ -182,16 +294,19 @@ async function main() {
   const sNbaIdx = nbaHeaders.indexOf('season');
   const tNbaIdx = nbaHeaders.indexOf('team');
 
+  const nbaTeamMap = new Map<string, string>();
   const nbaChampsByPlayer = new Map<string, Set<string>>();
   for (let i = 1; i < nbaTotals.length; i++) {
     const line = nbaTotals[i];
     if (!line) continue;
     const parts = line.split(',');
+    const pId = parts[pIdNbaIdx];
     const s = parseInt(parts[sNbaIdx], 10);
     const team = parts[tNbaIdx];
+    nbaTeamMap.set(`${pId}-${s}`, team);
+
     const champs = NBA_CHAMPIONS[s];
     if (champs && champs.includes(team)) {
-      const pId = parts[pIdNbaIdx];
       const set = nbaChampsByPlayer.get(pId) || new Set();
       const market = NBA_MARKETS[team];
       if (market) set.add(market);
@@ -199,21 +314,44 @@ async function main() {
     }
   }
 
+  // NBA MVPs
+  const nbaAwards = fs.readFileSync('.cache/nba/awards.csv', 'utf-8').split('\n');
+  const aHeaders = nbaAwards[0].split(',');
+  const aPIdIdx = aHeaders.indexOf('player_id');
+  const aSeasonIdx = aHeaders.indexOf('season');
+  const aAwardIdx = aHeaders.indexOf('award');
+  const aWinnerIdx = aHeaders.indexOf('winner');
+
+  const nbaMvpByPlayer = new Map<string, Set<string>>();
+  for (let i = 1; i < nbaAwards.length; i++) {
+    const parts = nbaAwards[i].split(',');
+    const award = parts[aAwardIdx]?.toLowerCase();
+    const winner = parts[aWinnerIdx];
+    if (award && (award === 'nba mvp' || award === 'most valuable player') && winner === 'TRUE') {
+      const pId = parts[aPIdIdx];
+      const s = parseInt(parts[aSeasonIdx], 10);
+      const team = nbaTeamMap.get(`${pId}-${s}`);
+      if (team) {
+        const market = NBA_MARKETS[team];
+        const set = nbaMvpByPlayer.get(pId) || new Set();
+        if (market) set.add(market);
+        nbaMvpByPlayer.set(pId, set);
+      }
+    }
+  }
+
   const nbaFile = 'src/data/athletes-nba.json';
   const nbaAthletes = JSON.parse(fs.readFileSync(nbaFile, 'utf-8'));
-  let nbaEnriched = 0;
   nbaAthletes.forEach((a: any) => {
     const rawId = a.id.replace('ath_nba_', '');
-    const set = nbaChampsByPlayer.get(rawId);
-    if (set && set.size > 0) {
-      a.championshipMarkets = Array.from(set);
-      nbaEnriched++;
-    } else {
-      a.championshipMarkets = [];
-    }
+    const champSet = nbaChampsByPlayer.get(rawId);
+    a.championshipMarkets = champSet && champSet.size > 0 ? Array.from(champSet) : [];
+
+    const mvpSet = nbaMvpByPlayer.get(rawId);
+    a.mvpMarkets = mvpSet && mvpSet.size > 0 ? Array.from(mvpSet) : [];
   });
   fs.writeFileSync(nbaFile, JSON.stringify(nbaAthletes, null, 2), 'utf-8');
-  console.log(`Enriched ${nbaEnriched} NBA athletes with championshipMarkets.`);
+  console.log(`Updated NBA athletes with championshipMarkets and mvpMarkets.`);
 
   // 3. Process NFL
   console.log('Processing NFL...');
@@ -248,20 +386,17 @@ async function main() {
 
   const nflFile = 'src/data/athletes-nfl.json';
   const nflAthletes = JSON.parse(fs.readFileSync(nflFile, 'utf-8'));
-  let nflEnriched = 0;
   nflAthletes.forEach((a: any) => {
     const rawId = a.id.replace('ath_nfl_', '');
     const nameLower = a.name.toLowerCase();
-    const set = nflChampsByPlayer.get(rawId) || nflChampsByPlayer.get(nameLower);
-    if (set && set.size > 0) {
-      a.championshipMarkets = Array.from(set);
-      nflEnriched++;
-    } else {
-      a.championshipMarkets = [];
-    }
+    const champSet = nflChampsByPlayer.get(rawId) || nflChampsByPlayer.get(nameLower);
+    a.championshipMarkets = champSet && champSet.size > 0 ? Array.from(champSet) : [];
+
+    const mvpMarket = NFL_MVP_MARKETS[nameLower];
+    a.mvpMarkets = mvpMarket ? [mvpMarket] : [];
   });
   fs.writeFileSync(nflFile, JSON.stringify(nflAthletes, null, 2), 'utf-8');
-  console.log(`Enriched ${nflEnriched} NFL athletes with championshipMarkets.`);
+  console.log(`Updated NFL athletes with championshipMarkets and mvpMarkets.`);
 
   // 4. Process NHL
   console.log('Processing NHL...');
@@ -293,19 +428,17 @@ async function main() {
 
   const nhlFile = 'src/data/athletes-nhl.json';
   const nhlAthletes = JSON.parse(fs.readFileSync(nhlFile, 'utf-8'));
-  let nhlEnriched = 0;
   nhlAthletes.forEach((a: any) => {
     const rawId = a.id.replace('ath_nhl_', '');
-    const set = nhlChampsByPlayer.get(rawId);
-    if (set && set.size > 0) {
-      a.championshipMarkets = Array.from(set);
-      nhlEnriched++;
-    } else {
-      a.championshipMarkets = [];
-    }
+    const nameLower = a.name.toLowerCase();
+    const champSet = nhlChampsByPlayer.get(rawId);
+    a.championshipMarkets = champSet && champSet.size > 0 ? Array.from(champSet) : [];
+
+    const mvpMarkets = NHL_MVP_MARKETS[nameLower];
+    a.mvpMarkets = mvpMarkets ? mvpMarkets : [];
   });
   fs.writeFileSync(nhlFile, JSON.stringify(nhlAthletes, null, 2), 'utf-8');
-  console.log(`Enriched ${nhlEnriched} NHL athletes with championshipMarkets.`);
+  console.log(`Updated NHL athletes with championshipMarkets and mvpMarkets.`);
 
   console.log('=== All 4 Leagues Enriched Successfully! ===');
 }
