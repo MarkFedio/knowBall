@@ -41,7 +41,7 @@ export const Grid: React.FC<GridProps> = ({
   isGameOver,
   activeCell,
   sportsUsed = new Set<Sport>(),
-  theme = 'SCOREBOARD',
+  theme = 'NEON',
 }) => {
   const [hoveredCell, setHoveredCell] = useState<{ row: number; col: number } | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);

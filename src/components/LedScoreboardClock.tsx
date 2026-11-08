@@ -22,7 +22,7 @@ const SEGMENT_MAP: Record<string, boolean[]> = {
   '9': [true, true, true, true, false, true, true],
 };
 
-const LedDigit: React.FC<{ char: string; theme?: VisualTheme }> = ({ char, theme = 'SCOREBOARD' }) => {
+const LedDigit: React.FC<{ char: string; theme?: VisualTheme }> = ({ char, theme = 'NEON' }) => {
   const segments = SEGMENT_MAP[char] || [false, false, false, false, false, false, false];
 
   const litColor = theme === 'SCOREBOARD' ? '#fbbf24' : theme === 'NEON' ? '#67e8f9' : '#e4e4e7';
@@ -82,7 +82,7 @@ const LedDigit: React.FC<{ char: string; theme?: VisualTheme }> = ({ char, theme
   );
 };
 
-const LedColon: React.FC<{ theme?: VisualTheme }> = ({ theme = 'SCOREBOARD' }) => {
+const LedColon: React.FC<{ theme?: VisualTheme }> = ({ theme = 'NEON' }) => {
   const litColor = theme === 'SCOREBOARD' ? '#fbbf24' : theme === 'NEON' ? '#67e8f9' : '#e4e4e7';
   const glowFilter =
     theme === 'SCOREBOARD'
@@ -101,12 +101,16 @@ const LedColon: React.FC<{ theme?: VisualTheme }> = ({ theme = 'SCOREBOARD' }) =
 
 export const LedScoreboardClock: React.FC<LedScoreboardClockProps> = ({
   timeStr = '00:00:10',
-  theme = 'SCOREBOARD',
+  theme = 'NEON',
 }) => {
   return (
     <div
       title="Daily SportsGrid Countdown Clock"
-      className="scoreboard-bezel rounded-xl px-2.5 py-1 sm:px-3 sm:py-1.5 flex items-center justify-center gap-0.5 sm:gap-1 shadow-inner select-none"
+      className={`rounded-xl px-2.5 py-1 sm:px-3 sm:py-1.5 flex items-center justify-center gap-0.5 sm:gap-1 select-none ${
+        theme === 'NEON'
+          ? 'bg-[#091524] border border-cyan-500/40 shadow-[0_0_15px_rgba(34,211,238,0.2)]'
+          : 'scoreboard-bezel shadow-inner'
+      }`}
     >
       {timeStr.split('').map((char, index) => {
         if (char === ':') {

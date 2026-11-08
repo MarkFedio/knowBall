@@ -11,7 +11,7 @@ interface SportRadarDialProps {
 
 export const SportRadarDial: React.FC<SportRadarDialProps> = ({
   sportsUsed = new Set<Sport>(),
-  theme = 'SCOREBOARD',
+  theme = 'NEON',
   onClick,
 }) => {
   const [hoveredSport, setHoveredSport] = useState<Sport | null>(null);

@@ -11,7 +11,6 @@ import {
   Eye,
   Volume2,
   VolumeX,
-  Palette,
 } from 'lucide-react';
 import { PlayMode, Sport, DailyPuzzle, VisualTheme } from '@/types';
 import { LedScoreboardClock } from './LedScoreboardClock';
@@ -36,7 +35,6 @@ interface HeaderProps {
   sportsUsed: Set<Sport>;
   hasGrandSlam: boolean;
   theme?: VisualTheme;
-  onToggleTheme?: (theme: VisualTheme) => void;
   onOpenHowToPlay: () => void;
   onOpenStats: () => void;
   onResetGame: () => void;
@@ -60,8 +58,7 @@ export const Header: React.FC<HeaderProps> = ({
   totalRarityScore,
   sportsUsed,
   hasGrandSlam,
-  theme = 'SCOREBOARD',
-  onToggleTheme,
+  theme = 'NEON',
   onOpenHowToPlay,
   onOpenStats,
   onResetGame,
@@ -90,16 +87,6 @@ export const Header: React.FC<HeaderProps> = ({
   const guessesRemaining = Math.max(0, maxGuesses - guessesUsed);
   const isScoreboard = theme === 'SCOREBOARD';
   const isNeon = theme === 'NEON';
-
-  const cycleTheme = () => {
-    if (!onToggleTheme) return;
-    if (theme === 'SCOREBOARD') onToggleTheme('NEON');
-    else if (theme === 'NEON') onToggleTheme('CLASSIC');
-    else onToggleTheme('SCOREBOARD');
-  };
-
-  const themeLabel =
-    theme === 'SCOREBOARD' ? 'Scoreboard' : theme === 'NEON' ? 'Cyber Neon' : 'Classic Dark';
 
   return (
     <header className="w-full max-w-5xl mx-auto mb-4 select-none">
@@ -279,24 +266,6 @@ export const Header: React.FC<HeaderProps> = ({
         {/* SECTION 5: ACTION SUITE TOOLBAR                      */}
         {/* ---------------------------------------------------- */}
         <div className="flex items-center gap-1.5 ml-auto sm:ml-0 shrink-0">
-          {/* Theme Switcher */}
-          {onToggleTheme && (
-            <button
-              onClick={cycleTheme}
-              title={`Active Theme: ${themeLabel}. Click to switch.`}
-              className={`p-1.5 sm:px-2 sm:py-1 rounded-lg border text-[11px] font-bold transition flex items-center gap-1 ${
-                isScoreboard
-                  ? 'bg-[#1a170e] border-amber-500/40 text-amber-300 hover:bg-[#251f10]'
-                  : isNeon
-                  ? 'bg-cyan-950/40 border-cyan-500/40 text-cyan-300 hover:bg-cyan-900/40'
-                  : 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:text-white'
-              }`}
-            >
-              <Palette className="h-3.5 w-3.5" />
-              <span className="hidden xl:inline">{themeLabel}</span>
-            </button>
-          )}
-
           {/* Random Board */}
           <button
             onClick={onNewRandomPuzzle}
