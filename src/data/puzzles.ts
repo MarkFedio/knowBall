@@ -58,7 +58,7 @@ const METRO_MARKET_CODES: Record<string, { codes: string[]; label: string }> = {
   metro_texas: { codes: ['DAL', 'HOU', 'SA'], label: 'Texas' },
   metro_ohio: { codes: ['CLE', 'CIN'], label: 'Ohio' },
   metro_dc_baltimore: { codes: ['WAS', 'BAL'], label: 'DC / Baltimore' },
-  metro_canada: { codes: ['TOR', 'MTL', 'VAN', 'CAL', 'EDM', 'OTT', 'WPG', 'CAN'], label: 'Canadian' },
+  metro_canada: { codes: ['TOR', 'MTL', 'VAN', 'CAL', 'CGY', 'EDM', 'OTT', 'WPG', 'CAN'], label: 'Canadian' },
 };
 
 // Single-event honors that require achieving the milestone WHILE with that team/market:

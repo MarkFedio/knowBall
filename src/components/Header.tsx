@@ -169,7 +169,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Center: Scoreboard Seven-Segment LED Display */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center" suppressHydrationWarning>
           <LedScoreboardClock timeStr={timeLeft} theme={theme} />
         </div>
 

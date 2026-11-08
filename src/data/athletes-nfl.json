@@ -6886,7 +6886,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -6941,7 +6943,9 @@
       "turnovers": 0
     },
     "popularityScore": 65,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -16139,7 +16143,9 @@
       "turnovers": 1
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": [
       "LA"
     ]
@@ -16190,7 +16196,9 @@
       "turnovers": 0
     },
     "popularityScore": 90,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": [
       "LA"
     ]
@@ -16901,7 +16909,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -18736,7 +18746,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -38981,7 +38993,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -51061,7 +51074,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -51500,7 +51514,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -53116,7 +53132,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -74367,7 +74385,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -75796,7 +75816,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -86356,7 +86378,9 @@
       "turnovers": 0
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -103422,7 +103446,8 @@
     },
     "popularityScore": 100,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -130056,7 +130081,9 @@
       "turnovers": 18
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -143106,7 +143133,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -143169,7 +143198,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -147594,7 +147625,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -149835,7 +149868,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -158759,7 +158794,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -158811,7 +158848,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -163777,7 +163816,9 @@
       "turnovers": 0
     },
     "popularityScore": 90,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -176613,7 +176654,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -185104,7 +185146,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -187078,7 +187122,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -187123,7 +187169,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -197492,7 +197540,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -201748,7 +201798,9 @@
       "turnovers": 6
     },
     "popularityScore": 70,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -217596,7 +217648,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -225683,7 +225737,8 @@
     },
     "popularityScore": 75,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -232640,6 +232695,7 @@
     "popularityScore": 45,
     "championshipMarkets": [
       "BAY",
+      "LA",
       "PIT"
     ],
     "mvpMarkets": []
@@ -232705,6 +232761,7 @@
     "popularityScore": 75,
     "championshipMarkets": [
       "BAY",
+      "LA",
       "PIT"
     ],
     "mvpMarkets": []
@@ -235544,7 +235601,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -235693,7 +235752,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -235747,7 +235808,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -237568,7 +237631,8 @@
     },
     "popularityScore": 30,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -237783,7 +237847,8 @@
     },
     "popularityScore": 55,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -237856,7 +237921,8 @@
     },
     "popularityScore": 75,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -301605,7 +301671,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -302956,7 +303024,9 @@
       "turnovers": 20
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": [
       "STL"
     ]
@@ -313317,7 +313387,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -314468,7 +314540,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -331322,7 +331396,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -348563,7 +348639,9 @@
       "turnovers": 6
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -369406,7 +369484,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -375855,7 +375935,9 @@
       "turnovers": 246
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -384007,7 +384089,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -386492,7 +386576,8 @@
     },
     "popularityScore": 100,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -389986,7 +390071,9 @@
       "turnovers": 8
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -399715,7 +399802,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -412440,7 +412529,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -418465,7 +418556,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -420771,7 +420864,9 @@
       "turnovers": 0
     },
     "popularityScore": 55,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -422912,7 +423007,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -424006,7 +424102,9 @@
       "turnovers": 0
     },
     "popularityScore": 90,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -430220,7 +430318,8 @@
     "popularityScore": 100,
     "championshipMarkets": [
       "BAL",
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -441439,6 +441538,7 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
+      "LA",
       "NY"
     ],
     "mvpMarkets": []
@@ -446681,7 +446781,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -448077,7 +448179,9 @@
       "turnovers": 0
     },
     "popularityScore": 55,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -449739,7 +449843,9 @@
       "turnovers": 14
     },
     "popularityScore": 55,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -455191,7 +455297,9 @@
       "turnovers": 18
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -457568,7 +457676,9 @@
       "turnovers": 0
     },
     "popularityScore": 90,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -458072,7 +458182,9 @@
       "turnovers": 0
     },
     "popularityScore": 40,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -467684,7 +467796,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -474055,7 +474168,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -498042,7 +498157,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -501324,7 +501441,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -535406,7 +535524,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -539309,7 +539429,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -539373,7 +539495,8 @@
     },
     "popularityScore": 30,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "STL"
     ],
     "mvpMarkets": []
   },
@@ -541028,7 +541151,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -544356,7 +544481,9 @@
       "turnovers": 10
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -561317,7 +561444,8 @@
     },
     "popularityScore": 30,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -561373,7 +561501,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -562225,7 +562354,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -585988,7 +586118,8 @@
     },
     "popularityScore": 75,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -589680,7 +589811,9 @@
       "turnovers": 0
     },
     "popularityScore": 70,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -596249,7 +596382,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -596749,7 +596884,9 @@
       "turnovers": 6
     },
     "popularityScore": 85,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -604172,7 +604309,9 @@
       "turnovers": 0
     },
     "popularityScore": 90,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -608387,7 +608526,9 @@
       "turnovers": 0
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -616748,7 +616889,9 @@
       "turnovers": 0
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -616841,7 +616984,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -634254,7 +634399,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -635654,7 +635800,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -648986,7 +649133,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -649968,7 +650117,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -656786,7 +656937,9 @@
       "turnovers": 0
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -664585,7 +664738,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -679996,6 +680150,7 @@
     "popularityScore": 90,
     "championshipMarkets": [
       "BAY",
+      "LA",
       "WAS"
     ],
     "mvpMarkets": []
@@ -681949,7 +682104,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -695793,7 +695950,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -709133,7 +709292,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -709267,7 +709428,9 @@
       "turnovers": 0
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -712740,7 +712903,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -715076,7 +715241,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -726346,7 +726513,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -726408,7 +726576,8 @@
     },
     "popularityScore": 30,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -737780,7 +737949,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -755774,7 +755945,9 @@
       "turnovers": 0
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -770974,7 +771147,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -779747,7 +779922,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -781662,7 +781839,9 @@
       "turnovers": 0
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -787894,7 +788073,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -800632,6 +800812,7 @@
     },
     "popularityScore": 100,
     "championshipMarkets": [
+      "STL",
       "IND"
     ],
     "mvpMarkets": []
@@ -801114,7 +801295,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -808203,7 +808386,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -817944,7 +818128,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -839318,7 +839503,9 @@
       "turnovers": 0
     },
     "popularityScore": 70,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -839591,7 +839778,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "KC"
+      "KC",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -847596,7 +847784,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -852923,7 +853113,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -930897,7 +931089,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -932623,7 +932817,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -934148,7 +934344,8 @@
     },
     "popularityScore": 45,
     "championshipMarkets": [
-      "DAL"
+      "DAL",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -951804,7 +952001,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -959056,7 +959255,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -974594,7 +974794,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -983591,7 +983793,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -983636,7 +983840,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -990090,7 +990296,8 @@
     },
     "popularityScore": 75,
     "championshipMarkets": [
-      "GB"
+      "GB",
+      "STL"
     ],
     "mvpMarkets": []
   },
@@ -996387,7 +996594,9 @@
       "turnovers": 0
     },
     "popularityScore": 80,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -996440,7 +996649,9 @@
       "turnovers": 0
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1001836,7 +1002047,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1007393,7 +1007606,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1034979,7 +1035194,9 @@
       "turnovers": 376
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": [
       "STL"
     ]
@@ -1041850,7 +1042067,9 @@
       "turnovers": 2
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1043598,7 +1043817,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1065007,7 +1065228,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1070259,7 +1070482,9 @@
       "turnovers": 0
     },
     "popularityScore": 55,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1074879,7 +1075104,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1082088,7 +1082315,9 @@
       "turnovers": 0
     },
     "popularityScore": 55,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1086005,7 +1086234,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1086173,7 +1086404,9 @@
       "turnovers": 0
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "LA"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1090990,7 +1091223,8 @@
     },
     "popularityScore": 85,
     "championshipMarkets": [
-      "BAY"
+      "BAY",
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -1096949,7 +1097183,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1113228,7 +1113464,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1117294,7 +1117532,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "STL"
+    ],
     "mvpMarkets": []
   },
   {

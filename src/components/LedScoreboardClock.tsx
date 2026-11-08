@@ -40,43 +40,43 @@ const LedDigit: React.FC<{ char: string; theme?: VisualTheme }> = ({ char, theme
       <polygon
         points="3,3 17,3 15,5 5,5"
         fill={segments[0] ? litColor : unlitColor}
-        filter={segments[0] ? glowFilter : undefined}
+        style={segments[0] && glowFilter ? { filter: glowFilter } : undefined}
       />
       {/* b: Top-Right */}
       <polygon
         points="17,3 17,15 15,14 15,5"
         fill={segments[1] ? litColor : unlitColor}
-        filter={segments[1] ? glowFilter : undefined}
+        style={segments[1] && glowFilter ? { filter: glowFilter } : undefined}
       />
       {/* c: Bottom-Right */}
       <polygon
         points="17,17 17,29 15,27 15,18"
         fill={segments[2] ? litColor : unlitColor}
-        filter={segments[2] ? glowFilter : undefined}
+        style={segments[2] && glowFilter ? { filter: glowFilter } : undefined}
       />
       {/* d: Bottom */}
       <polygon
         points="3,29 17,29 15,27 5,27"
         fill={segments[3] ? litColor : unlitColor}
-        filter={segments[3] ? glowFilter : undefined}
+        style={segments[3] && glowFilter ? { filter: glowFilter } : undefined}
       />
       {/* e: Bottom-Left */}
       <polygon
         points="3,17 3,29 5,27 5,18"
         fill={segments[4] ? litColor : unlitColor}
-        filter={segments[4] ? glowFilter : undefined}
+        style={segments[4] && glowFilter ? { filter: glowFilter } : undefined}
       />
       {/* f: Top-Left */}
       <polygon
         points="3,3 3,15 5,14 5,5"
         fill={segments[5] ? litColor : unlitColor}
-        filter={segments[5] ? glowFilter : undefined}
+        style={segments[5] && glowFilter ? { filter: glowFilter } : undefined}
       />
       {/* g: Middle */}
       <polygon
         points="4,16 6,15 14,15 16,16 14,17 6,17"
         fill={segments[6] ? litColor : unlitColor}
-        filter={segments[6] ? glowFilter : undefined}
+        style={segments[6] && glowFilter ? { filter: glowFilter } : undefined}
       />
     </svg>
   );
@@ -93,8 +93,8 @@ const LedColon: React.FC<{ theme?: VisualTheme }> = ({ theme = 'SCOREBOARD' }) =
 
   return (
     <svg viewBox="0 0 8 32" className="w-1.5 h-6 sm:w-2 sm:h-7" fill="none">
-      <circle cx="4" cy="10" r="1.5" fill={litColor} filter={glowFilter} />
-      <circle cx="4" cy="22" r="1.5" fill={litColor} filter={glowFilter} />
+      <circle cx="4" cy="10" r="1.5" fill={litColor} style={glowFilter ? { filter: glowFilter } : undefined} />
+      <circle cx="4" cy="22" r="1.5" fill={litColor} style={glowFilter ? { filter: glowFilter } : undefined} />
     </svg>
   );
 };

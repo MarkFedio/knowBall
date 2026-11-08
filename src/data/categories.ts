@@ -70,11 +70,11 @@ export const CATEGORIES: Record<string, Category> = {
   },
   STAT_ASSISTS_2500: {
     id: 'stat_assists_2500',
-    name: '750+ Career Assists (NBA/NHL)',
-    shortName: '750+ Assists',
+    name: '2,500+ Career Assists (NBA/NHL)',
+    shortName: '2,500+ Assists',
     type: 'CROSS_STAT',
-    description: '750+ career assists in NBA or NHL',
-    matches: (a) => (a.stats.assists ?? 0) >= 750,
+    description: '2,500+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 2500,
   },
   STAT_POINTS_500: {
     id: 'stat_points_500',
@@ -345,9 +345,10 @@ export const CATEGORIES: Record<string, Category> = {
     name: 'Played for a Canadian Team',
     shortName: 'Canadian Team',
     type: 'METRO',
-    description: 'Raptors, Blue Jays, Maple Leafs, Canadiens, Canucks, Flames, Oilers, Senators, Jets',
+    description: 'Raptors, Blue Jays, Maple Leafs, Canadiens, Canucks, Flames, Oilers, Senators, Jets, Expos',
     matches: (a) =>
-      ['TOR', 'MTL', 'VAN', 'CAL', 'EDM', 'OTT', 'WPG'].some((m) => a.markets.includes(m)),
+      ['TOR', 'MTL', 'VAN', 'CAL', 'CGY', 'EDM', 'OTT', 'WPG', 'CAN'].some((m) => a.markets.includes(m)) ||
+      a.teams.includes('MON'),
   },
 
   // ==========================================
