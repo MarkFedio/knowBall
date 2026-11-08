@@ -11,9 +11,9 @@ import {
   Eye,
   Volume2,
   VolumeX,
-  Calendar,
+  Palette,
 } from 'lucide-react';
-import { PlayMode, Sport, DailyPuzzle } from '@/types';
+import { PlayMode, Sport, DailyPuzzle, VisualTheme } from '@/types';
 import { LedScoreboardClock } from './LedScoreboardClock';
 import { LeagueIcon } from './LeagueIcon';
 
@@ -34,6 +34,8 @@ interface HeaderProps {
   totalRarityScore: number;
   sportsUsed: Set<Sport>;
   hasGrandSlam: boolean;
+  theme?: VisualTheme;
+  onToggleTheme?: (theme: VisualTheme) => void;
   onOpenHowToPlay: () => void;
   onOpenStats: () => void;
   onResetGame: () => void;
@@ -44,7 +46,6 @@ const ALL_SPORTS: Sport[] = ['NFL', 'NBA', 'MLB', 'NHL'];
 export const Header: React.FC<HeaderProps> = ({
   currentPuzzle,
   onNewRandomPuzzle,
-  onOpenArchive,
   onGiveUp,
   isGameOver,
   soundEnabled,
@@ -58,11 +59,13 @@ export const Header: React.FC<HeaderProps> = ({
   totalRarityScore,
   sportsUsed,
   hasGrandSlam,
+  theme = 'SCOREBOARD',
+  onToggleTheme,
   onOpenHowToPlay,
   onOpenStats,
   onResetGame,
 }) => {
-  const [timeLeft, setTimeLeft] = useState<string>('00:00:10');
+  const [timeLeft, setTimeLeft] = useState<string>('00:00:00');
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -83,27 +86,80 @@ export const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const guessesRemaining = Math.max(0, maxGuesses - guessesUsed);
+  const isScoreboard = theme === 'SCOREBOARD';
+  const isNeon = theme === 'NEON';
+
+  const cycleTheme = () => {
+    if (!onToggleTheme) return;
+    if (theme === 'SCOREBOARD') onToggleTheme('NEON');
+    else if (theme === 'NEON') onToggleTheme('CLASSIC');
+    else onToggleTheme('SCOREBOARD');
+  };
+
+  const themeLabel =
+    theme === 'SCOREBOARD'
+      ? 'Scoreboard'
+      : theme === 'NEON'
+      ? 'Cyber Neon'
+      : 'Classic Dark';
 
   return (
     <header className="w-full max-w-5xl mx-auto mb-4 flex flex-col gap-3">
       {/* ======================================================== */}
-      {/* 1. PRIMARY STADIUM SCOREBOARD HEADER BAR (Matches Mockup) */}
+      {/* 1. PRIMARY STADIUM SCOREBOARD HEADER BAR                 */}
       {/* ======================================================== */}
-      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-3 rounded-2xl bg-[#09111c]/80 border border-[#00e5a3]/30 shadow-[0_0_20px_rgba(0,229,163,0.08)] backdrop-blur-md">
-        {/* Left: Neon SPORTSGRID Logo & ALL-SPORTS 4x4 Badge */}
+      <div
+        className={`w-full flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ${
+          isScoreboard
+            ? 'bg-[#0f131b] border border-amber-500/35 shadow-[0_4px_24px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.08)]'
+            : isNeon
+            ? 'bg-[#09111c]/80 border border-[#00e5a3]/30 shadow-[0_0_20px_rgba(0,229,163,0.08)] backdrop-blur-md'
+            : 'bg-zinc-900 border border-zinc-800'
+        }`}
+      >
+        {/* Left: SPORTSGRID Logo & ALL-SPORTS 4x4 Badge */}
         <div className="flex items-center gap-3">
-          <div className="flex items-center select-none cursor-pointer" onClick={onOpenHowToPlay}>
-            <span className="text-2xl sm:text-3xl font-black italic tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#00f5b8] to-[#22d3ee] drop-shadow-[0_0_12px_rgba(0,245,184,0.5)]">
-              SPORTSGRID
-            </span>
+          <div
+            className="flex items-center select-none cursor-pointer group"
+            onClick={onOpenHowToPlay}
+          >
+            {isScoreboard ? (
+              <span className="font-scoreboard text-3xl sm:text-4xl font-black tracking-wider text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                SPORTS<span className="text-amber-400">GRID</span>
+              </span>
+            ) : isNeon ? (
+              <span className="text-2xl sm:text-3xl font-black italic tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#00f5b8] to-[#22d3ee] drop-shadow-[0_0_12px_rgba(0,245,184,0.5)]">
+                SPORTSGRID
+              </span>
+            ) : (
+              <span className="text-2xl font-black tracking-tight text-white">
+                SPORTS<span className="text-emerald-400">GRID</span>
+              </span>
+            )}
           </div>
 
           {/* ALL-SPORTS 4x4 Badge */}
-          <div className="flex flex-col items-center justify-center px-2 py-0.5 rounded-lg border border-cyan-400/50 bg-[#0c1c28]/90 shadow-[0_0_8px_rgba(34,211,238,0.25)] select-none">
-            <span className="text-[8px] font-black tracking-widest uppercase text-cyan-200">
+          <div
+            className={`flex flex-col items-center justify-center px-2 py-0.5 rounded-lg border select-none ${
+              isScoreboard
+                ? 'bg-[#18150d] border-amber-500/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]'
+                : isNeon
+                ? 'bg-[#0c1c28]/90 border-cyan-400/50 shadow-[0_0_8px_rgba(34,211,238,0.25)]'
+                : 'bg-zinc-800 border-zinc-700'
+            }`}
+          >
+            <span
+              className={`text-[8px] font-black tracking-widest uppercase ${
+                isScoreboard ? 'text-amber-300' : isNeon ? 'text-cyan-200' : 'text-zinc-400'
+              }`}
+            >
               ALL-SPORTS
             </span>
-            <span className="text-xs sm:text-sm font-black italic text-cyan-400 leading-none">
+            <span
+              className={`text-xs sm:text-sm font-black italic leading-none ${
+                isScoreboard ? 'text-amber-400' : isNeon ? 'text-cyan-400' : 'text-zinc-200'
+              }`}
+            >
               4×4
             </span>
           </div>
@@ -111,7 +167,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Center: Scoreboard Seven-Segment LED Display */}
         <div className="flex items-center justify-center">
-          <LedScoreboardClock timeStr={timeLeft} />
+          <LedScoreboardClock timeStr={timeLeft} theme={theme} />
         </div>
 
         {/* Right: Guesses Left, Rarity Score & 4 League Illuminated Badges */}
@@ -122,14 +178,30 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="text-zinc-400 text-xs font-sans">
                 {playMode === 'IMMACULATE' ? 'Guesses Left:' : 'Strikes:'}
               </span>
-              <span className="font-bold text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]">
+              <span
+                className={`font-bold font-mono text-sm sm:text-base ${
+                  isScoreboard
+                    ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
+                    : isNeon
+                    ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
+                    : 'text-zinc-200'
+                }`}
+              >
                 {playMode === 'IMMACULATE' ? guessesRemaining : `${strikesUsed}/${maxStrikes}`}
               </span>
             </div>
 
             <div className="flex items-center justify-end gap-1.5 leading-tight mt-0.5">
               <span className="text-zinc-400 text-xs font-sans">Rarity Score:</span>
-              <span className="font-bold text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]">
+              <span
+                className={`font-bold font-mono text-sm sm:text-base ${
+                  isScoreboard
+                    ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
+                    : isNeon
+                    ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
+                    : 'text-zinc-200'
+                }`}
+              >
                 {totalRarityScore.toFixed(1)}
               </span>
             </div>
@@ -156,7 +228,15 @@ export const Header: React.FC<HeaderProps> = ({
       {/* ======================================================== */}
       {/* 2. SECONDARY CONTROLS & UTILITIES SUB-BAR                */}
       {/* ======================================================== */}
-      <div className="w-full flex flex-wrap items-center justify-between gap-2 px-3 py-1.5 rounded-xl bg-zinc-950/60 border border-zinc-800/80 text-xs">
+      <div
+        className={`w-full flex flex-wrap items-center justify-between gap-2 px-3 py-1.5 rounded-xl text-xs transition-colors duration-200 ${
+          isScoreboard
+            ? 'bg-[#0e121a] border border-amber-500/20 shadow-inner'
+            : isNeon
+            ? 'bg-zinc-950/60 border border-zinc-800/80'
+            : 'bg-zinc-900 border border-zinc-800'
+        }`}
+      >
         {/* Left: Mode Switcher & Puzzle Title */}
         <div className="flex items-center gap-2">
           {/* Play Mode Switcher */}
@@ -165,7 +245,11 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => onToggleMode('IMMACULATE')}
               className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold transition ${
                 playMode === 'IMMACULATE'
-                  ? 'bg-[#00e5a3] text-black shadow-sm'
+                  ? isScoreboard
+                    ? 'bg-amber-400 text-black shadow-sm'
+                    : isNeon
+                    ? 'bg-[#00e5a3] text-black shadow-sm'
+                    : 'bg-white text-black'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
@@ -176,7 +260,11 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => onToggleMode('STRIKES')}
               className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold transition ${
                 playMode === 'STRIKES'
-                  ? 'bg-amber-400 text-black shadow-sm'
+                  ? isScoreboard
+                    ? 'bg-amber-400 text-black shadow-sm'
+                    : isNeon
+                    ? 'bg-cyan-400 text-black shadow-sm'
+                    : 'bg-white text-black'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
@@ -186,27 +274,55 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Daily Puzzle Title Badge */}
           <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00e5a3] animate-pulse" />
+            <span
+              className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                isScoreboard ? 'bg-amber-400' : 'bg-[#00e5a3]'
+              }`}
+            />
             <span>{currentPuzzle.title}</span>
           </div>
 
           {hasGrandSlam && (
-            <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-black border border-emerald-500/40 flex items-center gap-1">
+            <span
+              className={`px-2 py-0.5 rounded-full text-[10px] font-black border flex items-center gap-1 ${
+                isScoreboard
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                  : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+              }`}
+            >
               <Sparkles className="w-2.5 h-2.5" />
               GRAND SLAM (-25% Rarity)
             </span>
           )}
         </div>
 
-        {/* Right: Actions (Random, Reveal, Audio, Help, Stats, Reset) */}
+        {/* Right: Actions (Theme Toggle, Random, Reveal, Audio, Help, Stats, Reset) */}
         <div className="flex items-center gap-1.5 ml-auto">
+          {/* Theme Switcher Button */}
+          {onToggleTheme && (
+            <button
+              onClick={cycleTheme}
+              title={`Active Theme: ${themeLabel}. Click to switch theme.`}
+              className={`flex items-center gap-1 px-2 py-1 rounded-lg border text-[11px] font-bold transition ${
+                isScoreboard
+                  ? 'bg-[#1b170c] border-amber-500/40 text-amber-300 hover:bg-[#251f10]'
+                  : isNeon
+                  ? 'bg-cyan-950/40 border-cyan-500/40 text-cyan-300 hover:bg-cyan-900/40'
+                  : 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:text-white'
+              }`}
+            >
+              <Palette className="h-3.5 w-3.5" />
+              <span>{themeLabel}</span>
+            </button>
+          )}
+
           {/* Random Board */}
           <button
             onClick={onNewRandomPuzzle}
             title="Generate Random Solvable Grid"
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-900/40 transition font-medium"
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:border-zinc-700 hover:text-white transition font-medium"
           >
-            <Dices className="h-3.5 w-3.5 text-cyan-400" />
+            <Dices className="h-3.5 w-3.5 text-amber-400" />
             <span className="hidden md:inline text-[11px]">Random</span>
           </button>
 
@@ -229,7 +345,7 @@ export const Header: React.FC<HeaderProps> = ({
             className="p-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:bg-zinc-800 transition"
           >
             {soundEnabled ? (
-              <Volume2 className="h-3.5 w-3.5 text-[#00e5a3]" />
+              <Volume2 className="h-3.5 w-3.5 text-amber-400" />
             ) : (
               <VolumeX className="h-3.5 w-3.5 text-zinc-500" />
             )}
@@ -248,9 +364,13 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onOpenStats}
             title="Stats & Share"
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/40 transition font-medium"
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg border transition font-medium ${
+              isScoreboard
+                ? 'bg-amber-500/10 border-amber-500/30 text-amber-300 hover:bg-amber-500/20'
+                : 'bg-emerald-950/40 border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/40'
+            }`}
           >
-            <Trophy className="h-3.5 w-3.5 text-[#00e5a3]" />
+            <Trophy className="h-3.5 w-3.5" />
             <span className="text-[11px]">Stats</span>
           </button>
 

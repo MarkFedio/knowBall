@@ -1,9 +1,11 @@
 'use client';
 
 import React from 'react';
+import { VisualTheme } from '@/types';
 
 interface LedScoreboardClockProps {
   timeStr?: string; // Format "HH:MM:SS"
+  theme?: VisualTheme;
 }
 
 // 7-segment encoding: [a(top), b(top-right), c(bottom-right), d(bottom), e(bottom-left), f(top-left), g(middle)]
@@ -20,66 +22,86 @@ const SEGMENT_MAP: Record<string, boolean[]> = {
   '9': [true, true, true, true, false, true, true],
 };
 
-const LedDigit: React.FC<{ char: string }> = ({ char }) => {
+const LedDigit: React.FC<{ char: string; theme?: VisualTheme }> = ({ char, theme = 'SCOREBOARD' }) => {
   const segments = SEGMENT_MAP[char] || [false, false, false, false, false, false, false];
+
+  const litColor = theme === 'SCOREBOARD' ? '#fbbf24' : theme === 'NEON' ? '#67e8f9' : '#e4e4e7';
+  const unlitColor = theme === 'SCOREBOARD' ? '#221506' : theme === 'NEON' ? '#101c2a' : '#18181b';
+  const glowFilter =
+    theme === 'SCOREBOARD'
+      ? 'drop-shadow(0 0 3px #f59e0b)'
+      : theme === 'NEON'
+      ? 'drop-shadow(0 0 2px #22d3ee)'
+      : undefined;
 
   return (
     <svg viewBox="0 0 20 32" className="w-3.5 h-6 sm:w-4 sm:h-7" fill="none">
       {/* a: Top */}
       <polygon
         points="3,3 17,3 15,5 5,5"
-        fill={segments[0] ? '#67e8f9' : '#101c2a'}
-        filter={segments[0] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[0] ? litColor : unlitColor}
+        filter={segments[0] ? glowFilter : undefined}
       />
       {/* b: Top-Right */}
       <polygon
         points="17,3 17,15 15,14 15,5"
-        fill={segments[1] ? '#67e8f9' : '#101c2a'}
-        filter={segments[1] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[1] ? litColor : unlitColor}
+        filter={segments[1] ? glowFilter : undefined}
       />
       {/* c: Bottom-Right */}
       <polygon
         points="17,17 17,29 15,27 15,18"
-        fill={segments[2] ? '#67e8f9' : '#101c2a'}
-        filter={segments[2] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[2] ? litColor : unlitColor}
+        filter={segments[2] ? glowFilter : undefined}
       />
       {/* d: Bottom */}
       <polygon
         points="3,29 17,29 15,27 5,27"
-        fill={segments[3] ? '#67e8f9' : '#101c2a'}
-        filter={segments[3] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[3] ? litColor : unlitColor}
+        filter={segments[3] ? glowFilter : undefined}
       />
       {/* e: Bottom-Left */}
       <polygon
         points="3,17 3,29 5,27 5,18"
-        fill={segments[4] ? '#67e8f9' : '#101c2a'}
-        filter={segments[4] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[4] ? litColor : unlitColor}
+        filter={segments[4] ? glowFilter : undefined}
       />
       {/* f: Top-Left */}
       <polygon
         points="3,3 3,15 5,14 5,5"
-        fill={segments[5] ? '#67e8f9' : '#101c2a'}
-        filter={segments[5] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[5] ? litColor : unlitColor}
+        filter={segments[5] ? glowFilter : undefined}
       />
       {/* g: Middle */}
       <polygon
         points="4,16 6,15 14,15 16,16 14,17 6,17"
-        fill={segments[6] ? '#67e8f9' : '#101c2a'}
-        filter={segments[6] ? 'drop-shadow(0 0 2px #22d3ee)' : undefined}
+        fill={segments[6] ? litColor : unlitColor}
+        filter={segments[6] ? glowFilter : undefined}
       />
     </svg>
   );
 };
 
-const LedColon: React.FC = () => (
-  <svg viewBox="0 0 8 32" className="w-1.5 h-6 sm:w-2 sm:h-7" fill="none">
-    <circle cx="4" cy="10" r="1.5" fill="#67e8f9" filter="drop-shadow(0 0 2px #22d3ee)" />
-    <circle cx="4" cy="22" r="1.5" fill="#67e8f9" filter="drop-shadow(0 0 2px #22d3ee)" />
-  </svg>
-);
+const LedColon: React.FC<{ theme?: VisualTheme }> = ({ theme = 'SCOREBOARD' }) => {
+  const litColor = theme === 'SCOREBOARD' ? '#fbbf24' : theme === 'NEON' ? '#67e8f9' : '#e4e4e7';
+  const glowFilter =
+    theme === 'SCOREBOARD'
+      ? 'drop-shadow(0 0 3px #f59e0b)'
+      : theme === 'NEON'
+      ? 'drop-shadow(0 0 2px #22d3ee)'
+      : undefined;
+
+  return (
+    <svg viewBox="0 0 8 32" className="w-1.5 h-6 sm:w-2 sm:h-7" fill="none">
+      <circle cx="4" cy="10" r="1.5" fill={litColor} filter={glowFilter} />
+      <circle cx="4" cy="22" r="1.5" fill={litColor} filter={glowFilter} />
+    </svg>
+  );
+};
 
 export const LedScoreboardClock: React.FC<LedScoreboardClockProps> = ({
   timeStr = '00:00:10',
+  theme = 'SCOREBOARD',
 }) => {
   return (
     <div
@@ -88,9 +110,9 @@ export const LedScoreboardClock: React.FC<LedScoreboardClockProps> = ({
     >
       {timeStr.split('').map((char, index) => {
         if (char === ':') {
-          return <LedColon key={`colon-${index}`} />;
+          return <LedColon key={`colon-${index}`} theme={theme} />;
         }
-        return <LedDigit key={`digit-${index}`} char={char} />;
+        return <LedDigit key={`digit-${index}`} char={char} theme={theme} />;
       })}
     </div>
   );

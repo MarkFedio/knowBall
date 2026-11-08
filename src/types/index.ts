@@ -59,6 +59,8 @@ export interface Category {
 
 export type PlayMode = 'IMMACULATE' | 'STRIKES';
 
+export type VisualTheme = 'SCOREBOARD' | 'NEON' | 'CLASSIC';
+
 export interface CellState {
   row: number;
   col: number;

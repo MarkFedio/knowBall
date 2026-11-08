@@ -1,86 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #060b13;
+  --background: #090b10;
   --foreground: #f8fafc;
-  --neon-mint: #00f5b8;
-  --neon-teal: #00e5a3;
-  --neon-cyan: #22d3ee;
+  --amber-bulb: #f59e0b;
+  --amber-glow: rgba(245, 158, 11, 0.5);
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+/* Scoreboard typography */
+.font-scoreboard {
+  font-family: 'Bebas Neue', 'Impact', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-mono-digits {
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+.font-digit {
+  font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, monospace;
+}
+
+/* Authentic Stadium Perforated Dot-Matrix Mesh */
+.scoreboard-mesh {
+  background-color: #090c12;
   background-image: 
-    /* Top Left Floodlight Beam */
-    radial-gradient(ellipse 650px 450px at 0% 0%, rgba(34, 211, 238, 0.18) 0%, rgba(0, 229, 163, 0.06) 45%, transparent 75%),
-    /* Top Right Floodlight Beam */
-    radial-gradient(ellipse 650px 450px at 100% 0%, rgba(0, 245, 184, 0.16) 0%, rgba(34, 211, 238, 0.06) 45%, transparent 75%),
-    /* Carbon Fiber / Dot Matrix Stipple */
-    radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    radial-gradient(ellipse 900px 350px at 50% 0%, rgba(245, 158, 11, 0.06) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 80%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px);
+  background-size: 100% 100%, 12px 12px;
+  background-repeat: no-repeat, repeat;
+}
+
+/* Neon mode mesh for backward compatibility */
+.neon-mesh {
+  background-color: #060b13;
+  background-image: 
+    radial-gradient(ellipse 650px 450px at 0% 0%, rgba(34, 211, 238, 0.16) 0%, rgba(0, 229, 163, 0.05) 45%, transparent 75%),
+    radial-gradient(ellipse 650px 450px at 100% 0%, rgba(0, 245, 184, 0.14) 0%, rgba(34, 211, 238, 0.05) 45%, transparent 75%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 14px 14px;
   background-repeat: no-repeat, no-repeat, repeat;
 }
 
-/* Glass Card with 45-degree diagonal sheen reflection */
-.cell-sheen {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 46%,
-    rgba(10, 19, 31, 0.7) 48%,
-    rgba(6, 12, 20, 0.95) 100%
-  );
-}
-
-.cell-sheen::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.03) 45%,
-    transparent 47%
-  );
-  pointer-events: none;
-  border-radius: inherit;
-}
-
-/* Neon Text Glow */
-.text-neon-mint {
-  color: #00f5b8;
-  text-shadow: 0 0 10px rgba(0, 245, 184, 0.5), 0 0 20px rgba(0, 245, 184, 0.2);
-}
-
-.text-neon-cyan {
-  color: #22d3ee;
-  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.2);
-}
-
-/* Neon Box Border Glow */
-.glow-border-teal {
-  border-color: rgba(0, 229, 163, 0.45);
-  box-shadow: 0 0 15px rgba(0, 229, 163, 0.15), inset 0 0 15px rgba(0, 229, 163, 0.05);
-}
-
-.glow-border-cyan {
-  border-color: rgba(34, 211, 238, 0.45);
-  box-shadow: 0 0 15px rgba(34, 211, 238, 0.15), inset 0 0 15px rgba(34, 211, 238, 0.05);
-}
-
-/* Scoreboard Inset Bezel */
+/* Scoreboard tactile card bezel */
 .scoreboard-bezel {
-  background: linear-gradient(180deg, #090e17 0%, #04070c 100%);
-  border: 2px solid #1a2536;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, #121620 0%, #0a0d14 100%);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Scoreboard Cell Inset */
+.scoreboard-cell-inset {
+  background: linear-gradient(180deg, #0e121a 0%, #080a0f 100%);
+  border: 1px solid #1f2533;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.scoreboard-cell-inset:hover {
+  background: linear-gradient(180deg, #141924 0%, #0b0e16 100%);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.15);
+}
+
+/* Amber text glow for scoreboard numerals */
+.text-amber-bulb {
+  color: #fbbf24;
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+}
+
+/* Amber border glow */
+.border-amber-glow {
+  border-color: #f59e0b;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.35), inset 0 0 10px rgba(245, 158, 11, 0.1);
 }

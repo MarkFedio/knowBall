@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { X, Search, AlertCircle, CornerDownLeft, Sparkles } from 'lucide-react';
+import { X, Search, AlertCircle, CornerDownLeft, Sparkles, HelpCircle } from 'lucide-react';
 import { Athlete, Category, Sport } from '@/types';
 import { ATHLETES } from '@/data/athletes';
 import { validateGuess } from '@/data/puzzles';
@@ -10,6 +10,7 @@ import {
   resolveAlias,
   getHighlightedSegments,
 } from '@/lib/searchUtils';
+import { CategoryInfoModal } from './CategoryInfoModal';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -56,6 +57,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   const [query, setQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [infoCategory, setInfoCategory] = useState<Category | null>(null);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -188,13 +190,25 @@ export const SearchModal: React.FC<SearchModalProps> = ({
             Selecting answer for:
           </div>
           <div className="mt-1.5 flex flex-wrap items-center gap-2">
-            <span className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm">
-              {rowCategory.name}
-            </span>
+            <button
+              type="button"
+              onClick={() => setInfoCategory(rowCategory)}
+              title="Click to view criteria requirement"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 px-3 py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm transition cursor-pointer group"
+            >
+              <span>{rowCategory.name}</span>
+              <HelpCircle className="w-3.5 h-3.5 text-emerald-400/70 group-hover:text-emerald-300 transition" />
+            </button>
             <span className="text-zinc-500 font-bold">×</span>
-            <span className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm">
-              {colCategory.name}
-            </span>
+            <button
+              type="button"
+              onClick={() => setInfoCategory(colCategory)}
+              title="Click to view criteria requirement"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 px-3 py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm transition cursor-pointer group"
+            >
+              <span>{colCategory.name}</span>
+              <HelpCircle className="w-3.5 h-3.5 text-emerald-400/70 group-hover:text-emerald-300 transition" />
+            </button>
           </div>
         </div>
 
@@ -307,6 +321,12 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           )}
         </div>
       </div>
+
+      {/* Category Criteria Detail Popup Modal */}
+      <CategoryInfoModal
+        category={infoCategory}
+        onClose={() => setInfoCategory(null)}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
-import { Athlete, CellState, PlayMode, Sport, DailyPuzzle, CareerStats } from '@/types';
+import { Athlete, CellState, PlayMode, Sport, DailyPuzzle, CareerStats, VisualTheme } from '@/types';
 import { DAILY_PUZZLE } from '@/data/puzzles';
 import { generateProceduralPuzzle } from '@/lib/gridGenerator';
 import {
@@ -42,6 +42,7 @@ export default function Home() {
   const [strikesUsed, setStrikesUsed] = useState<number>(0);
   const [hasGivenUp, setHasGivenUp] = useState<boolean>(false);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
+  const [theme, setTheme] = useState<VisualTheme>('SCOREBOARD');
   const [isStorageLoaded, setIsStorageLoaded] = useState<boolean>(false);
   const [careerStats, setCareerStats] = useState<CareerStats>(DEFAULT_CAREER_STATS);
 
@@ -124,6 +125,10 @@ export default function Home() {
         const enabled = savedSound === 'true';
         setSoundEnabled(enabled);
         sound.enabled = enabled;
+      }
+      const savedTheme = window.localStorage.getItem('sportsgrid_theme');
+      if (savedTheme === 'SCOREBOARD' || savedTheme === 'NEON' || savedTheme === 'CLASSIC') {
+        setTheme(savedTheme as VisualTheme);
       }
     }
 
@@ -317,51 +322,63 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-transparent text-zinc-100 flex flex-col justify-between px-3 sm:px-6 py-5 font-sans relative overflow-x-hidden">
-      {/* Stadium Corner Floodlight Rigs and Atmospheric Beams */}
-      <div className="absolute top-0 left-0 w-80 h-80 pointer-events-none overflow-hidden select-none z-0">
-        <div className="absolute -top-12 -left-12 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl" />
-        <svg viewBox="0 0 160 120" className="w-40 sm:w-52 h-auto opacity-75 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
-          <circle cx="20" cy="20" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="38" cy="20" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="56" cy="20" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="20" cy="38" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="38" cy="38" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="56" cy="38" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="20" cy="56" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="38" cy="56" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <circle cx="56" cy="56" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
-          <path d="M40 40 L160 120 L120 120 Z" fill="url(#beamLeft)" opacity="0.25" />
-          <defs>
-            <linearGradient id="beamLeft" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+    <main
+      className={`min-h-screen text-zinc-100 flex flex-col justify-between px-3 sm:px-6 py-5 font-sans relative overflow-x-hidden ${
+        theme === 'SCOREBOARD'
+          ? 'scoreboard-mesh'
+          : theme === 'NEON'
+          ? 'neon-mesh'
+          : 'bg-black'
+      }`}
+    >
+      {/* Stadium Corner Floodlight Rigs and Atmospheric Beams (Active only in Cyber Neon theme) */}
+      {theme === 'NEON' && (
+        <>
+          <div className="absolute top-0 left-0 w-80 h-80 pointer-events-none overflow-hidden select-none z-0">
+            <div className="absolute -top-12 -left-12 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl" />
+            <svg viewBox="0 0 160 120" className="w-40 sm:w-52 h-auto opacity-75 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+              <circle cx="20" cy="20" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="38" cy="20" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="56" cy="20" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="20" cy="38" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="38" cy="38" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="56" cy="38" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="20" cy="56" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="38" cy="56" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <circle cx="56" cy="56" r="5" fill="#e0f2fe" filter="drop-shadow(0 0 6px #38bdf8)" />
+              <path d="M40 40 L160 120 L120 120 Z" fill="url(#beamLeft)" opacity="0.25" />
+              <defs>
+                <linearGradient id="beamLeft" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.45" />
+                  <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
 
-      <div className="absolute top-0 right-0 w-80 h-80 pointer-events-none overflow-hidden select-none z-0">
-        <div className="absolute -top-12 -right-12 w-72 h-72 bg-[#00f5b8]/15 rounded-full blur-3xl" />
-        <svg viewBox="0 0 160 120" className="w-40 sm:w-52 h-auto opacity-75 ml-auto drop-shadow-[0_0_15px_rgba(0,245,184,0.5)]">
-          <circle cx="140" cy="20" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="122" cy="20" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="104" cy="20" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="140" cy="38" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="122" cy="38" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="104" cy="38" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="140" cy="56" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="122" cy="56" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <circle cx="104" cy="56" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
-          <path d="M120 40 L0 120 L40 120 Z" fill="url(#beamRight)" opacity="0.25" />
-          <defs>
-            <linearGradient id="beamRight" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#00f5b8" stopOpacity="0.45" />
-              <stop offset="100%" stopColor="#00f5b8" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+          <div className="absolute top-0 right-0 w-80 h-80 pointer-events-none overflow-hidden select-none z-0">
+            <div className="absolute -top-12 -right-12 w-72 h-72 bg-[#00f5b8]/15 rounded-full blur-3xl" />
+            <svg viewBox="0 0 160 120" className="w-40 sm:w-52 h-auto opacity-75 ml-auto drop-shadow-[0_0_15px_rgba(0,245,184,0.5)]">
+              <circle cx="140" cy="20" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="122" cy="20" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="104" cy="20" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="140" cy="38" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="122" cy="38" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="104" cy="38" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="140" cy="56" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="122" cy="56" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <circle cx="104" cy="56" r="5" fill="#f0fdf4" filter="drop-shadow(0 0 6px #00f5b8)" />
+              <path d="M120 40 L0 120 L40 120 Z" fill="url(#beamRight)" opacity="0.25" />
+              <defs>
+                <linearGradient id="beamRight" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#00f5b8" stopOpacity="0.45" />
+                  <stop offset="100%" stopColor="#00f5b8" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </>
+      )}
 
       <div className="flex-1 flex flex-col items-center relative z-10">
         {/* Header with Game Status, Mode Switcher, and Counters */}
@@ -401,6 +418,17 @@ export default function Home() {
           totalRarityScore={totalRarityScore}
           sportsUsed={sportsUsed}
           hasGrandSlam={hasGrandSlam}
+          theme={theme}
+          onToggleTheme={(nextTheme) => {
+            setTheme(nextTheme);
+            if (typeof window !== 'undefined') {
+              try {
+                window.localStorage.setItem('sportsgrid_theme', nextTheme);
+              } catch {
+                // Fallback
+              }
+            }
+          }}
           onOpenHowToPlay={() => setIsHowToPlayOpen(true)}
           onOpenStats={() => setIsStatsOpen(true)}
           onOpenArchive={() => setIsArchiveOpen(true)}
@@ -420,6 +448,7 @@ export default function Home() {
           isGameOver={isGameOver}
           activeCell={activeCell}
           sportsUsed={sportsUsed}
+          theme={theme}
         />
 
         {/* Post-Game Notice & Inspector Tip */}
