@@ -81,12 +81,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   // Search logic with alias resolution and diacritics stripping
   const { filteredAthletes, matchedQuery } = useMemo(() => {
     if (!query.trim()) {
-      // Suggest top legendary / household name athletes when query is empty
-      const topAthletes = [...ATHLETES]
-        .filter((a) => !guessedAthleteIds.has(a.id))
-        .sort((a, b) => (b.popularityScore || 50) - (a.popularityScore || 50))
-        .slice(0, 10);
-      return { filteredAthletes: topAthletes, matchedQuery: '' };
+      return { filteredAthletes: [], matchedQuery: '' };
     }
 
     // Resolve common sports nicknames (e.g. "Steph Curry" -> "Stephen Curry")
@@ -122,7 +117,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
 
     const sorted = scoredMatches
       .sort((a, b) => b.score - a.score)
-      .slice(0, 15)
+      .slice(0, 25)
       .map((m) => m.athlete);
 
     return { filteredAthletes: sorted, matchedQuery: resolved };
@@ -239,7 +234,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
         </div>
 
         {/* Search Input */}
-        <div className="relative mb-3">
+        <div className={`relative ${query.trim() || errorMessage ? 'mb-3' : 'mb-0'}`}>
           <Search className="absolute left-3.5 top-3.5 h-5 w-5 text-zinc-400" />
           <input
             ref={inputRef}
@@ -253,10 +248,12 @@ export const SearchModal: React.FC<SearchModalProps> = ({
             placeholder="Type player name (e.g. Jordan, Brady, Jeter, Gretzky)..."
             className="w-full rounded-xl border border-zinc-800 bg-zinc-900/90 py-3 pl-11 pr-24 text-base text-zinc-100 placeholder-zinc-500 outline-none ring-emerald-500/50 transition focus:border-emerald-500 focus:ring-2"
           />
-          <div className="pointer-events-none absolute right-3.5 top-3.5 hidden sm:flex items-center gap-1 text-[11px] font-mono text-zinc-500">
-            <span>↑↓</span>
-            <span>navigate</span>
-          </div>
+          {filteredAthletes.length > 0 && (
+            <div className="pointer-events-none absolute right-3.5 top-3.5 hidden sm:flex items-center gap-1 text-[11px] font-mono text-zinc-500">
+              <span>↑↓</span>
+              <span>navigate</span>
+            </div>
+          )}
         </div>
 
         {/* Error Feedback */}
@@ -270,82 +267,84 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           </div>
         )}
 
-        {/* Athlete Candidates List */}
-        <div ref={listRef} className="flex-1 overflow-y-auto space-y-1.5 pr-1 max-h-[50vh]">
-          {filteredAthletes.length === 0 ? (
-            <div className="py-12 text-center text-sm text-zinc-500">
-              No matching athletes found for &quot;{query}&quot;. Try searching another spelling or surname.
-            </div>
-          ) : (
-            filteredAthletes.map((athlete, idx) => {
-              const isSelected = idx === selectedIndex;
-              const hasNameDuplicate = filteredAthletes.some(
-                (other) => other.id !== athlete.id && other.name === athlete.name
-              );
+        {/* Athlete Candidates List (only visible when user has typed) */}
+        {query.trim().length > 0 && (
+          <div ref={listRef} className="flex-1 overflow-y-auto space-y-1.5 pr-1 max-h-[346px]">
+            {filteredAthletes.length === 0 ? (
+              <div className="py-6 text-center text-sm text-zinc-500">
+                No matching athletes found for &quot;{query}&quot;. Try searching another spelling or surname.
+              </div>
+            ) : (
+              filteredAthletes.map((athlete, idx) => {
+                const isSelected = idx === selectedIndex;
+                const hasNameDuplicate = filteredAthletes.some(
+                  (other) => other.id !== athlete.id && other.name === athlete.name
+                );
 
-              // Substring highlighting
-              const segments = getHighlightedSegments(athlete.name, matchedQuery || query);
+                // Substring highlighting
+                const segments = getHighlightedSegments(athlete.name, matchedQuery || query);
 
-              return (
-                <button
-                  key={athlete.id}
-                  ref={isSelected ? selectedItemRef : null}
-                  onClick={() => handleSelectAthlete(athlete)}
-                  onMouseEnter={() => setSelectedIndex(idx)}
-                  className={`group flex w-full items-center justify-between rounded-xl border px-3.5 py-2.5 text-left transition duration-100 select-none ${
-                    isSelected
-                      ? 'border-emerald-500/70 bg-zinc-800/90 ring-1 ring-emerald-500/40 shadow-sm'
-                      : 'border-zinc-800/80 bg-zinc-900/50 hover:border-zinc-700 hover:bg-zinc-800/60'
-                  }`}
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="font-semibold text-zinc-100 group-hover:text-emerald-300 transition text-sm truncate">
-                      {segments.map((seg, sIdx) =>
-                        seg.isMatch ? (
-                          <strong key={sIdx} className="text-emerald-400 font-extrabold underline decoration-emerald-500/50">
-                            {seg.text}
-                          </strong>
-                        ) : (
-                          <span key={sIdx}>{seg.text}</span>
-                        )
-                      )}
-                    </span>
-
-                    {/* Disambiguation years only when exact duplicate names exist in results */}
-                    {hasNameDuplicate && (
-                      <span className="text-xs text-zinc-500 font-mono shrink-0">
-                        ({athlete.activeYears[0]}–{athlete.activeYears[1] >= 2026 ? 'Pres' : athlete.activeYears[1]})
+                return (
+                  <button
+                    key={athlete.id}
+                    ref={isSelected ? selectedItemRef : null}
+                    onClick={() => handleSelectAthlete(athlete)}
+                    onMouseEnter={() => setSelectedIndex(idx)}
+                    className={`group flex w-full h-11 items-center justify-between rounded-xl border px-3.5 text-left transition duration-100 select-none shrink-0 ${
+                      isSelected
+                        ? 'border-emerald-500/70 bg-zinc-800/90 ring-1 ring-emerald-500/40 shadow-sm'
+                        : 'border-zinc-800/80 bg-zinc-900/50 hover:border-zinc-700 hover:bg-zinc-800/60'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <span className="font-semibold text-zinc-100 group-hover:text-emerald-300 transition text-sm truncate">
+                        {segments.map((seg, sIdx) =>
+                          seg.isMatch ? (
+                            <strong key={sIdx} className="text-emerald-400 font-extrabold underline decoration-emerald-500/50">
+                              {seg.text}
+                            </strong>
+                          ) : (
+                            <span key={sIdx}>{seg.text}</span>
+                          )
+                        )}
                       </span>
+
+                      {/* Disambiguation years only when exact duplicate names exist in results */}
+                      {hasNameDuplicate && (
+                        <span className="text-xs text-zinc-500 font-mono shrink-0">
+                          ({athlete.activeYears[0]}–{athlete.activeYears[1] >= 2026 ? 'Pres' : athlete.activeYears[1]})
+                        </span>
+                      )}
+
+                      {/* Multi-sport / Single-sport badges */}
+                      <div className="flex gap-1 shrink-0">
+                        {athlete.sports.map((sport) => {
+                          const style = SPORT_COLORS[sport];
+                          return (
+                            <span
+                              key={sport}
+                              className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider border ${style.bg} ${style.text} ${style.border}`}
+                            >
+                              {sport}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Press Enter indicator on selected candidate */}
+                    {isSelected && (
+                      <div className="hidden sm:flex items-center gap-1 rounded bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-mono text-emerald-400 shrink-0">
+                        <span>Enter</span>
+                        <CornerDownLeft className="h-3 w-3" />
+                      </div>
                     )}
-
-                    {/* Multi-sport / Single-sport badges */}
-                    <div className="flex gap-1 shrink-0">
-                      {athlete.sports.map((sport) => {
-                        const style = SPORT_COLORS[sport];
-                        return (
-                          <span
-                            key={sport}
-                            className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider border ${style.bg} ${style.text} ${style.border}`}
-                          >
-                            {sport}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Press Enter indicator on selected candidate */}
-                  {isSelected && (
-                    <div className="hidden sm:flex items-center gap-1 rounded bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-mono text-emerald-400 shrink-0">
-                      <span>Enter</span>
-                      <CornerDownLeft className="h-3 w-3" />
-                    </div>
-                  )}
-                </button>
-              );
-            })
-          )}
-        </div>
+                  </button>
+                );
+              })
+            )}
+          </div>
+        )}
       </div>
 
       {/* Category Criteria Detail Popup Modal */}
