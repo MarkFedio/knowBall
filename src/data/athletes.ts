@@ -154,10 +154,31 @@ const NBA_ATHLETES: Athlete[] = (nbaData as unknown as Athlete[]).filter((p) => 
 const NFL_ATHLETES: Athlete[] = (nflData as unknown as Athlete[]).filter((p) => !MULTI_SPORT_NAMES.has(p.name));
 const NHL_ATHLETES: Athlete[] = (nhlData as unknown as Athlete[]).filter((p) => !MULTI_SPORT_NAMES.has(p.name));
 
-export const ATHLETES: Athlete[] = [
+const RAW_ATHLETES: Athlete[] = [
   ...MULTI_SPORT_ATHLETES,
   ...MLB_ATHLETES,
   ...NBA_ATHLETES,
   ...NFL_ATHLETES,
   ...NHL_ATHLETES,
 ];
+
+// Deduplicate athletes by unique ID, merging any secondary positions/teams if duplicate records exist
+const ATHLETE_MAP = new Map<string, Athlete>();
+for (const a of RAW_ATHLETES) {
+  const existing = ATHLETE_MAP.get(a.id);
+  if (!existing) {
+    ATHLETE_MAP.set(a.id, a);
+  } else {
+    const mergedPositions = Array.from(new Set([...existing.positions, ...a.positions]));
+    const mergedTeams = Array.from(new Set([...existing.teams, ...a.teams]));
+    const mergedTeamNames = Array.from(new Set([...existing.teamNames, ...a.teamNames]));
+    ATHLETE_MAP.set(a.id, {
+      ...existing,
+      positions: mergedPositions,
+      teams: mergedTeams,
+      teamNames: mergedTeamNames,
+    });
+  }
+}
+
+export const ATHLETES: Athlete[] = Array.from(ATHLETE_MAP.values());

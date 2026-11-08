@@ -6,12 +6,7 @@ import {
   CheckCircle2,
   Building2,
   Trophy,
-  Calendar,
-  Shuffle,
-  Hash,
   Target,
-  Flame,
-  HelpCircle,
   Sparkles,
 } from 'lucide-react';
 import { Category, Sport } from '@/types';

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Athlete, CellState, PlayMode, Sport, DailyPuzzle, CareerStats, VisualTheme } from '@/types';
 import { DAILY_PUZZLE } from '@/data/puzzles';
 import { generateProceduralPuzzle } from '@/lib/gridGenerator';
@@ -45,6 +45,8 @@ export default function Home() {
   const theme: VisualTheme = 'NEON';
   const [isStorageLoaded, setIsStorageLoaded] = useState<boolean>(false);
   const [careerStats, setCareerStats] = useState<CareerStats>(DEFAULT_CAREER_STATS);
+
+  const hasRecordedPuzzleRef = useRef<string | null>(null);
 
   // Modals
   const [activeCell, setActiveCell] = useState<{ row: number; col: number } | null>(null);
@@ -169,6 +171,9 @@ export default function Home() {
   // Record career stats when puzzle concludes
   useEffect(() => {
     if (!isStorageLoaded || !isGameOver) return;
+    if (hasRecordedPuzzleRef.current === currentPuzzle.id) return;
+    hasRecordedPuzzleRef.current = currentPuzzle.id;
+
     const correctCount = cells.flat().filter((c) => c.isCorrect).length;
     const isWon = correctCount === 16;
     const isImmaculate =
@@ -184,7 +189,18 @@ export default function Home() {
       hasGrandSlam,
     });
     setCareerStats(updated);
-  }, [isGameOver, isStorageLoaded]);
+  }, [
+    isGameOver,
+    isStorageLoaded,
+    currentPuzzle.id,
+    currentPuzzle.date,
+    cells,
+    playMode,
+    guessesUsed,
+    strikesUsed,
+    totalRarityScore,
+    hasGrandSlam,
+  ]);
 
   // Check for 16/16 win
   useEffect(() => {
@@ -299,6 +315,7 @@ export default function Home() {
     setHasGivenUp(false);
     setActiveCell(null);
     setInspectCell(null);
+    hasRecordedPuzzleRef.current = null;
     if (newPuzzle) {
       setCurrentPuzzle(newPuzzle);
     }

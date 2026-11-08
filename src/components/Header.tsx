@@ -8,7 +8,6 @@ import {
   Flame,
   Sparkles,
   Dices,
-  Eye,
   Volume2,
   VolumeX,
   Palette,
@@ -239,10 +238,18 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-2 shrink-0">
           <div className="flex flex-col items-end sm:items-center">
             <div className="flex items-center gap-1 text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
-              <Sparkles className="w-2.5 h-2.5 text-amber-400" />
+              <Sparkles
+                className={`w-2.5 h-2.5 ${hasGrandSlam ? 'text-emerald-400 animate-pulse' : 'text-amber-400'}`}
+              />
               <span>GRAND SLAM</span>
-              <span className="ml-0.5 px-1 py-0.2 rounded bg-amber-500/15 border border-amber-500/40 text-[9px] text-amber-200">
-                {sportsUsed.size}/4
+              <span
+                className={`ml-0.5 px-1 py-0.2 rounded border text-[9px] font-mono transition-all ${
+                  hasGrandSlam
+                    ? 'bg-emerald-500/25 border-emerald-400 text-emerald-300 font-bold shadow-[0_0_8px_rgba(52,211,153,0.5)]'
+                    : 'bg-amber-500/15 border-amber-500/40 text-amber-200'
+                }`}
+              >
+                {hasGrandSlam ? '-25%' : `${sportsUsed.size}/4`}
               </span>
             </div>
 

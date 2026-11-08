@@ -119,7 +119,7 @@ export const GrandSlamModal: React.FC<GrandSlamModalProps> = ({
             </div>
 
             <div className="grid grid-cols-2 gap-2">
-              {ALL_SPORTS.map(({ sport, name, icon }) => {
+              {ALL_SPORTS.map(({ sport }) => {
                 const isUsed = sportsUsed.has(sport);
                 return (
                   <div

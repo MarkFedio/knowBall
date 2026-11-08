@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Trophy,
-  GraduationCap,
   Timer,
   Award,
   Flame,

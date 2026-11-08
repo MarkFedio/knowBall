@@ -149,7 +149,7 @@ https://knowball.app`;
                 : 'text-zinc-400 hover:text-zinc-200'
             }`}
           >
-            Today's Grid
+            Today&apos;s Grid
           </button>
           <button
             onClick={() => setActiveTab('CAREER')}

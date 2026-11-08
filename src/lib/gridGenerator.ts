@@ -398,8 +398,8 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
     const hasStat = [...rows, ...cols].some((c) => c.type === 'CROSS_STAT');
     if (!hasStat) continue;
 
-    // Verify every single cell has at least 4 valid athletes and ZERO trivial redundancies
-    const report = validatePuzzleSolvability(rows, cols, athletes, 4);
+    // Verify every single cell has at least 5 valid athletes and ZERO trivial redundancies
+    const report = validatePuzzleSolvability(rows, cols, athletes, 5);
     if (report.isSolvable) {
       const randomId = Math.floor(1000 + Math.random() * 9000);
       return {
