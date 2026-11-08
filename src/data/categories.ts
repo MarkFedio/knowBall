@@ -246,6 +246,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Selected 1st overall in NFL, NBA, MLB, or NHL Draft',
     matches: (a) => a.draftPick === 1,
   },
+  DRAFT_TOP_10: {
+    id: 'draft_top_10',
+    name: 'Selected in Top 10 of Pro Draft',
+    shortName: 'Top 10 Pick',
+    type: 'BACKGROUND',
+    description: 'Selected with a Top 10 overall pick in their respective draft',
+    matches: (a) => a.draftPick !== undefined && a.draftPick <= 10,
+  },
   DRAFT_FIRST_ROUND: {
     id: 'draft_first_round',
     name: 'Selected in 1st Round of Draft',
@@ -261,6 +269,14 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'BACKGROUND',
     description: 'Appeared in pro regular-season or playoff games for at least 3 distinct teams',
     matches: (a) => a.teams.length >= 3,
+  },
+  CAREER_4_TEAMS: {
+    id: 'career_4_teams',
+    name: 'Played for 4+ Franchises',
+    shortName: '4+ Franchises',
+    type: 'BACKGROUND',
+    description: 'Appeared in pro regular-season or playoff games for at least 4 distinct teams',
+    matches: (a) => a.teams.length >= 4,
   },
   CAREER_ONE_FRANCHISE: {
     id: 'career_one_franchise',
@@ -349,6 +365,14 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'NUMBER_ERA',
     description: 'Played at least one regular-season or playoff game in 2020 or later',
     matches: (a) => a.activeYears[1] >= 2020,
+  },
+  ERA_2010S: {
+    id: 'era_2010s',
+    name: 'Active in the 2010s',
+    shortName: '2010s Era',
+    type: 'NUMBER_ERA',
+    description: 'Played at least one pro game between 2010 and 2019',
+    matches: (a) => a.activeYears[0] <= 2019 && a.activeYears[1] >= 2010,
   },
   ERA_2000S: {
     id: 'era_2000s',
