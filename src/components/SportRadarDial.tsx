@@ -96,22 +96,22 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
 
             {/* Hover radial glow beams */}
             <radialGradient id="nflHoverGlow" cx="25%" cy="25%" r="70%">
-              <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.55" />
+              <stop offset="0%" stopColor="#93c5fd" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#1e40af" stopOpacity="0" />
             </radialGradient>
 
             <radialGradient id="nbaHoverGlow" cx="75%" cy="25%" r="70%">
-              <stop offset="0%" stopColor="#fde047" stopOpacity="0.55" />
+              <stop offset="0%" stopColor="#fef08a" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#c2410c" stopOpacity="0" />
             </radialGradient>
 
             <radialGradient id="mlbHoverGlow" cx="25%" cy="75%" r="70%">
-              <stop offset="0%" stopColor="#fca5a5" stopOpacity="0.55" />
+              <stop offset="0%" stopColor="#fca5a5" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#991b1b" stopOpacity="0" />
             </radialGradient>
 
             <radialGradient id="nhlHoverGlow" cx="75%" cy="75%" r="70%">
-              <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.55" />
+              <stop offset="0%" stopColor="#bae6fd" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#0369a1" stopOpacity="0" />
             </radialGradient>
           </defs>
@@ -150,7 +150,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
           {/* ======================================================== */}
 
           {/* -------------------------------------------------------- */}
-          {/* TOP-LEFT: NFL                                             */}
+          {/* TOP-LEFT: NFL (DEEP BLUE)                                 */}
           {/* -------------------------------------------------------- */}
           <g
             className="cursor-pointer transition-all duration-200"
@@ -161,24 +161,35 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 hoveredSport === 'NFL'
                   ? 'drop-shadow(0 0 16px rgba(59, 130, 246, 0.95)) brightness(1.2)'
                   : isNflUsed
-                  ? 'drop-shadow(0 0 8px rgba(37, 99, 235, 0.7))'
+                  ? 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.8)) brightness(1.08)'
                   : 'none',
             }}
           >
-            {/* Wedge Background: High Contrast between Used (#1a498b) vs Unused (#0a1322) */}
+            {/* Wedge Background: Authentic Vibrant Blue matching reference image */}
             <path
               d="M 150 150 L 30 150 A 120 120 0 0 1 150 30 Z"
               fill={
                 hoveredSport === 'NFL'
                   ? '#2563eb'
                   : isNflUsed
-                  ? '#1a498b'
-                  : '#0b1626'
+                  ? '#1d4ed8'
+                  : '#1b498b'
               }
               stroke="#0a0c10"
               strokeWidth="1"
               className="transition-colors duration-200"
             />
+            {/* Active Outer Neon Rim when Used */}
+            {isNflUsed && (
+              <path
+                d="M 30 150 A 120 120 0 0 1 150 30"
+                fill="none"
+                stroke="#60a5fa"
+                strokeWidth="3.5"
+                filter="drop-shadow(0 0 6px #3b82f6)"
+                pointerEvents="none"
+              />
+            )}
             {/* Radiant Hover Beam */}
             {hoveredSport === 'NFL' && (
               <path
@@ -188,19 +199,16 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               />
             )}
 
-            {/* NFL Text: Arched along outer perimeter in Varsity font */}
+            {/* NFL Text: Always crisp bold white with varsity font */}
             <text
-              fill={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#475569'}
-              className="font-varsity font-black select-none pointer-events-none transition-colors duration-200"
+              fill="#FFFFFF"
+              className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
                 fontSize: '25px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
-                filter:
-                  isNflUsed || hoveredSport === 'NFL'
-                    ? 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))'
-                    : 'none',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
               }}
             >
               <textPath href="#arc-nfl" startOffset="50%" textAnchor="middle">
@@ -211,8 +219,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Football Icon: Strictly in Top-Left Quadrant at (105, 105) */}
             <g
               transform={`translate(105, 105) rotate(-38) scale(${hoveredSport === 'NFL' ? 1.14 : 1})`}
-              opacity={isNflUsed || hoveredSport === 'NFL' ? 1 : 0.4}
-              className="transition-opacity duration-200"
+              className="transition-transform duration-200"
             >
               {/* Ball Body */}
               <ellipse
@@ -220,14 +227,14 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 cy="0"
                 rx="23"
                 ry="13.5"
-                fill={isNflUsed || hoveredSport === 'NFL' ? '#7e3f1b' : '#3d2010'}
+                fill="#7e3f1b"
                 stroke="#180b04"
                 strokeWidth="2.2"
               />
               {/* Left End White Stripe */}
               <path
                 d="M -14 -9.5 Q -11 0 -14 9.5"
-                stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'}
+                stroke="#FFFFFF"
                 strokeWidth="2.8"
                 fill="none"
                 strokeLinecap="round"
@@ -235,36 +242,42 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               {/* Right End White Stripe */}
               <path
                 d="M 14 -9.5 Q 11 0 14 9.5"
-                stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'}
+                stroke="#FFFFFF"
                 strokeWidth="2.8"
                 fill="none"
                 strokeLinecap="round"
               />
               {/* Center White Laces */}
-              <line
-                x1="-8"
-                y1="0"
-                x2="8"
-                y2="0"
-                stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'}
-                strokeWidth="2.2"
-                strokeLinecap="round"
-              />
-              <line x1="-6" y1="-3.5" x2="-6" y2="3.5" stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'} strokeWidth="1.8" strokeLinecap="round" />
-              <line x1="-3" y1="-3.5" x2="-3" y2="3.5" stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'} strokeWidth="1.8" strokeLinecap="round" />
-              <line x1="0" y1="-3.5" x2="0" y2="3.5" stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'} strokeWidth="1.8" strokeLinecap="round" />
-              <line x1="3" y1="-3.5" x2="3" y2="3.5" stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'} strokeWidth="1.8" strokeLinecap="round" />
-              <line x1="6" y1="-3.5" x2="6" y2="3.5" stroke={isNflUsed || hoveredSport === 'NFL' ? '#FFFFFF' : '#94a3b8'} strokeWidth="1.8" strokeLinecap="round" />
+              <line x1="-8" y1="0" x2="8" y2="0" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" />
+              <line x1="-6" y1="-3.5" x2="-6" y2="3.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+              <line x1="-3" y1="-3.5" x2="-3" y2="3.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+              <line x1="0" y1="-3.5" x2="0" y2="3.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+              <line x1="3" y1="-3.5" x2="3" y2="3.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+              <line x1="6" y1="-3.5" x2="6" y2="3.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
             </g>
 
-            {/* Used Status Indicator Dot */}
+            {/* Prominent Glowing Checkmark Badge when Used */}
             {isNflUsed && (
-              <circle cx="132" cy="132" r="3.5" fill="#38bdf8" filter="drop-shadow(0 0 4px #38bdf8)" />
+              <g
+                transform="translate(124, 124)"
+                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
+                pointerEvents="none"
+              >
+                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <path
+                  d="M -3 0 L -1 2 L 3 -2"
+                  stroke="#FFFFFF"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </g>
             )}
           </g>
 
           {/* -------------------------------------------------------- */}
-          {/* TOP-RIGHT: NBA                                            */}
+          {/* TOP-RIGHT: NBA (VIBRANT BASKETBALL ORANGE)                 */}
           {/* -------------------------------------------------------- */}
           <g
             className="cursor-pointer transition-all duration-200"
@@ -275,24 +288,35 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 hoveredSport === 'NBA'
                   ? 'drop-shadow(0 0 16px rgba(249, 115, 22, 0.95)) brightness(1.2)'
                   : isNbaUsed
-                  ? 'drop-shadow(0 0 8px rgba(234, 88, 12, 0.7))'
+                  ? 'drop-shadow(0 0 10px rgba(234, 88, 12, 0.8)) brightness(1.08)'
                   : 'none',
             }}
           >
-            {/* Wedge Background: High Contrast between Used (#e86c1f) vs Unused (#1c0f05) */}
+            {/* Wedge Background: Authentic Vibrant Orange matching reference image */}
             <path
               d="M 150 150 L 150 30 A 120 120 0 0 1 270 150 Z"
               fill={
                 hoveredSport === 'NBA'
-                  ? '#f97316'
+                  ? '#ea580c'
                   : isNbaUsed
-                  ? '#e86c1f'
-                  : '#1a1006'
+                  ? '#f97316'
+                  : '#e86c1f'
               }
               stroke="#0a0c10"
               strokeWidth="1"
               className="transition-colors duration-200"
             />
+            {/* Active Outer Neon Rim when Used */}
+            {isNbaUsed && (
+              <path
+                d="M 150 30 A 120 120 0 0 1 270 150"
+                fill="none"
+                stroke="#fde047"
+                strokeWidth="3.5"
+                filter="drop-shadow(0 0 6px #f59e0b)"
+                pointerEvents="none"
+              />
+            )}
             {/* Radiant Hover Beam */}
             {hoveredSport === 'NBA' && (
               <path
@@ -302,19 +326,16 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               />
             )}
 
-            {/* NBA Text: Arched along outer perimeter in Varsity font */}
+            {/* NBA Text: Always crisp bold white with varsity font */}
             <text
-              fill={isNbaUsed || hoveredSport === 'NBA' ? '#FFFFFF' : '#475569'}
-              className="font-varsity font-black select-none pointer-events-none transition-colors duration-200"
+              fill="#FFFFFF"
+              className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
                 fontSize: '25px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
-                filter:
-                  isNbaUsed || hoveredSport === 'NBA'
-                    ? 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))'
-                    : 'none',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
               }}
             >
               <textPath href="#arc-nba" startOffset="50%" textAnchor="middle">
@@ -325,18 +346,10 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Basketball Icon: Strictly in Top-Right Quadrant at (195, 105) */}
             <g
               transform={`translate(195, 105) scale(${hoveredSport === 'NBA' ? 1.14 : 1})`}
-              opacity={isNbaUsed || hoveredSport === 'NBA' ? 1 : 0.4}
-              className="transition-opacity duration-200"
+              className="transition-transform duration-200"
             >
               {/* Ball Body */}
-              <circle
-                cx="0"
-                cy="0"
-                r="18"
-                fill={isNbaUsed || hoveredSport === 'NBA' ? '#e86c1f' : '#6b3208'}
-                stroke="#120c07"
-                strokeWidth="2.2"
-              />
+              <circle cx="0" cy="0" r="18" fill="#e86c1f" stroke="#120c07" strokeWidth="2.2" />
               {/* Seam Cross Lines */}
               <line x1="-18" y1="0" x2="18" y2="0" stroke="#120c07" strokeWidth="2" />
               <line x1="0" y1="-18" x2="0" y2="18" stroke="#120c07" strokeWidth="2" />
@@ -345,14 +358,28 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               <path d="M 9 -15.5 C 3 -7 3 7 9 15.5" stroke="#120c07" strokeWidth="1.8" fill="none" />
             </g>
 
-            {/* Used Status Indicator Dot */}
+            {/* Prominent Glowing Checkmark Badge when Used */}
             {isNbaUsed && (
-              <circle cx="168" cy="132" r="3.5" fill="#f59e0b" filter="drop-shadow(0 0 4px #f59e0b)" />
+              <g
+                transform="translate(176, 124)"
+                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
+                pointerEvents="none"
+              >
+                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <path
+                  d="M -3 0 L -1 2 L 3 -2"
+                  stroke="#FFFFFF"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </g>
             )}
           </g>
 
           {/* -------------------------------------------------------- */}
-          {/* BOTTOM-LEFT: MLB                                          */}
+          {/* BOTTOM-LEFT: MLB (CRIMSON BASEBALL RED)                   */}
           {/* -------------------------------------------------------- */}
           <g
             className="cursor-pointer transition-all duration-200"
@@ -363,24 +390,35 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 hoveredSport === 'MLB'
                   ? 'drop-shadow(0 0 16px rgba(239, 68, 68, 0.95)) brightness(1.2)'
                   : isMlbUsed
-                  ? 'drop-shadow(0 0 8px rgba(220, 38, 38, 0.7))'
+                  ? 'drop-shadow(0 0 10px rgba(220, 38, 38, 0.8)) brightness(1.08)'
                   : 'none',
             }}
           >
-            {/* Wedge Background: High Contrast between Used (#c52834) vs Unused (#1a080c) */}
+            {/* Wedge Background: Authentic Vibrant Crimson Red matching reference image */}
             <path
               d="M 150 150 L 150 270 A 120 120 0 0 1 30 150 Z"
               fill={
                 hoveredSport === 'MLB'
                   ? '#dc2626'
                   : isMlbUsed
-                  ? '#c52834'
-                  : '#1a080c'
+                  ? '#e11d48'
+                  : '#c52834'
               }
               stroke="#0a0c10"
               strokeWidth="1"
               className="transition-colors duration-200"
             />
+            {/* Active Outer Neon Rim when Used */}
+            {isMlbUsed && (
+              <path
+                d="M 30 150 A 120 120 0 0 0 150 270"
+                fill="none"
+                stroke="#fca5a5"
+                strokeWidth="3.5"
+                filter="drop-shadow(0 0 6px #ef4444)"
+                pointerEvents="none"
+              />
+            )}
             {/* Radiant Hover Beam */}
             {hoveredSport === 'MLB' && (
               <path
@@ -390,19 +428,16 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               />
             )}
 
-            {/* MLB Text: Arched along outer perimeter in Varsity font */}
+            {/* MLB Text: Always crisp bold white with varsity font */}
             <text
-              fill={isMlbUsed || hoveredSport === 'MLB' ? '#FFFFFF' : '#475569'}
-              className="font-varsity font-black select-none pointer-events-none transition-colors duration-200"
+              fill="#FFFFFF"
+              className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
                 fontSize: '25px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
-                filter:
-                  isMlbUsed || hoveredSport === 'MLB'
-                    ? 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))'
-                    : 'none',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
               }}
             >
               <textPath href="#arc-mlb" startOffset="50%" textAnchor="middle">
@@ -413,53 +448,49 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Baseball Icon: Strictly in Bottom-Left Quadrant at (105, 195) */}
             <g
               transform={`translate(105, 195) scale(${hoveredSport === 'MLB' ? 1.14 : 1})`}
-              opacity={isMlbUsed || hoveredSport === 'MLB' ? 1 : 0.4}
-              className="transition-opacity duration-200"
+              className="transition-transform duration-200"
             >
-              {/* Ball Body */}
-              <circle
-                cx="0"
-                cy="0"
-                r="18"
-                fill={isMlbUsed || hoveredSport === 'MLB' ? '#f8fafc' : '#71717a'}
-                stroke="#181c22"
-                strokeWidth="2.2"
-              />
+              {/* Ball Body: Pure crisp white */}
+              <circle cx="0" cy="0" r="18" fill="#f8fafc" stroke="#181c22" strokeWidth="2.2" />
               {/* Red Curved Seams */}
-              <path
-                d="M -7.5 -16 C -14 -7 -14 7 -7.5 16"
-                stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'}
-                strokeWidth="1.8"
-                fill="none"
-              />
-              <path
-                d="M 7.5 -16 C 14 -7 14 7 7.5 16"
-                stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'}
-                strokeWidth="1.8"
-                fill="none"
-              />
+              <path d="M -7.5 -16 C -14 -7 -14 7 -7.5 16" stroke="#c52834" strokeWidth="1.8" fill="none" />
+              <path d="M 7.5 -16 C 14 -7 14 7 7.5 16" stroke="#c52834" strokeWidth="1.8" fill="none" />
               {/* Chevron Stitches Left */}
-              <line x1="-12" y1="-10" x2="-9" y2="-12" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="-14" y1="-5" x2="-10" y2="-6.5" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="-14.5" y1="0" x2="-10.5" y2="0" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="-14" y1="5" x2="-10" y2="6.5" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="-12" y1="10" x2="-9" y2="12" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
+              <line x1="-12" y1="-10" x2="-9" y2="-12" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="-14" y1="-5" x2="-10" y2="-6.5" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="-14.5" y1="0" x2="-10.5" y2="0" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="-14" y1="5" x2="-10" y2="6.5" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="-12" y1="10" x2="-9" y2="12" stroke="#c52834" strokeWidth="1.3" />
               {/* Chevron Stitches Right */}
-              <line x1="12" y1="-10" x2="9" y2="-12" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="14" y1="-5" x2="10" y2="-6.5" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="14.5" y1="0" x2="10.5" y2="0" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="14" y1="5" x2="10" y2="6.5" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
-              <line x1="12" y1="10" x2="9" y2="12" stroke={isMlbUsed || hoveredSport === 'MLB' ? '#c52834' : '#450a0a'} strokeWidth="1.3" />
+              <line x1="12" y1="-10" x2="9" y2="-12" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="14" y1="-5" x2="10" y2="-6.5" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="14.5" y1="0" x2="10.5" y2="0" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="14" y1="5" x2="10" y2="6.5" stroke="#c52834" strokeWidth="1.3" />
+              <line x1="12" y1="10" x2="9" y2="12" stroke="#c52834" strokeWidth="1.3" />
             </g>
 
-            {/* Used Status Indicator Dot */}
+            {/* Prominent Glowing Checkmark Badge when Used */}
             {isMlbUsed && (
-              <circle cx="132" cy="168" r="3.5" fill="#f43f5e" filter="drop-shadow(0 0 4px #f43f5e)" />
+              <g
+                transform="translate(124, 176)"
+                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
+                pointerEvents="none"
+              >
+                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <path
+                  d="M -3 0 L -1 2 L 3 -2"
+                  stroke="#FFFFFF"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </g>
             )}
           </g>
 
           {/* -------------------------------------------------------- */}
-          {/* BOTTOM-RIGHT: NHL                                         */}
+          {/* BOTTOM-RIGHT: NHL (STEEL SLATE BLUE-GRAY)                 */}
           {/* -------------------------------------------------------- */}
           <g
             className="cursor-pointer transition-all duration-200"
@@ -470,24 +501,35 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 hoveredSport === 'NHL'
                   ? 'drop-shadow(0 0 16px rgba(56, 189, 248, 0.95)) brightness(1.25)'
                   : isNhlUsed
-                  ? 'drop-shadow(0 0 8px rgba(14, 165, 233, 0.7))'
+                  ? 'drop-shadow(0 0 10px rgba(14, 165, 233, 0.8)) brightness(1.08)'
                   : 'none',
             }}
           >
-            {/* Wedge Background: High Contrast between Used (#354b5e) vs Unused (#0f1720) */}
+            {/* Wedge Background: Authentic Steel Slate Blue matching reference image */}
             <path
               d="M 150 150 L 270 150 A 120 120 0 0 1 150 270 Z"
               fill={
                 hoveredSport === 'NHL'
                   ? '#0284c7'
                   : isNhlUsed
-                  ? '#354b5e'
-                  : '#0f1720'
+                  ? '#2563eb'
+                  : '#354b5e'
               }
               stroke="#0a0c10"
               strokeWidth="1"
               className="transition-colors duration-200"
             />
+            {/* Active Outer Neon Rim when Used */}
+            {isNhlUsed && (
+              <path
+                d="M 150 270 A 120 120 0 0 0 270 150"
+                fill="none"
+                stroke="#7dd3fc"
+                strokeWidth="3.5"
+                filter="drop-shadow(0 0 6px #0ea5e9)"
+                pointerEvents="none"
+              />
+            )}
             {/* Radiant Hover Beam */}
             {hoveredSport === 'NHL' && (
               <path
@@ -497,19 +539,16 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               />
             )}
 
-            {/* NHL Text: Arched along outer perimeter in Varsity font */}
+            {/* NHL Text: Always crisp bold white with varsity font */}
             <text
-              fill={isNhlUsed || hoveredSport === 'NHL' ? '#FFFFFF' : '#475569'}
-              className="font-varsity font-black select-none pointer-events-none transition-colors duration-200"
+              fill="#FFFFFF"
+              className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
                 fontSize: '25px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
-                filter:
-                  isNhlUsed || hoveredSport === 'NHL'
-                    ? 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))'
-                    : 'none',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
               }}
             >
               <textPath href="#arc-nhl" startOffset="50%" textAnchor="middle">
@@ -520,13 +559,12 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Hockey Puck Icon: Strictly in Bottom-Right Quadrant at (195, 195) */}
             <g
               transform={`translate(195, 195) rotate(-28) scale(${hoveredSport === 'NHL' ? 1.14 : 1})`}
-              opacity={isNhlUsed || hoveredSport === 'NHL' ? 1 : 0.4}
-              className="transition-opacity duration-200"
+              className="transition-transform duration-200"
             >
               {/* Cylindrical Side Wall */}
               <path
                 d="M -17 2 L -17 10 C -17 16 17 16 17 10 L 17 2 Z"
-                fill={isNhlUsed || hoveredSport === 'NHL' ? '#161b22' : '#0d1014'}
+                fill="#161b22"
                 stroke="#0b0e12"
                 strokeWidth="2.2"
               />
@@ -536,7 +574,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 cy="2"
                 rx="17"
                 ry="8.5"
-                fill={isNhlUsed || hoveredSport === 'NHL' ? '#2c3540' : '#1a1f26'}
+                fill="#2c3540"
                 stroke="#0b0e12"
                 strokeWidth="2.2"
               />
@@ -544,9 +582,23 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               <ellipse cx="-2" cy="0.5" rx="12" ry="5.5" fill="rgba(255,255,255,0.08)" />
             </g>
 
-            {/* Used Status Indicator Dot */}
+            {/* Prominent Glowing Checkmark Badge when Used */}
             {isNhlUsed && (
-              <circle cx="168" cy="168" r="3.5" fill="#38bdf8" filter="drop-shadow(0 0 4px #38bdf8)" />
+              <g
+                transform="translate(176, 176)"
+                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
+                pointerEvents="none"
+              >
+                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <path
+                  d="M -3 0 L -1 2 L 3 -2"
+                  stroke="#FFFFFF"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </g>
             )}
           </g>
 
