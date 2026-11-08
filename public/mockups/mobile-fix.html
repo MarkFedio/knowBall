@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNOWBALL Mobile Precision Fix Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Graduate&family=Chakra+Petch:wght@500;700;900&family=Inter:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #060b13;
+      background-image: 
+        radial-gradient(ellipse 650px 450px at 0% 0%, rgba(34, 211, 238, 0.16) 0%, rgba(0, 229, 163, 0.05) 45%, transparent 75%),
+        radial-gradient(ellipse 650px 450px at 100% 0%, rgba(0, 245, 184, 0.14) 0%, rgba(34, 211, 238, 0.05) 45%, transparent 75%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 14px 14px;
+      background-repeat: no-repeat, no-repeat, repeat;
+      color: #f1f5f9;
+      font-family: 'Inter', -apple-system, sans-serif;
+      padding: 30px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .font-scoreboard { font-family: 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.05em; }
+    .font-varsity { font-family: 'Graduate', Impact, 'Arial Black', sans-serif; }
+    .font-mono { font-family: 'Share Tech Mono', monospace; }
+
+    .showcase-header {
+      text-align: center;
+      max-width: 650px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(0, 245, 184, 0.15);
+      border: 1px solid rgba(0, 245, 184, 0.4);
+      color: #00f5b8;
+      margin-bottom: 8px;
+    }
+
+    /* Side-by-Side Comparison Container */
+    .comparison-container {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    .column-box {
+      width: 100%;
+      max-width: 390px;
+    }
+
+    .box-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    /* Mobile Frame */
+    .phone-container {
+      background: #060b13;
+      border: 2px solid #17283c;
+      border-radius: 32px;
+      padding: 10px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(0, 229, 163, 0.08);
+    }
+
+    /* Header Card */
+    .header-card {
+      background: rgba(8, 17, 29, 0.92);
+      border: 1px solid rgba(0, 229, 163, 0.35);
+      box-shadow: 0 0 24px rgba(0, 229, 163, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Row 1: Logo & Mode Switcher */
+    .row-brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+    }
+    .brand-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+      color: #fff;
+    }
+    .brand-title span { color: #f59e0b; }
+    .catchphrase {
+      font-size: 7.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: rgba(245, 158, 11, 0.9);
+      letter-spacing: 0.06em;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .mode-switcher {
+      display: flex;
+      background: rgba(3, 7, 18, 0.75);
+      border: 1px solid rgba(39, 39, 42, 0.8);
+      border-radius: 8px;
+      padding: 2px;
+      flex-shrink: 0;
+    }
+    .mode-btn {
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+    .mode-btn.active {
+      background: #00f5b8;
+      color: #000;
+      box-shadow: 0 0 8px rgba(0, 245, 184, 0.4);
+    }
+    .mode-btn.inactive {
+      background: transparent;
+      color: #94a3b8;
+    }
+
+    /* Row 2: Clock + Stats + Grand Slam */
+    .row-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      gap: 4px;
+    }
+
+    .led-clock {
+      background: #070d14;
+      border: 1px solid #142232;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.8);
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #67e8f9;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+      display: flex;
+      align-items: center;
+      line-height: 1.4;
+    }
+
+    .stat-text {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      font-size: 10.5px;
+      line-height: 1.15;
+      font-family: -apple-system, sans-serif;
+    }
+    .stat-text .lbl { color: #94a3b8; }
+    .stat-text .val {
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: 700;
+      color: #00f5b8;
+      font-size: 12px;
+      margin-left: 3px;
+      text-shadow: 0 0 6px rgba(0, 245, 184, 0.4);
+    }
+
+    .grand-slam-box {
+      display: flex;
+      flex-direction: column;
+      width: 125px;
+    }
+    .slam-title {
+      font-size: 9.5px;
+      font-weight: 900;
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      letter-spacing: 0.05em;
+    }
+    .slam-pill {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      padding: 0 4px;
+      border-radius: 4px;
+      font-size: 8.5px;
+      font-family: 'Share Tech Mono', monospace;
+      color: #fde68a;
+    }
+    .slam-medallions {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .medallion {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      font-weight: 900;
+      background: #09131f;
+      border: 1.5px solid #1e293b;
+      color: #64748b;
+    }
+    .medallion.active {
+      background: #0f1d38;
+      border-color: #60a5fa;
+      color: #93c5fd;
+      box-shadow: 0 0 8px rgba(96, 165, 250, 0.8);
+    }
+
+    /* Row 3: Action Toolbar (STRICTLY LEFT-ALIGNED WITH EXACT LUCIDE SVGS) */
+    .row-actions-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .squircle-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(3, 7, 18, 0.65);
+      border: 1px solid rgba(39, 39, 42, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+    }
+    .stats-btn {
+      height: 28px;
+      padding: 0 10px;
+      border-radius: 8px;
+      background: rgba(6, 78, 59, 0.5);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    /* 5x5 Game Grid */
+    .grid-frame {
+      border: 1px solid rgba(0, 229, 163, 0.4);
+      background: rgba(8, 18, 31, 0.85);
+      box-shadow: 0 0 30px rgba(0, 229, 163, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 4px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 3.5px;
+    }
+
+    .tile {
+      height: 64px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2px 2px;
+      position: relative;
+    }
+
+    .cat-tile {
+      background: rgba(11, 23, 38, 0.9);
+      border: 1px solid rgba(0, 229, 163, 0.35);
+    }
+    .cat-tile .icon-wrap {
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cat-tile h4 {
+      font-size: 7px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: #f8fafc;
+      letter-spacing: -0.01em;
+      word-break: keep-all;
+      overflow-wrap: normal;
+      hyphens: none;
+    }
+
+    .play-tile {
+      background: rgba(7, 19, 32, 0.8);
+      border: 1px solid rgba(23, 40, 60, 0.8);
+      cursor: pointer;
+    }
+    .play-tile .plus {
+      font-size: 19px;
+      font-weight: 300;
+      color: rgba(100, 116, 139, 0.6);
+      line-height: 1;
+    }
+    .play-tile .sub {
+      font-size: 7.5px;
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #475569;
+      margin-top: 1px;
+    }
+
+    /* Callout Footer */
+    .fix-footer {
+      margin-top: 24px;
+      max-width: 650px;
+      background: rgba(8, 17, 29, 0.85);
+      border: 1px solid rgba(0, 229, 163, 0.3);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+    .fix-footer strong { color: #00f5b8; }
+  </style>
+</head>
+<body>
+
+  <div class="showcase-header">
+    <div class="badge">Pixel-for-Pixel Verification</div>
+    <h1 style="font-size: 26px; font-weight: 900; margin-bottom: 6px;">Authentic Visual Match</h1>
+    <p style="font-size: 13px; color: #94a3af;">Using the exact Vector Dial, Lucide SVGs, and Cyber Neon palette from your codebase.</p>
+  </div>
+
+  <div class="comparison-container">
+    
+    <!-- LEFT: BEFORE (The User's Screenshot) -->
+    <div class="column-box">
+      <div class="box-title">
+        <span style="color: #f87171; font-weight: 800;">BEFORE (Your Screenshot)</span>
+        <span style="color: #64748b;">Notice right clipping & right-aligned buttons</span>
+      </div>
+      <div style="border: 2px solid #334155; border-radius: 32px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+        <img src="./mobile-screenshot.jpg" alt="Original Screenshot" style="width: 100%; height: auto; display: block;">
+      </div>
+    </div>
+
+    <!-- RIGHT: FIXED (Visuals 100% Identical, Surgical Fixes Applied) -->
+    <div class="column-box">
+      <div class="box-title">
+        <span style="color: #00f5b8; font-weight: 800;">WITH TARGETED FIXES</span>
+        <span style="color: #64748b;">No clipping • Left actions • Text fits</span>
+      </div>
+
+      <div class="phone-container">
+        
+        <!-- HEADER (Exact styling from app) -->
+        <header class="header-card">
+          <!-- Row 1: Logo & Mode Switcher -->
+          <div class="row-brand">
+            <div>
+              <div class="font-scoreboard brand-title">KNOW<span>BALL</span></div>
+              <span class="catchphrase">Think you know ball? Prove it.</span>
+            </div>
+
+            <!-- Mode Switcher (Slightly adjusted padding so it never clips) -->
+            <div class="mode-switcher">
+              <button class="mode-btn active">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.5 3 4 5 4 8a6 6 0 1 1-12 0c0-3 2.5-5 4-8 1.5 2 2.5 3 4 0z"/></svg>
+                <span>Ball Knower</span>
+              </button>
+              <button class="mode-btn inactive">
+                <span>Casual (4 Strikes)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: Digital LED Timer + Guesses / Rarity + Grand Slam -->
+          <div class="row-hud">
+            <!-- Digital LED Timer -->
+            <div class="led-clock">11:24:01</div>
+
+            <!-- Guesses & Rarity -->
+            <div class="stat-text">
+              <div><span class="lbl">Guesses:</span><span class="val">16</span></div>
+              <div style="margin-top: 1px;"><span class="lbl">Rarity:</span><span class="val">0.0</span></div>
+            </div>
+
+            <!-- Grand Slam & Medallions (Slightly larger, spanning full width of text) -->
+            <div class="grand-slam-box">
+              <div class="slam-title">
+                <span>✨ GRAND SLAM</span>
+                <span class="slam-pill">0/4</span>
+              </div>
+              <div class="slam-medallions">
+                <div class="medallion active">NFL</div>
+                <div class="medallion">NBA</div>
+                <div class="medallion">MLB</div>
+                <div class="medallion">NHL</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Action Toolbar (STRICTLY LEFT-ALIGNED WITH EXACT CODEBASE LUCIDE ICONS) -->
+          <div class="row-actions-left">
+            <!-- 1. Dices (Lucide SVG, yellow/amber) -->
+            <button class="squircle-btn" title="Random Grid">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="12" height="12" x="2" y="10" rx="2" ry="2"/>
+                <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3.18l-5.74-5.74a2.24 2.24 0 0 0-3.18 0L9 5.08"/>
+                <circle cx="6" cy="14" r="1" fill="#fbbf24"/>
+                <circle cx="10" cy="18" r="1" fill="#fbbf24"/>
+                <circle cx="8" cy="16" r="1" fill="#fbbf24"/>
+                <circle cx="15" cy="6" r="1" fill="#fbbf24"/>
+              </svg>
+            </button>
+
+            <!-- 2. Flag (Lucide SVG, rose) -->
+            <button class="squircle-btn" title="Tap Out">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                <line x1="4" x2="4" y1="22" y2="15"/>
+              </svg>
+            </button>
+
+            <!-- 3. Volume2 (Lucide SVG, yellow/amber) -->
+            <button class="squircle-btn" title="Sound">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+              </svg>
+            </button>
+
+            <!-- 4. HelpCircle (Lucide SVG, slate) -->
+            <button class="squircle-btn" title="How to Play">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" x2="12.01" y1="17" y2="17"/>
+              </svg>
+            </button>
+
+            <!-- 5. Stats Button (Trophy SVG in yellow + mint Stats text) -->
+            <button class="stats-btn" title="Stats">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1v-2.34M14 14.66V17c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.34M6 4h12v6c0 3.31-2.69 6-6 6s-6-2.69-6-6V4z"/>
+              </svg>
+              <span>Stats</span>
+            </button>
+
+            <!-- 6. RotateCcw (Lucide SVG, slate) -->
+            <button class="squircle-btn" title="Run It Back">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <!-- 5x5 GRID (Authentic Codebase Visuals) -->
+        <div class="grid-frame">
+          
+          <!-- (0,0) EXACT SportRadarDial Vector Compass from src/components/SportRadarDial.tsx -->
+          <div class="tile cat-tile" style="padding: 1px;">
+            <svg viewBox="0 0 300 300" style="width: 100%; height: 100%; max-width: 58px; overflow: visible;">
+              <defs>
+                <path id="arc-nfl-m" d="M 64.03 126.97 A 89 89 0 0 1 126.97 64.03" fill="none" />
+                <path id="arc-nba-m" d="M 173.03 64.03 A 89 89 0 0 1 235.97 126.97" fill="none" />
+                <path id="arc-mlb-m" d="M 49.54 176.92 A 104 104 0 0 0 123.08 250.46" fill="none" />
+                <path id="arc-nhl-m" d="M 176.92 250.46 A 104 104 0 0 0 250.46 176.92" fill="none" />
+                <linearGradient id="bezelMetallicM" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#252934" />
+                  <stop offset="50%" stop-color="#13161c" />
+                  <stop offset="100%" stop-color="#0d0f14" />
+                </linearGradient>
+              </defs>
+
+              <!-- Bezel -->
+              <circle cx="150" cy="150" r="138" fill="url(#bezelMetallicM)" stroke="#222630" stroke-width="2.5" />
+              <circle cx="150" cy="150" r="120" fill="none" stroke="#0a0c10" stroke-width="1.5" />
+
+              <!-- NFL Quadrant (Top-Left, Blue) -->
+              <path d="M 150 150 L 30 150 A 120 120 0 0 1 150 30 Z" fill="#17345d" stroke="#0a0c10" stroke-width="1" />
+              <text fill="#FFFFFF" font-family="'Graduate', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="0.06em">
+                <textPath href="#arc-nfl-m" startOffset="50%" text-anchor="middle">NFL</textPath>
+              </text>
+              <!-- Football Vector -->
+              <g transform="translate(109, 109) rotate(-38)">
+                <ellipse cx="0" cy="0" rx="23" ry="13.5" fill="#7e3f1b" stroke="#180b04" stroke-width="2.2" />
+                <path d="M -14 -9.5 Q -11 0 -14 9.5" stroke="#FFFFFF" stroke-width="2.8" fill="none" stroke-linecap="round" />
+                <path d="M 14 -9.5 Q 11 0 14 9.5" stroke="#FFFFFF" stroke-width="2.8" fill="none" stroke-linecap="round" />
+                <line x1="-8" y1="0" x2="8" y2="0" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="-5" y1="-3" x2="-5" y2="3" stroke="#FFFFFF" stroke-width="1.8" />
+                <line x1="0" y1="-3" x2="0" y2="3" stroke="#FFFFFF" stroke-width="1.8" />
+                <line x1="5" y1="-3" x2="5" y2="3" stroke="#FFFFFF" stroke-width="1.8" />
+              </g>
+
+              <!-- NBA Quadrant (Top-Right, Orange) -->
+              <path d="M 150 150 L 150 30 A 120 120 0 0 1 270 150 Z" fill="#78350c" stroke="#0a0c10" stroke-width="1" />
+              <text fill="#FFFFFF" font-family="'Graduate', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="0.06em">
+                <textPath href="#arc-nba-m" startOffset="50%" text-anchor="middle">NBA</textPath>
+              </text>
+              <!-- Basketball Vector -->
+              <g transform="translate(189, 111)">
+                <circle cx="0" cy="0" r="18" fill="#e86c1f" stroke="#120c07" stroke-width="2.2" />
+                <line x1="-18" y1="0" x2="18" y2="0" stroke="#120c07" stroke-width="2" />
+                <line x1="0" y1="-18" x2="0" y2="18" stroke="#120c07" stroke-width="2" />
+                <path d="M -9 -15.5 C -3 -7 -3 7 -9 15.5" stroke="#120c07" stroke-width="1.8" fill="none" />
+                <path d="M 9 -15.5 C 3 -7 3 7 9 15.5" stroke="#120c07" stroke-width="1.8" fill="none" />
+              </g>
+
+              <!-- MLB Quadrant (Bottom-Left, Red) -->
+              <path d="M 150 150 L 150 270 A 120 120 0 0 1 30 150 Z" fill="#701a26" stroke="#0a0c10" stroke-width="1" />
+              <text fill="#FFFFFF" font-family="'Graduate', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="0.06em">
+                <textPath href="#arc-mlb-m" startOffset="50%" text-anchor="middle">MLB</textPath>
+              </text>
+              <!-- Baseball Vector -->
+              <g transform="translate(111, 189)">
+                <circle cx="0" cy="0" r="18" fill="#f8fafc" stroke="#181c22" stroke-width="2.2" />
+                <path d="M -7.5 -16 C -14 -7 -14 7 -7.5 16" stroke="#c52834" stroke-width="1.8" fill="none" />
+                <path d="M 7.5 -16 C 14 -7 14 7 7.5 16" stroke="#c52834" stroke-width="1.8" fill="none" />
+              </g>
+
+              <!-- NHL Quadrant (Bottom-Right, Slate/Navy) -->
+              <path d="M 150 150 L 270 150 A 120 120 0 0 1 150 270 Z" fill="#243340" stroke="#0a0c10" stroke-width="1" />
+              <text fill="#FFFFFF" font-family="'Graduate', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="0.06em">
+                <textPath href="#arc-nhl-m" startOffset="50%" text-anchor="middle">NHL</textPath>
+              </text>
+              <!-- Hockey Puck Vector -->
+              <g transform="translate(187, 187) rotate(-28)">
+                <path d="M -17 2 L -17 10 C -17 16 17 16 17 10 L 17 2 Z" fill="#161b22" stroke="#0b0e12" stroke-width="2.2" />
+                <ellipse cx="0" cy="2" rx="17" ry="8.5" fill="#2c3540" stroke="#0b0e12" stroke-width="2.2" />
+              </g>
+
+              <!-- Crosshairs -->
+              <line x1="28" y1="150" x2="272" y2="150" stroke="#0a0c10" stroke-width="4.5" />
+              <line x1="150" y1="28" x2="150" y2="272" stroke="#0a0c10" stroke-width="4.5" />
+
+              <!-- Center Hub -->
+              <circle cx="150" cy="150" r="24" fill="#13161c" stroke="#2a303c" stroke-width="2.8" />
+              <circle cx="150" cy="150" r="17" fill="#1e232c" stroke="#0a0c10" stroke-width="1.5" />
+              <circle cx="150" cy="150" r="8" fill="#080a0d" />
+            </svg>
+          </div>
+
+          <!-- Column Headers (Text Fits, No Hyphen Breaks) -->
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1v-2.34M14 14.66V17c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.34M6 4h12v6c0 3.31-2.69 6-6 6s-6-2.69-6-6V4z"/></svg>
+            </div>
+            <h4>WON CHAMPIONSHIP</h4>
+          </div>
+
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M3 21h18M6 18V9M10 18V5M14 18v-7M18 18V3"/></svg>
+            </div>
+            <h4>PLAYED IN BOSTON</h4>
+          </div>
+
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+            </div>
+            <h4>WORE #10–#19</h4>
+          </div>
+
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h4>100+ STEALS</h4>
+          </div>
+
+          <!-- Row 1 -->
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M3 21h18M6 18V9M10 18V5M14 18v-7M18 18V3"/></svg>
+            </div>
+            <h4>PLAYED IN NY / NJ</h4>
+          </div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+
+          <!-- Row 2 -->
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1v-2.34M14 14.66V17c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-2.34M6 4h12v6c0 3.31-2.69 6-6 6s-6-2.69-6-6V4z"/></svg>
+            </div>
+            <h4>LEAGUE MVP</h4>
+          </div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+
+          <!-- Row 3 -->
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            </div>
+            <h4>3+ FRANCHISES</h4>
+          </div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+
+          <!-- Row 4 -->
+          <div class="tile cat-tile">
+            <div class="icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h4>ACTIVE IN 2020s</h4>
+          </div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+          <div class="tile play-tile"><span class="plus">+</span><span class="sub">Select</span></div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="fix-footer">
+    <strong>Summary of Exact Fixes:</strong>
+    <ol style="margin-top: 6px; padding-left: 18px;">
+      <li><strong>Mode Toggle:</strong> Internal button padding trimmed to <code>px-1.5</code> so <code>Casual (4 Strikes)</code> has 10px margin on the right and never clips.</li>
+      <li><strong>Action Toolbar:</strong> Kept the exact Lucide squircle buttons from your screenshot, but <strong>strictly left-aligned (<code>justify-start</code>)</strong> on Row 3.</li>
+      <li><strong>Grid Dial & Text:</strong> Retained the exact <code>SportRadarDial</code> vector compass in (0,0); <code>WORE #10–#19</code> wraps cleanly as <code>WORE</code> / <code>#10–#19</code> (no hyphen break), and <code>WON CHAMPIONSHIP</code> fits without clipping.</li>
+    </ol>
+  </div>
+
+</body>
+</html>

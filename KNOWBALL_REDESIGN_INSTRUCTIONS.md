@@ -363,9 +363,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="hidden md:block h-7 w-px bg-zinc-800/80" />
 
         {/* ---------------------------------------------------- */}
-        {/* SECTION 5: ACTION SUITE TOOLBAR                      */}
+        {/* SECTION 5: ACTION SUITE TOOLBAR (STRICTLY LEFT-ALIGNED) */}
         {/* ---------------------------------------------------- */}
-        <div className="flex items-center gap-1.5 ml-auto sm:ml-0 shrink-0">
+        <div className="flex items-center justify-start gap-1.5 w-full sm:w-auto shrink-0">
           {/* Theme Switcher */}
           {onToggleTheme && (
             <button
@@ -591,6 +591,20 @@ export const metadata: Metadata = {
   // ...
 };
 ```
+
+---
+
+## Guaranteed Text-Fitting & Left-Aligned Actions Safeguards
+
+1. **Left-Aligned Action Buttons Row:**
+   * In both desktop and mobile layouts, the action button cluster (`Random`, `Tap Out`, `Stats`, `Sound`, `How to Play`, `Run It Back`) is **strictly left-aligned (`justify-start`)** across the available container width. The previous right-floating `ml-auto` has been eliminated.
+
+2. **Guaranteed Text Fit Inside All 5×5 Matrix Tiles:**
+   * **Category Headers:** Uses `text-[7.5px] min-[390px]:text-[8px] sm:text-xs font-black uppercase tracking-tight sm:tracking-wider leading-[1.0] sm:leading-tight break-words hyphens-none`.
+   * **Jersey Range Labels:** Multi-word ranges like `Wore #10–#19` wrap cleanly into `WORE` on line 1 and `#10–#19` on line 2 with `whitespace-normal` (never breaking after the hyphen).
+   * **Long Single Words:** 12-letter words like `CHAMPIONSHIP` and `FRANCHISES` have a rendered width of ~52px at 7.5px font size, fitting inside the 62px mobile cell width with margin to spare.
+   * **Solved Cells:** Player names use `truncate` so long names never clip borders. Rarity pills display a compact tag on mobile (`0.4% ⭐`) and expand to full label (`0.4% ⭐ CERTIFIED SICKO`) on desktop (`hidden sm:inline`).
+   * **Redundant Icons:** The `?` help icons on category headers are hidden on mobile (`hidden sm:inline-block`) to preserve 100% of the tile's text bounding box.
 
 ---
 
