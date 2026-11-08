@@ -86,7 +86,9 @@
       1954,
       1976
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      44
+    ],
     "championships": 1,
     "mvps": 1,
     "hallOfFame": true,
@@ -12087,7 +12089,9 @@
       1990,
       2008
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      18
+    ],
     "college": "Canada College",
     "championships": 1,
     "mvps": 0,
@@ -27693,7 +27697,10 @@
       2014,
       2022
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      9,
+      28
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -28051,7 +28058,9 @@
       1991,
       2005
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5
+    ],
     "college": "University of Hartford",
     "championships": 0,
     "mvps": 1,
@@ -33096,7 +33105,9 @@
       1953,
       1971
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      14
+    ],
     "championships": 0,
     "mvps": 2,
     "hallOfFame": true,
@@ -43493,7 +43504,9 @@
       1988,
       1997
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      19
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -43554,7 +43567,9 @@
       2004,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      19
+    ],
     "college": "Chipola College",
     "championships": 0,
     "mvps": 0,
@@ -51145,7 +51160,9 @@
       1998,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      29
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
@@ -51200,7 +51217,10 @@
       1998,
       2017
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      15,
+      21
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -51621,7 +51641,9 @@
       1967,
       1983
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5
+    ],
     "championships": 2,
     "mvps": 2,
     "hallOfFame": true,
@@ -59570,7 +59592,9 @@
       1988,
       2007
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      7
+    ],
     "college": "Seton Hall University",
     "championships": 0,
     "mvps": 0,
@@ -68209,7 +68233,10 @@
       1982,
       1999
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      12,
+      26
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -69787,7 +69814,10 @@
       1986,
       2007
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      24,
+      25
+    ],
     "college": "Arizona State University",
     "collegeConference": "Pac-12",
     "championships": 0,
@@ -81311,7 +81341,9 @@
       2006,
       2007
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8
+    ],
     "college": "University of Nevada-Las Vegas",
     "championships": 0,
     "mvps": 0,
@@ -81351,7 +81383,9 @@
       2007,
       2020
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8
+    ],
     "college": "University of Miami",
     "collegeConference": "ACC",
     "championships": 0,
@@ -83292,7 +83326,9 @@
       1973,
       1993
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5
+    ],
     "championships": 1,
     "mvps": 1,
     "hallOfFame": true,
@@ -94414,7 +94450,8 @@
       2026
     ],
     "jerseyNumbers": [
-      23
+      23,
+      17
     ],
     "championships": 1,
     "mvps": 1,
@@ -107578,7 +107615,9 @@
       2005,
       2017
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      18
+    ],
     "championships": 3,
     "mvps": 0,
     "hallOfFame": false,
@@ -112969,7 +113008,10 @@
       2005,
       2022
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      24,
+      22
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -118895,7 +118937,9 @@
       1974,
       1992
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -127734,7 +127778,8 @@
       2026
     ],
     "jerseyNumbers": [
-      44
+      44,
+      54
     ],
     "championships": 2,
     "mvps": 0,
@@ -138909,7 +138954,10 @@
       1984,
       2007
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      21,
+      22
+    ],
     "college": "University of Texas at Austin",
     "championships": 2,
     "mvps": 1,
@@ -166518,7 +166566,10 @@
       1997,
       2003
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      17,
+      23
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -166578,7 +166629,8 @@
       2026
     ],
     "jerseyNumbers": [
-      23
+      23,
+      17
     ],
     "championships": 0,
     "mvps": 0,
@@ -179977,7 +180029,10 @@
       1976,
       1996
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8,
+      10
+    ],
     "college": "Florida Agricultural and Mechanical University",
     "collegeConference": "SEC",
     "championships": 0,
@@ -184896,7 +184951,10 @@
       1993,
       2009
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      21,
+      25
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -191105,7 +191163,9 @@
       1998,
       1999
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      39
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -191144,7 +191204,9 @@
       2016,
       2022
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      39
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -198079,7 +198141,8 @@
       2026
     ],
     "jerseyNumbers": [
-      24
+      24,
+      20
     ],
     "college": "Auburn University",
     "collegeConference": "SEC",
@@ -213429,7 +213492,10 @@
       1975,
       1998
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      43,
+      24
+    ],
     "championships": 1,
     "mvps": 1,
     "hallOfFame": true,
@@ -219652,7 +219718,10 @@
       2005,
       2020
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      10,
+      23
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -224569,7 +224638,9 @@
       2006,
       2017
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      16
+    ],
     "college": "Arizona State University",
     "collegeConference": "Pac-12",
     "championships": 0,
@@ -234834,7 +234905,10 @@
       2005,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      28,
+      84
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -238628,7 +238702,10 @@
       1969,
       1993
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      27,
+      72
+    ],
     "college": "University of New Hampshire",
     "championships": 0,
     "mvps": 0,
@@ -257319,7 +257396,9 @@
       1999,
       2008
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      38
+    ],
     "college": "Seminole State College",
     "championships": 1,
     "mvps": 0,
@@ -263651,7 +263730,9 @@
       2008,
       2021
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      11
+    ],
     "college": "College of Charleston",
     "championships": 1,
     "mvps": 0,
@@ -268057,7 +268138,9 @@
       1923,
       1939
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      4
+    ],
     "college": "Columbia University",
     "championships": 8,
     "mvps": 2,
@@ -271000,7 +271083,9 @@
       1995,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      25
+    ],
     "college": "California State University Long Beach",
     "collegeConference": "Pac-12",
     "championships": 0,
@@ -277089,7 +277174,9 @@
       1987,
       2008
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      47
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -281591,7 +281678,9 @@
       2008,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -283696,7 +283785,9 @@
       1984,
       2000
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      16
+    ],
     "championships": 3,
     "mvps": 0,
     "hallOfFame": false,
@@ -288796,7 +288887,10 @@
       2004,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      28,
+      3
+    ],
     "college": "University of Illinois at Chicago",
     "collegeConference": "Big Ten",
     "championships": 0,
@@ -293750,7 +293844,8 @@
       2026
     ],
     "jerseyNumbers": [
-      23
+      23,
+      21
     ],
     "championships": 0,
     "mvps": 0,
@@ -299336,7 +299431,9 @@
       1996,
       2011
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      27
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": true,
@@ -299376,7 +299473,9 @@
       2019,
       2022
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      27
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -299619,7 +299718,9 @@
       1975,
       1988
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      49
+    ],
     "college": "University of Louisiana at Lafayette",
     "championships": 2,
     "mvps": 0,
@@ -302585,7 +302686,9 @@
       1982,
       2001
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      19
+    ],
     "college": "San Diego State University",
     "championships": 0,
     "mvps": 0,
@@ -302632,7 +302735,9 @@
       2006,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      19
+    ],
     "college": "San Diego State University",
     "championships": 0,
     "mvps": 0,
@@ -306214,7 +306319,10 @@
       1998,
       2013
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      32,
+      34
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
@@ -308201,7 +308309,9 @@
       2006,
       2020
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      35
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -308715,7 +308825,9 @@
       2007,
       2015
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      32
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
@@ -314551,7 +314663,8 @@
       2026
     ],
     "jerseyNumbers": [
-      3
+      3,
+      34
     ],
     "championships": 0,
     "mvps": 3,
@@ -323462,7 +323575,11 @@
       2007,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      7,
+      12,
+      14
+    ],
     "college": "University of Tennessee",
     "collegeConference": "SEC",
     "championships": 0,
@@ -327583,7 +327700,9 @@
       1997,
       2013
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      17
+    ],
     "college": "University of Tennessee",
     "collegeConference": "SEC",
     "championships": 0,
@@ -328539,7 +328658,11 @@
       1979,
       2003
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      24,
+      35,
+      14
+    ],
     "championships": 2,
     "mvps": 1,
     "hallOfFame": true,
@@ -332834,7 +332957,9 @@
       2005,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      34
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -344857,7 +344982,9 @@
       1993,
       2010
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "college": "University of Arizona",
     "collegeConference": "Pac-12",
     "championships": 0,
@@ -353831,7 +353958,9 @@
       2004,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      6
+    ],
     "college": "Missouri State University",
     "championships": 1,
     "mvps": 1,
@@ -360550,7 +360679,9 @@
       1997,
       2015
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      48
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -362863,7 +362994,9 @@
       1996,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      29
+    ],
     "college": "\"Miami-Dade College",
     "collegeConference": "ACC",
     "championships": 0,
@@ -367025,7 +367158,10 @@
       1967,
       1987
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      9,
+      44
+    ],
     "college": "Arizona State University",
     "collegeConference": "Pac-12",
     "championships": 5,
@@ -372826,7 +372962,9 @@
       1995,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      2
+    ],
     "championships": 5,
     "mvps": 0,
     "hallOfFame": true,
@@ -378445,7 +378583,9 @@
       1980,
       1982
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "college": "\"Miami-Dade College",
     "collegeConference": "ACC",
     "championships": 0,
@@ -378484,7 +378624,9 @@
       1982,
       1984
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "college": "San Jose State University",
     "championships": 0,
     "mvps": 0,
@@ -378537,7 +378679,9 @@
       1988,
       2009
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "college": "University of Southern California",
     "collegeConference": "Pac-12",
     "championships": 1,
@@ -380839,7 +380983,9 @@
       1993,
       2012
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      10
+    ],
     "championships": 1,
     "mvps": 1,
     "hallOfFame": true,
@@ -388198,7 +388344,9 @@
       1953,
       1974
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      6
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -395825,7 +395973,9 @@
       2006,
       2020
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      27
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -398963,7 +399113,9 @@
       2012,
       2026
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      60
+    ],
     "college": "University of Arkansas",
     "collegeConference": "SEC",
     "championships": 1,
@@ -400387,7 +400539,9 @@
       1954,
       1975
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      3
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": true,
@@ -403209,7 +403363,10 @@
       2006,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5,
+      3
+    ],
     "college": "University of Missouri Columbia",
     "championships": 1,
     "mvps": 0,
@@ -430300,7 +430457,9 @@
       1999,
       2012
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      45
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -430384,7 +430543,10 @@
       1919,
       1926
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      34,
+      33
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -430429,7 +430591,10 @@
       2002,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      34,
+      33
+    ],
     "college": "University of Arkansas",
     "collegeConference": "SEC",
     "championships": 0,
@@ -435990,7 +436155,10 @@
       2006,
       2021
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      31,
+      34
+    ],
     "championships": 3,
     "mvps": 0,
     "hallOfFame": false,
@@ -438187,7 +438355,9 @@
       2002,
       2012
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      54
+    ],
     "college": "University of Notre Dame",
     "collegeConference": "ACC",
     "championships": 1,
@@ -439146,7 +439316,9 @@
       2007,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      55
+    ],
     "college": "University of Washington",
     "collegeConference": "Pac-12",
     "championships": 3,
@@ -452068,7 +452240,9 @@
       2010,
       2021
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      20
+    ],
     "college": "University of Louisiana at Lafayette",
     "championships": 1,
     "mvps": 0,
@@ -459454,7 +459628,9 @@
       1986,
       2008
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      31
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -466972,7 +467148,9 @@
       1951,
       1968
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      7
+    ],
     "championships": 7,
     "mvps": 3,
     "hallOfFame": true,
@@ -474621,7 +474799,9 @@
       1992,
       2009
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      45
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -474668,7 +474848,9 @@
       1993,
       1997
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      45
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -475045,7 +475227,9 @@
       2006,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      55
+    ],
     "college": "Chipola College",
     "championships": 0,
     "mvps": 0,
@@ -475588,7 +475772,9 @@
       2002,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      41
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -479392,7 +479578,9 @@
       1982,
       1995
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      23
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
@@ -480094,7 +480282,9 @@
       2004,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      7
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": true,
@@ -482651,7 +482841,9 @@
       1951,
       1973
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      24
+    ],
     "championships": 1,
     "mvps": 2,
     "hallOfFame": true,
@@ -485084,7 +485276,9 @@
       2005,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      16
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -489261,7 +489455,8 @@
       2026
     ],
     "jerseyNumbers": [
-      24
+      24,
+      22
     ],
     "championships": 0,
     "mvps": 1,
@@ -494979,7 +495174,9 @@
       1986,
       2001
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      25
+    ],
     "college": "University of Southern California",
     "collegeConference": "Pac-12",
     "championships": 1,
@@ -521417,7 +521614,9 @@
       2004,
       2026
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      4
+    ],
     "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
@@ -521470,7 +521669,9 @@
       1978,
       1998
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      4
+    ],
     "college": "University of Minnesota",
     "collegeConference": "Big Ten",
     "championships": 1,
@@ -530110,7 +530311,9 @@
       2003,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      33
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
@@ -530996,7 +531199,9 @@
       1977,
       1994
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      47
+    ],
     "college": "Brigham Young University",
     "championships": 4,
     "mvps": 0,
@@ -540686,7 +540891,9 @@
       1977,
       1997
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      33
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -544919,7 +545126,9 @@
       1999,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      36
+    ],
     "college": "Stony Brook University",
     "championships": 1,
     "mvps": 0,
@@ -566690,7 +566899,9 @@
       1985,
       2001
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      21
+    ],
     "championships": 5,
     "mvps": 0,
     "hallOfFame": false,
@@ -567357,7 +567568,9 @@
       1997,
       2011
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      30
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -569004,7 +569217,9 @@
       1997,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      34
+    ],
     "championships": 3,
     "mvps": 0,
     "hallOfFame": true,
@@ -576995,7 +577210,9 @@
       2005,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      58
+    ],
     "college": "Mississippi State University",
     "collegeConference": "SEC",
     "championships": 1,
@@ -585544,7 +585761,9 @@
       2006,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      15
+    ],
     "college": "Arizona State University",
     "collegeConference": "Pac-12",
     "championships": 3,
@@ -586864,7 +587083,9 @@
       2001,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      23
+    ],
     "college": "Northeastern University",
     "championships": 0,
     "mvps": 0,
@@ -587687,7 +587908,10 @@
       2007,
       2020
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8,
+      9
+    ],
     "college": "University of Texas at Arlington",
     "championships": 2,
     "mvps": 0,
@@ -589144,7 +589368,9 @@
       1995,
       2009
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      40
+    ],
     "college": "\"University of California",
     "collegeConference": "Pac-12",
     "championships": 1,
@@ -594655,7 +594881,9 @@
       1995,
       2013
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      46
+    ],
     "college": "\"San Jacinto College",
     "championships": 5,
     "mvps": 0,
@@ -606623,7 +606851,9 @@
       1995,
       2011
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      20
+    ],
     "college": "Calhoun Community College",
     "championships": 5,
     "mvps": 0,
@@ -606822,7 +607052,9 @@
       2009,
       2021
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      28
+    ],
     "college": "Florida State University",
     "collegeConference": "SEC",
     "championships": 3,
@@ -611873,7 +612105,9 @@
       1984,
       1995
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      34
+    ],
     "college": "Triton College",
     "championships": 2,
     "mvps": 0,
@@ -618631,7 +618865,10 @@
       2005,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      2,
+      13
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -631256,7 +631493,9 @@
       2003,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      7
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -631292,7 +631531,9 @@
       2006,
       2006
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      7
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -639686,7 +639927,9 @@
       1995,
       2013
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      42
+    ],
     "championships": 5,
     "mvps": 0,
     "hallOfFame": true,
@@ -640228,7 +640471,8 @@
       2026
     ],
     "jerseyNumbers": [
-      44
+      44,
+      48
     ],
     "championships": 1,
     "mvps": 0,
@@ -643096,7 +643340,9 @@
       1955,
       1977
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5
+    ],
     "championships": 2,
     "mvps": 1,
     "hallOfFame": true,
@@ -643741,7 +643987,9 @@
       1956,
       1976
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      20
+    ],
     "championships": 2,
     "mvps": 2,
     "hallOfFame": true,
@@ -643903,7 +644151,9 @@
       1947,
       1956
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      42
+    ],
     "college": "\"University of California",
     "collegeConference": "Pac-12",
     "championships": 1,
@@ -645661,7 +645911,10 @@
       1994,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      3,
+      13
+    ],
     "championships": 1,
     "mvps": 3,
     "hallOfFame": false,
@@ -650601,7 +650854,9 @@
       2000,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      11
+    ],
     "championships": 1,
     "mvps": 1,
     "hallOfFame": false,
@@ -654844,7 +655099,9 @@
       1963,
       1986
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      14
+    ],
     "championships": 3,
     "mvps": 1,
     "hallOfFame": false,
@@ -654886,7 +655143,9 @@
       1997,
       1997
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      14
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -661121,7 +661380,9 @@
       1914,
       1935
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      3
+    ],
     "championships": 7,
     "mvps": 1,
     "hallOfFame": true,
@@ -662802,7 +663063,9 @@
       2001,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      52
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -664662,7 +664925,8 @@
       2026
     ],
     "jerseyNumbers": [
-      51
+      51,
+      41
     ],
     "college": "Florida Gulf Coast University",
     "collegeConference": "SEC",
@@ -667641,7 +667905,9 @@
       1981,
       1997
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      23
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": true,
@@ -669648,7 +669914,9 @@
       2000,
       2012
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      57
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -676076,7 +676344,8 @@
       2026
     ],
     "jerseyNumbers": [
-      31
+      31,
+      21
     ],
     "college": "University of Missouri Columbia",
     "championships": 2,
@@ -677773,7 +678042,9 @@
       1972,
       1989
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      20
+    ],
     "college": "Ohio University",
     "championships": 1,
     "mvps": 3,
@@ -683723,7 +683994,9 @@
       2011,
       2021
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      15
+    ],
     "college": "University of North Carolina at Chapel Hill",
     "collegeConference": "ACC",
     "championships": 0,
@@ -692103,7 +692376,11 @@
       1988,
       2009
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      11,
+      10,
+      5
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -708832,7 +709109,9 @@
       1980,
       1997
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      46
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -709480,7 +709759,9 @@
       1978,
       1996
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      1
+    ],
     "college": "\"California Polytechnic State University",
     "collegeConference": "Pac-12",
     "championships": 1,
@@ -711417,7 +711698,9 @@
       1988,
       2009
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      29
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
@@ -715452,7 +715735,10 @@
       1999,
       2014
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      12,
+      99
+    ],
     "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
@@ -716083,7 +716369,9 @@
       1989,
       2007
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      21
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
@@ -723690,7 +723978,9 @@
       1962,
       1982
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8
+    ],
     "championships": 2,
     "mvps": 1,
     "hallOfFame": true,
@@ -728608,7 +728898,9 @@
       1978,
       1995
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      34
+    ],
     "championships": 3,
     "mvps": 0,
     "hallOfFame": false,
@@ -733423,7 +733715,10 @@
       1983,
       1999
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      18,
+      39
+    ],
     "championships": 4,
     "mvps": 0,
     "hallOfFame": false,
@@ -740831,7 +741126,9 @@
       2001,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
@@ -743360,7 +743657,10 @@
       2004,
       2015
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      33,
+      23
+    ],
     "college": "The Ohio State University",
     "collegeConference": "Big Ten",
     "championships": 1,
@@ -750183,7 +750483,10 @@
       2003,
       2016
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      23,
+      25
+    ],
     "college": "Georgia Institute of Technology",
     "collegeConference": "SEC",
     "championships": 1,
@@ -754543,7 +754846,9 @@
       1951,
       1966
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      35
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -754586,7 +754891,9 @@
       1990,
       2008
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      35
+    ],
     "college": "Auburn University",
     "collegeConference": "SEC",
     "championships": 1,
@@ -755719,7 +756026,9 @@
       1991,
       2012
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      25
+    ],
     "college": "Illinois Central College",
     "collegeConference": "Big Ten",
     "championships": 0,
@@ -769381,7 +769690,9 @@
       2006,
       2019
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      2
+    ],
     "college": "California State University Long Beach",
     "collegeConference": "Pac-12",
     "championships": 0,
@@ -774167,7 +774478,9 @@
       2003,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      26
+    ],
     "college": "\"University of California",
     "collegeConference": "Pac-12",
     "championships": 1,
@@ -782056,7 +782369,9 @@
       2005,
       2026
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      35
+    ],
     "college": "Old Dominion University",
     "championships": 2,
     "mvps": 1,
@@ -787176,7 +787491,9 @@
       1995,
       2010
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      13
+    ],
     "college": "Ferrum College",
     "championships": 0,
     "mvps": 0,
@@ -788060,7 +788377,9 @@
       2005,
       2026
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      50
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -805511,7 +805830,9 @@
       1989,
       2000
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      35
+    ],
     "college": "College of San Mateo",
     "championships": 1,
     "mvps": 0,
@@ -813868,7 +814189,9 @@
       1970,
       1974
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -813905,7 +814228,9 @@
       1991,
       2006
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      51
+    ],
     "championships": 4,
     "mvps": 0,
     "hallOfFame": false,
@@ -817479,7 +817804,9 @@
       1939,
       1960
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      9
+    ],
     "championships": 0,
     "mvps": 2,
     "hallOfFame": true,
@@ -822099,7 +822426,9 @@
       1973,
       1995
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      31
+    ],
     "college": "University of Minnesota",
     "collegeConference": "Big Ten",
     "championships": 1,
@@ -830127,7 +830456,9 @@
       2004,
       2018
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      5
+    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -833132,7 +833463,9 @@
       1961,
       1983
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      8
+    ],
     "championships": 0,
     "mvps": 1,
     "hallOfFame": true,
@@ -836744,7 +837077,9 @@
       2000,
       2013
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      10
+    ],
     "college": "\"University of California",
     "collegeConference": "Pac-12",
     "championships": 0,
@@ -837170,7 +837505,9 @@
       1974,
       1993
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      19
+    ],
     "championships": 0,
     "mvps": 2,
     "hallOfFame": true,
