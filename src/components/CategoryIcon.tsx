@@ -104,7 +104,13 @@ export const CategoryIcon: React.FC<CategoryIconProps> = ({ category, className 
   if (catId.includes('points') || catId.includes('score')) {
     return <Flame className={`${className} text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.5)]`} />;
   }
-  if (catId.includes('steals') || catId.includes('hits') || catId.includes('saves') || catId.includes('turnovers')) {
+  if (
+    catId.includes('assists') ||
+    catId.includes('steals') ||
+    catId.includes('hits') ||
+    catId.includes('saves') ||
+    catId.includes('turnovers')
+  ) {
     return <Target className={`${className} text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]`} />;
   }
   if (catId.includes('hof') || catId.includes('rookie')) {

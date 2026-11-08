@@ -152,6 +152,11 @@ const ACCOLADE_CRITERIA: Record<string, { award: string; leagues: string; notes:
     leagues: 'Super Bowl (NFL), NBA Finals, World Series (MLB), Stanley Cup (NHL)',
     notes: 'Won 3 or more championship rings across their professional career.',
   },
+  accolade_multi_champ_4: {
+    award: '4+ World Championship Titles',
+    leagues: 'Super Bowl (NFL), NBA Finals, World Series (MLB), Stanley Cup (NHL)',
+    notes: 'Won 4 or more championship rings across their professional career.',
+  },
   accolade_mvp: {
     award: 'League Most Valuable Player (MVP)',
     leagues: 'NFL AP MVP, NBA MVP, MLB AL or NL MVP, NHL Hart Memorial Trophy',
@@ -176,10 +181,20 @@ const STAT_CRITERIA: Record<string, { statName: string; breakdown: string; rule:
     breakdown: 'MLB Stolen Bases (100+) OR NBA Defensive Steals (100+)',
     rule: 'Achieved at least 100 stolen bases in MLB or 100 steals in the NBA.',
   },
+  stat_steals_250: {
+    statName: '250+ Career Steals',
+    breakdown: 'MLB Stolen Bases (250+) OR NBA Defensive Steals (250+)',
+    rule: 'Achieved at least 250 stolen bases in MLB or 250 steals in the NBA.',
+  },
   stat_steals_500: {
     statName: '500+ Career Steals',
     breakdown: 'MLB Stolen Bases (500+) OR NBA Defensive Steals (500+)',
     rule: 'Achieved at least 500 stolen bases in MLB or 500 steals in the NBA.',
+  },
+  stat_assists_250: {
+    statName: '250+ Career Assists',
+    breakdown: 'NBA Assists (250+) OR NHL Assists (250+)',
+    rule: 'Recorded at least 250 career assists on the court or on the ice.',
   },
   stat_assists_500: {
     statName: '500+ Career Assists',
@@ -191,35 +206,130 @@ const STAT_CRITERIA: Record<string, { statName: string; breakdown: string; rule:
     breakdown: 'NBA Assists (1,000+) OR NHL Assists (1,000+)',
     rule: 'Recorded at least 1,000 career assists on the court or on the ice.',
   },
+  stat_assists_2500: {
+    statName: '2,500+ Career Assists',
+    breakdown: 'NBA Assists (2,500+) OR NHL Assists (2,500+)',
+    rule: 'Recorded at least 2,500 career assists on the court or on the ice.',
+  },
+  stat_points_1k: {
+    statName: '1,000+ Career Points (or 100+ NHL Points)',
+    breakdown: 'NBA: 1,000+ points | NHL: 100+ points (Goals + Assists)',
+    rule: 'Scored 1,000+ career points in basketball, or 100+ points in hockey.',
+  },
+  stat_points_5k: {
+    statName: '5,000+ Career Points (or 500+ NHL Points)',
+    breakdown: 'NBA: 5,000+ points | NHL: 500+ points (Goals + Assists)',
+    rule: 'Scored 5,000+ career points in basketball, or 500+ points in hockey.',
+  },
   stat_points_10k: {
     statName: '10,000+ Career Points (or 1,000+ NHL Points)',
     breakdown: 'NBA: 10,000+ points | NHL: 1,000+ points (Goals + Assists)',
     rule: 'Scored 10,000+ career points in basketball, or reached the elite 1,000-point plateau in hockey.',
+  },
+  stat_points_15k: {
+    statName: '15,000+ Career Points (or 1,200+ NHL Points)',
+    breakdown: 'NBA: 15,000+ points | NHL: 1,200+ points (Goals + Assists)',
+    rule: 'Scored 15,000+ career points in basketball, or 1,200+ points in hockey.',
+  },
+  stat_turnovers_100: {
+    statName: '100+ Career Turnovers',
+    breakdown: 'NFL: 100+ Turnovers (INTs thrown + Fumbles lost) | NBA: 100+ Turnovers committed',
+    rule: 'Recorded 100+ total career turnovers in the NFL or NBA.',
   },
   stat_turnovers_150: {
     statName: '150+ Career Turnovers',
     breakdown: 'NFL: 150+ Turnovers (INTs thrown + Fumbles lost) | NBA: 150+ Turnovers committed',
     rule: 'Recorded 150+ total career turnovers in the NFL or NBA.',
   },
+  stat_turnovers_250: {
+    statName: '250+ Career Turnovers',
+    breakdown: 'NFL: 250+ Turnovers (INTs thrown + Fumbles lost) | NBA: 250+ Turnovers committed',
+    rule: 'Recorded 250+ total career turnovers in the NFL or NBA.',
+  },
+  stat_hits_1000: {
+    statName: '1,000+ Career Hits',
+    breakdown: 'MLB: 1,000+ Base Hits | NHL: 1,000+ Body Checks / Hits',
+    rule: 'Recorded 1,000+ base hits in baseball or 1,000+ hits in the NHL.',
+  },
+  stat_hits_2000: {
+    statName: '2,000+ Career Hits',
+    breakdown: 'MLB: 2,000+ Base Hits | NHL: 2,000+ Body Checks / Hits',
+    rule: 'Recorded 2,000+ base hits in baseball or 2,000+ hits in the NHL.',
+  },
   stat_hits_3000: {
     statName: '3,000+ Career Hits',
     breakdown: 'MLB: 3,000+ Base Hits | NHL: 3,000+ Body Checks / Hits',
     rule: 'Member of the 3,000 Hit Club in baseball or recorded 3,000+ hits in the NHL.',
+  },
+  stat_saves_100: {
+    statName: '100+ Career Saves',
+    breakdown: 'MLB: 100+ Relief Pitching Saves | NHL: 100+ Goalie Saves',
+    rule: 'Recorded 100+ saves on the mound (MLB closers) or 100+ saves in net (NHL goalies).',
+  },
+  stat_saves_200: {
+    statName: '200+ Career Saves',
+    breakdown: 'MLB: 200+ Relief Pitching Saves | NHL: 200+ Goalie Saves',
+    rule: 'Recorded 200+ saves on the mound (MLB closers) or 200+ saves in net (NHL goalies).',
   },
   stat_saves_300: {
     statName: '300+ Career Saves',
     breakdown: 'MLB: 300+ Relief Pitching Saves | NHL: 300+ Goalie Saves',
     rule: 'Recorded 300+ saves on the mound (MLB closers) or 300+ saves in net (NHL goalies).',
   },
-  number_23_or_24: {
-    statName: 'Wore #23 or #24 in Pros',
-    breakdown: 'Jersey #23 or #24',
-    rule: 'Wore number 23 or 24 for at least one official regular season game in NFL, NBA, MLB, or NHL.',
-  },
   number_single_digit: {
     statName: 'Wore Single Digit Number (#1–#9)',
     breakdown: 'Jersey Numbers 1 through 9',
     rule: 'Wore any single-digit number (1, 2, 3, 4, 5, 6, 7, 8, or 9) during their pro career.',
+  },
+  number_teens: {
+    statName: 'Wore a Teen Jersey Number (#10–#19)',
+    breakdown: 'Jersey Numbers 10 through 19',
+    rule: 'Wore a jersey number in the teens (10, 11, 12, 13, 14, 15, 16, 17, 18, or 19) in pro games.',
+  },
+  number_twenties: {
+    statName: 'Wore a 20s Jersey Number (#20–#29)',
+    breakdown: 'Jersey Numbers 20 through 29',
+    rule: 'Wore a jersey number in the twenties (20 through 29) during pro regular season games.',
+  },
+  number_thirties: {
+    statName: 'Wore a 30s Jersey Number (#30–#39)',
+    breakdown: 'Jersey Numbers 30 through 39',
+    rule: 'Wore a jersey number in the thirties (30 through 39) during pro regular season games.',
+  },
+  number_forties: {
+    statName: 'Wore a 40s Jersey Number (#40–#49)',
+    breakdown: 'Jersey Numbers 40 through 49',
+    rule: 'Wore a jersey number in the forties (40 through 49) during pro regular season games.',
+  },
+  number_fifties: {
+    statName: 'Wore a 50s Jersey Number (#50–#59)',
+    breakdown: 'Jersey Numbers 50 through 59',
+    rule: 'Wore a jersey number in the fifties (50 through 59) during pro regular season games.',
+  },
+  number_sixty_plus: {
+    statName: 'Wore 60s/70s Jersey Number (#60–#79)',
+    breakdown: 'Jersey Numbers 60 through 79',
+    rule: 'Wore a jersey number between 60 and 79 during their major league career.',
+  },
+  number_eighty_plus: {
+    statName: 'Wore High Jersey Number (#80–#99)',
+    breakdown: 'Jersey Numbers 80 through 99',
+    rule: 'Wore a high jersey number between 80 and 99 during their major league career.',
+  },
+  number_23_or_24: {
+    statName: 'Wore Iconic #23 or #24 in Pros',
+    breakdown: 'Jersey #23 or #24',
+    rule: 'Wore number 23 or 24 for at least one official regular season game in NFL, NBA, MLB, or NHL.',
+  },
+  number_33_or_34: {
+    statName: 'Wore Legendary #33 or #34 in Pros',
+    breakdown: 'Jersey #33 or #34',
+    rule: 'Wore number 33 or 34 for at least one official regular season game in NFL, NBA, MLB, or NHL.',
+  },
+  number_0_or_99: {
+    statName: 'Wore #0, #00, or #99 in Pros',
+    breakdown: 'Jersey #0, #00, or #99',
+    rule: 'Wore jersey number 0, 00, or 99 during their pro regular season career.',
   },
 };
 
@@ -245,18 +355,34 @@ const ERA_CRITERIA: Record<string, { label: string; rule: string }> = {
     label: 'Active in the 1980s',
     rule: 'Appeared in at least one pro game between January 1, 1980 and December 31, 1989.',
   },
+  era_8_seasons: {
+    label: 'Played 8+ Seasons',
+    rule: 'Career spanned 8 or more calendar years at the major league level (active years difference >= 7).',
+  },
   era_10_seasons: {
     label: 'Played 10+ Seasons',
     rule: 'Career spanned 10 or more calendar years at the major league level (active years difference >= 9).',
+  },
+  era_12_seasons: {
+    label: 'Played 12+ Seasons',
+    rule: 'Career spanned 12 or more calendar years at the major league level (active years difference >= 11).',
   },
   era_15_seasons: {
     label: 'Played 15+ Seasons',
     rule: 'Career spanned 15 or more calendar years at the major league level (active years difference >= 14).',
   },
+  era_18_seasons: {
+    label: 'Played 18+ Seasons',
+    rule: 'Career spanned 18 or more calendar years at the major league level (active years difference >= 17).',
+  },
 };
 
 // Franchise / Journey breakdowns
 const FRANCHISE_CRITERIA: Record<string, { label: string; rule: string }> = {
+  career_2_teams: {
+    label: 'Played for 2+ Franchises',
+    rule: 'Appeared in official regular-season or playoff games for at least 2 distinct pro franchises.',
+  },
   career_3_teams: {
     label: 'Played for 3+ Franchises',
     rule: 'Appeared in official regular-season or playoff games for at least 3 distinct pro franchises.',
@@ -268,6 +394,10 @@ const FRANCHISE_CRITERIA: Record<string, { label: string; rule: string }> = {
   career_5_teams: {
     label: 'Played for 5+ Franchises',
     rule: 'Appeared in official regular-season or playoff games for at least 5 distinct pro franchises.',
+  },
+  career_6_teams: {
+    label: 'Played for 6+ Franchises',
+    rule: 'Appeared in official regular-season or playoff games for at least 6 distinct pro franchises.',
   },
   career_one_franchise: {
     label: 'One-Franchise Legend (8+ Yrs)',

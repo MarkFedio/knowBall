@@ -4,6 +4,22 @@ export const CATEGORIES: Record<string, Category> = {
   // ==========================================
   // 1. CROSS-SPORT STAT HOMONYMS
   // ==========================================
+  STAT_STEALS_100: {
+    id: 'stat_steals_100',
+    name: '100+ Career Steals (MLB/NBA)',
+    shortName: '100+ Steals',
+    type: 'CROSS_STAT',
+    description: '100+ career stolen bases (MLB) or 100+ defensive steals (NBA)',
+    matches: (a) => (a.stats.steals ?? 0) >= 100,
+  },
+  STAT_STEALS_250: {
+    id: 'stat_steals_250',
+    name: '250+ Career Steals (MLB/NBA)',
+    shortName: '250+ Steals',
+    type: 'CROSS_STAT',
+    description: '250+ career stolen bases (MLB) or 250+ defensive steals (NBA)',
+    matches: (a) => (a.stats.steals ?? 0) >= 250,
+  },
   STAT_STEALS_500: {
     id: 'stat_steals_500',
     name: '500+ Career Steals (MLB/NBA)',
@@ -12,13 +28,21 @@ export const CATEGORIES: Record<string, Category> = {
     description: '500+ career stolen bases (MLB) or 500+ defensive steals (NBA)',
     matches: (a) => (a.stats.steals ?? 0) >= 500,
   },
-  STAT_STEALS_100: {
-    id: 'stat_steals_100',
-    name: '100+ Career Steals (MLB/NBA)',
-    shortName: '100+ Steals',
+  STAT_ASSISTS_250: {
+    id: 'stat_assists_250',
+    name: '250+ Career Assists (NBA/NHL)',
+    shortName: '250+ Assists',
     type: 'CROSS_STAT',
-    description: '100+ career stolen bases (MLB) or 100+ defensive steals (NBA)',
-    matches: (a) => (a.stats.steals ?? 0) >= 100,
+    description: '250+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 250,
+  },
+  STAT_ASSISTS_500: {
+    id: 'stat_assists_500',
+    name: '500+ Career Assists (NBA/NHL)',
+    shortName: '500+ Assists',
+    type: 'CROSS_STAT',
+    description: '500+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 500,
   },
   STAT_ASSISTS_1000: {
     id: 'stat_assists_1000',
@@ -28,13 +52,39 @@ export const CATEGORIES: Record<string, Category> = {
     description: '1,000+ career assists in NBA or NHL',
     matches: (a) => (a.stats.assists ?? 0) >= 1000,
   },
-  STAT_ASSISTS_500: {
-    id: 'stat_assists_500',
-    name: '500+ Career Assists (NBA/NHL)',
-    shortName: '500+ Assists',
+  STAT_ASSISTS_2500: {
+    id: 'stat_assists_2500',
+    name: '2,500+ Career Assists (NBA/NHL)',
+    shortName: '2,500+ Assists',
     type: 'CROSS_STAT',
-    description: '500+ career assists in NBA or NHL',
-    matches: (a) => (a.stats.assists ?? 0) >= 500,
+    description: '2,500+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 2500,
+  },
+  STAT_POINTS_1K: {
+    id: 'stat_points_1k',
+    name: '1,000+ Career Points (NBA/NHL)',
+    shortName: '1K+ Points',
+    type: 'CROSS_STAT',
+    description: '1,000+ points scored in NBA (or 100+ points in NHL)',
+    matches: (a) => {
+      if (a.sports.includes('NHL')) {
+        return (a.stats.points ?? 0) >= 100;
+      }
+      return (a.stats.points ?? 0) >= 1000;
+    },
+  },
+  STAT_POINTS_5K: {
+    id: 'stat_points_5k',
+    name: '5,000+ Career Points (NBA/NHL)',
+    shortName: '5K+ Points',
+    type: 'CROSS_STAT',
+    description: '5,000+ points scored in NBA (or 500+ points in NHL)',
+    matches: (a) => {
+      if (a.sports.includes('NHL')) {
+        return (a.stats.points ?? 0) >= 500;
+      }
+      return (a.stats.points ?? 0) >= 5000;
+    },
   },
   STAT_POINTS_10K: {
     id: 'stat_points_10k',
@@ -49,21 +99,26 @@ export const CATEGORIES: Record<string, Category> = {
       return (a.stats.points ?? 0) >= 10000;
     },
   },
-  STAT_HITS_3000: {
-    id: 'stat_hits_3000',
-    name: '3,000+ Career Hits (MLB/NHL)',
-    shortName: '3,000+ Hits',
+  STAT_POINTS_15K: {
+    id: 'stat_points_15k',
+    name: '15,000+ Career Points (NBA/NHL)',
+    shortName: '15K+ Points',
     type: 'CROSS_STAT',
-    description: '3,000+ base hits (MLB) or 3,000+ body checks/hits (NHL)',
-    matches: (a) => (a.stats.hits ?? 0) >= 3000,
+    description: '15,000+ points scored in NBA (or 1,200+ in NHL)',
+    matches: (a) => {
+      if (a.sports.includes('NHL')) {
+        return (a.stats.points ?? 0) >= 1200;
+      }
+      return (a.stats.points ?? 0) >= 15000;
+    },
   },
-  STAT_SAVES_300: {
-    id: 'stat_saves_300',
-    name: '300+ Career Saves (MLB/NHL)',
-    shortName: '300+ Saves',
+  STAT_TURNOVERS_100: {
+    id: 'stat_turnovers_100',
+    name: '100+ Career Turnovers (NFL/NBA)',
+    shortName: '100+ Turnovers',
     type: 'CROSS_STAT',
-    description: '300+ relief pitching saves (MLB) or 300+ goalie saves (NHL)',
-    matches: (a) => (a.stats.saves ?? 0) >= 300,
+    description: '100+ career turnovers (NFL INTs/fumbles lost, or NBA turnovers)',
+    matches: (a) => (a.stats.turnovers ?? 0) >= 100,
   },
   STAT_TURNOVERS_150: {
     id: 'stat_turnovers_150',
@@ -72,6 +127,62 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'CROSS_STAT',
     description: '150+ career turnovers (NFL INTs/fumbles lost, or NBA turnovers)',
     matches: (a) => (a.stats.turnovers ?? 0) >= 150,
+  },
+  STAT_TURNOVERS_250: {
+    id: 'stat_turnovers_250',
+    name: '250+ Career Turnovers (NFL/NBA)',
+    shortName: '250+ Turnovers',
+    type: 'CROSS_STAT',
+    description: '250+ career turnovers (NFL INTs/fumbles lost, or NBA turnovers)',
+    matches: (a) => (a.stats.turnovers ?? 0) >= 250,
+  },
+  STAT_HITS_1000: {
+    id: 'stat_hits_1000',
+    name: '1,000+ Career Hits (MLB/NHL)',
+    shortName: '1,000+ Hits',
+    type: 'CROSS_STAT',
+    description: '1,000+ base hits (MLB) or 1,000+ body checks/hits (NHL)',
+    matches: (a) => (a.stats.hits ?? 0) >= 1000,
+  },
+  STAT_HITS_2000: {
+    id: 'stat_hits_2000',
+    name: '2,000+ Career Hits (MLB/NHL)',
+    shortName: '2,000+ Hits',
+    type: 'CROSS_STAT',
+    description: '2,000+ base hits (MLB) or 2,000+ body checks/hits (NHL)',
+    matches: (a) => (a.stats.hits ?? 0) >= 2000,
+  },
+  STAT_HITS_3000: {
+    id: 'stat_hits_3000',
+    name: '3,000+ Career Hits (MLB/NHL)',
+    shortName: '3,000+ Hits',
+    type: 'CROSS_STAT',
+    description: '3,000+ base hits (MLB) or 3,000+ body checks/hits (NHL)',
+    matches: (a) => (a.stats.hits ?? 0) >= 3000,
+  },
+  STAT_SAVES_100: {
+    id: 'stat_saves_100',
+    name: '100+ Career Saves (MLB/NHL)',
+    shortName: '100+ Saves',
+    type: 'CROSS_STAT',
+    description: '100+ relief pitching saves (MLB) or 100+ goalie saves (NHL)',
+    matches: (a) => (a.stats.saves ?? 0) >= 100,
+  },
+  STAT_SAVES_200: {
+    id: 'stat_saves_200',
+    name: '200+ Career Saves (MLB/NHL)',
+    shortName: '200+ Saves',
+    type: 'CROSS_STAT',
+    description: '200+ relief pitching saves (MLB) or 200+ goalie saves (NHL)',
+    matches: (a) => (a.stats.saves ?? 0) >= 200,
+  },
+  STAT_SAVES_300: {
+    id: 'stat_saves_300',
+    name: '300+ Career Saves (MLB/NHL)',
+    shortName: '300+ Saves',
+    type: 'CROSS_STAT',
+    description: '300+ relief pitching saves (MLB) or 300+ goalie saves (NHL)',
+    matches: (a) => (a.stats.saves ?? 0) >= 300,
   },
 
   // ==========================================
@@ -238,6 +349,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Won 3 or more World Championships across their pro career',
     matches: (a) => a.championships >= 3,
   },
+  ACCOLADE_MULTI_CHAMP_4: {
+    id: 'accolade_multi_champ_4',
+    name: 'Won 4+ Championships',
+    shortName: '4+ Championships',
+    type: 'ACCOLADE',
+    description: 'Won 4 or more World Championships across their pro career',
+    matches: (a) => a.championships >= 4,
+  },
   ACCOLADE_MVP: {
     id: 'accolade_mvp',
     name: 'Won League MVP',
@@ -261,6 +380,14 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'ACCOLADE',
     description: 'Named Rookie of the Year in their primary league',
     matches: (a) => a.rookieOfTheYear,
+  },
+  CAREER_2_TEAMS: {
+    id: 'career_2_teams',
+    name: 'Played for 2+ Franchises',
+    shortName: '2+ Franchises',
+    type: 'BACKGROUND',
+    description: 'Appeared in pro regular-season or playoff games for at least 2 distinct teams',
+    matches: (a) => a.teams.length >= 2,
   },
   CAREER_3_TEAMS: {
     id: 'career_3_teams',
@@ -286,6 +413,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Appeared in pro regular-season or playoff games for at least 5 distinct teams',
     matches: (a) => a.teams.length >= 5,
   },
+  CAREER_6_TEAMS: {
+    id: 'career_6_teams',
+    name: 'Played for 6+ Franchises',
+    shortName: '6+ Franchises',
+    type: 'BACKGROUND',
+    description: 'Appeared in pro regular-season or playoff games for at least 6 distinct teams',
+    matches: (a) => a.teams.length >= 6,
+  },
   CAREER_ONE_FRANCHISE: {
     id: 'career_one_franchise',
     name: 'One-Franchise Legend (8+ Yrs)',
@@ -296,24 +431,100 @@ export const CATEGORIES: Record<string, Category> = {
   },
 
   // ==========================================
-  // 5. NUMBERS & ERAS
+  // 5. NUMBERS & JERSEYS
   // ==========================================
-  NUMBER_23_OR_24: {
-    id: 'number_23_or_24',
-    name: 'Wore #23 or #24 in Pros',
-    shortName: 'Wore #23 or #24',
-    type: 'NUMBER_ERA',
-    description: 'Wore jersey number 23 or 24 for at least one pro season',
-    matches: (a) => a.jerseyNumbers.includes(23) || a.jerseyNumbers.includes(24),
-  },
   NUMBER_SINGLE_DIGIT: {
     id: 'number_single_digit',
     name: 'Wore Single Digit Number (#1-#9)',
     shortName: 'Wore #1–#9',
     type: 'NUMBER_ERA',
-    description: 'Wore a single digit jersey number (1 through 9)',
+    description: 'Wore a single digit jersey number (1 through 9) in regular season games',
     matches: (a) => a.jerseyNumbers.some((n) => n >= 1 && n <= 9),
   },
+  NUMBER_TEENS: {
+    id: 'number_teens',
+    name: 'Wore a Teen Jersey Number (#10-#19)',
+    shortName: 'Wore #10–#19',
+    type: 'NUMBER_ERA',
+    description: 'Wore a jersey number from 10 through 19 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 10 && n <= 19),
+  },
+  NUMBER_TWENTIES: {
+    id: 'number_twenties',
+    name: 'Wore a 20s Jersey Number (#20-#29)',
+    shortName: 'Wore #20–#29',
+    type: 'NUMBER_ERA',
+    description: 'Wore a jersey number from 20 through 29 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 20 && n <= 29),
+  },
+  NUMBER_THIRTIES: {
+    id: 'number_thirties',
+    name: 'Wore a 30s Jersey Number (#30-#39)',
+    shortName: 'Wore #30–#39',
+    type: 'NUMBER_ERA',
+    description: 'Wore a jersey number from 30 through 39 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 30 && n <= 39),
+  },
+  NUMBER_FORTIES: {
+    id: 'number_forties',
+    name: 'Wore a 40s Jersey Number (#40-#49)',
+    shortName: 'Wore #40–#49',
+    type: 'NUMBER_ERA',
+    description: 'Wore a jersey number from 40 through 49 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 40 && n <= 49),
+  },
+  NUMBER_FIFTIES: {
+    id: 'number_fifties',
+    name: 'Wore a 50s Jersey Number (#50-#59)',
+    shortName: 'Wore #50–#59',
+    type: 'NUMBER_ERA',
+    description: 'Wore a jersey number from 50 through 59 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 50 && n <= 59),
+  },
+  NUMBER_SIXTY_PLUS: {
+    id: 'number_sixty_plus',
+    name: 'Wore Jersey Number in 60s/70s (#60-#79)',
+    shortName: 'Wore #60–#79',
+    type: 'NUMBER_ERA',
+    description: 'Wore a jersey number from 60 through 79 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 60 && n <= 79),
+  },
+  NUMBER_EIGHTY_PLUS: {
+    id: 'number_eighty_plus',
+    name: 'Wore High Jersey Number (#80-#99)',
+    shortName: 'Wore #80–#99',
+    type: 'NUMBER_ERA',
+    description: 'Wore a high jersey number from 80 through 99 during pro career',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 80 && n <= 99),
+  },
+  NUMBER_23_OR_24: {
+    id: 'number_23_or_24',
+    name: 'Wore Iconic #23 or #24 in Pros',
+    shortName: 'Wore #23 or #24',
+    type: 'NUMBER_ERA',
+    description: 'Wore iconic jersey number 23 or 24 for at least one pro season',
+    matches: (a) => a.jerseyNumbers.includes(23) || a.jerseyNumbers.includes(24),
+  },
+  NUMBER_33_OR_34: {
+    id: 'number_33_or_34',
+    name: 'Wore Legendary #33 or #34 in Pros',
+    shortName: 'Wore #33 or #34',
+    type: 'NUMBER_ERA',
+    description: 'Wore legendary jersey number 33 or 34 for at least one pro season',
+    matches: (a) => a.jerseyNumbers.includes(33) || a.jerseyNumbers.includes(34),
+  },
+  NUMBER_0_OR_99: {
+    id: 'number_0_or_99',
+    name: 'Wore #0, #00, or #99 in Pros',
+    shortName: 'Wore #0 / #99',
+    type: 'NUMBER_ERA',
+    description: 'Wore jersey number 0, 00, or 99 during their major league career',
+    matches: (a) => a.jerseyNumbers.some((n) => n === 0 || n === 99),
+  },
+
+  // ==========================================
+  // 6. ERAS & LONGEVITY
+  // ==========================================
   ERA_ACTIVE_2020S: {
     id: 'era_active_2020s',
     name: 'Active in 2020s',
@@ -354,6 +565,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Played at least one pro game between 1980 and 1989',
     matches: (a) => a.activeYears[0] <= 1989 && a.activeYears[1] >= 1980,
   },
+  ERA_8_SEASONS: {
+    id: 'era_8_seasons',
+    name: 'Played 8+ Seasons',
+    shortName: '8+ Seasons',
+    type: 'NUMBER_ERA',
+    description: 'Career spanned 8 or more calendar years at the pro level',
+    matches: (a) => a.activeYears[1] - a.activeYears[0] >= 7,
+  },
   ERA_10_SEASONS: {
     id: 'era_10_seasons',
     name: 'Played 10+ Seasons',
@@ -362,6 +581,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Career spanned 10 or more calendar years at the pro level',
     matches: (a) => a.activeYears[1] - a.activeYears[0] >= 9,
   },
+  ERA_12_SEASONS: {
+    id: 'era_12_seasons',
+    name: 'Played 12+ Seasons',
+    shortName: '12+ Seasons',
+    type: 'NUMBER_ERA',
+    description: 'Career spanned 12 or more calendar years at the pro level',
+    matches: (a) => a.activeYears[1] - a.activeYears[0] >= 11,
+  },
   ERA_15_SEASONS: {
     id: 'era_15_seasons',
     name: 'Played 15+ Seasons',
@@ -369,5 +596,13 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'NUMBER_ERA',
     description: 'Career spanned 15 or more calendar years at the pro level',
     matches: (a) => a.activeYears[1] - a.activeYears[0] >= 14,
+  },
+  ERA_18_SEASONS: {
+    id: 'era_18_seasons',
+    name: 'Played 18+ Seasons',
+    shortName: '18+ Seasons',
+    type: 'NUMBER_ERA',
+    description: 'Career spanned 18 or more calendar years at the pro level',
+    matches: (a) => a.activeYears[1] - a.activeYears[0] >= 17,
   },
 };
