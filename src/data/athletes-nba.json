@@ -224675,7 +224675,7 @@
     ],
     "college": "Texas A&M",
     "collegeConference": "SEC",
-    "championships": 1,
+    "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -224687,7 +224687,8 @@
     },
     "popularityScore": 20,
     "championshipMarkets": [
-      "LA"
+      "LA",
+      "OKC"
     ],
     "mvpMarkets": []
   },
@@ -229866,7 +229867,7 @@
     "draftPick": 11,
     "draftRound": 1,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 1,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -229877,7 +229878,9 @@
       "turnovers": 1234
     },
     "popularityScore": 85,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": [
       "OKC"
     ]
@@ -229928,7 +229931,7 @@
     "draftPick": 43,
     "draftRound": 2,
     "draftYear": 2017,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -229939,7 +229942,9 @@
       "turnovers": 505
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -230681,7 +230686,7 @@
     ],
     "college": "TCU",
     "collegeConference": "Big 12",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -230692,7 +230697,9 @@
       "turnovers": 329
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -238170,7 +238177,7 @@
     ],
     "college": "Arizona State",
     "collegeConference": "Pac-12",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -238181,7 +238188,9 @@
       "turnovers": 465
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -241848,7 +241857,7 @@
     "draftPick": 49,
     "draftRound": 2,
     "draftYear": 2020,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -241859,7 +241868,9 @@
       "turnovers": 201
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -247649,7 +247660,7 @@
     "draftPick": 55,
     "draftRound": 2,
     "draftYear": 2021,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -247660,7 +247671,9 @@
       "turnovers": 322
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -250490,7 +250503,7 @@
     "draftPick": 11,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -250501,7 +250514,9 @@
       "turnovers": 139
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -251270,7 +251285,7 @@
     "draftPick": 12,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -251281,7 +251296,9 @@
       "turnovers": 463
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -252215,7 +252232,7 @@
     "draftPick": 34,
     "draftRound": 2,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -252226,7 +252243,9 @@
       "turnovers": 176
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -254712,7 +254731,7 @@
     "draftPick": 2,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -254723,7 +254742,9 @@
       "turnovers": 299
     },
     "popularityScore": 30,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -255579,7 +255600,7 @@
     "draftPick": 10,
     "draftRound": 1,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -255590,7 +255611,9 @@
       "turnovers": 180
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -260258,7 +260281,7 @@
     "draftPick": 26,
     "draftRound": 1,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -260269,7 +260292,9 @@
       "turnovers": 28
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {
@@ -260301,7 +260326,7 @@
     "draftPick": 38,
     "draftRound": 2,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -260312,7 +260337,9 @@
       "turnovers": 120
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "OKC"
+    ],
     "mvpMarkets": []
   },
   {

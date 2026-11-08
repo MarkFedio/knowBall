@@ -49886,7 +49886,7 @@
     "draftPick": 2,
     "draftRound": 1,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -49895,7 +49895,9 @@
       "turnovers": 8
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -59120,7 +59122,7 @@
     "draftPick": 74,
     "draftRound": 3,
     "draftYear": 2020,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -59129,7 +59131,9 @@
       "turnovers": 0
     },
     "popularityScore": 65,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -84264,7 +84268,7 @@
     ],
     "college": "Middle Tennessee State",
     "collegeConference": "SEC",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -84273,7 +84277,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -116737,7 +116743,7 @@
     "draftPick": 51,
     "draftRound": 2,
     "draftYear": 2019,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -116746,7 +116752,9 @@
       "turnovers": 10
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -149735,7 +149743,7 @@
     "draftPick": 198,
     "draftRound": 6,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -149744,7 +149752,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -163192,7 +163202,7 @@
     "draftPick": 9,
     "draftRound": 1,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -163201,7 +163211,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -236678,7 +236690,7 @@
     "draftPick": 13,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -236687,7 +236699,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -244060,7 +244074,7 @@
     "draftPick": 40,
     "draftRound": 2,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -244069,7 +244083,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -246215,7 +246231,7 @@
     "draftPick": 83,
     "draftRound": 3,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -246224,7 +246240,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -253101,7 +253119,7 @@
     "draftPick": 37,
     "draftRound": 2,
     "draftYear": 2021,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -253110,7 +253128,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -263934,7 +263954,7 @@
     "draftPick": 16,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -263943,7 +263963,9 @@
       "turnovers": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -341937,7 +341959,7 @@
     "draftPick": 105,
     "draftRound": 4,
     "draftYear": 2019,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -341946,7 +341968,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -358081,7 +358105,7 @@
     "draftPick": 49,
     "draftRound": 2,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -358090,7 +358114,9 @@
       "turnovers": 6
     },
     "popularityScore": 95,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -465544,7 +465570,7 @@
       47
     ],
     "college": "Memphis",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -465553,7 +465579,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -472840,7 +472868,7 @@
     "draftPick": 53,
     "draftRound": 2,
     "draftYear": 2020,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -472849,7 +472877,9 @@
       "turnovers": 118
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -543938,7 +543968,7 @@
     "draftPick": 51,
     "draftRound": 2,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -543947,7 +543977,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -623186,7 +623218,7 @@
     "draftPick": 233,
     "draftRound": 7,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -623195,7 +623227,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -626073,7 +626107,7 @@
     "draftPick": 191,
     "draftRound": 6,
     "draftYear": 2020,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -626082,7 +626116,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -691850,7 +691886,7 @@
     "draftPick": 22,
     "draftRound": 1,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -691859,7 +691895,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -744820,7 +744858,7 @@
     "draftPick": 249,
     "draftRound": 7,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -744829,7 +744867,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -782330,7 +782370,7 @@
     "draftPick": 20,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -782339,7 +782379,9 @@
       "turnovers": 30
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -892515,7 +892557,7 @@
     "draftPick": 127,
     "draftRound": 4,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -892524,7 +892566,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -905559,7 +905603,7 @@
     "draftPick": 36,
     "draftRound": 2,
     "draftYear": 2013,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -905568,7 +905612,9 @@
       "turnovers": 0
     },
     "popularityScore": 100,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -911720,7 +911766,7 @@
     "draftPick": 10,
     "draftRound": 1,
     "draftYear": 2021,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -911729,7 +911775,9 @@
       "turnovers": 6
     },
     "popularityScore": 80,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -912283,7 +912331,7 @@
     "draftPick": 10,
     "draftRound": 1,
     "draftYear": 2021,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -912292,7 +912340,9 @@
       "turnovers": 0
     },
     "popularityScore": 60,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -919300,7 +919350,7 @@
     "draftPick": 30,
     "draftRound": 1,
     "draftYear": 2023,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -919309,7 +919359,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -957114,7 +957166,7 @@
     "draftPick": 130,
     "draftRound": 4,
     "draftYear": 2018,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -957123,7 +957175,9 @@
       "turnovers": 0
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1080317,7 +1080371,7 @@
     "draftPick": 73,
     "draftRound": 3,
     "draftYear": 2021,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1080326,7 +1080380,9 @@
       "turnovers": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {
@@ -1090614,7 +1090670,7 @@
     "draftPick": 185,
     "draftRound": 6,
     "draftYear": 2024,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -1090623,7 +1090679,9 @@
       "turnovers": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "PHI"
+    ],
     "mvpMarkets": []
   },
   {

@@ -7,6 +7,14 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   // Basketball
   'aunonoby': 'og anunoby',
   'og aunonoby': 'og anunoby',
+  'the joker': 'nikola jokic',
+  'jokic': 'nikola jokic',
+  'luka': 'luka doncic',
+  'luka magic': 'luka doncic',
+  'ant': 'anthony edwards',
+  'ant-man': 'anthony edwards',
+  'ant man': 'anthony edwards',
+  'chet': 'chet holmgren',
   'steph curry': 'stephen curry',
   'magic johnson': 'earvin johnson',
   'magic': 'earvin johnson',
@@ -32,6 +40,8 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'bam adebayo': 'edrice adebayo',
 
   // Baseball
+  'chourio': 'jackson chourio',
+  'yelich': 'christian yelich',
   'kike hernandez': 'enrique hernandez',
   'kike': 'enrique hernandez',
   'kiké hernandez': 'enrique hernandez',
@@ -57,6 +67,8 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'the say hey kid': 'willie mays',
 
   // Football
+  'saquon': 'saquon barkley',
+  'charbonnet': 'zach charbonnet',
   'mitch trubisky': 'mitchell trubisky',
   'chad ochocinco': 'chad johnson',
   'ochocinco': 'chad johnson',

@@ -72851,7 +72851,7 @@
       84,
       88
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -72861,7 +72861,9 @@
       "hits": 4248
     },
     "popularityScore": 85,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -83658,7 +83660,7 @@
     "jerseyNumbers": [
       24
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -83668,7 +83670,9 @@
       "hits": 914
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -261104,7 +261108,7 @@
     "jerseyNumbers": [
       11
     ],
-    "championships": 1,
+    "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -261115,7 +261119,8 @@
     },
     "popularityScore": 100,
     "championshipMarkets": [
-      "PIT"
+      "PIT",
+      "CAR"
     ],
     "mvpMarkets": []
   },
@@ -277030,7 +277035,7 @@
       9,
       81
     ],
-    "championships": 1,
+    "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -277041,7 +277046,8 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "WAS"
+      "WAS",
+      "CAR"
     ],
     "mvpMarkets": []
   },
@@ -294845,7 +294851,7 @@
       41,
       53
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -294855,7 +294861,9 @@
       "hits": 1626
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -295253,7 +295261,7 @@
     "jerseyNumbers": [
       48
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -295263,7 +295271,9 @@
       "hits": 1225
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -295896,7 +295906,7 @@
     "jerseyNumbers": [
       74
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -295906,7 +295916,9 @@
       "hits": 1379
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -301183,7 +301195,7 @@
       28,
       48
     ],
-    "championships": 1,
+    "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -301194,7 +301206,8 @@
     },
     "popularityScore": 50,
     "championshipMarkets": [
-      "VGK"
+      "VGK",
+      "CAR"
     ],
     "mvpMarkets": []
   },
@@ -309665,7 +309678,7 @@
       38,
       44
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -309675,7 +309688,9 @@
       "hits": 2121
     },
     "popularityScore": 70,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -310551,7 +310566,7 @@
       96,
       98
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -310561,7 +310576,9 @@
       "hits": 1009
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -313843,7 +313860,7 @@
       63,
       64
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -313853,7 +313870,9 @@
       "hits": 460
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -322287,7 +322306,7 @@
     "jerseyNumbers": [
       88
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -322297,7 +322316,9 @@
       "hits": 1274
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -325275,7 +325296,7 @@
       26,
       61
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -325285,7 +325306,9 @@
       "hits": 896
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -325966,7 +325989,7 @@
     "jerseyNumbers": [
       50
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -325976,7 +325999,9 @@
       "hits": 646
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -326922,7 +326947,7 @@
       15,
       82
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -326932,7 +326957,9 @@
       "hits": 788
     },
     "popularityScore": 35,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -326960,7 +326987,7 @@
     "jerseyNumbers": [
       37
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -326970,7 +326997,9 @@
       "hits": 1551
     },
     "popularityScore": 45,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -327125,7 +327154,7 @@
       18,
       72
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -327135,7 +327164,9 @@
       "hits": 390
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -350946,7 +350977,7 @@
       52,
       90
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -350956,7 +350987,9 @@
       "saves": 2998
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -368708,7 +368741,7 @@
       30,
       31
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -368718,7 +368751,9 @@
       "saves": 14476
     },
     "popularityScore": 75,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
@@ -374665,7 +374700,7 @@
       30,
       41
     ],
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -374675,7 +374710,9 @@
       "saves": 1777
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "CAR"
+    ],
     "mvpMarkets": []
   },
   {
