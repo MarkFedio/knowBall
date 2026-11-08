@@ -30,6 +30,8 @@ export interface Athlete {
   college?: string;            // 'Michigan'
   collegeConference?: string;  // 'Big Ten'
   draftPick?: number;          // 199
+  draftRound?: number;         // 6
+  draftYear?: number;          // 2000
   isUndrafted?: boolean;       // false
   
   // Accolades
