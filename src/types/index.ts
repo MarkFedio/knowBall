@@ -15,6 +15,8 @@ export interface AthleteStats {
   hits?: number;       // MLB Base Hits or NHL Body Checks
   saves?: number;      // MLB Pitching Saves or NHL Goalie Saves
   turnovers?: number;  // NFL INTs+Fumbles or NBA Turnovers
+  blocks?: number;     // NBA Blocked Shots or NHL Blocked Shots
+  wins?: number;       // MLB Pitcher Wins, NHL Goalie Wins, or NFL Starting QB Wins
 }
 
 export interface Athlete {

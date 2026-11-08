@@ -7893,7 +7893,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 54,
-      "turnovers": 141
+      "turnovers": 141,
+      "wins": 94
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -15676,7 +15677,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 888,
-      "turnovers": 230
+      "turnovers": 230,
+      "wins": 94
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -22737,7 +22739,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 91
     },
     "popularityScore": 70,
     "championshipMarkets": [],
@@ -54979,7 +54982,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 59
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -85043,7 +85047,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 120,
-      "turnovers": 274
+      "turnovers": 274,
+      "wins": 98
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -102110,7 +102115,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 107
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -102570,7 +102576,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 420,
-      "turnovers": 626
+      "turnovers": 626,
+      "wins": 251
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -106139,7 +106146,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 312,
-      "turnovers": 606
+      "turnovers": 606,
+      "wins": 172
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -130611,7 +130619,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 90,
-      "turnovers": 176
+      "turnovers": 176,
+      "wins": 78
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -159325,7 +159334,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 84,
-      "turnovers": 302
+      "turnovers": 302,
+      "wins": 77
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -170883,7 +170893,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 72,
-      "turnovers": 146
+      "turnovers": 146,
+      "wins": 67
     },
     "popularityScore": 95,
     "championshipMarkets": [],
@@ -196837,7 +196848,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 60,
-      "turnovers": 350
+      "turnovers": 350,
+      "wins": 81
     },
     "popularityScore": 95,
     "championshipMarkets": [],
@@ -210595,7 +210607,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 252,
-      "turnovers": 338
+      "turnovers": 338,
+      "wins": 92
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -222289,7 +222302,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 210,
-      "turnovers": 134
+      "turnovers": 134,
+      "wins": 82
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -224717,7 +224731,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 132,
-      "turnovers": 398
+      "turnovers": 398,
+      "wins": 74
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -226189,7 +226204,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 276,
-      "turnovers": 370
+      "turnovers": 370,
+      "wins": 84
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -242683,7 +242699,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 94
     },
     "popularityScore": 90,
     "championshipMarkets": [
@@ -247836,7 +247853,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 84,
-      "turnovers": 286
+      "turnovers": 286,
+      "wins": 56
     },
     "popularityScore": 80,
     "championshipMarkets": [],
@@ -254948,7 +254966,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 30,
-      "turnovers": 156
+      "turnovers": 156,
+      "wins": 58
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -289570,7 +289589,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 204,
-      "turnovers": 226
+      "turnovers": 226,
+      "wins": 148
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -292721,7 +292741,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 42,
-      "turnovers": 184
+      "turnovers": 184,
+      "wins": 80
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -297175,7 +297196,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 24,
-      "turnovers": 175
+      "turnovers": 175,
+      "wins": 64
     },
     "popularityScore": 85,
     "championshipMarkets": [],
@@ -303634,7 +303656,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 84,
-      "turnovers": 564
+      "turnovers": 564,
+      "wins": 186
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -306580,7 +306603,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 79
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -312880,7 +312904,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 252,
-      "turnovers": 398
+      "turnovers": 398,
+      "wins": 59
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -312979,7 +313004,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 204,
-      "turnovers": 432
+      "turnovers": 432,
+      "wins": 107
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -323561,7 +323587,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 86
     },
     "popularityScore": 75,
     "championshipMarkets": [],
@@ -335372,7 +335399,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 86
     },
     "popularityScore": 70,
     "championshipMarkets": [],
@@ -339736,7 +339764,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 144,
-      "turnovers": 158
+      "turnovers": 158,
+      "wins": 76
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -340780,7 +340809,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 324,
-      "turnovers": 228
+      "turnovers": 228,
+      "wins": 58
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -358244,7 +358274,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 156,
-      "turnovers": 264
+      "turnovers": 264,
+      "wins": 95
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -375978,7 +376009,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 48,
-      "turnovers": 246
+      "turnovers": 246,
+      "wins": 56
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -379456,7 +379488,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 92
     },
     "popularityScore": 90,
     "championshipMarkets": [
@@ -382720,7 +382753,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 75
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -388055,7 +388089,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 82
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -401407,7 +401442,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 108,
-      "turnovers": 117
+      "turnovers": 117,
+      "wins": 66
     },
     "popularityScore": 95,
     "championshipMarkets": [],
@@ -415437,7 +415473,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 87
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -418657,7 +418694,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 108,
-      "turnovers": 384
+      "turnovers": 384,
+      "wins": 85
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -425675,7 +425713,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 56
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -472874,7 +472913,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 780,
-      "turnovers": 118
+      "turnovers": 118,
+      "wins": 59
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -486393,7 +486433,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 216,
-      "turnovers": 57
+      "turnovers": 57,
+      "wins": 79
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -495258,7 +495299,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 73
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -507391,7 +507433,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 59
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -512699,7 +512742,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 84,
-      "turnovers": 252
+      "turnovers": 252,
+      "wins": 72
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -544059,7 +544103,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 69
     },
     "popularityScore": 75,
     "championshipMarkets": [],
@@ -552547,7 +552592,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 42,
-      "turnovers": 175
+      "turnovers": 175,
+      "wins": 101
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -558763,7 +558809,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 61
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -572749,7 +572796,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 98
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -578834,7 +578882,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 66
     },
     "popularityScore": 45,
     "championshipMarkets": [],
@@ -622963,7 +623012,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 252,
-      "turnovers": 200
+      "turnovers": 200,
+      "wins": 100
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -626570,7 +626620,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 84,
-      "turnovers": 622
+      "turnovers": 622,
+      "wins": 117
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -626703,7 +626754,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 252,
-      "turnovers": 560
+      "turnovers": 560,
+      "wins": 186
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -628661,7 +628713,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 54,
-      "turnovers": 252
+      "turnovers": 252,
+      "wins": 147
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -643452,7 +643505,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 120,
-      "turnovers": 226
+      "turnovers": 226,
+      "wins": 60
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -667201,7 +667255,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 108,
-      "turnovers": 90
+      "turnovers": 90,
+      "wins": 67
     },
     "popularityScore": 95,
     "championshipMarkets": [
@@ -668939,7 +668994,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 396,
-      "turnovers": 368
+      "turnovers": 368,
+      "wins": 98
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -668987,7 +669043,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 348,
-      "turnovers": 274
+      "turnovers": 274,
+      "wins": 91
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -695720,7 +695777,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 117
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -697369,7 +697427,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 2
+      "turnovers": 2,
+      "wins": 102
     },
     "popularityScore": 75,
     "championshipMarkets": [],
@@ -706240,7 +706299,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 63
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -709312,7 +709372,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 81
     },
     "popularityScore": 60,
     "championshipMarkets": [
@@ -721603,7 +721664,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 62
     },
     "popularityScore": 90,
     "championshipMarkets": [
@@ -729604,7 +729666,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 936,
-      "turnovers": 312
+      "turnovers": 312,
+      "wins": 75
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -757864,7 +757927,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 96,
-      "turnovers": 458
+      "turnovers": 458,
+      "wins": 92
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -764377,7 +764441,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 56
     },
     "popularityScore": 60,
     "championshipMarkets": [
@@ -787983,7 +788048,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 132,
-      "turnovers": 308
+      "turnovers": 308,
+      "wins": 69
     },
     "popularityScore": 95,
     "championshipMarkets": [],
@@ -788163,7 +788229,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 72
     },
     "popularityScore": 60,
     "championshipMarkets": [
@@ -796868,7 +796935,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 408,
-      "turnovers": 234
+      "turnovers": 234,
+      "wins": 86
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -833577,7 +833645,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 48,
-      "turnovers": 536
+      "turnovers": 536,
+      "wins": 134
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -843432,7 +843501,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 468,
-      "turnovers": 346
+      "turnovers": 346,
+      "wins": 169
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -844832,7 +844902,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 276,
-      "turnovers": 586
+      "turnovers": 586,
+      "wins": 165
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -848345,7 +848416,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 60,
-      "turnovers": 296
+      "turnovers": 296,
+      "wins": 78
     },
     "popularityScore": 85,
     "championshipMarkets": [],
@@ -859835,7 +859907,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 180,
-      "turnovers": 486
+      "turnovers": 486,
+      "wins": 124
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -874588,7 +874661,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 30,
-      "turnovers": 108
+      "turnovers": 108,
+      "wins": 61
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -898296,7 +898370,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 95
     },
     "popularityScore": 60,
     "championshipMarkets": [
@@ -902556,7 +902631,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 57
     },
     "popularityScore": 70,
     "championshipMarkets": [],
@@ -912895,7 +912971,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 168,
-      "turnovers": 2
+      "turnovers": 2,
+      "wins": 99
     },
     "popularityScore": 60,
     "championshipMarkets": [],
@@ -933446,7 +933523,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 96
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -933880,7 +933958,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 216,
-      "turnovers": 474
+      "turnovers": 474,
+      "wins": 124
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -937407,7 +937486,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 85
     },
     "popularityScore": 90,
     "championshipMarkets": [
@@ -961941,7 +962021,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 348,
-      "turnovers": 302
+      "turnovers": 302,
+      "wins": 81
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -962543,7 +962624,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 124
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -972329,7 +972411,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 90,
-      "turnovers": 267
+      "turnovers": 267,
+      "wins": 90
     },
     "popularityScore": 95,
     "championshipMarkets": [],
@@ -972858,7 +972941,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 77
     },
     "popularityScore": 85,
     "championshipMarkets": [
@@ -1018766,7 +1018850,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 444,
-      "turnovers": 274
+      "turnovers": 274,
+      "wins": 61
     },
     "popularityScore": 100,
     "championshipMarkets": [],
@@ -1035309,7 +1035394,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 60,
-      "turnovers": 376
+      "turnovers": 376,
+      "wins": 67
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -1059401,7 +1059487,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 62
     },
     "popularityScore": 60,
     "championshipMarkets": [
@@ -1092394,7 +1092481,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 420,
-      "turnovers": 320
+      "turnovers": 320,
+      "wins": 121
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -1114816,7 +1114904,8 @@
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
-      "turnovers": 0
+      "turnovers": 0,
+      "wins": 94
     },
     "popularityScore": 100,
     "championshipMarkets": [
@@ -1119520,5 +1119609,348 @@
     "popularityScore": 30,
     "championshipMarkets": [],
     "mvpMarkets": []
+  },
+  {
+    "id": "ath_nfl_unitas_johnny",
+    "name": "Johnny Unitas",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "BAL",
+      "IND",
+      "SD"
+    ],
+    "teamNames": [
+      "Baltimore Colts",
+      "San Diego Chargers"
+    ],
+    "markets": [
+      "BAL",
+      "LA"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1956,
+      1973
+    ],
+    "jerseyNumbers": [
+      19
+    ],
+    "championships": 3,
+    "championshipMarkets": [
+      "BAL"
+    ],
+    "mvps": 3,
+    "hallOfFame": true,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 118
+    },
+    "popularityScore": 92
+  },
+  {
+    "id": "ath_nfl_starr_bart",
+    "name": "Bart Starr",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "GB"
+    ],
+    "teamNames": [
+      "Green Bay Packers"
+    ],
+    "markets": [
+      "GB"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1956,
+      1971
+    ],
+    "jerseyNumbers": [
+      15
+    ],
+    "championships": 5,
+    "championshipMarkets": [
+      "GB"
+    ],
+    "mvps": 1,
+    "hallOfFame": true,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 94
+    },
+    "popularityScore": 90
+  },
+  {
+    "id": "ath_nfl_tittle_ya",
+    "name": "Y.A. Tittle",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "BAL",
+      "SF",
+      "NYG"
+    ],
+    "teamNames": [
+      "Baltimore Colts",
+      "San Francisco 49ers",
+      "New York Giants"
+    ],
+    "markets": [
+      "BAL",
+      "BAY",
+      "NY"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1948,
+      1964
+    ],
+    "jerseyNumbers": [
+      14,
+      63
+    ],
+    "championships": 0,
+    "championshipMarkets": [],
+    "mvps": 1,
+    "hallOfFame": true,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 78
+    },
+    "popularityScore": 82
+  },
+  {
+    "id": "ath_nfl_graham_otto",
+    "name": "Otto Graham",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "CLE"
+    ],
+    "teamNames": [
+      "Cleveland Browns"
+    ],
+    "markets": [
+      "CLE"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1946,
+      1955
+    ],
+    "jerseyNumbers": [
+      14,
+      60
+    ],
+    "championships": 7,
+    "championshipMarkets": [
+      "CLE"
+    ],
+    "mvps": 3,
+    "hallOfFame": true,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 57
+    },
+    "popularityScore": 88
+  },
+  {
+    "id": "ath_nfl_layne_bobby",
+    "name": "Bobby Layne",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "CHI",
+      "NYB",
+      "DET",
+      "PIT"
+    ],
+    "teamNames": [
+      "Chicago Bears",
+      "New York Bulldogs",
+      "Detroit Lions",
+      "Pittsburgh Steelers"
+    ],
+    "markets": [
+      "CHI",
+      "NY",
+      "DET",
+      "PIT"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1948,
+      1962
+    ],
+    "jerseyNumbers": [
+      22
+    ],
+    "championships": 3,
+    "championshipMarkets": [
+      "DET"
+    ],
+    "mvps": 0,
+    "hallOfFame": true,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 81
+    },
+    "popularityScore": 84
+  },
+  {
+    "id": "ath_nfl_vanbrocklin_norm",
+    "name": "Norm Van Brocklin",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "RAM",
+      "LAR",
+      "LA",
+      "PHI"
+    ],
+    "teamNames": [
+      "Los Angeles Rams",
+      "Philadelphia Eagles"
+    ],
+    "markets": [
+      "LA",
+      "PHI"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1949,
+      1960
+    ],
+    "jerseyNumbers": [
+      11,
+      25
+    ],
+    "championships": 2,
+    "championshipMarkets": [
+      "LA",
+      "PHI"
+    ],
+    "mvps": 1,
+    "hallOfFame": true,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 61
+    },
+    "popularityScore": 82
+  },
+  {
+    "id": "ath_nfl_brodie_john",
+    "name": "John Brodie",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "SF"
+    ],
+    "teamNames": [
+      "San Francisco 49ers"
+    ],
+    "markets": [
+      "BAY"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1957,
+      1973
+    ],
+    "jerseyNumbers": [
+      12
+    ],
+    "championships": 0,
+    "championshipMarkets": [],
+    "mvps": 1,
+    "hallOfFame": false,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 86
+    },
+    "popularityScore": 75
+  },
+  {
+    "id": "ath_nfl_kemp_jack",
+    "name": "Jack Kemp",
+    "sports": [
+      "NFL"
+    ],
+    "teams": [
+      "PIT",
+      "LAC",
+      "SD",
+      "BUF"
+    ],
+    "teamNames": [
+      "Pittsburgh Steelers",
+      "San Diego Chargers",
+      "Buffalo Bills"
+    ],
+    "markets": [
+      "PIT",
+      "LA",
+      "BUF"
+    ],
+    "positions": [
+      "QB"
+    ],
+    "activeYears": [
+      1957,
+      1969
+    ],
+    "jerseyNumbers": [
+      15
+    ],
+    "championships": 2,
+    "championshipMarkets": [
+      "BUF"
+    ],
+    "mvps": 1,
+    "hallOfFame": false,
+    "rookieOfTheYear": false,
+    "stats": {
+      "points": 0,
+      "turnovers": 0,
+      "wins": 62
+    },
+    "popularityScore": 76
   }
 ]

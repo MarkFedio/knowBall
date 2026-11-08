@@ -108,7 +108,9 @@ export const CategoryIcon: React.FC<CategoryIconProps> = ({ category, className 
     catId.includes('steals') ||
     catId.includes('hits') ||
     catId.includes('saves') ||
-    catId.includes('turnovers')
+    catId.includes('turnovers') ||
+    catId.includes('blocks') ||
+    catId.includes('wins')
   ) {
     return <Target className={`${className} text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]`} />;
   }

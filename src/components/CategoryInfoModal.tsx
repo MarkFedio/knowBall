@@ -307,6 +307,51 @@ const STAT_CRITERIA: Record<string, { statName: string; breakdown: string; rule:
     breakdown: 'MLB: 300+ Relief Pitching Saves | NHL: 300+ Goalie Saves',
     rule: 'Recorded 300+ saves on the mound (MLB closers) or 300+ saves in net (NHL goalies).',
   },
+  stat_blocks_500: {
+    statName: '500+ Career Blocks',
+    breakdown: 'NBA: 500+ Blocked Shots | NHL: 500+ Blocked Shots',
+    rule: 'Recorded 500+ career blocked shots in the NBA (rim protectors) or NHL (shot-blocking skaters).',
+  },
+  stat_blocks_1000: {
+    statName: '1,000+ Career Blocks',
+    breakdown: 'NBA: 1,000+ Blocked Shots | NHL: 1,000+ Blocked Shots',
+    rule: 'Recorded 1,000+ career blocked shots in the NBA or NHL.',
+  },
+  stat_blocks_1500: {
+    statName: '1,500+ Career Blocks',
+    breakdown: 'NBA: 1,500+ Blocked Shots | NHL: 1,500+ Blocked Shots',
+    rule: 'Recorded 1,500+ career blocked shots in the NBA or NHL.',
+  },
+  stat_blocks_2000: {
+    statName: '2,000+ Career Blocks',
+    breakdown: 'NBA: 2,000+ Blocked Shots | NHL: 2,000+ Blocked Shots',
+    rule: 'Recorded 2,000+ career blocked shots in the NBA or NHL.',
+  },
+  stat_wins_50: {
+    statName: '50+ Career Wins',
+    breakdown: 'MLB: 50+ Pitcher Wins | NHL: 50+ Goalie Wins | NFL: 50+ Starting QB Wins',
+    rule: 'Earned at least 50 official career wins on the mound (MLB), in net (NHL), or under center (NFL starter).',
+  },
+  stat_wins_100: {
+    statName: '100+ Career Wins',
+    breakdown: 'MLB: 100+ Pitcher Wins | NHL: 100+ Goalie Wins | NFL: 100+ Starting QB Wins',
+    rule: 'Achieved the century mark with 100+ career wins in MLB, NHL, or NFL.',
+  },
+  stat_wins_150: {
+    statName: '150+ Career Wins',
+    breakdown: 'MLB: 150+ Pitcher Wins | NHL: 150+ Goalie Wins | NFL: 150+ Starting QB Wins',
+    rule: 'Elite 150+ career wins on the mound, in net, or as an NFL starting quarterback.',
+  },
+  stat_wins_200: {
+    statName: '200+ Career Wins',
+    breakdown: 'MLB: 200+ Pitcher Wins | NHL: 200+ Goalie Wins | NFL: 200+ Starting QB Wins',
+    rule: 'Legendary 200+ career wins in MLB, NHL, or NFL.',
+  },
+  stat_wins_300: {
+    statName: '300+ Career Wins',
+    breakdown: 'MLB: 300+ Pitcher Wins | NHL: 300+ Goalie Wins',
+    rule: 'Member of the historic 300-Win Club in Major League Baseball or the NHL.',
+  },
   number_0_to_9: {
     statName: 'Wore Jersey Number #0–#9',
     breakdown: 'Jersey Numbers 0 through 9',
