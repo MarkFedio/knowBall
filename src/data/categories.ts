@@ -14,10 +14,10 @@ export const CATEGORIES: Record<string, Category> = {
   },
   STAT_ASSISTS_1000: {
     id: 'stat_assists_1000',
-    name: '1,000+ Career Assists (NBA/NHL/Soccer)',
+    name: '1,000+ Career Assists (NBA/NHL)',
     shortName: '1,000+ Assists',
     type: 'CROSS_STAT',
-    description: '1,000+ career assists in NBA, NHL, or top-flight soccer',
+    description: '1,000+ career assists in NBA or NHL',
     matches: (a) => (a.stats.assists ?? 0) >= 1000,
   },
   STAT_POINTS_10K: {
@@ -43,10 +43,10 @@ export const CATEGORIES: Record<string, Category> = {
   },
   STAT_SAVES_300: {
     id: 'stat_saves_300',
-    name: '300+ Career Saves (MLB/NHL/Soccer)',
+    name: '300+ Career Saves (MLB/NHL)',
     shortName: '300+ Saves',
     type: 'CROSS_STAT',
-    description: '300+ relief pitching saves (MLB) or 300+ goalie saves (NHL/Soccer)',
+    description: '300+ relief pitching saves (MLB) or 300+ goalie saves (NHL)',
     matches: (a) => (a.stats.saves ?? 0) >= 300,
   },
   STAT_TURNOVERS_150: {
@@ -191,7 +191,7 @@ export const CATEGORIES: Record<string, Category> = {
   },
   ACCOLADE_MVP: {
     id: 'accolade_mvp',
-    name: 'Won League MVP / Ballon d’Or',
+    name: 'Won League MVP',
     shortName: 'League MVP',
     type: 'ACCOLADE',
     description: 'Won an official regular season MVP award in their sport',

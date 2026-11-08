@@ -1,4 +1,4 @@
-export type Sport = 'NFL' | 'NBA' | 'MLB' | 'NHL' | 'SOCCER';
+export type Sport = 'NFL' | 'NBA' | 'MLB' | 'NHL';
 
 export type CategoryType = 
   | 'SPORT' 
@@ -10,10 +10,10 @@ export type CategoryType =
 
 export interface AthleteStats {
   steals?: number;     // MLB Stolen Bases or NBA Steals
-  assists?: number;    // NBA / NHL / Soccer Assists
+  assists?: number;    // NBA / NHL Assists
   points?: number;     // NBA Points / NHL Points (G+A) / NFL Points scored
   hits?: number;       // MLB Base Hits or NHL Body Checks
-  saves?: number;      // MLB Pitching Saves or NHL/Soccer Goalie Saves
+  saves?: number;      // MLB Pitching Saves or NHL Goalie Saves
   turnovers?: number;  // NFL INTs+Fumbles or NBA Turnovers
 }
 
@@ -74,4 +74,31 @@ export interface DailyPuzzle {
   title: string;
   rowCategories: Category[];
   colCategories: Category[];
+}
+
+export interface SavedGameState {
+  puzzleId: string;
+  date: string;
+  cells: CellState[][];
+  guessedAthleteIds: string[];
+  guessesUsed: number;
+  strikesUsed: number;
+  playMode: PlayMode;
+  hasGivenUp: boolean;
+  lastUpdated: number;
+}
+
+export interface CareerStats {
+  gamesPlayed: number;
+  gamesWon: number;
+  immaculateCompletions: number;
+  currentStreak: number;
+  maxStreak: number;
+  lastPlayedDate?: string;
+  lastWonDate?: string;
+  bestRarityScore: number | null;
+  averageRarityScore: number;
+  totalCorrectCells: number;
+  grandSlamsAchieved: number;
+  completedPuzzleIds: string[];
 }

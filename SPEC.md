@@ -3,7 +3,7 @@
 ## 1. Executive Summary
 
 **Project Name:** SportsGrid (Working Title)  
-**High Concept:** The ultimate 4×4 sports trivia grid that breaks down the silos between major professional leagues. Unlike traditional single-sport grids, SportsGrid unifies **NFL, NBA, MLB, NHL, and Soccer** into a single daily 16-cell matrix featuring a rich taxonomy of categories—including cross-sport statistical homonyms (e.g., Steals, Assists, Hits, Points, Saves, Turnovers).
+**High Concept:** The ultimate 4×4 sports trivia grid that breaks down the silos between major professional leagues. Unlike traditional single-sport grids, SportsGrid unifies the **NFL, NBA, MLB, and NHL** into a single daily 16-cell matrix featuring a rich taxonomy of categories—including cross-sport statistical homonyms (e.g., Steals, Assists, Hits, Points, Saves, Turnovers).
 
 ---
 
@@ -32,7 +32,7 @@ Categories are modular, declarative filter rules classified into six distinct ty
 
 ```
 [Category Types]
-├── 1. LEAGUE / SPORT      (NFL, NBA, MLB, NHL, Soccer)
+├── 1. LEAGUE / SPORT      (NFL, NBA, MLB, NHL)
 ├── 2. METRO / MARKET      (Boston, Chicago, New York, Bay Area, LA, etc.)
 ├── 3. ACCOLADES           (Championship Ring, MVP, Rookie of the Year, Hall of Fame)
 ├── 4. BACKGROUND/COLLEGE  (SEC, Big Ten, ACC, Pac-12, Undrafted, #1 Overall Pick)
@@ -46,10 +46,10 @@ These categories take advantage of identical statistical terminology shared acro
 | Stat Name | Sport A (Meaning) | Sport B (Meaning) | Sport C (Meaning) | Example Category Thresholds |
 | :--- | :--- | :--- | :--- | :--- |
 | **Steals** | **MLB:** Stolen Bases | **NBA:** Defensive Steals | — | `500+ Career Steals`, `Led League in Steals` |
-| **Assists** | **NBA:** Passing Assists | **NHL:** Goal Assists | **Soccer:** Goal Assists | `1,000+ Career Assists`, `100+ Season Assists` |
+| **Assists** | **NBA:** Passing Assists | **NHL:** Goal Assists | — | `1,000+ Career Assists`, `100+ Season Assists` |
 | **Points** | **NBA:** Points Scored | **NHL:** Goals + Assists | **NFL:** Total Points Scored (Kickers/TDs) | `10,000+ Career Points`, `1,000+ Points` |
 | **Hits** | **MLB:** Base Hits | **NHL:** Body Checks / Hits | — | `3,000+ Career Hits`, `2,000+ Hits` |
-| **Saves** | **MLB:** Pitching Saves | **NHL:** Goalie Puck Saves | **Soccer:** Goalie Saves | `300+ Career Saves`, `Led League in Saves` |
+| **Saves** | **MLB:** Pitching Saves | **NHL:** Goalie Puck Saves | — | `300+ Career Saves`, `Led League in Saves` |
 | **Turnovers** | **NFL:** INTs + Fumbles Lost | **NBA:** Turnovers Committed | — | `150+ Career Turnovers`, `50+ Season Turnovers` |
 
 ---
@@ -77,7 +77,7 @@ $$\forall i \in \{1,2,3,4\}, \forall j \in \{1,2,3,4\}: \quad |S(R_i, C_j)| \ge 
 
 ### 5.2 The "Grand Slam" Diversity Bonus
 To reward cross-sport mastery in open-category cells:
-* If a completed grid contains at least **1 athlete from 4 different sports** (e.g., at least one NFL, NBA, MLB, and NHL/Soccer athlete), the player receives the **Grand Slam Badge** and a **25% deduction** on their final Rarity Score.
+* If a completed grid contains at least **1 athlete from 4 different sports** (NFL, NBA, MLB, and NHL), the player receives the **Grand Slam Badge** and a **25% deduction** on their final Rarity Score.
 
 ### 5.3 Special Badges
 * **The Immaculate 16:** 16/16 with 0 incorrect guesses.
@@ -90,7 +90,7 @@ To reward cross-sport mastery in open-category cells:
 
 ### 6.1 Athlete Schema (`Athlete`)
 ```typescript
-export type Sport = 'NFL' | 'NBA' | 'MLB' | 'NHL' | 'SOCCER';
+export type Sport = 'NFL' | 'NBA' | 'MLB' | 'NHL';
 
 export interface Athlete {
   id: string;                      // e.g. "ath_tom_brady_01"
@@ -122,10 +122,10 @@ export interface Athlete {
   // The 6 Normalized Cross-Sport Stats
   stats: {
     steals?: number;               // MLB SB or NBA Steals
-    assists?: number;              // NBA / NHL / Soccer Assists
+    assists?: number;              // NBA / NHL Assists
     points?: number;               // NBA / NHL / NFL Points
     hits?: number;                 // MLB Base Hits or NHL Body Checks
-    saves?: number;                // MLB Saves or NHL / Soccer Saves
+    saves?: number;                // MLB Saves or NHL Saves
     turnovers?: number;            // NFL INTs+Fumbles or NBA Turnovers
   };
 

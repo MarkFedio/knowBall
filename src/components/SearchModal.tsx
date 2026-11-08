@@ -21,7 +21,6 @@ const SPORT_COLORS: Record<Sport, { bg: string; text: string; border: string }> 
   NBA: { bg: 'bg-amber-500/10', text: 'text-amber-400', border: 'border-amber-500/20' },
   MLB: { bg: 'bg-rose-500/10', text: 'text-rose-400', border: 'border-rose-500/20' },
   NHL: { bg: 'bg-cyan-500/10', text: 'text-cyan-400', border: 'border-cyan-500/20' },
-  SOCCER: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', border: 'border-emerald-500/20' },
 };
 
 export const SearchModal: React.FC<SearchModalProps> = ({

@@ -16,7 +16,6 @@ const SPORT_COLORS: Record<Sport, { bg: string; text: string; border: string }> 
   NBA: { bg: 'bg-amber-500/15', text: 'text-amber-400', border: 'border-amber-500/30' },
   MLB: { bg: 'bg-rose-500/15', text: 'text-rose-400', border: 'border-rose-500/30' },
   NHL: { bg: 'bg-cyan-500/15', text: 'text-cyan-400', border: 'border-cyan-500/30' },
-  SOCCER: { bg: 'bg-emerald-500/15', text: 'text-emerald-400', border: 'border-emerald-500/30' },
 };
 
 const CATEGORY_TYPE_LABELS: Record<string, { label: string; color: string }> = {

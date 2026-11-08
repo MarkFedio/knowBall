@@ -1,9 +1,17 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
-import { Athlete, CellState, PlayMode, Sport, DailyPuzzle } from '@/types';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { Athlete, CellState, PlayMode, Sport, DailyPuzzle, CareerStats } from '@/types';
 import { DAILY_PUZZLE } from '@/data/puzzles';
 import { generateProceduralPuzzle } from '@/lib/gridGenerator';
+import {
+  saveGameState,
+  loadGameState,
+  clearGameState,
+  loadCareerStats,
+  recordGameFinished,
+  DEFAULT_CAREER_STATS,
+} from '@/lib/storage';
 import { Header } from '@/components/Header';
 import { Grid } from '@/components/Grid';
 import { SearchModal } from '@/components/SearchModal';
@@ -33,6 +41,8 @@ export default function Home() {
   const [strikesUsed, setStrikesUsed] = useState<number>(0);
   const [hasGivenUp, setHasGivenUp] = useState<boolean>(false);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
+  const [isStorageLoaded, setIsStorageLoaded] = useState<boolean>(false);
+  const [careerStats, setCareerStats] = useState<CareerStats>(DEFAULT_CAREER_STATS);
 
   // Modals
   const [activeCell, setActiveCell] = useState<{ row: number; col: number } | null>(null);
@@ -100,6 +110,61 @@ export default function Home() {
       }
     }
   };
+
+  // Load saved puzzle state and career stats on mount or when puzzle changes
+  useEffect(() => {
+    const stats = loadCareerStats();
+    setCareerStats(stats);
+
+    const saved = loadGameState(currentPuzzle.id);
+    if (saved) {
+      setCells(saved.cells);
+      setGuessedAthleteIds(new Set(saved.guessedAthleteIds));
+      setGuessesUsed(saved.guessesUsed);
+      setStrikesUsed(saved.strikesUsed);
+      setPlayMode(saved.playMode);
+      setHasGivenUp(saved.hasGivenUp);
+    }
+    setIsStorageLoaded(true);
+  }, [currentPuzzle.id]);
+
+  // Auto-save game state to localStorage whenever board progresses
+  useEffect(() => {
+    if (!isStorageLoaded) return;
+    if (guessesUsed > 0 || strikesUsed > 0 || hasGivenUp) {
+      saveGameState({
+        puzzleId: currentPuzzle.id,
+        date: currentPuzzle.date,
+        cells,
+        guessedAthleteIds: Array.from(guessedAthleteIds),
+        guessesUsed,
+        strikesUsed,
+        playMode,
+        hasGivenUp,
+        lastUpdated: Date.now(),
+      });
+    }
+  }, [cells, guessesUsed, strikesUsed, hasGivenUp, playMode, guessedAthleteIds, currentPuzzle, isStorageLoaded]);
+
+  // Record career stats when puzzle concludes
+  useEffect(() => {
+    if (!isStorageLoaded || !isGameOver) return;
+    const correctCount = cells.flat().filter((c) => c.isCorrect).length;
+    const isWon = correctCount === 16;
+    const isImmaculate =
+      isWon && (playMode === 'IMMACULATE' ? guessesUsed === 16 : strikesUsed === 0);
+
+    const updated = recordGameFinished({
+      puzzleId: currentPuzzle.id,
+      date: currentPuzzle.date,
+      isWon,
+      isImmaculate,
+      correctCount,
+      rarityScore: totalRarityScore,
+      hasGrandSlam,
+    });
+    setCareerStats(updated);
+  }, [isGameOver, isStorageLoaded]);
 
   // Check for 16/16 win
   useEffect(() => {
@@ -182,6 +247,8 @@ export default function Home() {
   };
 
   const resetBoard = (newPuzzle?: DailyPuzzle) => {
+    const targetPuzzle = newPuzzle || currentPuzzle;
+    clearGameState(targetPuzzle.id);
     setCells(
       Array.from({ length: 4 }, (_, r) =>
         Array.from({ length: 4 }, (_, c) => ({
@@ -312,7 +379,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="mt-8 text-center text-xs text-zinc-600 border-t border-zinc-900 pt-4">
-        SportsGrid • The 4×4 Multi-Sport Trivia Grid • NFL • NBA • MLB • NHL • Soccer
+        SportsGrid • The 4×4 Multi-Sport Trivia Grid • NFL • NBA • MLB • NHL
       </footer>
 
       {/* Autocomplete Search Modal */}
@@ -356,6 +423,7 @@ export default function Home() {
         maxGuesses={maxGuesses}
         sportsUsed={sportsUsed}
         hasGrandSlam={hasGrandSlam}
+        careerStats={careerStats}
       />
     </main>
   );

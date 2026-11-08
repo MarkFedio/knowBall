@@ -54,13 +54,13 @@ export const HowToPlayModal: React.FC<HowToPlayModalProps> = ({ isOpen, onClose 
                 <span className="font-bold text-amber-300">Steals:</span> MLB Stolen Bases or NBA Steals
               </div>
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-2.5">
-                <span className="font-bold text-blue-300">Assists:</span> NBA, NHL, or Soccer Assists
+                <span className="font-bold text-blue-300">Assists:</span> NBA or NHL Assists
               </div>
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-2.5">
                 <span className="font-bold text-emerald-300">Hits:</span> MLB Base Hits or NHL Body Checks
               </div>
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-2.5">
-                <span className="font-bold text-purple-300">Saves:</span> MLB Relief Saves or NHL/Soccer Saves
+                <span className="font-bold text-purple-300">Saves:</span> MLB Relief Saves or NHL Saves
               </div>
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-2.5">
                 <span className="font-bold text-rose-300">Points:</span> NBA Points or NHL Points (G+A)
