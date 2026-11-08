@@ -104,7 +104,7 @@ export const GrandSlamModal: React.FC<GrandSlamModalProps> = ({
             </div>
             <p className="text-zinc-200 leading-relaxed">
               When achieved, your entire final Rarity Score is multiplied by{' '}
-              <strong className="text-emerald-300">0.75</strong> (a 25% reduction). In SportsGrid, a
+              <strong className="text-emerald-300">0.75</strong> (a 25% reduction). In KnowBall, a
               lower rarity score means rarer guesses and a higher leaderboard ranking!
             </p>
           </div>

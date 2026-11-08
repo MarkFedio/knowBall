@@ -69,7 +69,7 @@ export const ArchiveModal: React.FC<ArchiveModalProps> = ({
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-sm text-zinc-100">
-                      SportsGrid #{puzzleNumber}
+                      KnowBall #{puzzleNumber}
                     </span>
                     {isCurrent && (
                       <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[9px] font-black uppercase text-emerald-400 border border-emerald-500/30">

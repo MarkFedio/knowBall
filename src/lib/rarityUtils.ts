@@ -1,6 +1,6 @@
 /**
  * Rarity tier classification and badge styling
- * Matches the official SportsGrid stadium neon aesthetic:
+ * Matches the official KnowBall stadium neon aesthetic:
  * - < 1.0%: MYTHIC (Gold Glow)
  * - 1.0% - 5.0%: RARE (Emerald Glow)
  * - 5.0% - 15.0%: UNCOMMON (Cyan Glow)

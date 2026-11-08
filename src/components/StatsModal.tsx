@@ -69,7 +69,7 @@ export const StatsModal: React.FC<StatsModalProps> = ({
     const modeText = playMode === 'IMMACULATE' ? 'Immaculate 16' : 'Casual 4-Strikes';
     const bonusText = hasGrandSlam ? '\n🎯 Grand Slam Diversity Bonus (4 Sports) Active!' : '';
 
-    return `SportsGrid 4x4 🏆\nScore: ${correctCount}/16 (${modeText})\nRarity Score: ${totalRarityScore.toFixed(1)}${bonusText}\n\n${emojiGrid}\nPlay: https://sportsgrid.app`;
+    return `KnowBall 4x4 🏆\nScore: ${correctCount}/16 (${modeText})\nRarity Score: ${totalRarityScore.toFixed(1)}${bonusText}\n\n${emojiGrid}\nPlay: https://knowball.app`;
   };
 
   const handleCopy = async () => {

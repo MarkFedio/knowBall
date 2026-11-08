@@ -10,14 +10,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sportsgrid.app"),
-  title: "SportsGrid | The Daily 4×4 Multi-Sport Trivia Grid",
+  metadataBase: new URL("https://knowball.app"),
+  title: "KnowBall | The Daily 4×4 Multi-Sport Trivia Grid",
   description:
     "The daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL with cross-sport stats, accolades, and markets.",
-  applicationName: "SportsGrid",
+  applicationName: "KnowBall",
   appleWebApp: {
     capable: true,
-    title: "SportsGrid",
+    title: "KnowBall",
     statusBarStyle: "black-translucent",
   },
   icons: {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sportsgrid.app",
-    siteName: "SportsGrid",
-    title: "SportsGrid | The Daily 4×4 Multi-Sport Trivia Grid",
+    url: "https://knowball.app",
+    siteName: "KnowBall",
+    title: "KnowBall | The Daily 4×4 Multi-Sport Trivia Grid",
     description:
       "Play the daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL with cross-sport stats, accolades, and markets.",
     images: [
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SportsGrid 4x4 Trivia Matrix Preview",
+        alt: "KnowBall 4x4 Trivia Matrix Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SportsGrid | The Daily 4×4 Multi-Sport Trivia Grid",
+    title: "KnowBall | The Daily 4×4 Multi-Sport Trivia Grid",
     description:
       "Daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL with cross-sport stats and accolades.",
     images: ["/og-image.png"],

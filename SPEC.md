@@ -1,9 +1,9 @@
-# All-Sports 4×4 Grid: Game Specification & System Architecture
+# KnowBall 4×4 Grid: Game Specification & System Architecture
 
 ## 1. Executive Summary
 
-**Project Name:** SportsGrid (Working Title)  
-**High Concept:** The ultimate 4×4 sports trivia grid that breaks down the silos between major professional leagues. Unlike traditional single-sport grids, SportsGrid unifies the **NFL, NBA, MLB, and NHL** into a single daily 16-cell matrix featuring a rich taxonomy of categories—including cross-sport statistical homonyms (e.g., Steals, Assists, Hits, Points, Saves, Turnovers).
+**Project Name:** KnowBall  
+**High Concept:** The ultimate 4×4 sports trivia grid that breaks down the silos between major professional leagues. Unlike traditional single-sport grids, KnowBall unifies the **NFL, NBA, MLB, and NHL** into a single daily 16-cell matrix featuring a rich taxonomy of categories—including cross-sport statistical homonyms (e.g., Steals, Assists, Hits, Points, Saves, Turnovers).
 
 ---
 
@@ -195,7 +195,7 @@ Because the player pool spans all sports, the autocomplete modal must show rich 
 Following the viral Wordle / Immaculate Grid pattern, players can copy an emoji grid to clipboard:
 
 ```
-SportsGrid 4x4 #42 🏆
+KnowBall 4x4 #42 🏆
 15/16 | Rarity: 124.8
 Grand Slam Bonus: Active 🎯
 
@@ -204,7 +204,7 @@ Grand Slam Bonus: Active 🎯
 🟩🟩🟩🟩
 🟩🟩🟩🟩
 
-Play: https://sportsgrid.app
+Play: https://knowball.app
 ```
 
 ---
@@ -228,16 +228,16 @@ We adopt the **Full-Stack GitHub + Vercel Deployment Architecture**, giving us a
 
 ```mermaid
 flowchart LR
-    A[Local Development in sportsGrid] -->|git push| B[GitHub Repository]
+    A[Local Development in knowBall] -->|git push| B[GitHub Repository]
     B -->|Webhook Trigger| C[Vercel CI/CD Pipeline]
-    C -->|Deploys to Edge CDN| D["Custom Domain (e.g., sportsgrid.app)"]
+    C -->|Deploys to Edge CDN| D["Custom Domain (e.g., knowball.app)"]
     D <-->|API Routes| E[Serverless Functions]
     E <-->|Queries & Aggregations| F[PostgreSQL / Supabase DB]
 ```
 
 ### 9.1 GitHub & Vercel Integration Pipeline
 1. **GitHub Repository:**
-   * Hosted as a public or private repository (e.g., `github.com/markfedio/sportsGrid`).
+   * Hosted as a public or private repository (e.g., `github.com/MarkFedio/knowBall`).
    * Pushes to `main` automatically trigger production deployments.
    * Pull requests automatically trigger preview deployments with unique test URLs.
 2. **Vercel Edge Network:**

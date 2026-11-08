@@ -105,7 +105,7 @@ export const LedScoreboardClock: React.FC<LedScoreboardClockProps> = ({
 }) => {
   return (
     <div
-      title="Daily SportsGrid Countdown Clock"
+      title="Daily KnowBall Countdown Clock"
       className={`rounded-xl px-2.5 py-1 sm:px-3 sm:py-1.5 flex items-center justify-center gap-0.5 sm:gap-1 select-none ${
         theme === 'NEON'
           ? 'bg-[#091524] border border-cyan-500/40 shadow-[0_0_15px_rgba(34,211,238,0.2)]'

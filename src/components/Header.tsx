@@ -110,19 +110,19 @@ export const Header: React.FC<HeaderProps> = ({
           <div
             onClick={onOpenHowToPlay}
             className="cursor-pointer group transition transform active:scale-95 shrink-0"
-            title="SportsGrid - Click for How to Play"
+            title="KnowBall - Click for How to Play"
           >
             {isScoreboard ? (
               <span className="font-scoreboard text-xl sm:text-3xl font-black tracking-wider text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-                SPORTS<span className="text-amber-400">GRID</span>
+                KNOW<span className="text-amber-400">BALL</span>
               </span>
             ) : isNeon ? (
               <span className="text-lg sm:text-2xl font-black italic tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#00f5b8] to-[#22d3ee] drop-shadow-[0_0_10px_rgba(0,245,184,0.5)]">
-                SPORTSGRID
+                KNOWBALL
               </span>
             ) : (
               <span className="text-lg sm:text-2xl font-black tracking-tight text-white">
-                SPORTS<span className="text-emerald-400">GRID</span>
+                KNOW<span className="text-emerald-400">BALL</span>
               </span>
             )}
           </div>

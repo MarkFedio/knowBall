@@ -120,7 +120,9 @@ export default function Home() {
     setCareerStats(stats);
 
     if (typeof window !== 'undefined') {
-      const savedSound = window.localStorage.getItem('sportsgrid_sound_enabled');
+      const savedSound =
+        window.localStorage.getItem('knowball_sound_enabled') ||
+        window.localStorage.getItem('sportsgrid_sound_enabled');
       if (savedSound !== null) {
         const enabled = savedSound === 'true';
         setSoundEnabled(enabled);
@@ -128,6 +130,7 @@ export default function Home() {
       }
       try {
         window.localStorage.removeItem('sportsgrid_theme');
+        window.localStorage.removeItem('knowball_theme');
       } catch {
         // Fallback
       }
@@ -383,7 +386,7 @@ export default function Home() {
             sound.enabled = next;
             if (typeof window !== 'undefined') {
               try {
-                window.localStorage.setItem('sportsgrid_sound_enabled', String(next));
+                window.localStorage.setItem('knowball_sound_enabled', String(next));
               } catch {
                 // Fallback
               }
@@ -467,7 +470,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="mt-8 text-center text-xs text-zinc-600 border-t border-zinc-900 pt-4">
-        SportsGrid • The 4×4 Multi-Sport Trivia Grid • NFL • NBA • MLB • NHL
+        KnowBall • The 4×4 Multi-Sport Trivia Grid • NFL • NBA • MLB • NHL
       </footer>
 
       {/* Autocomplete Search Modal */}

@@ -6,7 +6,7 @@ import { CATEGORIES } from './categories';
 export const DAILY_PUZZLE: DailyPuzzle = {
   id: 'puzzle_daily_today',
   date: new Date().toISOString().split('T')[0],
-  title: 'SportsGrid Daily',
+  title: 'KnowBall Daily',
   rowCategories: [
     CATEGORIES.METRO_NY,
     CATEGORIES.ACCOLADE_MVP,

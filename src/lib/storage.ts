@@ -1,8 +1,10 @@
 import { CareerStats, SavedGameState } from '@/types';
 
 const STORAGE_KEYS = {
-  GAME_PREFIX: 'sportsgrid_game_',
-  CAREER_STATS: 'sportsgrid_career_stats',
+  GAME_PREFIX: 'knowball_game_',
+  CAREER_STATS: 'knowball_career_stats',
+  LEGACY_GAME_PREFIX: 'sportsgrid_game_',
+  LEGACY_CAREER_STATS: 'sportsgrid_career_stats',
 };
 
 export const DEFAULT_CAREER_STATS: CareerStats = {
@@ -42,7 +44,8 @@ export function loadGameState(puzzleId: string): SavedGameState | null {
   if (!isClient()) return null;
   try {
     const key = `${STORAGE_KEYS.GAME_PREFIX}${puzzleId}`;
-    const raw = window.localStorage.getItem(key);
+    const legacyKey = `${STORAGE_KEYS.LEGACY_GAME_PREFIX}${puzzleId}`;
+    const raw = window.localStorage.getItem(key) || window.localStorage.getItem(legacyKey);
     if (!raw) return null;
     return JSON.parse(raw) as SavedGameState;
   } catch (err) {
@@ -70,7 +73,9 @@ export function clearGameState(puzzleId: string): void {
 export function loadCareerStats(): CareerStats {
   if (!isClient()) return DEFAULT_CAREER_STATS;
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEYS.CAREER_STATS);
+    const raw =
+      window.localStorage.getItem(STORAGE_KEYS.CAREER_STATS) ||
+      window.localStorage.getItem(STORAGE_KEYS.LEGACY_CAREER_STATS);
     if (!raw) return DEFAULT_CAREER_STATS;
     const parsed = JSON.parse(raw);
     return {

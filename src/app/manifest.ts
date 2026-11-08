@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'SportsGrid | The Daily 4×4 Multi-Sport Trivia Grid',
-    short_name: 'SportsGrid',
+    name: 'KnowBall | The Daily 4×4 Multi-Sport Trivia Grid',
+    short_name: 'KnowBall',
     description: 'The definitive daily 4×4 sports trivia grid connecting NFL, NBA, MLB, and NHL.',
     start_url: '/',
     display: 'standalone',

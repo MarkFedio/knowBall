@@ -26,7 +26,7 @@ export const HowToPlayModal: React.FC<HowToPlayModalProps> = ({ isOpen, onClose 
             <HelpCircle className="h-6 w-6" />
           </div>
           <div>
-            <h2 className="text-xl font-bold tracking-tight text-white">How to Play SportsGrid</h2>
+            <h2 className="text-xl font-bold tracking-tight text-white">How to Play KnowBall</h2>
             <p className="text-sm text-zinc-400">The 4×4 Multi-Sport Trivia Challenge</p>
           </div>
         </div>
