@@ -1,13 +1,11 @@
 'use client';
 
 import React from 'react';
-import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, ChevronDown, Volume2, VolumeX } from 'lucide-react';
+import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, Volume2, VolumeX } from 'lucide-react';
 import { PlayMode, Sport, DailyPuzzle } from '@/types';
-import { PUZZLE_PRESETS } from '@/lib/gridGenerator';
 
 interface HeaderProps {
   currentPuzzle: DailyPuzzle;
-  onSelectPreset: (preset: DailyPuzzle) => void;
   onNewRandomPuzzle: () => void;
   onGiveUp: () => void;
   isGameOver: boolean;
@@ -31,7 +29,6 @@ const ALL_SPORTS: Sport[] = ['NFL', 'NBA', 'MLB', 'NHL'];
 
 export const Header: React.FC<HeaderProps> = ({
   currentPuzzle,
-  onSelectPreset,
   onNewRandomPuzzle,
   onGiveUp,
   isGameOver,
@@ -72,30 +69,12 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Puzzle Selector & Generator Controls */}
+        {/* Puzzle Status Badge & Controls */}
         <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-end">
-          {/* Preset Dropdown */}
-          <div className="relative">
-            <select
-              value={currentPuzzle.id}
-              onChange={(e) => {
-                const found = PUZZLE_PRESETS.find((p) => p.id === e.target.value);
-                if (found) onSelectPreset(found);
-              }}
-              className="appearance-none rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 pl-3 pr-8 text-xs font-semibold text-zinc-200 outline-none hover:border-zinc-700 cursor-pointer"
-            >
-              {PUZZLE_PRESETS.map((p) => (
-                <option key={p.id} value={p.id} className="bg-zinc-950 text-zinc-200">
-                  {p.title}
-                </option>
-              ))}
-              {currentPuzzle.id.startsWith('puzzle_random') && (
-                <option value={currentPuzzle.id} className="bg-zinc-950 text-zinc-200">
-                  {currentPuzzle.title}
-                </option>
-              )}
-            </select>
-            <ChevronDown className="pointer-events-none absolute right-2.5 top-3 h-3.5 w-3.5 text-zinc-400" />
+          {/* Daily Puzzle Badge */}
+          <div className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 px-3 text-xs font-semibold text-zinc-200">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>{currentPuzzle.title}</span>
           </div>
 
           {/* Random Board Button */}

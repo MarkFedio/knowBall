@@ -2,23 +2,25 @@ import { Athlete, Category, DailyPuzzle } from '@/types';
 import { ATHLETES } from './athletes';
 import { CATEGORIES } from './categories';
 
-export const SAMPLE_PUZZLE: DailyPuzzle = {
-  id: 'puzzle_daily_01',
-  date: '2026-11-07',
-  title: 'All-Sports 4×4 Inaugural Grid',
+export const DAILY_PUZZLE: DailyPuzzle = {
+  id: 'daily_grid_01',
+  date: '2026-11-08',
+  title: 'All-Sports Daily 4×4 Grid',
   rowCategories: [
-    CATEGORIES.SPORT_NFL,
-    CATEGORIES.SPORT_NBA,
+    CATEGORIES.METRO_BOSTON,
+    CATEGORIES.METRO_NY,
     CATEGORIES.METRO_CHICAGO,
-    CATEGORIES.NUMBER_23_OR_24,
+    CATEGORIES.METRO_LA,
   ],
   colCategories: [
+    CATEGORIES.STAT_STEALS_500,
+    CATEGORIES.STAT_ASSISTS_1000,
     CATEGORIES.ACCOLADE_CHAMPION,
     CATEGORIES.ACCOLADE_MVP,
-    CATEGORIES.DRAFT_FIRST_OVERALL,
-    CATEGORIES.COLLEGE_SEC,
   ],
 };
+
+export const SAMPLE_PUZZLE: DailyPuzzle = DAILY_PUZZLE;
 
 /**
  * Returns all athletes matching both the row and column categories.

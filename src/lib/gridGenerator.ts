@@ -1,7 +1,7 @@
 import { Athlete, Category, DailyPuzzle } from '@/types';
 import { ATHLETES } from '@/data/athletes';
 import { CATEGORIES } from '@/data/categories';
-import { getValidAthletesForCell } from '@/data/puzzles';
+import { getValidAthletesForCell, DAILY_PUZZLE } from '@/data/puzzles';
 
 export interface SolvabilityReport {
   isSolvable: boolean;
@@ -83,23 +83,7 @@ export function getAllSolutionsForCell(
 // CURATED PUZZLE PRESETS
 // =========================================================================
 export const PUZZLE_PRESETS: DailyPuzzle[] = [
-  {
-    id: 'puzzle_inaugural',
-    date: '2026-11-07',
-    title: 'The Inaugural 4×4 Grid',
-    rowCategories: [
-      CATEGORIES.SPORT_NFL,
-      CATEGORIES.SPORT_NBA,
-      CATEGORIES.METRO_CHICAGO,
-      CATEGORIES.NUMBER_23_OR_24,
-    ],
-    colCategories: [
-      CATEGORIES.ACCOLADE_CHAMPION,
-      CATEGORIES.ACCOLADE_MVP,
-      CATEGORIES.DRAFT_FIRST_OVERALL,
-      CATEGORIES.COLLEGE_SEC,
-    ],
-  },
+  DAILY_PUZZLE,
   {
     id: 'puzzle_cross_stats',
     date: '2026-11-08',

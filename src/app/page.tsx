@@ -2,7 +2,8 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Athlete, CellState, PlayMode, Sport, DailyPuzzle } from '@/types';
-import { PUZZLE_PRESETS, generateProceduralPuzzle } from '@/lib/gridGenerator';
+import { DAILY_PUZZLE } from '@/data/puzzles';
+import { generateProceduralPuzzle } from '@/lib/gridGenerator';
 import { Header } from '@/components/Header';
 import { Grid } from '@/components/Grid';
 import { SearchModal } from '@/components/SearchModal';
@@ -12,7 +13,7 @@ import { CellSolutionsModal } from '@/components/CellSolutionsModal';
 import { sound } from '@/lib/sound';
 
 export default function Home() {
-  const [currentPuzzle, setCurrentPuzzle] = useState<DailyPuzzle>(PUZZLE_PRESETS[0]);
+  const [currentPuzzle, setCurrentPuzzle] = useState<DailyPuzzle>(DAILY_PUZZLE);
 
   // 4x4 Grid State
   const [cells, setCells] = useState<CellState[][]>(() =>
@@ -202,16 +203,6 @@ export default function Home() {
     }
   };
 
-  const handleSelectPreset = (preset: DailyPuzzle) => {
-    if (guessesUsed > 0 || strikesUsed > 0) {
-      if (confirm('Changing puzzles will reset your current progress. Continue?')) {
-        resetBoard(preset);
-      }
-    } else {
-      resetBoard(preset);
-    }
-  };
-
   const handleNewRandomPuzzle = () => {
     if (guessesUsed > 0 || strikesUsed > 0) {
       if (!confirm('Generate a new random grid and reset progress?')) return;
@@ -236,10 +227,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 flex flex-col justify-between px-3 sm:px-6 py-6 font-sans">
       <div className="flex-1 flex flex-col items-center">
-        {/* Header with Preset Selector, Mode Switcher, and Counters */}
+        {/* Header with Game Status, Mode Switcher, and Counters */}
         <Header
           currentPuzzle={currentPuzzle}
-          onSelectPreset={handleSelectPreset}
           onNewRandomPuzzle={handleNewRandomPuzzle}
           onGiveUp={handleGiveUp}
           isGameOver={isGameOver}
