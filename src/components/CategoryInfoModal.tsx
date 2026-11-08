@@ -337,7 +337,7 @@ const STAT_CRITERIA: Record<string, { statName: string; breakdown: string; rule:
 const ERA_CRITERIA: Record<string, { label: string; rule: string }> = {
   era_active_2020s: {
     label: 'Active in the 2020s',
-    rule: 'Appeared in at least one pro regular-season or playoff game in 2020 or later (including the 2024–2026 seasons).',
+    rule: 'Appeared in at least one pro regular-season or playoff game in 2020 or later.',
   },
   era_2010s: {
     label: 'Active in the 2010s',
@@ -357,23 +357,23 @@ const ERA_CRITERIA: Record<string, { label: string; rule: string }> = {
   },
   era_8_seasons: {
     label: 'Played 8+ Seasons',
-    rule: 'Career spanned 8 or more calendar years at the major league level (active years difference >= 7).',
+    rule: 'Career spanned 8 or more calendar years at the major league level.',
   },
   era_10_seasons: {
     label: 'Played 10+ Seasons',
-    rule: 'Career spanned 10 or more calendar years at the major league level (active years difference >= 9).',
+    rule: 'Career spanned 10 or more calendar years at the major league level.',
   },
   era_12_seasons: {
     label: 'Played 12+ Seasons',
-    rule: 'Career spanned 12 or more calendar years at the major league level (active years difference >= 11).',
+    rule: 'Career spanned 12 or more calendar years at the major league level.',
   },
   era_15_seasons: {
     label: 'Played 15+ Seasons',
-    rule: 'Career spanned 15 or more calendar years at the major league level (active years difference >= 14).',
+    rule: 'Career spanned 15 or more calendar years at the major league level.',
   },
   era_18_seasons: {
     label: 'Played 18+ Seasons',
-    rule: 'Career spanned 18 or more calendar years at the major league level (active years difference >= 17).',
+    rule: 'Career spanned 18 or more calendar years at the major league level.',
   },
 };
 
