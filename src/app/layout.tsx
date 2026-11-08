@@ -11,9 +11,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://knowball.app"),
-  title: "KnowBall | The Daily 4×4 Multi-Sport Trivia Grid",
+  title: "KnowBall | Think you know ball? Prove it.",
   description:
-    "The daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL with cross-sport stats, accolades, and markets.",
+    "The daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL. Think you know ball? Prove it.",
   applicationName: "KnowBall",
   appleWebApp: {
     capable: true,
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://knowball.app",
     siteName: "KnowBall",
-    title: "KnowBall | The Daily 4×4 Multi-Sport Trivia Grid",
+    title: "KnowBall | Think you know ball? Prove it.",
     description:
-      "Play the daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL with cross-sport stats, accolades, and markets.",
+      "The daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL. Think you know ball? Prove it.",
     images: [
       {
         url: "/og-image.png",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KnowBall | The Daily 4×4 Multi-Sport Trivia Grid",
+    title: "KnowBall | Think you know ball? Prove it.",
     description:
-      "Daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL with cross-sport stats and accolades.",
+      "The daily 4×4 all-sports trivia matrix connecting NFL, NBA, MLB, and NHL. Think you know ball? Prove it.",
     images: ["/og-image.png"],
   },
 };

@@ -435,33 +435,37 @@ export default function Home() {
 
         {/* Post-Game Notice & Inspector Tip */}
         {isGameOver && (
-          <div className="w-full max-w-xl mt-4 p-4 rounded-2xl border border-zinc-800 bg-zinc-900/90 text-center animate-in fade-in slide-in-from-bottom-2">
-            <h3 className="font-bold text-base text-zinc-100">
+          <div className="w-full max-w-xl mt-4 p-4 rounded-2xl border border-zinc-800 bg-[#0e121a]/95 text-center animate-in fade-in slide-in-from-bottom-2 shadow-2xl">
+            <div className="text-[11px] font-black uppercase tracking-widest text-amber-400 mb-1">
+              "Think you know ball? Prove it."
+            </div>
+            <h3 className="font-extrabold text-base text-zinc-100">
               {cells.flat().filter((c) => c.isCorrect).length === 16
-                ? '🎉 Immaculate Perfection! You solved all 16 cells!'
-                : 'Game Finished! Click any cell above to inspect all valid answers.'}
+                ? '🔥 CERTIFIED BALL KNOWER! You solved all 16 cells!'
+                : 'FRAUD ALERT! Think you know ball? Inspect answers below or run it back.'}
             </h3>
             <p className="text-xs text-zinc-400 mt-1">
-              Final Rarity Score: <span className="font-mono text-emerald-400 font-bold">{totalRarityScore.toFixed(1)}</span>
+              Final Rarity Score:{' '}
+              <span className="font-mono text-amber-400 font-bold">{totalRarityScore.toFixed(1)}</span>
             </p>
             <div className="mt-3 flex justify-center gap-3">
               <button
                 onClick={() => setIsStatsOpen(true)}
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 text-black hover:bg-emerald-400 transition"
+                className="px-4 py-2 rounded-xl text-xs font-black bg-amber-400 text-black hover:bg-amber-300 transition shadow-md"
               >
-                View Stats & Share
+                View Verdict & Share
               </button>
               <button
                 onClick={handleNewRandomPuzzle}
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-cyan-500 text-black hover:bg-cyan-400 transition"
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-800 text-zinc-200 hover:bg-zinc-700 transition"
               >
-                Next Random Grid
+                Next Grid
               </button>
               <button
                 onClick={() => resetBoard()}
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-800 text-zinc-200 hover:bg-zinc-700 transition"
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-800 text-zinc-300 hover:text-white transition"
               >
-                Play Again
+                Run It Back
               </button>
             </div>
           </div>

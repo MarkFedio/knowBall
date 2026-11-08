@@ -49,6 +49,18 @@ export const StatsModal: React.FC<StatsModalProps> = ({
       ? Math.round((careerStats.gamesWon / careerStats.gamesPlayed) * 100)
       : 0;
 
+  // Dynamic Credibility Verdict
+  const getVerdict = () => {
+    if (correctCount === 16) {
+      if (totalRarityScore < 15) return 'APOCALYPTIC SICKO';
+      return 'CERTIFIED BALL KNOWER';
+    }
+    if (correctCount >= 10) return 'LEGIT BALL KNOWER';
+    if (correctCount >= 6) return 'HIGHLIGHT WATCHER';
+    return 'CASUAL ALERT';
+  };
+  const verdict = getVerdict();
+
   // Generate emoji grid
   const generateShareText = () => {
     let emojiGrid = '';
@@ -66,10 +78,15 @@ export const StatsModal: React.FC<StatsModalProps> = ({
       emojiGrid += '\n';
     }
 
-    const modeText = playMode === 'IMMACULATE' ? 'Immaculate 16' : 'Casual 4-Strikes';
-    const bonusText = hasGrandSlam ? '\n🎯 Grand Slam Diversity Bonus (4 Sports) Active!' : '';
+    const grandSlamText = hasGrandSlam ? ' • Grand Slam 🏈🏀⚾🏒' : '';
 
-    return `KnowBall 4x4 🏆\nScore: ${correctCount}/16 (${modeText})\nRarity Score: ${totalRarityScore.toFixed(1)}${bonusText}\n\n${emojiGrid}\nPlay: https://knowball.app`;
+    return `KNOWBALL 🏆
+VERDICT: ${verdict}
+Score: ${correctCount}/16 | Rarity: ${totalRarityScore.toFixed(1)}${grandSlamText}
+
+${emojiGrid}
+"Think you know ball? Prove it."
+https://knowball.app`;
   };
 
   const handleCopy = async () => {
@@ -105,6 +122,21 @@ export const StatsModal: React.FC<StatsModalProps> = ({
               {playMode === 'IMMACULATE' ? 'The Immaculate 16 Mode' : '4 Strikes Casual Mode'}
             </p>
           </div>
+        </div>
+
+        {/* Verdict Banner */}
+        <div
+          className={`my-3 p-3 rounded-xl border text-center font-black tracking-wider uppercase text-sm ${
+            verdict === 'APOCALYPTIC SICKO'
+              ? 'bg-amber-500/20 border-amber-400 text-amber-300 shadow-[0_0_15px_rgba(251,191,36,0.4)]'
+              : verdict === 'CERTIFIED BALL KNOWER'
+              ? 'bg-emerald-500/20 border-emerald-400 text-emerald-300 shadow-[0_0_15px_rgba(52,211,153,0.4)]'
+              : verdict === 'LEGIT BALL KNOWER'
+              ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300'
+              : 'bg-rose-500/20 border-rose-500 text-rose-300'
+          }`}
+        >
+          VERDICT: {verdict}
         </div>
 
         {/* Tab Switcher */}
