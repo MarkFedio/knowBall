@@ -1,8 +1,21 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, Volume2, VolumeX, Clock, Calendar } from 'lucide-react';
+import {
+  HelpCircle,
+  Trophy,
+  RotateCcw,
+  Flame,
+  Sparkles,
+  Dices,
+  Eye,
+  Volume2,
+  VolumeX,
+  Calendar,
+} from 'lucide-react';
 import { PlayMode, Sport, DailyPuzzle } from '@/types';
+import { LedScoreboardClock } from './LedScoreboardClock';
+import { LeagueIcon } from './LeagueIcon';
 
 interface HeaderProps {
   currentPuzzle: DailyPuzzle;
@@ -49,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenStats,
   onResetGame,
 }) => {
-  const [timeLeft, setTimeLeft] = useState<string>('');
+  const [timeLeft, setTimeLeft] = useState<string>('00:00:10');
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -69,63 +82,142 @@ export const Header: React.FC<HeaderProps> = ({
     return () => clearInterval(interval);
   }, []);
 
+  const guessesRemaining = Math.max(0, maxGuesses - guessesUsed);
+
   return (
-    <header className="w-full max-w-5xl mx-auto mb-6 flex flex-col gap-4">
-      {/* Top Navbar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-b border-zinc-800/80 pb-4">
-        {/* Brand */}
-        <div className="flex items-center gap-3 w-full sm:w-auto">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 via-cyan-500 to-blue-600 font-black text-black shadow-lg shadow-emerald-500/20">
-            4×4
+    <header className="w-full max-w-5xl mx-auto mb-4 flex flex-col gap-3">
+      {/* ======================================================== */}
+      {/* 1. PRIMARY STADIUM SCOREBOARD HEADER BAR (Matches Mockup) */}
+      {/* ======================================================== */}
+      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-3 rounded-2xl bg-[#09111c]/80 border border-[#00e5a3]/30 shadow-[0_0_20px_rgba(0,229,163,0.08)] backdrop-blur-md">
+        {/* Left: Neon SPORTSGRID Logo & ALL-SPORTS 4x4 Badge */}
+        <div className="flex items-center gap-3">
+          <div className="flex items-center select-none cursor-pointer" onClick={onOpenHowToPlay}>
+            <span className="text-2xl sm:text-3xl font-black italic tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#00f5b8] to-[#22d3ee] drop-shadow-[0_0_12px_rgba(0,245,184,0.5)]">
+              SPORTSGRID
+            </span>
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white">
-                SPORTS<span className="text-emerald-400">GRID</span>
-              </h1>
-              <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
-                ALL-SPORTS
-              </span>
-            </div>
-            <p className="text-xs text-zinc-400">Daily Multi-Sport Trivia Matrix</p>
+
+          {/* ALL-SPORTS 4x4 Badge */}
+          <div className="flex flex-col items-center justify-center px-2 py-0.5 rounded-lg border border-cyan-400/50 bg-[#0c1c28]/90 shadow-[0_0_8px_rgba(34,211,238,0.25)] select-none">
+            <span className="text-[8px] font-black tracking-widest uppercase text-cyan-200">
+              ALL-SPORTS
+            </span>
+            <span className="text-xs sm:text-sm font-black italic text-cyan-400 leading-none">
+              4×4
+            </span>
           </div>
         </div>
 
-        {/* Puzzle Status Badge & Controls */}
-        <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-end">
-          {/* Daily Puzzle Badge */}
-          <div className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 px-3 text-xs font-semibold text-zinc-200">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+        {/* Center: Scoreboard Seven-Segment LED Display */}
+        <div className="flex items-center justify-center">
+          <LedScoreboardClock timeStr={timeLeft} />
+        </div>
+
+        {/* Right: Guesses Left, Rarity Score & 4 League Illuminated Badges */}
+        <div className="flex items-center gap-4 sm:gap-5">
+          {/* Counters */}
+          <div className="flex flex-col text-right select-none font-mono text-xs sm:text-sm">
+            <div className="flex items-center justify-end gap-1.5 leading-tight">
+              <span className="text-zinc-400 text-xs font-sans">
+                {playMode === 'IMMACULATE' ? 'Guesses Left:' : 'Strikes:'}
+              </span>
+              <span className="font-bold text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]">
+                {playMode === 'IMMACULATE' ? guessesRemaining : `${strikesUsed}/${maxStrikes}`}
+              </span>
+            </div>
+
+            <div className="flex items-center justify-end gap-1.5 leading-tight mt-0.5">
+              <span className="text-zinc-400 text-xs font-sans">Rarity Score:</span>
+              <span className="font-bold text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]">
+                {totalRarityScore.toFixed(1)}
+              </span>
+            </div>
+          </div>
+
+          {/* 4 Circular League Badges (NFL, NBA, MLB, NHL) */}
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {ALL_SPORTS.map((sport) => {
+              const isUsed = sportsUsed.has(sport);
+              return (
+                <LeagueIcon
+                  key={sport}
+                  sport={sport}
+                  size="md"
+                  variant="circle"
+                  active={isUsed}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ======================================================== */}
+      {/* 2. SECONDARY CONTROLS & UTILITIES SUB-BAR                */}
+      {/* ======================================================== */}
+      <div className="w-full flex flex-wrap items-center justify-between gap-2 px-3 py-1.5 rounded-xl bg-zinc-950/60 border border-zinc-800/80 text-xs">
+        {/* Left: Mode Switcher & Puzzle Title */}
+        <div className="flex items-center gap-2">
+          {/* Play Mode Switcher */}
+          <div className="flex rounded-lg bg-zinc-900 p-0.5 border border-zinc-800">
+            <button
+              onClick={() => onToggleMode('IMMACULATE')}
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold transition ${
+                playMode === 'IMMACULATE'
+                  ? 'bg-[#00e5a3] text-black shadow-sm'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              <Flame className="h-3 w-3" />
+              Immaculate 16
+            </button>
+            <button
+              onClick={() => onToggleMode('STRIKES')}
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold transition ${
+                playMode === 'STRIKES'
+                  ? 'bg-amber-400 text-black shadow-sm'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              4 Strikes
+            </button>
+          </div>
+
+          {/* Daily Puzzle Title Badge */}
+          <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00e5a3] animate-pulse" />
             <span>{currentPuzzle.title}</span>
           </div>
 
-          {/* Midnight Countdown Clock */}
-          <div
-            title="Time remaining until the next daily SportsGrid drops at midnight"
-            className="hidden sm:flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/90 py-2 px-2.5 text-xs font-mono text-zinc-400"
-          >
-            <Clock className="h-3.5 w-3.5 text-zinc-500" />
-            <span>{timeLeft || '24:00:00'}</span>
-          </div>
+          {hasGrandSlam && (
+            <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-black border border-emerald-500/40 flex items-center gap-1">
+              <Sparkles className="w-2.5 h-2.5" />
+              GRAND SLAM (-25% Rarity)
+            </span>
+          )}
+        </div>
 
-          {/* Past Grids Archive Button */}
+        {/* Right: Actions (Archive, Random, Stats, Help, Audio, Reset, Give Up) */}
+        <div className="flex items-center gap-1.5 ml-auto">
+          {/* Past Grids */}
           <button
             onClick={onOpenArchive}
             title="Browse and play past daily SportsGrids"
-            className="flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/90 px-3 py-2 text-xs font-semibold text-zinc-300 transition hover:border-zinc-700 hover:text-white"
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-zinc-900/90 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-700 transition font-medium"
           >
-            <Calendar className="h-4 w-4 text-cyan-400" />
-            <span className="hidden md:inline">Past Grids</span>
+            <Calendar className="h-3.5 w-3.5 text-cyan-400" />
+            <span className="hidden md:inline text-[11px]">Past Grids</span>
           </button>
 
-          {/* Random Board Button */}
+          {/* Random Board */}
           <button
             onClick={onNewRandomPuzzle}
             title="Generate Random Solvable Grid"
-            className="flex items-center gap-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-3 py-2 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-500/20"
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-900/40 transition font-medium"
           >
-            <Dices className="h-4 w-4" />
-            <span className="hidden md:inline">Random Grid</span>
+            <Dices className="h-3.5 w-3.5 text-cyan-400" />
+            <span className="hidden md:inline text-[11px]">Random</span>
           </button>
 
           {/* Give Up / Reveal Answers */}
@@ -133,10 +225,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={onGiveUp}
               title="Give Up & Reveal Answers"
-              className="flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-xs font-semibold text-zinc-400 transition hover:border-rose-500/40 hover:bg-rose-500/10 hover:text-rose-300"
+              className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:border-rose-500/40 hover:bg-rose-950/20 hover:text-rose-300 transition font-medium"
             >
-              <Eye className="h-4 w-4" />
-              <span className="hidden md:inline">Reveal Answers</span>
+              <Eye className="h-3.5 w-3.5" />
+              <span className="hidden md:inline text-[11px]">Reveal</span>
             </button>
           )}
 
@@ -144,123 +236,42 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onToggleSound}
             title={soundEnabled ? 'Mute Sounds' : 'Unmute Sounds'}
-            className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-2 text-zinc-300 transition hover:bg-zinc-800 hover:text-white"
+            className="p-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:bg-zinc-800 transition"
           >
-            {soundEnabled ? <Volume2 className="h-4 w-4 text-emerald-400" /> : <VolumeX className="h-4 w-4 text-zinc-500" />}
+            {soundEnabled ? (
+              <Volume2 className="h-3.5 w-3.5 text-[#00e5a3]" />
+            ) : (
+              <VolumeX className="h-3.5 w-3.5 text-zinc-500" />
+            )}
           </button>
 
-          {/* Action Icons */}
+          {/* Help */}
           <button
             onClick={onOpenHowToPlay}
             title="How to Play"
-            className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-2 text-zinc-300 transition hover:bg-zinc-800 hover:text-white"
+            className="p-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:bg-zinc-800 transition"
           >
-            <HelpCircle className="h-4 w-4" />
+            <HelpCircle className="h-3.5 w-3.5" />
           </button>
 
+          {/* Stats */}
           <button
             onClick={onOpenStats}
             title="Stats & Share"
-            className="flex items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/40 transition font-medium"
           >
-            <Trophy className="h-4 w-4 text-emerald-400" />
-            <span className="hidden sm:inline">Stats</span>
+            <Trophy className="h-3.5 w-3.5 text-[#00e5a3]" />
+            <span className="text-[11px]">Stats</span>
           </button>
 
+          {/* Reset */}
           <button
             onClick={onResetGame}
             title="Reset Board"
-            className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-2 text-zinc-400 transition hover:bg-zinc-800 hover:text-white"
+            className="p-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition"
           >
-            <RotateCcw className="h-4 w-4" />
+            <RotateCcw className="h-3.5 w-3.5" />
           </button>
-        </div>
-      </div>
-
-      {/* Game Mode Selector & Status Ticker */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-3 sm:p-4">
-        {/* Mode Pill Toggle */}
-        <div className="flex rounded-xl bg-zinc-950 p-1 border border-zinc-800">
-          <button
-            onClick={() => onToggleMode('IMMACULATE')}
-            className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition ${
-              playMode === 'IMMACULATE'
-                ? 'bg-emerald-500 text-black shadow-sm'
-                : 'text-zinc-400 hover:text-white'
-            }`}
-          >
-            <Flame className="h-3.5 w-3.5" />
-            Immaculate 16
-          </button>
-
-          <button
-            onClick={() => onToggleMode('STRIKES')}
-            className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold transition ${
-              playMode === 'STRIKES'
-                ? 'bg-amber-400 text-black shadow-sm'
-                : 'text-zinc-400 hover:text-white'
-            }`}
-          >
-            4 Strikes (Casual)
-          </button>
-        </div>
-
-        {/* Live Counters */}
-        <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-zinc-300">
-          {/* Guesses / Strikes left */}
-          <div className="flex items-center gap-1.5">
-            <span className="text-zinc-400">
-              {playMode === 'IMMACULATE' ? 'Guesses:' : 'Strikes:'}
-            </span>
-            <span className="font-mono font-bold text-white text-sm">
-              {playMode === 'IMMACULATE' ? (
-                `${maxGuesses - guessesUsed} left`
-              ) : (
-                `${strikesUsed} / ${maxStrikes}`
-              )}
-            </span>
-          </div>
-
-          <div className="h-4 w-[1px] bg-zinc-800 hidden sm:block" />
-
-          {/* Rarity Score */}
-          <div className="flex items-center gap-1.5">
-            <span className="text-zinc-400">Rarity Score:</span>
-            <span className="font-mono font-bold text-emerald-400 text-sm">
-              {totalRarityScore.toFixed(1)}
-            </span>
-          </div>
-
-          <div className="h-4 w-[1px] bg-zinc-800 hidden sm:block" />
-
-          {/* Grand Slam Tracker */}
-          <div className="flex items-center gap-1.5">
-            <span className="text-zinc-400 flex items-center gap-1">
-              <Sparkles className="h-3 w-3 text-cyan-400" /> Grand Slam:
-            </span>
-            <div className="flex gap-1">
-              {ALL_SPORTS.map((sport) => {
-                const isUsed = sportsUsed.has(sport);
-                return (
-                  <span
-                    key={sport}
-                    className={`rounded px-1 text-[9px] font-bold border transition ${
-                      isUsed
-                        ? 'border-emerald-500 bg-emerald-500/20 text-emerald-300'
-                        : 'border-zinc-800 bg-zinc-950 text-zinc-600'
-                    }`}
-                  >
-                    {sport}
-                  </span>
-                );
-              })}
-            </div>
-            {hasGrandSlam && (
-              <span className="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[9px] font-black text-emerald-300 border border-emerald-500/40">
-                -25%
-              </span>
-            )}
-          </div>
         </div>
       </div>
     </header>

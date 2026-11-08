@@ -1,11 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #ededed;
+  --background: #060b13;
+  --foreground: #f8fafc;
+  --neon-mint: #00f5b8;
+  --neon-teal: #00e5a3;
+  --neon-cyan: #22d3ee;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-image: 
+    /* Top Left Floodlight Beam */
+    radial-gradient(ellipse 650px 450px at 0% 0%, rgba(34, 211, 238, 0.18) 0%, rgba(0, 229, 163, 0.06) 45%, transparent 75%),
+    /* Top Right Floodlight Beam */
+    radial-gradient(ellipse 650px 450px at 100% 0%, rgba(0, 245, 184, 0.16) 0%, rgba(34, 211, 238, 0.06) 45%, transparent 75%),
+    /* Carbon Fiber / Dot Matrix Stipple */
+    radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 14px 14px;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+/* Glass Card with 45-degree diagonal sheen reflection */
+.cell-sheen {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 46%,
+    rgba(10, 19, 31, 0.7) 48%,
+    rgba(6, 12, 20, 0.95) 100%
+  );
+}
+
+.cell-sheen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.03) 45%,
+    transparent 47%
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Neon Text Glow */
+.text-neon-mint {
+  color: #00f5b8;
+  text-shadow: 0 0 10px rgba(0, 245, 184, 0.5), 0 0 20px rgba(0, 245, 184, 0.2);
+}
+
+.text-neon-cyan {
+  color: #22d3ee;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+/* Neon Box Border Glow */
+.glow-border-teal {
+  border-color: rgba(0, 229, 163, 0.45);
+  box-shadow: 0 0 15px rgba(0, 229, 163, 0.15), inset 0 0 15px rgba(0, 229, 163, 0.05);
+}
+
+.glow-border-cyan {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.15), inset 0 0 15px rgba(34, 211, 238, 0.05);
+}
+
+/* Scoreboard Inset Bezel */
+.scoreboard-bezel {
+  background: linear-gradient(180deg, #090e17 0%, #04070c 100%);
+  border: 2px solid #1a2536;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(255, 255, 255, 0.05);
 }

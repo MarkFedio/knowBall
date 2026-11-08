@@ -122,9 +122,8 @@ export const CellSolutionsModal: React.FC<CellSolutionsModalProps> = ({
                     {(() => {
                       const tier = getRarityTier(rarity);
                       return (
-                        <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-mono text-xs font-bold border ${tier.badgeClass}`}>
-                          {tier.prefixIcon && <span>{tier.prefixIcon}</span>}
-                          <span>{rarity.toFixed(1)}%</span>
+                        <span className={tier.pillClass}>
+                          {rarity.toFixed(1)}% {tier.label}
                         </span>
                       );
                     })()}
