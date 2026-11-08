@@ -414,7 +414,7 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
       return {
         id: `puzzle_random_${Date.now()}_${randomId}`,
         date: new Date().toISOString().split('T')[0],
-        title: `KnowBall: Random Board #${randomId}`,
+        title: 'Random',
         rowCategories: rows,
         colCategories: cols,
       };
@@ -425,6 +425,6 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
   return {
     ...DAILY_PUZZLE,
     id: `puzzle_random_${Date.now()}`,
-    title: `KnowBall: Random Board #${Math.floor(1000 + Math.random() * 9000)}`,
+    title: 'Random',
   };
 }

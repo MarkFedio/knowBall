@@ -90,6 +90,11 @@ export const Header: React.FC<HeaderProps> = ({
   const isScoreboard = theme === 'SCOREBOARD';
   const isNeon = theme === 'NEON';
 
+  // Compact puzzle identifier: "Daily" or "Random" to save header space
+  const displayPuzzleTitle = currentPuzzle.title.toLowerCase().includes('random')
+    ? 'Random'
+    : 'Daily';
+
   const cycleTheme = () => {
     if (!onToggleTheme) return;
     if (theme === 'SCOREBOARD') onToggleTheme('NEON');
@@ -106,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({
       {/* KNOWBALL LINEAR COMMAND BAR (2-TIER STADIUM DECK)        */}
       {/* ======================================================== */}
       <div
-        className={`w-full flex flex-col gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 ${
+        className={`w-full flex flex-col gap-2 sm:gap-2.5 px-3.5 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 ${
           isScoreboard
             ? 'bg-[#0e121a]/95 border border-amber-500/35 shadow-[0_6px_24px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.06)]'
             : isNeon
@@ -177,33 +182,33 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* SECTION 2: DIGITAL CLOCK & PUZZLE IDENTIFIER */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
           <LedScoreboardClock timeStr={timeLeft} theme={theme} />
 
-          {/* Puzzle ID Chip */}
-          <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-950/60 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+          {/* Puzzle ID Chip (Compact Daily / Random) */}
+          <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-950/60 border border-zinc-800 text-[11px] font-medium text-zinc-300 shrink-0">
             <span
               className={`w-1.5 h-1.5 rounded-full animate-pulse ${
                 isScoreboard ? 'bg-amber-400' : isNeon ? 'bg-[#00f5b8]' : 'bg-emerald-400'
               }`}
             />
-            <span className="truncate max-w-[130px] font-mono">{currentPuzzle.title}</span>
+            <span className="font-mono text-[11px] font-bold">{displayPuzzleTitle}</span>
           </div>
         </div>
 
         {/* GROUP 3: STATS & GRAND SLAM (LOCKED TOGETHER ON RIGHT) */}
-        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-          {/* Vertical Divider before stats on md+ */}
-          <div className="hidden md:block h-7 w-px bg-zinc-800/80" />
+        <div className="flex items-center gap-3 sm:gap-4 shrink-0 pr-1 sm:pr-2">
+          {/* Vertical Divider before stats on sm+ */}
+          <div className="hidden sm:block h-7 w-px bg-zinc-800/80" />
 
-          {/* SECTION 3: LIVE STATS (GUESSES & RARITY) */}
-          <div className="flex flex-col text-right font-mono text-xs leading-tight shrink-0">
-            <div className="flex items-center justify-end gap-1.5">
+          {/* SECTION 3: LIVE STATS (GUESSES & RARITY) - ABSOLUTELY FIXED POSITION */}
+          <div className="flex flex-col shrink-0 w-[86px] text-xs leading-tight">
+            <div className="flex items-center justify-between w-full">
               <span className="text-zinc-400 text-[11px] font-sans">
                 Guesses:
               </span>
               <span
-                className={`font-bold font-mono text-xs sm:text-sm ${
+                className={`font-bold font-mono text-xs sm:text-sm w-7 text-right tabular-nums ${
                   isScoreboard
                     ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
                     : isNeon
@@ -215,10 +220,10 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
 
-            <div className="flex items-center justify-end gap-1.5 mt-0.5">
+            <div className="flex items-center justify-between w-full mt-0.5">
               <span className="text-zinc-400 text-[11px] font-sans">Rarity:</span>
               <span
-                className={`font-bold font-mono text-xs sm:text-sm ${
+                className={`font-bold font-mono text-xs sm:text-sm w-7 text-right tabular-nums ${
                   isScoreboard
                     ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
                     : isNeon
@@ -236,7 +241,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* SECTION 4: GRAND SLAM & 4 LEAGUE TOKENS */}
           <div className="flex items-center shrink-0">
-            <div className="flex flex-col w-full min-w-[124px]">
+            <div className="flex flex-col w-[114px]">
               {/* Title & Pill Header */}
               <div className="flex items-center justify-between w-full text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
                 <div className="flex items-center gap-1">
@@ -264,7 +269,7 @@ export const Header: React.FC<HeaderProps> = ({
                     <LeagueIcon
                       key={sport}
                       sport={sport}
-                      size="md"
+                      size="sm"
                       variant="circle"
                       active={isUsed}
                     />
