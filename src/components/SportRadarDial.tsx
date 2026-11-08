@@ -71,15 +71,15 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
           className="w-full h-full overflow-visible transition-transform duration-300 group-hover:scale-[1.02]"
         >
           <defs>
-            {/* Symmetrical curved text arc paths centered at radius 101 */}
-            {/* NFL (Top-Left): Clockwise from 200° to 250° */}
-            <path id="arc-nfl" d="M 55.09 115.46 A 101 101 0 0 1 115.46 55.09" fill="none" />
-            {/* NBA (Top-Right): Clockwise from 290° to 340° */}
-            <path id="arc-nba" d="M 184.54 55.09 A 101 101 0 0 1 244.91 115.46" fill="none" />
-            {/* MLB (Bottom-Left): Counter-Clockwise from 160° to 110° */}
-            <path id="arc-mlb" d="M 55.09 184.54 A 101 101 0 0 0 115.46 244.91" fill="none" />
-            {/* NHL (Bottom-Right): Counter-Clockwise from 70° to 20° */}
-            <path id="arc-nhl" d="M 184.54 244.91 A 101 101 0 0 0 244.91 184.54" fill="none" />
+            {/* Symmetrical curved text arc paths placing text halfway between ball and quadrant edge */}
+            {/* NFL (Top-Left): Clockwise along R=89 (baseline at R=89, ascenders outward to R=104) */}
+            <path id="arc-nfl" d="M 64.03 126.97 A 89 89 0 0 1 126.97 64.03" fill="none" />
+            {/* NBA (Top-Right): Clockwise along R=89 (baseline at R=89, ascenders outward to R=104) */}
+            <path id="arc-nba" d="M 173.03 64.03 A 89 89 0 0 1 235.97 126.97" fill="none" />
+            {/* MLB (Bottom-Left): Counter-Clockwise along R=104 (baseline at R=104, ascenders inward to R=89) */}
+            <path id="arc-mlb" d="M 49.54 176.92 A 104 104 0 0 0 123.08 250.46" fill="none" />
+            {/* NHL (Bottom-Right): Counter-Clockwise along R=104 (baseline at R=104, ascenders inward to R=89) */}
+            <path id="arc-nhl" d="M 176.92 250.46 A 104 104 0 0 0 250.46 176.92" fill="none" />
 
             {/* Inset drop shadows and metallic gradients */}
             <radialGradient id="centerHubRecessed" cx="50%" cy="50%" r="50%">
@@ -205,7 +205,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
-                fontSize: '25px',
+                fontSize: '21px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
                 filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
@@ -216,9 +216,9 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               </textPath>
             </text>
 
-            {/* Football Icon: Strictly in Top-Left Quadrant at (105, 105) */}
+            {/* Football Icon: Strictly in Top-Left Quadrant */}
             <g
-              transform={`translate(105, 105) rotate(-38) scale(${hoveredSport === 'NFL' ? 1.14 : 1})`}
+              transform={`translate(109, 109) rotate(-38) scale(${hoveredSport === 'NFL' ? 1.14 : 1})`}
               className="transition-transform duration-200"
             >
               {/* Ball Body */}
@@ -259,7 +259,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Prominent Glowing Checkmark Badge when Used */}
             {isNflUsed && (
               <g
-                transform="translate(124, 124)"
+                transform="translate(126, 126)"
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
@@ -332,7 +332,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
-                fontSize: '25px',
+                fontSize: '21px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
                 filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
@@ -343,9 +343,9 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               </textPath>
             </text>
 
-            {/* Basketball Icon: Strictly in Top-Right Quadrant at (195, 105) */}
+            {/* Basketball Icon: Strictly in Top-Right Quadrant */}
             <g
-              transform={`translate(195, 105) scale(${hoveredSport === 'NBA' ? 1.14 : 1})`}
+              transform={`translate(189, 111) scale(${hoveredSport === 'NBA' ? 1.14 : 1})`}
               className="transition-transform duration-200"
             >
               {/* Ball Body */}
@@ -361,7 +361,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Prominent Glowing Checkmark Badge when Used */}
             {isNbaUsed && (
               <g
-                transform="translate(176, 124)"
+                transform="translate(174, 126)"
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
@@ -434,7 +434,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
-                fontSize: '25px',
+                fontSize: '21px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
                 filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
@@ -445,9 +445,9 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               </textPath>
             </text>
 
-            {/* Baseball Icon: Strictly in Bottom-Left Quadrant at (105, 195) */}
+            {/* Baseball Icon: Strictly in Bottom-Left Quadrant */}
             <g
-              transform={`translate(105, 195) scale(${hoveredSport === 'MLB' ? 1.14 : 1})`}
+              transform={`translate(111, 189) scale(${hoveredSport === 'MLB' ? 1.14 : 1})`}
               className="transition-transform duration-200"
             >
               {/* Ball Body: Pure crisp white */}
@@ -472,7 +472,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Prominent Glowing Checkmark Badge when Used */}
             {isMlbUsed && (
               <g
-                transform="translate(124, 176)"
+                transform="translate(126, 174)"
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
@@ -545,7 +545,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               className="font-varsity font-black select-none pointer-events-none"
               style={{
                 fontFamily: "'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif",
-                fontSize: '25px',
+                fontSize: '21px',
                 fontWeight: 900,
                 letterSpacing: '0.06em',
                 filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.9))',
@@ -556,9 +556,9 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               </textPath>
             </text>
 
-            {/* Hockey Puck Icon: Strictly in Bottom-Right Quadrant at (195, 195) */}
+            {/* Hockey Puck Icon: Strictly in Bottom-Right Quadrant */}
             <g
-              transform={`translate(195, 195) rotate(-28) scale(${hoveredSport === 'NHL' ? 1.14 : 1})`}
+              transform={`translate(187, 187) rotate(-28) scale(${hoveredSport === 'NHL' ? 1.14 : 1})`}
               className="transition-transform duration-200"
             >
               {/* Cylindrical Side Wall */}
@@ -585,7 +585,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
             {/* Prominent Glowing Checkmark Badge when Used */}
             {isNhlUsed && (
               <g
-                transform="translate(176, 176)"
+                transform="translate(174, 174)"
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
