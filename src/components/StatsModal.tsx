@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { X, Trophy, Share2, Check, Sparkles, Flame, Award, Star, BarChart3 } from 'lucide-react';
+import { X, Trophy, Share2, Check, Sparkles, Flame, Award, Star, BarChart3, Infinity as InfinityIcon } from 'lucide-react';
 import { CellState, PlayMode, Sport, CareerStats } from '@/types';
 import { loadCareerStats } from '@/lib/storage';
 
@@ -119,7 +119,7 @@ https://knowball.app`;
               {isComplete ? 'Puzzle Completed!' : 'Statistics & Summary'}
             </h2>
             <p className="text-xs text-zinc-400">
-              {playMode === 'IMMACULATE' ? 'The Immaculate 16 Mode' : '4 Strikes Casual Mode'}
+              {playMode === 'IMMACULATE' ? 'Ball Knower (16 Guesses)' : 'Unlimited Mode (Practice)'}
             </p>
           </div>
         </div>
@@ -181,10 +181,10 @@ https://knowball.app`;
 
               <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-3 text-center">
                 <div className="text-2xl font-black text-amber-400">
-                  {guessesUsed}/{maxGuesses}
+                  {playMode === 'IMMACULATE' ? `${guessesUsed}/${maxGuesses}` : `${guessesUsed} (∞)`}
                 </div>
                 <div className="text-[10px] uppercase tracking-wider text-zinc-400 mt-1">
-                  {playMode === 'IMMACULATE' ? 'Guesses' : 'Strikes'}
+                  Guesses
                 </div>
               </div>
             </div>
@@ -221,21 +221,33 @@ https://knowball.app`;
               </div>
             </div>
 
-            {/* Share Button */}
-            <button
-              onClick={handleCopy}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 py-3 text-center font-bold text-black transition hover:bg-emerald-400 shadow-lg shadow-emerald-500/20"
-            >
-              {copied ? (
-                <>
-                  <Check className="h-5 w-5" /> Copied to Clipboard!
-                </>
-              ) : (
-                <>
-                  <Share2 className="h-5 w-5" /> Share Result
-                </>
-              )}
-            </button>
+            {/* Share Button / Unlimited Mode Notice */}
+            {playMode === 'IMMACULATE' ? (
+              <button
+                onClick={handleCopy}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 py-3 text-center font-bold text-black transition hover:bg-emerald-400 shadow-lg shadow-emerald-500/20"
+              >
+                {copied ? (
+                  <>
+                    <Check className="h-5 w-5" /> Copied to Clipboard!
+                  </>
+                ) : (
+                  <>
+                    <Share2 className="h-5 w-5" /> Share Result
+                  </>
+                )}
+              </button>
+            ) : (
+              <div className="flex flex-col items-center justify-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/60 py-3.5 px-4 text-center">
+                <div className="flex items-center gap-2 text-xs font-bold text-zinc-300">
+                  <InfinityIcon className="h-4 w-4 text-cyan-400" />
+                  <span>Unlimited Mode — Non-Shareable</span>
+                </div>
+                <p className="text-[11px] text-zinc-500">
+                  Sharing results is disabled in Unlimited Mode. Switch to <strong>Ball Knower</strong> mode to earn an official shareable verdict!
+                </p>
+              </div>
+            )}
           </div>
         )}
 

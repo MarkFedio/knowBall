@@ -6,6 +6,7 @@ import {
   Trophy,
   RotateCcw,
   Flame,
+  Infinity as InfinityIcon,
   Sparkles,
   Dices,
   Volume2,
@@ -136,11 +137,11 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Vertical Divider */}
           <div className="hidden sm:block h-7 w-px bg-zinc-800/80 mx-0.5" />
 
-          {/* Play Mode Switcher (Ball Knower vs Casual) */}
+          {/* Play Mode Switcher (Ball Knower vs Unlimited) */}
           <div className="flex rounded-lg bg-zinc-950/70 p-0.5 border border-zinc-800/80 text-[10px] sm:text-[11px] shrink-0">
             <button
               onClick={() => onToggleMode('IMMACULATE')}
-              title="Ball Knower: 16 Guesses, 0 Strikes"
+              title="Ball Knower: 16 Guesses, 0 Strikes (Official Rank & Shareable)"
               className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
                 playMode === 'IMMACULATE'
                   ? isScoreboard
@@ -155,10 +156,10 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Ball Knower</span>
             </button>
             <button
-              onClick={() => onToggleMode('STRIKES')}
-              title="Casual Mode: 4 Strikes Allowed"
+              onClick={() => onToggleMode('UNLIMITED')}
+              title="Unlimited Mode: Unlimited guesses for risky picks (Non-shareable)"
               className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
-                playMode === 'STRIKES'
+                playMode === 'UNLIMITED' || playMode === 'STRIKES'
                   ? isScoreboard
                     ? 'bg-amber-400 text-black shadow-sm'
                     : isNeon
@@ -167,7 +168,8 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
-              <span>Casual (4 Strikes)</span>
+              <InfinityIcon className="h-3 w-3 shrink-0" />
+              <span>Unlimited</span>
             </button>
           </div>
         </div>
@@ -198,7 +200,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex flex-col text-right font-mono text-xs leading-tight shrink-0">
           <div className="flex items-center justify-end gap-1.5">
             <span className="text-zinc-400 text-[11px] font-sans">
-              {playMode === 'IMMACULATE' ? 'Guesses:' : 'Strikes:'}
+              Guesses:
             </span>
             <span
               className={`font-bold font-mono text-xs sm:text-sm ${
@@ -209,7 +211,7 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-zinc-200'
               }`}
             >
-              {playMode === 'IMMACULATE' ? guessesRemaining : `${strikesUsed}/${maxStrikes}`}
+              {playMode === 'IMMACULATE' ? guessesRemaining : `${guessesUsed} (∞)`}
             </span>
           </div>
 

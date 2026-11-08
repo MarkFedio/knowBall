@@ -77,10 +77,10 @@ export const HowToPlayModal: React.FC<HowToPlayModalProps> = ({ isOpen, onClose 
             </h3>
             <ul className="list-inside list-disc space-y-1 text-zinc-400">
               <li>
-                <strong className="text-zinc-200">The Immaculate 16:</strong> 16 total guesses. Every incorrect guess permanently burns that cell with an <span className="font-bold text-rose-400">X</span>.
+                <strong className="text-zinc-200">Ball Knower (Official):</strong> 16 total guesses for 16 cells. Every incorrect guess permanently burns that cell with an <span className="font-bold text-rose-400">X</span>. Official ranked results can be shared with friends!
               </li>
               <li>
-                <strong className="text-zinc-200">4 Strikes (Casual):</strong> You can guess until the entire 16-cell board is filled or until you hit 4 strikes.
+                <strong className="text-zinc-200">Unlimited (Practice):</strong> Take unlimited guesses to test wild hunches and obscure players. Cells never burn, so you can guess until you solve the board. (Results cannot be shared).
               </li>
             </ul>
           </section>

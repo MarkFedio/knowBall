@@ -79,9 +79,10 @@ export default function Home() {
     if (playMode === 'IMMACULATE') {
       return guessesUsed >= maxGuesses;
     } else {
-      return strikesUsed >= maxStrikes;
+      // Unlimited mode: player can take as many guesses as needed until solving or giving up
+      return false;
     }
-  }, [cells, playMode, guessesUsed, strikesUsed, hasGivenUp]);
+  }, [cells, playMode, guessesUsed, hasGivenUp]);
 
   // Total Rarity Score calculation
   const totalRarityScore = useMemo(() => {
@@ -283,16 +284,8 @@ export default function Home() {
       setGuessesUsed((prev) => prev + 1);
       setActiveCell(null);
     } else {
-      const nextStrikes = strikesUsed + 1;
-      setStrikesUsed(nextStrikes);
-      if (nextStrikes >= maxStrikes) {
-        setCells((prev) =>
-          prev.map((r) =>
-            r.map((c) => (c.isCorrect ? c : { ...c, isBurnt: true }))
-          )
-        );
-        setActiveCell(null);
-      }
+      // Unlimited Mode: cell is NOT burnt. Record the attempt and keep cell open to try another athlete.
+      setGuessesUsed((prev) => prev + 1);
     }
   };
 

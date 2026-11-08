@@ -59,7 +59,7 @@ export interface Category {
   matches: (athlete: Athlete) => boolean;
 }
 
-export type PlayMode = 'IMMACULATE' | 'STRIKES';
+export type PlayMode = 'IMMACULATE' | 'UNLIMITED' | 'STRIKES';
 
 export type VisualTheme = 'SCOREBOARD' | 'NEON' | 'CLASSIC';
 
