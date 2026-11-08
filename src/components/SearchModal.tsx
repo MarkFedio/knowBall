@@ -64,10 +64,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           matchScore = 400; // Last name or first name starts with query
         } else if (nameLower.includes(q)) {
           matchScore = 200;
-        } else if (a.teamNames.some((t) => t.toLowerCase().includes(q))) {
-          matchScore = 60;
-        } else if (a.college?.toLowerCase().includes(q)) {
-          matchScore = 40;
         }
       }
 
@@ -136,7 +132,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               setQuery(e.target.value);
               setErrorMessage(null);
             }}
-            placeholder="Search athlete by name, team, or college..."
+            placeholder="Search athlete by name..."
             className="w-full rounded-xl border border-zinc-800 bg-zinc-900/90 py-3 pl-11 pr-4 text-base text-zinc-100 placeholder-zinc-500 outline-none ring-emerald-500/50 transition focus:border-emerald-500 focus:ring-2"
           />
         </div>
@@ -153,23 +149,32 @@ export const SearchModal: React.FC<SearchModalProps> = ({
         )}
 
         {/* Athlete Candidates List */}
-        <div className="flex-1 overflow-y-auto space-y-2 pr-1">
+        <div className="flex-1 overflow-y-auto space-y-1.5 pr-1">
           {filteredAthletes.length === 0 ? (
             <div className="py-12 text-center text-sm text-zinc-500">
               No matching athletes found for &quot;{query}&quot;. Try searching another name.
             </div>
           ) : (
-            filteredAthletes.map((athlete) => (
-              <button
-                key={athlete.id}
-                onClick={() => handleSelectAthlete(athlete)}
-                className="group flex w-full items-center justify-between rounded-xl border border-zinc-800/80 bg-zinc-900/50 p-3 text-left transition hover:border-emerald-500/40 hover:bg-zinc-800/80"
-              >
-                <div className="flex flex-col gap-1">
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-zinc-100 group-hover:text-emerald-300 transition">
+            filteredAthletes.map((athlete) => {
+              const hasNameDuplicate = filteredAthletes.some(
+                (other) => other.id !== athlete.id && other.name === athlete.name
+              );
+
+              return (
+                <button
+                  key={athlete.id}
+                  onClick={() => handleSelectAthlete(athlete)}
+                  className="group flex w-full items-center justify-between rounded-xl border border-zinc-800/80 bg-zinc-900/50 px-3.5 py-2.5 text-left transition hover:border-emerald-500/40 hover:bg-zinc-800/80"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className="font-semibold text-zinc-100 group-hover:text-emerald-300 transition text-sm">
                       {athlete.name}
                     </span>
+                    {hasNameDuplicate && (
+                      <span className="text-xs text-zinc-500 font-mono">
+                        ({athlete.activeYears[0]}–{athlete.activeYears[1] >= 2026 ? 'Pres' : athlete.activeYears[1]})
+                      </span>
+                    )}
                     <div className="flex gap-1">
                       {athlete.sports.map((sport) => {
                         const style = SPORT_COLORS[sport];
@@ -184,20 +189,9 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                       })}
                     </div>
                   </div>
-                  <div className="text-xs text-zinc-400">
-                    <span>{athlete.positions.join('/')}</span> •{' '}
-                    <span>{athlete.teamNames.slice(0, 3).join(', ')}{athlete.teamNames.length > 3 ? '...' : ''}</span> •{' '}
-                    <span className="text-zinc-500">
-                      {athlete.activeYears[0]}–{athlete.activeYears[1] >= 2026 ? 'Pres' : athlete.activeYears[1]}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="text-xs text-zinc-500 font-mono">
-                  {athlete.college ? athlete.college : `#${athlete.jerseyNumbers[0] ?? ''}`}
-                </div>
-              </button>
-            ))
+                </button>
+              );
+            })
           )}
         </div>
       </div>
