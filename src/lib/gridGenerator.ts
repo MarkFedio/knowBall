@@ -172,12 +172,13 @@ function shuffle<T>(arr: T[]): T[] {
  * Generates a completely new, 100% solvable random board on the fly.
  * Enforces:
  * - At most ONE city per axis (no 4-city lines!)
+ * - At least ONE stat requirement per board (points, assists, steals, turnovers, hits, saves)
  * - Zero college categories
  * - Zero draft pick categories
  * - Broad diversity: Accolades, Metros, Franchises, Jersey Numbers, Stats, and Eras.
  */
 export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyPuzzle {
-  const dynamicOthers = [...JERSEYS, ...STATS, ...ERAS_LONGEVITY];
+  const nonStatOthers = [...JERSEYS, ...ERAS_LONGEVITY];
 
   // Try dynamic combinations
   for (let attempt = 1; attempt <= 150; attempt++) {
@@ -192,21 +193,28 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
       const cAcc = shuffle(ACCOLADES)[0];
       const cMet = shuffle(METROS)[0];
       const cFra = shuffle(FRANCHISES)[0];
-      const cOth = shuffle(dynamicOthers)[0];
-      cols = shuffle([cAcc, cMet, cFra, cOth]);
+      const cStat = shuffle(STATS)[0]; // Guaranteed stat requirement
+      cols = shuffle([cAcc, cMet, cFra, cStat]);
     } else {
+      const statOnRows = Math.random() < 0.5;
       const rAcc = shuffle(ACCOLADES)[0];
       const rMet = shuffle(METROS)[0];
       const rFra = shuffle(FRANCHISES)[0];
-      const rOth = shuffle(dynamicOthers)[0];
-      rows = shuffle([rAcc, rMet, rFra, rOth]);
+      const rOther = statOnRows ? shuffle(STATS)[0] : shuffle(nonStatOthers)[0];
+      rows = shuffle([rAcc, rMet, rFra, rOther]);
 
       const cAcc = shuffle(ACCOLADES.filter((a) => a.id !== rAcc.id))[0];
       const cMet = shuffle(METROS.filter((m) => m.id !== rMet.id))[0];
       const cFra = shuffle(FRANCHISES.filter((f) => f.id !== rFra.id))[0];
-      const cOth = shuffle(dynamicOthers.filter((o) => o.id !== rOth.id))[0];
-      cols = shuffle([cAcc, cMet, cFra, cOth]);
+      const cOther = !statOnRows
+        ? shuffle(STATS)[0]
+        : shuffle(nonStatOthers.filter((o) => o.id !== rOther.id))[0];
+      cols = shuffle([cAcc, cMet, cFra, cOther]);
     }
+
+    // Ensure at least one stat requirement is present on the board
+    const hasStat = [...rows, ...cols].some((c) => c.type === 'CROSS_STAT');
+    if (!hasStat) continue;
 
     // Verify every single cell has at least 4 valid athletes
     const report = validatePuzzleSolvability(rows, cols, athletes, 4);
