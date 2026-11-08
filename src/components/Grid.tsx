@@ -8,6 +8,7 @@ import { SportRadarDial } from './SportRadarDial';
 import { CategoryIcon } from './CategoryIcon';
 import { LeagueIcon } from './LeagueIcon';
 import { CategoryInfoModal } from './CategoryInfoModal';
+import { GrandSlamModal } from './GrandSlamModal';
 
 interface GridProps {
   rowCategories: Category[];
@@ -44,6 +45,7 @@ export const Grid: React.FC<GridProps> = ({
 }) => {
   const [hoveredCell, setHoveredCell] = useState<{ row: number; col: number } | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [isGrandSlamOpen, setIsGrandSlamOpen] = useState(false);
 
   const isScoreboard = theme === 'SCOREBOARD';
   const isNeon = theme === 'NEON';
@@ -70,15 +72,19 @@ export const Grid: React.FC<GridProps> = ({
           {/* (0,0) TOP-LEFT CORNER: 4-SPORT RADAR COMPASS DIAL        */}
           {/* ======================================================== */}
           <div
-            className={`flex items-center justify-center rounded-xl p-1 min-h-[95px] sm:min-h-[105px] border ${
+            className={`flex items-center justify-center rounded-xl min-h-[95px] sm:min-h-[105px] border overflow-visible ${
               isScoreboard
-                ? 'border-amber-500/40 bg-[#0f121a] shadow-inner'
+                ? 'border-amber-500/30 bg-[#0c0f16] shadow-inner'
                 : isNeon
-                ? 'border-[#00e5a3]/40 bg-[#091524]/90'
+                ? 'border-[#00e5a3]/30 bg-[#091524]/90'
                 : 'border-zinc-800 bg-zinc-900'
             }`}
           >
-            <SportRadarDial sportsUsed={sportsUsed} theme={theme} />
+            <SportRadarDial
+              sportsUsed={sportsUsed}
+              theme={theme}
+              onClick={() => setIsGrandSlamOpen(true)}
+            />
           </div>
 
           {/* ======================================================== */}
@@ -314,6 +320,14 @@ export const Grid: React.FC<GridProps> = ({
       <CategoryInfoModal
         category={selectedCategory}
         onClose={() => setSelectedCategory(null)}
+      />
+
+      {/* Grand Slam 4-Sport Diversity Bonus Explanation Modal */}
+      <GrandSlamModal
+        isOpen={isGrandSlamOpen}
+        onClose={() => setIsGrandSlamOpen(false)}
+        sportsUsed={sportsUsed}
+        hasGrandSlam={sportsUsed.size >= 4}
       />
     </div>
   );

@@ -21,6 +21,11 @@
   font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, monospace;
 }
 
+.font-varsity {
+  font-family: 'Graduate', 'Bebas Neue', Impact, 'Arial Black', sans-serif;
+  letter-spacing: 0.05em;
+}
+
 /* Authentic Stadium Perforated Dot-Matrix Mesh */
 .scoreboard-mesh {
   background-color: #090c12;
