@@ -1,0 +1,409 @@
+# Implementation Guide: Header Variation 3 (The FinTech Linear Ticker)
+
+This document contains step-by-step instructions and complete drop-in replacement code for implementing **Header Variation 3** in the SportsGrid repository.
+
+---
+
+## 1. Summary of Changes
+
+* **Architecture:** Replaces the current two-bar stacked header with a single, high-density, horizontal command bar (`w-full max-w-5xl mx-auto rounded-2xl`).
+* **Badge Removal:** Completely removes the `ALL-SPORTS 4x4` badge next to the `SPORTSGRID` logo.
+* **Element Retention:** Retains every element from the original design:
+  * Brand logo (`SPORTSGRID`)
+  * Mode switcher (`Immaculate 16` vs `4 Strikes`)
+  * Digital countdown clock (`LedScoreboardClock`)
+  * Board ID / title chip (`• SportsGrid: Random Board #9067`)
+  * Live gameplay stats (`Guesses Left` and `Rarity Score`)
+  * Grand Slam tracker (`✨ GRAND SLAM [1/4]` with 4 circular league medallions for NFL, NBA, MLB, NHL)
+  * Utility toolbar: Theme toggle, Random grid, Reveal answers, Audio toggle, How to Play, Stats & Share, Reset board.
+* **Responsive Layout:** Flexbox with `flex-wrap items-center justify-between gap-2.5 sm:gap-3.5` ensuring clean desktop presentation and natural wrapping on mobile screens without horizontal clipping.
+* **Compatibility:** 100% compatible with existing props, callbacks, and the multi-theme system (`SCOREBOARD`, `NEON`, `CLASSIC`).
+
+---
+
+## 2. Target File
+
+* **File Path:** `src/components/Header.tsx`
+
+---
+
+## 3. Drop-In Code
+
+Replace the entire contents of `src/components/Header.tsx` with the following code:
+
+```tsx
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import {
+  HelpCircle,
+  Trophy,
+  RotateCcw,
+  Flame,
+  Sparkles,
+  Dices,
+  Eye,
+  Volume2,
+  VolumeX,
+  Palette,
+} from 'lucide-react';
+import { PlayMode, Sport, DailyPuzzle, VisualTheme } from '@/types';
+import { LedScoreboardClock } from './LedScoreboardClock';
+import { LeagueIcon } from './LeagueIcon';
+
+interface HeaderProps {
+  currentPuzzle: DailyPuzzle;
+  onNewRandomPuzzle: () => void;
+  onOpenArchive?: () => void;
+  onGiveUp: () => void;
+  isGameOver: boolean;
+  soundEnabled: boolean;
+  onToggleSound: () => void;
+  playMode: PlayMode;
+  onToggleMode: (mode: PlayMode) => void;
+  guessesUsed: number;
+  maxGuesses: number;
+  strikesUsed: number;
+  maxStrikes: number;
+  totalRarityScore: number;
+  sportsUsed: Set<Sport>;
+  hasGrandSlam: boolean;
+  theme?: VisualTheme;
+  onToggleTheme?: (theme: VisualTheme) => void;
+  onOpenHowToPlay: () => void;
+  onOpenStats: () => void;
+  onResetGame: () => void;
+}
+
+const ALL_SPORTS: Sport[] = ['NFL', 'NBA', 'MLB', 'NHL'];
+
+export const Header: React.FC<HeaderProps> = ({
+  currentPuzzle,
+  onNewRandomPuzzle,
+  onGiveUp,
+  isGameOver,
+  soundEnabled,
+  onToggleSound,
+  playMode,
+  onToggleMode,
+  guessesUsed,
+  maxGuesses,
+  strikesUsed,
+  maxStrikes,
+  totalRarityScore,
+  sportsUsed,
+  hasGrandSlam,
+  theme = 'SCOREBOARD',
+  onToggleTheme,
+  onOpenHowToPlay,
+  onOpenStats,
+  onResetGame,
+}) => {
+  const [timeLeft, setTimeLeft] = useState<string>('00:00:00');
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const now = new Date();
+      const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+      const diffMs = tomorrow.getTime() - now.getTime();
+      const hours = Math.floor(diffMs / (1000 * 60 * 60));
+      const mins = Math.floor((diffMs / (1000 * 60)) % 60);
+      const secs = Math.floor((diffMs / 1000) % 60);
+      setTimeLeft(
+        `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+      );
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const guessesRemaining = Math.max(0, maxGuesses - guessesUsed);
+  const isScoreboard = theme === 'SCOREBOARD';
+  const isNeon = theme === 'NEON';
+
+  const cycleTheme = () => {
+    if (!onToggleTheme) return;
+    if (theme === 'SCOREBOARD') onToggleTheme('NEON');
+    else if (theme === 'NEON') onToggleTheme('CLASSIC');
+    else onToggleTheme('SCOREBOARD');
+  };
+
+  const themeLabel =
+    theme === 'SCOREBOARD' ? 'Scoreboard' : theme === 'NEON' ? 'Cyber Neon' : 'Classic Dark';
+
+  return (
+    <header className="w-full max-w-5xl mx-auto mb-4 select-none">
+      {/* ======================================================== */}
+      {/* VARIATION 3: THE FINTECH LINEAR COMMAND BAR (SINGLE ROW)  */}
+      {/* ======================================================== */}
+      <div
+        className={`w-full flex flex-wrap items-center justify-between gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 ${
+          isScoreboard
+            ? 'bg-[#0e121a]/95 border border-amber-500/30 shadow-[0_6px_24px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.06)]'
+            : isNeon
+            ? 'bg-[#08111d]/90 border border-[#00e5a3]/35 shadow-[0_0_24px_rgba(0,229,163,0.12)] backdrop-blur-md'
+            : 'bg-zinc-900 border border-zinc-800'
+        }`}
+      >
+        {/* ---------------------------------------------------- */}
+        {/* SECTION 1: BRAND LOGO & PLAY MODE TOGGLE             */}
+        {/* ---------------------------------------------------- */}
+        <div className="flex items-center gap-2.5 shrink-0">
+          {/* Logo (NO ALL-SPORTS 4x4 BADGE) */}
+          <div
+            onClick={onOpenHowToPlay}
+            className="cursor-pointer group transition transform active:scale-95"
+            title="SportsGrid - Click for How to Play"
+          >
+            {isScoreboard ? (
+              <span className="font-scoreboard text-2xl sm:text-3xl font-black tracking-wider text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                SPORTS<span className="text-amber-400">GRID</span>
+              </span>
+            ) : isNeon ? (
+              <span className="text-xl sm:text-2xl font-black italic tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#00f5b8] to-[#22d3ee] drop-shadow-[0_0_10px_rgba(0,245,184,0.5)]">
+                SPORTSGRID
+              </span>
+            ) : (
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">
+                SPORTS<span className="text-emerald-400">GRID</span>
+              </span>
+            )}
+          </div>
+
+          {/* Vertical Divider */}
+          <div className="hidden sm:block h-6 w-px bg-zinc-800/80" />
+
+          {/* Play Mode Switcher */}
+          <div className="flex rounded-lg bg-zinc-950/70 p-0.5 border border-zinc-800/80 text-[11px]">
+            <button
+              onClick={() => onToggleMode('IMMACULATE')}
+              className={`flex items-center gap-1 px-2 py-1 rounded-md font-bold transition ${
+                playMode === 'IMMACULATE'
+                  ? isScoreboard
+                    ? 'bg-amber-400 text-black shadow-sm'
+                    : isNeon
+                    ? 'bg-[#00f5b8] text-black shadow-sm'
+                    : 'bg-white text-black'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              <Flame className="h-3 w-3" />
+              <span>Immaculate</span>
+            </button>
+            <button
+              onClick={() => onToggleMode('STRIKES')}
+              className={`flex items-center gap-1 px-2 py-1 rounded-md font-bold transition ${
+                playMode === 'STRIKES'
+                  ? isScoreboard
+                    ? 'bg-amber-400 text-black shadow-sm'
+                    : isNeon
+                    ? 'bg-cyan-400 text-black shadow-sm'
+                    : 'bg-white text-black'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              <span>Strikes</span>
+            </button>
+          </div>
+        </div>
+
+        {/* ---------------------------------------------------- */}
+        {/* SECTION 2: DIGITAL CLOCK & PUZZLE TITLE              */}
+        {/* ---------------------------------------------------- */}
+        <div className="flex items-center gap-2.5 shrink-0">
+          <LedScoreboardClock timeStr={timeLeft} theme={theme} />
+
+          {/* Puzzle Title Pill */}
+          <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-zinc-950/60 border border-zinc-800 text-[11px] font-medium text-zinc-300">
+            <span
+              className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                isScoreboard ? 'bg-amber-400' : isNeon ? 'bg-[#00f5b8]' : 'bg-emerald-400'
+              }`}
+            />
+            <span className="truncate max-w-[140px]">{currentPuzzle.title}</span>
+          </div>
+        </div>
+
+        {/* Vertical Divider */}
+        <div className="hidden md:block h-6 w-px bg-zinc-800/80" />
+
+        {/* ---------------------------------------------------- */}
+        {/* SECTION 3: LIVE STATS (GUESSES & RARITY)             */}
+        {/* ---------------------------------------------------- */}
+        <div className="flex flex-col text-right font-mono text-xs leading-tight shrink-0">
+          <div className="flex items-center justify-end gap-1.5">
+            <span className="text-zinc-400 text-[11px] font-sans">
+              {playMode === 'IMMACULATE' ? 'Guesses:' : 'Strikes:'}
+            </span>
+            <span
+              className={`font-bold font-mono text-xs sm:text-sm ${
+                isScoreboard
+                  ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
+                  : isNeon
+                  ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
+                  : 'text-zinc-200'
+              }`}
+            >
+              {playMode === 'IMMACULATE' ? guessesRemaining : `${strikesUsed}/${maxStrikes}`}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-end gap-1.5 mt-0.5">
+            <span className="text-zinc-400 text-[11px] font-sans">Rarity:</span>
+            <span
+              className={`font-bold font-mono text-xs sm:text-sm ${
+                isScoreboard
+                  ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
+                  : isNeon
+                  ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
+                  : 'text-zinc-200'
+              }`}
+            >
+              {totalRarityScore.toFixed(1)}
+            </span>
+          </div>
+        </div>
+
+        {/* Vertical Divider */}
+        <div className="hidden sm:block h-6 w-px bg-zinc-800/80" />
+
+        {/* ---------------------------------------------------- */}
+        {/* SECTION 4: GRAND SLAM & 4 LEAGUE TOKENS              */}
+        {/* ---------------------------------------------------- */}
+        <div className="flex items-center gap-2 shrink-0">
+          <div className="flex flex-col items-end sm:items-center">
+            <div className="flex items-center gap-1 text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
+              <Sparkles className="w-2.5 h-2.5 text-amber-400" />
+              <span>GRAND SLAM</span>
+              <span className="ml-0.5 px-1 py-0.2 rounded bg-amber-500/15 border border-amber-500/40 text-[9px] text-amber-200">
+                {sportsUsed.size}/4
+              </span>
+            </div>
+
+            {/* 4 League Medallions */}
+            <div className="flex items-center gap-1 mt-1">
+              {ALL_SPORTS.map((sport) => {
+                const isUsed = sportsUsed.has(sport);
+                return (
+                  <LeagueIcon
+                    key={sport}
+                    sport={sport}
+                    size="sm"
+                    variant="circle"
+                    active={isUsed}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Vertical Divider */}
+        <div className="hidden md:block h-6 w-px bg-zinc-800/80" />
+
+        {/* ---------------------------------------------------- */}
+        {/* SECTION 5: ACTION SUITE TOOLBAR                      */}
+        {/* ---------------------------------------------------- */}
+        <div className="flex items-center gap-1.5 ml-auto sm:ml-0 shrink-0">
+          {/* Theme Switcher */}
+          {onToggleTheme && (
+            <button
+              onClick={cycleTheme}
+              title={`Active Theme: ${themeLabel}. Click to switch.`}
+              className={`p-1.5 sm:px-2 sm:py-1 rounded-lg border text-[11px] font-bold transition flex items-center gap-1 ${
+                isScoreboard
+                  ? 'bg-[#1a170e] border-amber-500/40 text-amber-300 hover:bg-[#251f10]'
+                  : isNeon
+                  ? 'bg-cyan-950/40 border-cyan-500/40 text-cyan-300 hover:bg-cyan-900/40'
+                  : 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:text-white'
+              }`}
+            >
+              <Palette className="h-3.5 w-3.5" />
+              <span className="hidden xl:inline">{themeLabel}</span>
+            </button>
+          )}
+
+          {/* Random Board */}
+          <button
+            onClick={onNewRandomPuzzle}
+            title="Generate Random Solvable Grid"
+            className="flex items-center gap-1 px-2 py-1 rounded-lg bg-zinc-950/60 border border-zinc-800 text-zinc-300 hover:border-zinc-700 hover:text-white transition font-medium text-[11px]"
+          >
+            <Dices className="h-3.5 w-3.5 text-amber-400" />
+            <span className="hidden md:inline">Random</span>
+          </button>
+
+          {/* Reveal Answers / Give Up */}
+          {!isGameOver && (
+            <button
+              onClick={onGiveUp}
+              title="Give Up & Reveal Answers"
+              className="p-1.5 rounded-lg bg-zinc-950/60 border border-zinc-800 text-zinc-400 hover:border-rose-500/40 hover:bg-rose-950/20 hover:text-rose-300 transition text-[11px]"
+            >
+              <Eye className="h-3.5 w-3.5" />
+            </button>
+          )}
+
+          {/* Sound Toggle */}
+          <button
+            onClick={onToggleSound}
+            title={soundEnabled ? 'Mute Sounds' : 'Unmute Sounds'}
+            className="p-1.5 rounded-lg bg-zinc-950/60 border border-zinc-800 text-zinc-300 hover:bg-zinc-800 transition"
+          >
+            {soundEnabled ? (
+              <Volume2 className="h-3.5 w-3.5 text-amber-400" />
+            ) : (
+              <VolumeX className="h-3.5 w-3.5 text-zinc-500" />
+            )}
+          </button>
+
+          {/* How to Play */}
+          <button
+            onClick={onOpenHowToPlay}
+            title="How to Play"
+            className="p-1.5 rounded-lg bg-zinc-950/60 border border-zinc-800 text-zinc-300 hover:bg-zinc-800 transition"
+          >
+            <HelpCircle className="h-3.5 w-3.5" />
+          </button>
+
+          {/* Stats Button */}
+          <button
+            onClick={onOpenStats}
+            title="View Stats & Share"
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg border transition font-bold text-[11px] ${
+              isScoreboard
+                ? 'bg-amber-500/15 border-amber-500/40 text-amber-300 hover:bg-amber-500/25'
+                : 'bg-emerald-950/50 border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/40'
+            }`}
+          >
+            <Trophy className="h-3.5 w-3.5 text-amber-400" />
+            <span>Stats</span>
+          </button>
+
+          {/* Reset Board */}
+          <button
+            onClick={onResetGame}
+            title="Reset Board"
+            className="p-1.5 rounded-lg bg-zinc-950/60 border border-zinc-800 text-zinc-400 hover:text-white transition"
+          >
+            <RotateCcw className="h-3.5 w-3.5" />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
+```
+
+---
+
+## 4. Verification Steps
+
+1. **Build Check:** Run `npm run build` to confirm zero TypeScript compilation errors and clean CSS optimization.
+2. **Local Preview:** Run `npm run dev` and open `http://localhost:3000`.
+3. **Checklist:**
+   * Verify the `ALL-SPORTS 4x4` badge is absent.
+   * Verify all 5 sections (Brand & Mode, Clock & Title, Stats, Grand Slam, Action Toolbar) fit on a single sleek bar.
+   * Verify all interactive buttons (Theme toggle, Random, Reveal, Sound, How to play, Stats modal, Reset) respond correctly to clicks.

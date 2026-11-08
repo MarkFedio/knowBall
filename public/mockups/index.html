@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportsGrid Design Prototypes Gallery</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #090c10;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 30px 20px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1200px; mx: auto; margin: 0 auto; }
+    header {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1e293b;
+    }
+    h1 { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; color: #fff; }
+    h1 span { color: #f59e0b; }
+    p.subtitle { color: #94a3b8; font-size: 14px; margin-top: 4px; }
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 40px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #f8fafc;
+    }
+    .badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-weight: 700;
+    }
+    .card {
+      background: #0f141d;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .card-img-wrap {
+      background: #06080c;
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.2s;
+    }
+    .card-body { padding: 20px; }
+    .card h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .card p { font-size: 13px; color: #94a3b8; }
+    .card ul { margin: 10px 0 0 18px; font-size: 13px; color: #cbd5e1; }
+    .card li { margin-bottom: 4px; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SPORTS<span>GRID</span> Design Prototypes</h1>
+      <p class="subtitle">Visual showcase of the top header variations and the redesigned 4-sport indicator dial widget.</p>
+      <div style="margin-top: 14px;">
+        <a href="./header-options.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 10px; background: #00f5b8; color: #06090e; font-weight: 800; font-size: 13px; text-decoration: none;">
+          ⚡ View New Header Option 2 Variations (Interactive Preview) &rarr;
+        </a>
+      </div>
+    </header>
+
+    <!-- SECTION 1: HEADER VARIATIONS -->
+    <div class="section-title">
+      <span>Top Header Variations</span>
+      <span class="badge">4 Options</span>
+    </div>
+
+    <!-- Header 1: Stadium Scoreboard Ticker (Panoramic) -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <a href="./header-scoreboard-ticker.jpg" target="_blank">
+          <img src="./header-scoreboard-ticker.jpg" alt="Stadium Scoreboard Ticker Header">
+        </a>
+      </div>
+      <div class="card-body">
+        <h3>1. The Live Stadium Scoreboard Ticker (Panoramic Close-Up)</h3>
+        <p>Authentic arena jumbotron / stadium ticker bar set against deep graphite steel with warm amber incandescent LED readouts.</p>
+        <ul>
+          <li><strong>Left:</strong> Bold collegiate marquee <code>SPORTSGRID</code>, amber keyline <code>ALL-SPORTS 4×4</code> badge, and daily grid indicator.</li>
+          <li><strong>Center:</strong> Recessed 7-segment digital countdown clock (<code>23:45:12</code>) and athletic mode toggle (<code>Immaculate 16</code> vs <code>4 Strikes</code>).</li>
+          <li><strong>Right:</strong> Amber digital counters (<code>16 GUESSES</code>, <code>0.0 RARITY</code>) and illuminated circular league medallions for NFL, NBA, MLB, NHL.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Header 2: Sportsbook Pro -->
+    <div class="card">
+      <div class="card-img-wrap">
+        <a href="./header-sportsbook-pro.jpg" target="_blank">
+          <img src="./header-sportsbook-pro.jpg" alt="Sportsbook Pro Header">
+        </a>
+      </div>
+      <div class="card-body">
+        <h3>2. The Sportsbook Pro Command Bar</h3>
+        <p>High-density, precision-engineered dark mode inspired by modern sports betting dashboards and Apple Sports.</p>
+        <ul>
+          <li><strong>Architecture:</strong> Single continuous 1px hairline border with zero visual clutter.</li>
+          <li><strong>Center & Right:</strong> Integrated time capsule, tabular stat cells with micro-badges, and horizontal segmented league pills <code>[NFL] [NBA] [MLB] [NHL]</code>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <!-- Header 3: 90s Varsity -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <a href="./header-90s-varsity.jpg" target="_blank">
+            <img src="./header-90s-varsity.jpg" alt="90s Varsity Header">
+          </a>
+        </div>
+        <div class="card-body">
+          <h3>3. The 90s Varsity & Enamel Pins</h3>
+          <p>Stitched collegiate tackle-twill patch logo, mechanical retro flip timer, and physical enamel lapel pins for the 4 leagues.</p>
+        </div>
+      </div>
+
+      <!-- Header 4: Tactical Playbook -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <a href="./header-tactical-playbook.jpg" target="_blank">
+            <img src="./header-tactical-playbook.jpg" alt="Tactical Playbook Header">
+          </a>
+        </div>
+        <div class="card-body">
+          <h3>4. The Tactical Play Clock Bar</h3>
+          <p>Stenciled brand identity, chalkboard game clock countdown, and high-contrast tactical chips.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: 4-SPORT DIAL WIDGET -->
+    <div class="section-title">
+      <span>The 4-Sport Indicator Dial Redesign</span>
+      <span class="badge">Approved Layout</span>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap" style="max-width: 600px; margin: 0 auto;">
+        <a href="./dial-clean-vector.jpg" target="_blank">
+          <img src="./dial-clean-vector.jpg" alt="Clean Vector 4-Sport Dial">
+        </a>
+      </div>
+      <div class="card-body">
+        <h3>Clean 2D Vector Scoreboard Pods (All 4 Balls on Inside)</h3>
+        <p>Combining the exact positioning with clean, flat 2D vector styling:</p>
+        <ul>
+          <li><strong>Top-Left (NFL):</strong> <code>NFL</code> on outer top curve, brown leather football on inner apex.</li>
+          <li><strong>Top-Right (NBA):</strong> <code>NBA</code> on outer top curve, orange basketball on inner apex.</li>
+          <li><strong>Bottom-Left (MLB):</strong> White baseball on inner apex, <code>MLB</code> on outer bottom curve.</li>
+          <li><strong>Bottom-Right (NHL):</strong> Black hockey puck on inner apex, <code>NHL</code> on outer bottom curve.</li>
+          <li><strong>Symmetry:</strong> All 4 balls encircle the center hub in a circle; all 4 league texts line the outer perimeter.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

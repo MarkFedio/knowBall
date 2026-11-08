@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportsGrid Header Option 2 Variations</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #06090e;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 24px;
+      line-height: 1.4;
+    }
+    .wrapper { max-width: 1100px; margin: 0 auto; }
+    
+    header.page-header {
+      margin-bottom: 36px;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 20px;
+    }
+    header.page-header h1 { font-size: 26px; font-weight: 900; color: #fff; }
+    header.page-header h1 span { color: #00f5b8; }
+    header.page-header p { font-size: 14px; color: #94a3b8; margin-top: 4px; }
+
+    .header-container {
+      margin-bottom: 50px;
+      padding: 24px;
+      background: #090d14;
+      border: 1px solid #1e293b;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .header-container h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .header-container p.desc {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      background: rgba(0, 245, 184, 0.12);
+      color: #00f5b8;
+      border: 1px solid rgba(0, 245, 184, 0.3);
+      font-weight: 700;
+    }
+
+    /* ========================================================= */
+    /* SHARED UI COMPONENTS (CSS & SVG)                         */
+    /* ========================================================= */
+    .brand-logo {
+      font-size: 26px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: 0.05em;
+      color: #00f5b8;
+      text-shadow: 0 0 14px rgba(0, 245, 184, 0.5);
+      user-select: none;
+    }
+
+    .clock-bezel {
+      background: linear-gradient(180deg, #0c121c 0%, #06090e 100%);
+      border: 1.5px solid #1e293b;
+      border-radius: 14px;
+      padding: 6px 14px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.8), 0 1px 1px rgba(255,255,255,0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .clock-digits {
+      font-family: "Courier New", monospace;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #22d3ee;
+      text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    .stat-val {
+      font-family: monospace;
+      font-size: 15px;
+      font-weight: 800;
+      color: #00f5b8;
+      text-shadow: 0 0 8px rgba(0, 245, 184, 0.5);
+    }
+
+    .grand-slam-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 900;
+      color: #fbbf24;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+    }
+    .gs-count-pill {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      color: #fef08a;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 6px;
+    }
+
+    .league-tokens {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .token {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      font-weight: 900;
+      border: 1.5px solid #334155;
+      background: #0f172a;
+      color: #64748b;
+    }
+    .token.nfl { border-color: #1e3a8a; background: #0f172a; color: #60a5fa; }
+    .token.nba { border-color: #b45309; background: #221404; color: #fbbf24; }
+    .token.mlb.active {
+      border-color: #ef4444;
+      background: #450a0a;
+      color: #fca5a5;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.8), inset 0 0 6px rgba(239, 68, 68, 0.5);
+    }
+    .token.nhl { border-color: #0e7490; background: #081e28; color: #38bdf8; }
+
+    /* Button and control styling */
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      color: #cbd5e1;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s;
+    }
+    .btn-pill:hover { border-color: #334155; color: #fff; }
+
+    .btn-pill.primary {
+      background: #00f5b8;
+      border-color: #00f5b8;
+      color: #06090e;
+      box-shadow: 0 0 10px rgba(0, 245, 184, 0.35);
+    }
+
+    .btn-pill.gold {
+      background: rgba(234, 179, 8, 0.15);
+      border-color: rgba(234, 179, 8, 0.4);
+      color: #facc15;
+    }
+
+    .btn-pill.cyan {
+      background: rgba(34, 211, 238, 0.12);
+      border-color: rgba(34, 211, 238, 0.35);
+      color: #38bdf8;
+    }
+
+    .btn-pill.stats {
+      background: rgba(0, 245, 184, 0.12);
+      border-color: rgba(0, 245, 184, 0.35);
+      color: #00f5b8;
+    }
+
+    .icon-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    /* ========================================================= */
+    /* VARIATION 1: ELEVATED DUAL-BAR SYSTEM                     */
+    /* ========================================================= */
+    .var1-top {
+      background: linear-gradient(180deg, #0e1520 0%, #090e17 100%);
+      border: 1px solid rgba(0, 245, 184, 0.3);
+      border-radius: 18px;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .var1-bottom {
+      background: #070c14;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 8px 16px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ========================================================= */
+    /* VARIATION 2: UNIFIED LUXURY COMMAND CONSOLE (1 INTEGRATED BAR) */
+    /* ========================================================= */
+    .var2-unified {
+      background: linear-gradient(180deg, #0e1624 0%, #080d16 100%);
+      border: 1px solid rgba(0, 245, 184, 0.35);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .var2-upper {
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .var2-lower {
+      padding: 10px 24px;
+      background: rgba(6, 10, 17, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ========================================================= */
+    /* VARIATION 3: FINTECH FLIGHT TICKER (LINEAR POWERHOUSE)    */
+    /* ========================================================= */
+    .var3-linear {
+      background: #090e17;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+    }
+    .divider-v {
+      width: 1px;
+      height: 34px;
+      background: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="page-header">
+      <h1>Header Option 2 <span>Design Variations</span></h1>
+      <p>Base: Sportsbook Pro. <strong>All-Sports 4x4 badge removed.</strong> All screenshot elements fully accounted for.</p>
+    </header>
+
+    <!-- VARIATION 1 -->
+    <div class="header-container">
+      <h2>
+        <span>Variation 1: The Sportsbook Pro Dual-Bar</span>
+        <span class="tag">Refined 2-Bar Architecture</span>
+      </h2>
+      <p class="desc">Retains the familiar two-deck separation from your screenshot, but elevates every bevel, clock, and stat column with Sportsbook Pro polish.</p>
+
+      <!-- Top Bar -->
+      <div class="var1-top">
+        <!-- Left: Brand (NO 4x4 BADGE) -->
+        <div class="brand-logo">SPORTSGRID</div>
+
+        <!-- Center: Recessed Clock -->
+        <div class="clock-bezel">
+          <span class="clock-digits">14:07:55</span>
+        </div>
+
+        <!-- Right: Stats & Grand Slam -->
+        <div style="display: flex; align-items: center; gap: 24px;">
+          <!-- Guesses & Rarity -->
+          <div style="text-align: right; line-height: 1.35;">
+            <div><span class="stat-label">Guesses Left: </span><span class="stat-val">15</span></div>
+            <div><span class="stat-label">Rarity Score: </span><span class="stat-val">0.1</span></div>
+          </div>
+
+          <!-- Grand Slam Module -->
+          <div>
+            <div class="grand-slam-badge">
+              <span>✨ GRAND SLAM</span>
+              <span class="gs-count-pill">1/4</span>
+            </div>
+            <div class="league-tokens">
+              <div class="token nfl" title="NFL">🏈</div>
+              <div class="token nba" title="NBA">🏀</div>
+              <div class="token mlb active" title="MLB (Active Unlock!)">⚾</div>
+              <div class="token nhl" title="NHL">🏒</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="var1-bottom">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="display: flex; border-radius: 10px; background: #0c121c; padding: 2px; border: 1px solid #1e293b;">
+            <button class="btn-pill primary">🔥 Immaculate 16</button>
+            <button class="btn-pill" style="border: none; background: transparent;">4 Strikes</button>
+          </div>
+          <div class="btn-pill" style="border-color: #1e293b;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: #00f5b8; box-shadow: 0 0 6px #00f5b8;"></span>
+            <span>SportsGrid: Random Board #9067</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button class="btn-pill cyan">🎨 Cyber Neon</button>
+          <button class="btn-pill gold">🎲 Random</button>
+          <button class="btn-pill">👁 Reveal</button>
+          <button class="icon-btn" title="Audio">🔊</button>
+          <button class="icon-btn" title="Help">❓</button>
+          <button class="btn-pill stats">🏆 Stats</button>
+          <button class="icon-btn" title="Reset">🔄</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- VARIATION 2 -->
+    <div class="header-container">
+      <h2>
+        <span>Variation 2: The Unified Command Console</span>
+        <span class="tag">Single Integrated Master Card</span>
+      </h2>
+      <p class="desc">Unifies the top bar and sub-bar into a single luxury command deck with an integrated hairline seam, eliminating visual fragmentation.</p>
+
+      <div class="var2-unified">
+        <!-- Upper Deck -->
+        <div class="var2-upper">
+          <div class="brand-logo">SPORTSGRID</div>
+
+          <div class="clock-bezel">
+            <span class="clock-digits">14:07:55</span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 24px;">
+            <div style="text-align: right; line-height: 1.35;">
+              <div><span class="stat-label">Guesses Left: </span><span class="stat-val">15</span></div>
+              <div><span class="stat-label">Rarity Score: </span><span class="stat-val">0.1</span></div>
+            </div>
+
+            <div>
+              <div class="grand-slam-badge">
+                <span>✨ GRAND SLAM</span>
+                <span class="gs-count-pill">1/4</span>
+              </div>
+              <div class="league-tokens">
+                <div class="token nfl">🏈</div>
+                <div class="token nba">🏀</div>
+                <div class="token mlb active">⚾</div>
+                <div class="token nhl">🏒</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lower Integrated Deck -->
+        <div class="var2-lower">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="display: flex; border-radius: 8px; background: #0c121c; padding: 2px; border: 1px solid #1e293b;">
+              <button class="btn-pill primary" style="padding: 4px 10px; font-size: 11px;">🔥 Immaculate 16</button>
+              <button class="btn-pill" style="border: none; background: transparent; padding: 4px 10px; font-size: 11px;">4 Strikes</button>
+            </div>
+            <div class="btn-pill" style="border-color: #1e293b; font-size: 11px;">
+              <span style="width: 5px; height: 5px; border-radius: 50%; background: #00f5b8;"></span>
+              <span>SportsGrid: Random Board #9067</span>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <button class="btn-pill cyan" style="font-size: 11px; padding: 4px 10px;">🎨 Cyber Neon</button>
+            <button class="btn-pill gold" style="font-size: 11px; padding: 4px 10px;">🎲 Random</button>
+            <button class="btn-pill" style="font-size: 11px; padding: 4px 10px;">👁 Reveal</button>
+            <button class="icon-btn" style="width: 26px; height: 26px;">🔊</button>
+            <button class="icon-btn" style="width: 26px; height: 26px;">❓</button>
+            <button class="btn-pill stats" style="font-size: 11px; padding: 4px 10px;">🏆 Stats</button>
+            <button class="icon-btn" style="width: 26px; height: 26px;">🔄</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- VARIATION 3 -->
+    <div class="header-container">
+      <h2>
+        <span>Variation 3: The FinTech Linear Ticker</span>
+        <span class="tag">Ultra-Compact Single Row</span>
+      </h2>
+      <p class="desc">A streamlined horizontal row grouping brand, stats, clock, and controls with vertical divider pins.</p>
+
+      <div class="var3-linear">
+        <!-- Brand & Mode -->
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="brand-logo" style="font-size: 22px;">SPORTSGRID</div>
+          <div class="divider-v"></div>
+          <div style="display: flex; border-radius: 8px; background: #0c121c; padding: 2px; border: 1px solid #1e293b;">
+            <button class="btn-pill primary" style="padding: 3px 8px; font-size: 11px;">🔥 Immaculate</button>
+            <button class="btn-pill" style="border: none; background: transparent; padding: 3px 8px; font-size: 11px;">Casual</button>
+          </div>
+        </div>
+
+        <!-- Clock & Board ID -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="clock-bezel" style="padding: 4px 10px;">
+            <span class="clock-digits" style="font-size: 16px;">14:07:55</span>
+          </div>
+          <div style="text-align: right; line-height: 1.25;">
+            <div><span class="stat-label">Guesses: </span><span class="stat-val">15</span></div>
+            <div><span class="stat-label">Rarity: </span><span class="stat-val">0.1</span></div>
+          </div>
+        </div>
+
+        <div class="divider-v"></div>
+
+        <!-- Grand Slam -->
+        <div>
+          <div class="grand-slam-badge" style="font-size: 10px;">
+            <span>✨ GRAND SLAM</span>
+            <span class="gs-count-pill">1/4</span>
+          </div>
+          <div class="league-tokens">
+            <div class="token nfl" style="width: 22px; height: 22px;">🏈</div>
+            <div class="token nba" style="width: 22px; height: 22px;">🏀</div>
+            <div class="token mlb active" style="width: 22px; height: 22px;">⚾</div>
+            <div class="token nhl" style="width: 22px; height: 22px;">🏒</div>
+          </div>
+        </div>
+
+        <div class="divider-v"></div>
+
+        <!-- Actions -->
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <button class="btn-pill cyan" style="padding: 4px 8px; font-size: 11px;">🎨</button>
+          <button class="btn-pill gold" style="padding: 4px 8px; font-size: 11px;">🎲</button>
+          <button class="icon-btn" style="width: 28px; height: 28px;">👁</button>
+          <button class="icon-btn" style="width: 28px; height: 28px;">🔊</button>
+          <button class="btn-pill stats" style="padding: 4px 8px; font-size: 11px;">🏆 Stats</button>
+          <button class="icon-btn" style="width: 28px; height: 28px;">🔄</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
