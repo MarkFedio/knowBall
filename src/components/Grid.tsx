@@ -9,6 +9,7 @@ interface GridProps {
   cells: CellState[][];
   onCellClick: (row: number, col: number) => void;
   isGameOver: boolean;
+  activeCell?: { row: number; col: number } | null;
 }
 
 const SPORT_COLORS: Record<Sport, { bg: string; text: string; border: string }> = {
@@ -33,6 +34,7 @@ export const Grid: React.FC<GridProps> = ({
   cells,
   onCellClick,
   isGameOver,
+  activeCell,
 }) => {
   return (
     <div className="w-full max-w-5xl mx-auto overflow-x-auto pb-4">
@@ -51,17 +53,28 @@ export const Grid: React.FC<GridProps> = ({
         </div>
 
         {/* Column Headers */}
-        {colCategories.map((col) => {
+        {colCategories.map((col, cIdx) => {
           const typeMeta = CATEGORY_TYPE_LABELS[col.type] || { label: col.type, color: 'text-zinc-400 bg-zinc-800' };
+          const isActiveCol = activeCell?.col === cIdx;
+
           return (
             <div
               key={col.id}
-              className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center transition hover:border-zinc-700 min-h-[90px]"
+              className={`flex flex-col items-center justify-center p-3 rounded-xl border text-center transition-all duration-200 min-h-[90px] relative ${
+                isActiveCol
+                  ? 'bg-emerald-950/40 border-emerald-500 ring-2 ring-emerald-500/40 shadow-lg shadow-emerald-500/10 scale-[1.01]'
+                  : 'bg-zinc-900/90 border-zinc-800 hover:border-zinc-700'
+              }`}
             >
+              {isActiveCol && (
+                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex items-center gap-1 rounded-full bg-emerald-500 px-1.5 py-0.2 text-[8px] font-black uppercase text-black tracking-wider shadow">
+                  Active
+                </div>
+              )}
               <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider mb-1 uppercase ${typeMeta.color}`}>
                 {typeMeta.label}
               </span>
-              <h3 className="text-xs sm:text-sm font-bold text-zinc-100 leading-tight">
+              <h3 className={`text-xs sm:text-sm font-bold leading-tight ${isActiveCol ? 'text-emerald-300' : 'text-zinc-100'}`}>
                 {col.shortName}
               </h3>
               <p className="hidden md:block text-[10px] text-zinc-400 mt-1 line-clamp-1">
@@ -74,14 +87,27 @@ export const Grid: React.FC<GridProps> = ({
         {/* 4 Rows */}
         {rowCategories.map((row, rIdx) => {
           const rowTypeMeta = CATEGORY_TYPE_LABELS[row.type] || { label: row.type, color: 'text-zinc-400 bg-zinc-800' };
+          const isActiveRow = activeCell?.row === rIdx;
+
           return (
             <React.Fragment key={row.id}>
               {/* Row Header */}
-              <div className="flex flex-col items-center justify-center p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 text-center transition hover:border-zinc-700 min-h-[105px]">
+              <div
+                className={`flex flex-col items-center justify-center p-3 rounded-xl border text-center transition-all duration-200 min-h-[105px] relative ${
+                  isActiveRow
+                    ? 'bg-emerald-950/40 border-emerald-500 ring-2 ring-emerald-500/40 shadow-lg shadow-emerald-500/10 scale-[1.01]'
+                    : 'bg-zinc-900/90 border-zinc-800 hover:border-zinc-700'
+                }`}
+              >
+                {isActiveRow && (
+                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 flex items-center gap-1 rounded-full bg-emerald-500 px-1.5 py-0.2 text-[8px] font-black uppercase text-black tracking-wider shadow">
+                    Active
+                  </div>
+                )}
                 <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider mb-1 uppercase ${rowTypeMeta.color}`}>
                   {rowTypeMeta.label}
                 </span>
-                <h3 className="text-xs sm:text-sm font-bold text-zinc-100 leading-tight">
+                <h3 className={`text-xs sm:text-sm font-bold leading-tight ${isActiveRow ? 'text-emerald-300' : 'text-zinc-100'}`}>
                   {row.shortName}
                 </h3>
                 <p className="hidden md:block text-[10px] text-zinc-400 mt-1 line-clamp-1">
@@ -93,13 +119,16 @@ export const Grid: React.FC<GridProps> = ({
               {colCategories.map((col, cIdx) => {
                 const cell = cells[rIdx][cIdx];
                 const canPlayGuess = !cell.isCorrect && !cell.isBurnt && !isGameOver;
+                const isCurrentActive = activeCell?.row === rIdx && activeCell?.col === cIdx;
 
                 return (
                   <button
                     key={`${rIdx}-${cIdx}`}
                     onClick={() => onCellClick(rIdx, cIdx)}
-                    className={`relative flex flex-col items-center justify-center p-2.5 rounded-xl border min-h-[105px] transition duration-150 select-none ${
-                      cell.isCorrect
+                    className={`relative flex flex-col items-center justify-center p-2.5 rounded-xl border min-h-[105px] transition-all duration-150 select-none ${
+                      isCurrentActive
+                        ? 'border-emerald-400 bg-emerald-500/20 ring-2 ring-emerald-400/60 scale-[1.03] shadow-xl shadow-emerald-500/20 z-10'
+                        : cell.isCorrect
                         ? 'bg-emerald-950/30 border-emerald-500/50 hover:border-emerald-400 cursor-pointer'
                         : cell.isBurnt
                         ? 'bg-rose-950/20 border-rose-500/40 hover:border-rose-400 cursor-pointer'
@@ -138,24 +167,17 @@ export const Grid: React.FC<GridProps> = ({
                         </span>
                       </div>
                     ) : cell.isBurnt ? (
-                      <div className="flex flex-col items-center justify-center text-rose-500">
-                        <span className="text-2xl font-black leading-none">✕</span>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-rose-400/80 mt-1">
-                          {isGameOver ? 'See Answers' : 'Burnt'}
-                        </span>
-                      </div>
-                    ) : isGameOver ? (
-                      <div className="flex flex-col items-center justify-center text-cyan-400/70 hover:text-cyan-300">
-                        <span className="text-sm font-semibold">Empty</span>
-                        <span className="text-[9px] uppercase tracking-wider text-cyan-400/60 mt-0.5">
-                          See Answers
+                      <div className="flex flex-col items-center justify-center animate-in fade-in zoom-in-95 duration-200">
+                        <span className="text-2xl font-black text-rose-500/80">✕</span>
+                        <span className="text-[10px] font-bold tracking-wider text-rose-400/80 uppercase mt-0.5">
+                          BURNT
                         </span>
                       </div>
                     ) : (
-                      <div className="flex flex-col items-center justify-center text-zinc-600 hover:text-emerald-400 transition">
-                        <span className="text-lg font-light">+</span>
-                        <span className="text-[9px] uppercase tracking-widest text-zinc-500 mt-0.5">
-                          Guess
+                      <div className="flex flex-col items-center justify-center text-zinc-600 transition group-hover:text-zinc-400">
+                        <span className="text-xl font-light">+</span>
+                        <span className="text-[10px] font-medium tracking-wide uppercase mt-0.5 text-zinc-500">
+                          Select
                         </span>
                       </div>
                     )}

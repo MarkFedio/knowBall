@@ -340,6 +340,7 @@ export default function Home() {
           cells={cells}
           onCellClick={handleCellClick}
           isGameOver={isGameOver}
+          activeCell={activeCell}
         />
 
         {/* Post-Game Notice & Inspector Tip */}
