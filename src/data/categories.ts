@@ -169,6 +169,31 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Cowboys, Texans, Oilers, Rockets, Spurs, Mavericks, Rangers, Astros, Stars',
     matches: (a) => a.markets.includes('DAL') || a.markets.includes('HOU') || a.markets.includes('SA'),
   },
+  METRO_OHIO: {
+    id: 'metro_ohio',
+    name: 'Played for an Ohio Team (CLE / CIN)',
+    shortName: 'Ohio Team',
+    type: 'METRO',
+    description: 'Browns, Bengals, Cavaliers, Reds, Guardians, Blue Jackets',
+    matches: (a) => a.markets.includes('CLE') || a.markets.includes('CIN'),
+  },
+  METRO_DC_BALTIMORE: {
+    id: 'metro_dc_baltimore',
+    name: 'Played in DC or Baltimore',
+    shortName: 'DC / Baltimore',
+    type: 'METRO',
+    description: 'Commanders, Ravens, Wizards, Orioles, Nationals, Capitals',
+    matches: (a) => a.markets.includes('WAS') || a.markets.includes('BAL'),
+  },
+  METRO_CANADA: {
+    id: 'metro_canada',
+    name: 'Played for a Canadian Team',
+    shortName: 'Canadian Team',
+    type: 'METRO',
+    description: 'Raptors, Blue Jays, Maple Leafs, Canadiens, Canucks, Flames, Oilers, Senators, Jets',
+    matches: (a) =>
+      ['TOR', 'MTL', 'VAN', 'CAL', 'EDM', 'OTT', 'WPG'].some((m) => a.markets.includes(m)),
+  },
 
   // ==========================================
   // 4. ACCOLADES & MILESTONES
@@ -221,6 +246,30 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Selected 1st overall in NFL, NBA, MLB, or NHL Draft',
     matches: (a) => a.draftPick === 1,
   },
+  DRAFT_FIRST_ROUND: {
+    id: 'draft_first_round',
+    name: 'Selected in 1st Round of Draft',
+    shortName: '1st Round Pick',
+    type: 'BACKGROUND',
+    description: 'Selected in the 1st round (Picks 1–32) of pro draft',
+    matches: (a) => (a.draftPick !== undefined && a.draftPick <= 32) || a.draftRound === 1,
+  },
+  CAREER_3_TEAMS: {
+    id: 'career_3_teams',
+    name: 'Played for 3+ Franchises',
+    shortName: '3+ Franchises',
+    type: 'BACKGROUND',
+    description: 'Appeared in pro regular-season or playoff games for at least 3 distinct teams',
+    matches: (a) => a.teams.length >= 3,
+  },
+  CAREER_ONE_FRANCHISE: {
+    id: 'career_one_franchise',
+    name: 'One-Franchise Legend (8+ Yrs)',
+    shortName: '1-Franchise Icon',
+    type: 'BACKGROUND',
+    description: 'Spent entire 8+ year pro career with a single franchise',
+    matches: (a) => a.teams.length === 1 && a.activeYears[1] - a.activeYears[0] >= 7,
+  },
 
   // ==========================================
   // 5. BACKGROUND & COLLEGES
@@ -241,6 +290,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: 'Attended Michigan, Ohio State, Penn State, Indiana, Wisconsin, Illinois, etc.',
     matches: (a) => a.collegeConference === 'Big Ten',
   },
+  COLLEGE_SEC_OR_BIG_TEN: {
+    id: 'college_sec_or_big_ten',
+    name: 'Attended SEC or Big Ten School',
+    shortName: 'SEC / Big Ten',
+    type: 'BACKGROUND',
+    description: 'Attended an SEC or Big Ten university',
+    matches: (a) => a.collegeConference === 'SEC' || a.collegeConference === 'Big Ten',
+  },
   COLLEGE_ACC: {
     id: 'college_acc',
     name: 'Attended an ACC School',
@@ -248,6 +305,22 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'BACKGROUND',
     description: 'Attended North Carolina, Duke, Florida State, Miami, Virginia, Wake Forest, etc.',
     matches: (a) => a.collegeConference === 'ACC',
+  },
+  COLLEGE_PAC_12: {
+    id: 'college_pac_12',
+    name: 'Attended Pac-12 / Pac-10 School',
+    shortName: 'Pac-12 School',
+    type: 'BACKGROUND',
+    description: 'Attended UCLA, USC, Stanford, Cal, Oregon, Washington, Arizona, etc.',
+    matches: (a) => a.collegeConference === 'Pac-12' || a.collegeConference === 'Pac-10',
+  },
+  COLLEGE_BIG_12: {
+    id: 'college_big_12',
+    name: 'Attended Big 12 School',
+    shortName: 'Big 12 School',
+    type: 'BACKGROUND',
+    description: 'Attended Texas, Oklahoma, Kansas, Texas Tech, Baylor, Oklahoma State, etc.',
+    matches: (a) => a.collegeConference === 'Big 12',
   },
 
   // ==========================================
@@ -276,6 +349,22 @@ export const CATEGORIES: Record<string, Category> = {
     type: 'NUMBER_ERA',
     description: 'Played at least one regular-season or playoff game in 2020 or later',
     matches: (a) => a.activeYears[1] >= 2020,
+  },
+  ERA_2000S: {
+    id: 'era_2000s',
+    name: 'Active in the 2000s',
+    shortName: '2000s Era',
+    type: 'NUMBER_ERA',
+    description: 'Played at least one pro game between 2000 and 2009',
+    matches: (a) => a.activeYears[0] <= 2009 && a.activeYears[1] >= 2000,
+  },
+  ERA_1990S: {
+    id: 'era_1990s',
+    name: 'Active in the 1990s',
+    shortName: '1990s Era',
+    type: 'NUMBER_ERA',
+    description: 'Played at least one pro game between 1990 and 1999',
+    matches: (a) => a.activeYears[0] <= 1999 && a.activeYears[1] >= 1990,
   },
   ERA_15_SEASONS: {
     id: 'era_15_seasons',

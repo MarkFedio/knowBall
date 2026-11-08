@@ -2,6 +2,7 @@ import { Athlete, Category, DailyPuzzle } from '@/types';
 import { ATHLETES } from '@/data/athletes';
 import { CATEGORIES } from '@/data/categories';
 import { getValidAthletesForCell, DAILY_PUZZLE } from '@/data/puzzles';
+import { PUZZLE_BANK } from '@/data/puzzleBank';
 
 export interface SolvabilityReport {
   isSolvable: boolean;
@@ -57,7 +58,7 @@ export function validatePuzzleSolvability(
 }
 
 /**
- * Returns all solutions for a cell sorted by popularity.
+ * Returns all solutions for a cell sorted by rarity.
  */
 export function getAllSolutionsForCell(
   rowCat: Category,
@@ -76,122 +77,39 @@ export function getAllSolutionsForCell(
       const rarity = Math.max(0.1, Math.round(rawRarity * 10) / 10);
       return { athlete, rarity };
     })
-    .sort((a, b) => a.rarity - b.rarity); // Obscure / low rarity first
+    .sort((a, b) => a.rarity - b.rarity); // Low rarity / deep cuts first
 }
 
-// =========================================================================
-// CURATED PUZZLE PRESETS
-// =========================================================================
-export const PUZZLE_PRESETS: DailyPuzzle[] = [
-  DAILY_PUZZLE,
-  {
-    id: 'puzzle_cross_stats',
-    date: '2026-11-08',
-    title: 'Cross-Sport Stats Showdown',
-    rowCategories: [
-      CATEGORIES.METRO_BOSTON,
-      CATEGORIES.METRO_NY,
-      CATEGORIES.METRO_CHICAGO,
-      CATEGORIES.METRO_LA,
-    ],
-    colCategories: [
-      CATEGORIES.STAT_STEALS_500,
-      CATEGORIES.STAT_ASSISTS_1000,
-      CATEGORIES.ACCOLADE_CHAMPION,
-      CATEGORIES.ACCOLADE_MVP,
-    ],
-  },
-  {
-    id: 'puzzle_quad_decathlon',
-    date: '2026-11-09',
-    title: 'The Quad-Sport Decathlon',
-    rowCategories: [
-      CATEGORIES.SPORT_NFL,
-      CATEGORIES.SPORT_NBA,
-      CATEGORIES.SPORT_MLB,
-      CATEGORIES.SPORT_NHL,
-    ],
-    colCategories: [
-      CATEGORIES.ACCOLADE_CHAMPION,
-      CATEGORIES.ACCOLADE_MVP,
-      CATEGORIES.ACCOLADE_HOF,
-      CATEGORIES.ERA_15_SEASONS,
-    ],
-  },
-  {
-    id: 'puzzle_metro_clash',
-    date: '2026-11-10',
-    title: 'Metro Markets & Accolades',
-    rowCategories: [
-      CATEGORIES.METRO_BOSTON,
-      CATEGORIES.METRO_BAY_AREA,
-      CATEGORIES.METRO_NY,
-      CATEGORIES.METRO_PHILLY,
-    ],
-    colCategories: [
-      CATEGORIES.ACCOLADE_CHAMPION,
-      CATEGORIES.ACCOLADE_ROOKIE_OF_YEAR,
-      CATEGORIES.DRAFT_FIRST_OVERALL,
-      CATEGORIES.NUMBER_SINGLE_DIGIT,
-    ],
-  },
-];
-
 /**
- * Generates a random, fully-solvable 4x4 puzzle on the fly from the category taxonomy.
+ * Generates a random, fully-solvable 4x4 puzzle on the fly drawing from the full taxonomy:
+ * Colleges, Draft, Numbers, Eras, Multi-Team Journeymen, Cross-Stats, Sunbelt/Coast/Rust Belt Metros, and Big 4 Leagues.
  */
 export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyPuzzle {
-  const rowPool = [
-    CATEGORIES.SPORT_NFL,
-    CATEGORIES.SPORT_NBA,
-    CATEGORIES.SPORT_MLB,
-    CATEGORIES.SPORT_NHL,
-    CATEGORIES.METRO_BOSTON,
-    CATEGORIES.METRO_CHICAGO,
-    CATEGORIES.METRO_NY,
-    CATEGORIES.METRO_LA,
-    CATEGORIES.METRO_BAY_AREA,
-    CATEGORIES.NUMBER_23_OR_24,
-  ];
+  // 1. Pick a random base configuration from the 30 curated and verified puzzles
+  const randomIndex = Math.floor(Math.random() * PUZZLE_BANK.length);
+  const basePreset = PUZZLE_BANK[randomIndex];
 
-  const colPool = [
-    CATEGORIES.ACCOLADE_CHAMPION,
-    CATEGORIES.ACCOLADE_MVP,
-    CATEGORIES.ACCOLADE_HOF,
-    CATEGORIES.ACCOLADE_ROOKIE_OF_YEAR,
-    CATEGORIES.DRAFT_FIRST_OVERALL,
-    CATEGORIES.COLLEGE_SEC,
-    CATEGORIES.COLLEGE_BIG_TEN,
-    CATEGORIES.COLLEGE_ACC,
-    CATEGORIES.STAT_STEALS_500,
-    CATEGORIES.STAT_ASSISTS_1000,
-    CATEGORIES.ERA_ACTIVE_2020S,
-    CATEGORIES.ERA_15_SEASONS,
-    CATEGORIES.NUMBER_SINGLE_DIGIT,
-  ];
+  // 2. Shuffle row and column order to create unique permutations
+  const shuffledRows = [...basePreset.rowCategories].sort(() => Math.random() - 0.5);
+  const shuffledCols = [...basePreset.colCategories].sort(() => Math.random() - 0.5);
 
-  // Try up to 300 random combinations to find a 100% solvable puzzle
-  for (let attempt = 0; attempt < 300; attempt++) {
-    const shuffledRows = [...rowPool].sort(() => Math.random() - 0.5).slice(0, 4);
-    const shuffledCols = [...colPool].sort(() => Math.random() - 0.5).slice(0, 4);
+  const report = validatePuzzleSolvability(shuffledRows, shuffledCols, athletes, 2);
 
-    const report = validatePuzzleSolvability(shuffledRows, shuffledCols, athletes, 2);
-    if (report.isSolvable) {
-      return {
-        id: `puzzle_random_${Date.now()}`,
-        date: new Date().toISOString().split('T')[0],
-        title: `Procedural Grid #${Math.floor(1000 + Math.random() * 9000)}`,
-        rowCategories: shuffledRows,
-        colCategories: shuffledCols,
-      };
-    }
+  if (report.isSolvable) {
+    return {
+      id: `puzzle_random_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
+      date: new Date().toISOString().split('T')[0],
+      title: `Random: ${basePreset.title.replace(/^SportsGrid #\d+:\s*/, '')}`,
+      rowCategories: shuffledRows,
+      colCategories: shuffledCols,
+    };
   }
 
-  // Fallback to random preset if no unique procedural grid solved in 300 attempts
-  const fallback = PUZZLE_PRESETS[Math.floor(Math.random() * PUZZLE_PRESETS.length)];
+  // Fallback to exact preset configuration
   return {
-    ...fallback,
+    ...basePreset,
     id: `puzzle_random_${Date.now()}`,
-    title: `Procedural ${fallback.title}`,
+    date: new Date().toISOString().split('T')[0],
+    title: `Random: ${basePreset.title}`,
   };
 }

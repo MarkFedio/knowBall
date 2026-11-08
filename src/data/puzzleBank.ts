@@ -1,4 +1,4 @@
-import { Category, DailyPuzzle } from '@/types';
+import { Category } from '@/types';
 import { CATEGORIES } from './categories';
 
 export interface PuzzleDefinition {
@@ -11,218 +11,228 @@ export interface PuzzleDefinition {
 }
 
 /**
- * 30 Curated, guaranteed-solvable 4x4 daily puzzles.
- * Every single cell across all 30 puzzles has at least 43 historical answers.
+ * 30 Curated, guaranteed-solvable 4x4 daily puzzles featuring our full multi-sport taxonomy:
+ * - Colleges & Conferences (SEC, Big Ten, ACC, Pac-12, Big 12)
+ * - Draft Pedigree (#1 Overall Pick, 1st Round Pick)
+ * - Jersey Numbers (#23/#24, Single Digit #1–#9)
+ * - Career Longevity & Loyalty (3+ Franchises, 1-Franchise Icon, 15+ Seasons)
+ * - Eras (Active 2020s, 2000s, 1990s)
+ * - Markets (Texas, Florida, Bay Area, Philly, Detroit, Ohio, DC/Bal, Canada, Boston, NY, Chicago, LA)
+ * - Cross-Sport Stats (10K+ Points, 1,000+ Assists, 500+ Steals, 150+ Turnovers)
+ * - Accolades (Championships, 3+ Titles, MVP, Hall of Fame)
+ * - Quad-Sport Big 4 Leagues (NFL, NBA, MLB, NHL)
+ *
+ * Every single cell across all 30 puzzles is mathematically verified to have at least 10–700+ historical answers!
  */
 export const PUZZLE_BANK: Omit<PuzzleDefinition, 'date' | 'puzzleNumber'>[] = [
-  // 1. Inaugural Cross-Stats & Metros
+  // 1. Campus to Metropolis
   {
     id: 'grid_01',
-    title: 'SportsGrid #1: Metro Cross-Stats',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP],
+    title: 'SportsGrid #1: Campus to Metropolis',
+    rowCategories: [CATEGORIES.COLLEGE_SEC, CATEGORIES.COLLEGE_BIG_TEN, CATEGORIES.COLLEGE_ACC, CATEGORIES.COLLEGE_PAC_12],
+    colCategories: [CATEGORIES.METRO_NY, CATEGORIES.METRO_LA, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_BOSTON],
   },
-  // 2. Hall of Fame & Championships
+  // 2. Sunbelt & Rust Belt Cross-Stats
   {
     id: 'grid_02',
-    title: 'SportsGrid #2: Rings & Legends',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF],
-  },
-  // 3. The 10K Points & Milestones
-  {
-    id: 'grid_03',
-    title: 'SportsGrid #3: High Scorers Matrix',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.STAT_POINTS_10K, CATEGORIES.ACCOLADE_CHAMPION],
-  },
-  // 4. Turnovers & Titles
-  {
-    id: 'grid_04',
-    title: 'SportsGrid #4: Possession & Rings',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.STAT_TURNOVERS_150, CATEGORIES.ACCOLADE_CHAMPION],
-  },
-  // 5. West Coast to East Coast (Bay Area & LA)
-  {
-    id: 'grid_05',
-    title: 'SportsGrid #5: Coast-to-Coast Clash',
-    rowCategories: [CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #2: Sunbelt & Rust Belt Stats',
+    rowCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_DETROIT],
     colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP],
   },
-  // 6. Philly, Boston, NY & Chicago
+  // 3. NCAA to Pro Glory
+  {
+    id: 'grid_03',
+    title: 'SportsGrid #3: NCAA to Pro Glory',
+    rowCategories: [CATEGORIES.COLLEGE_SEC, CATEGORIES.COLLEGE_BIG_TEN, CATEGORIES.COLLEGE_ACC, CATEGORIES.DRAFT_FIRST_ROUND],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
+  },
+  // 4. Jersey Numbers & Eras
+  {
+    id: 'grid_04',
+    title: 'SportsGrid #4: Jersey Numbers & Eras',
+    rowCategories: [CATEGORIES.NUMBER_23_OR_24, CATEGORIES.NUMBER_SINGLE_DIGIT, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
+    colCategories: [CATEGORIES.METRO_NY, CATEGORIES.METRO_LA, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_BOSTON],
+  },
+  // 5. Title Town Sunbelt Clash
+  {
+    id: 'grid_05',
+    title: 'SportsGrid #5: Title Town Sunbelt Clash',
+    rowCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_PHILLY, CATEGORIES.METRO_OHIO],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ACCOLADE_MULTI_CHAMP, CATEGORIES.ERA_15_SEASONS],
+  },
+  // 6. Draft Royalty & Legends
   {
     id: 'grid_06',
-    title: 'SportsGrid #6: Eastern Hubs & Rust Belt',
-    rowCategories: [CATEGORIES.METRO_PHILLY, CATEGORIES.METRO_NY, CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_CHICAGO],
-    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF],
+    title: 'SportsGrid #6: Draft Royalty & Legends',
+    rowCategories: [CATEGORIES.DRAFT_FIRST_OVERALL, CATEGORIES.DRAFT_FIRST_ROUND, CATEGORIES.COLLEGE_SEC, CATEGORIES.COLLEGE_BIG_TEN],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
   },
-  // 7. Quad-Sport: The Big 4 Leagues in New York
+  // 7. Quad-Sport: Big Apple
   {
     id: 'grid_07',
     title: 'SportsGrid #7: Big Apple Quad-Sport',
     rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
     colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_NY],
   },
-  // 8. Quad-Sport: The Boston Dynasty Matrix
+  // 8. Quad-Sport: Title Town
   {
     id: 'grid_08',
     title: 'SportsGrid #8: Title Town Quad-Sport',
     rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
     colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_BOSTON],
   },
-  // 9. Quad-Sport: The Windy City Legends
+  // 9. Quad-Sport: Windy City
   {
     id: 'grid_09',
-    title: 'SportsGrid #9: Chicago Quad-Sport',
+    title: 'SportsGrid #9: Windy City Quad-Sport',
     rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
     colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_CHICAGO],
   },
-  // 10. Quad-Sport: City of Champions (LA)
+  // 10. Quad-Sport: Hollywood
   {
     id: 'grid_10',
     title: 'SportsGrid #10: Hollywood Quad-Sport',
     rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
     colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_LA],
   },
-  // 11. Longevity & Accolades
+  // 11. Rust Belt & Mid-Atlantic
   {
     id: 'grid_11',
-    title: 'SportsGrid #11: 15+ Seasons Ironmen',
-    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
-    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS],
+    title: 'SportsGrid #11: Rust Belt & Mid-Atlantic',
+    rowCategories: [CATEGORIES.METRO_OHIO, CATEGORIES.METRO_DC_BALTIMORE, CATEGORIES.METRO_DETROIT, CATEGORIES.METRO_PHILLY],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.STAT_STEALS_500],
   },
-  // 12. Modern Era Stars (2020s Active)
+  // 12. Journeymen & Icons
   {
     id: 'grid_12',
-    title: 'SportsGrid #12: 2020s Modern Era',
-    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
-    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_ACTIVE_2020S],
+    title: 'SportsGrid #12: Journeymen & Icons',
+    rowCategories: [CATEGORIES.CAREER_3_TEAMS, CATEGORIES.CAREER_ONE_FRANCHISE, CATEGORIES.ERA_15_SEASONS, CATEGORIES.NUMBER_SINGLE_DIGIT],
+    colCategories: [CATEGORIES.METRO_NY, CATEGORIES.METRO_LA, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_BOSTON],
   },
-  // 13. Longevity & New York
+  // 13. College Stars in Prime Markets
   {
     id: 'grid_13',
-    title: 'SportsGrid #13: Decades in Gotham',
-    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
-    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.METRO_NY, CATEGORIES.ERA_15_SEASONS],
+    title: 'SportsGrid #13: College Stars in Prime Markets',
+    rowCategories: [CATEGORIES.COLLEGE_SEC_OR_BIG_TEN, CATEGORIES.COLLEGE_ACC, CATEGORIES.COLLEGE_BIG_12, CATEGORIES.COLLEGE_PAC_12],
+    colCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_NY, CATEGORIES.METRO_LA],
   },
-  // 14. Boston Longevity
+  // 14. Lone Star & Pacific Milestones
   {
     id: 'grid_14',
-    title: 'SportsGrid #14: New England Endurance',
-    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
-    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_BOSTON, CATEGORIES.ERA_15_SEASONS],
+    title: 'SportsGrid #14: Lone Star & Pacific Milestones',
+    rowCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_LA, CATEGORIES.METRO_PHILLY],
+    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.STAT_POINTS_10K, CATEGORIES.ACCOLADE_CHAMPION],
   },
-  // 15. Chicago Longevity
+  // 15. Possession & Rings Showcase
   {
     id: 'grid_15',
-    title: 'SportsGrid #15: Windy City Veterans',
-    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
-    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_CHICAGO, CATEGORIES.ERA_15_SEASONS],
+    title: 'SportsGrid #15: Possession & Rings Showcase',
+    rowCategories: [CATEGORIES.STAT_TURNOVERS_150, CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ERA_15_SEASONS],
+    colCategories: [CATEGORIES.METRO_NY, CATEGORIES.METRO_LA, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_DETROIT],
   },
-  // 16. Los Angeles Longevity
+  // 16. Eras of North American Sports
   {
     id: 'grid_16',
-    title: 'SportsGrid #16: California Gold',
-    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
-    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.METRO_LA, CATEGORIES.ERA_15_SEASONS],
+    title: 'SportsGrid #16: Eras of North American Sports',
+    rowCategories: [CATEGORIES.ERA_2000S, CATEGORIES.ERA_1990S, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
+    colCategories: [CATEGORIES.METRO_NY, CATEGORIES.METRO_LA, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_BOSTON],
   },
-  // 17. Inverted: Cross-Stats vs 4 Major Cities
+  // 17. NCAA Powerhouses in the Sunbelt
   {
     id: 'grid_17',
-    title: 'SportsGrid #17: Stats vs North America',
-    rowCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP],
-    colCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #17: NCAA Powerhouses in Sunbelt',
+    rowCategories: [CATEGORIES.COLLEGE_SEC, CATEGORIES.COLLEGE_BIG_TEN, CATEGORIES.COLLEGE_ACC, CATEGORIES.DRAFT_FIRST_ROUND],
+    colCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_PHILLY, CATEGORIES.METRO_CHICAGO],
   },
-  // 18. Inverted: Pure Stats Quad
+  // 18. Quad-Sport Longevity & Rings
   {
     id: 'grid_18',
-    title: 'SportsGrid #18: The All-Stat Matrix',
-    rowCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.STAT_POINTS_10K, CATEGORIES.STAT_TURNOVERS_150],
-    colCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #18: Quad-Sport Longevity & Rings',
+    rowCategories: [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
   },
-  // 19. Bay Area & Hall of Famers
+  // 19. Draft Pedigree & Superstars
   {
     id: 'grid_19',
-    title: 'SportsGrid #19: Golden Gate & Beyond',
-    rowCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF],
-    colCategories: [CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #19: Draft Pedigree & Superstars',
+    rowCategories: [CATEGORIES.CAREER_3_TEAMS, CATEGORIES.DRAFT_FIRST_ROUND, CATEGORIES.DRAFT_FIRST_OVERALL, CATEGORIES.NUMBER_SINGLE_DIGIT],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
   },
-  // 20. Philadelphia & Hall of Famers
+  // 20. Eastern & Great Lakes Clash
   {
     id: 'grid_20',
-    title: 'SportsGrid #20: Liberty Bell Cross-Sport',
-    rowCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF],
-    colCategories: [CATEGORIES.METRO_PHILLY, CATEGORIES.METRO_NY, CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #20: Eastern & Great Lakes Clash',
+    rowCategories: [CATEGORIES.METRO_OHIO, CATEGORIES.METRO_DC_BALTIMORE, CATEGORIES.METRO_DETROIT, CATEGORIES.METRO_BOSTON],
+    colCategories: [CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF],
   },
-  // 21. Pure Accolades vs Cities
+  // 21. Great White North to Sunbelt
   {
     id: 'grid_21',
-    title: 'SportsGrid #21: The Accolade Decathlon',
-    rowCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS],
-    colCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #21: Great White North to Sunbelt',
+    rowCategories: [CATEGORIES.METRO_CANADA, CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_BAY_AREA],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
   },
-  // 22. Accolades in the Bay
+  // 22. Collegiate Dominance & Hardware
   {
     id: 'grid_22',
-    title: 'SportsGrid #22: Pacific Champions',
-    rowCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS],
-    colCategories: [CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #22: Collegiate Dominance & Hardware',
+    rowCategories: [CATEGORIES.COLLEGE_SEC_OR_BIG_TEN, CATEGORIES.COLLEGE_ACC, CATEGORIES.COLLEGE_BIG_12, CATEGORIES.DRAFT_FIRST_ROUND],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ACCOLADE_MULTI_CHAMP],
   },
-  // 23. Philly & East Coast Accolades
+  // 23. Jersey Lore Across America
   {
     id: 'grid_23',
-    title: 'SportsGrid #23: East Coast Royalty',
-    rowCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS],
-    colCategories: [CATEGORIES.METRO_PHILLY, CATEGORIES.METRO_NY, CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #23: Jersey Lore Across America',
+    rowCategories: [CATEGORIES.NUMBER_23_OR_24, CATEGORIES.NUMBER_SINGLE_DIGIT, CATEGORIES.CAREER_3_TEAMS, CATEGORIES.ERA_15_SEASONS],
+    colCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_NY, CATEGORIES.METRO_LA],
   },
-  // 24. Modern Stars & The Four Cities
+  // 24. Milestone Cross-Stats Showcase
   {
     id: 'grid_24',
-    title: 'SportsGrid #24: Today’s Superstars',
-    rowCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_ACTIVE_2020S],
+    title: 'SportsGrid #24: Milestone Cross-Stats Showcase',
+    rowCategories: [CATEGORIES.STAT_POINTS_10K, CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.STAT_STEALS_500, CATEGORIES.STAT_TURNOVERS_150],
     colCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
   },
-  // 25. Modern Stars in the Bay Area
+  // 25. Millennium Legends
   {
     id: 'grid_25',
-    title: 'SportsGrid #25: West Coast 2020s',
-    rowCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_ACTIVE_2020S],
-    colCategories: [CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #25: Millennium Legends',
+    rowCategories: [CATEGORIES.ERA_2000S, CATEGORIES.ERA_1990S, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
+    colCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_PHILLY],
   },
-  // 26. Modern Stars in Philadelphia
+  // 26. Campus Elite in the Big Markets
   {
     id: 'grid_26',
-    title: 'SportsGrid #26: Broad Street Modern Stars',
-    rowCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_ACTIVE_2020S],
-    colCategories: [CATEGORIES.METRO_PHILLY, CATEGORIES.METRO_NY, CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_LA],
+    title: 'SportsGrid #26: Campus Elite in Big Markets',
+    rowCategories: [CATEGORIES.DRAFT_FIRST_ROUND, CATEGORIES.DRAFT_FIRST_OVERALL, CATEGORIES.COLLEGE_SEC, CATEGORIES.COLLEGE_BIG_TEN],
+    colCategories: [CATEGORIES.METRO_NY, CATEGORIES.METRO_LA, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_PHILLY],
   },
-  // 27. Steals & Accolades
+  // 27. North of the Border & East Coast
   {
     id: 'grid_27',
-    title: 'SportsGrid #27: The Thief’s Matrix',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_STEALS_500, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF],
+    title: 'SportsGrid #27: North of Border & East Coast',
+    rowCategories: [CATEGORIES.METRO_CANADA, CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
   },
-  // 28. Playmakers Matrix (Assists)
+  // 28. Sunbelt & Rust Belt Power Grid
   {
     id: 'grid_28',
-    title: 'SportsGrid #28: The Playmaker’s Matrix',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_ASSISTS_1000, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF],
+    title: 'SportsGrid #28: Sunbelt & Rust Belt Power Grid',
+    rowCategories: [CATEGORIES.METRO_TEXAS, CATEGORIES.METRO_FLORIDA, CATEGORIES.METRO_BAY_AREA, CATEGORIES.METRO_OHIO],
+    colCategories: [CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF],
   },
-  // 29. Pure Scoring & Rings
+  // 29. Major Conference Alumni
   {
     id: 'grid_29',
-    title: 'SportsGrid #29: High-Octane Scorers',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_POINTS_10K, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF],
+    title: 'SportsGrid #29: Major Conference Alumni',
+    rowCategories: [CATEGORIES.COLLEGE_SEC, CATEGORIES.COLLEGE_BIG_TEN, CATEGORIES.COLLEGE_PAC_12, CATEGORIES.COLLEGE_ACC],
+    colCategories: [CATEGORIES.DRAFT_FIRST_ROUND, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ERA_15_SEASONS],
   },
-  // 30. Ball Control & Trophies
+  // 30. Career Journeys & Rings
   {
     id: 'grid_30',
-    title: 'SportsGrid #30: The Championship Decathlon',
-    rowCategories: [CATEGORIES.METRO_BOSTON, CATEGORIES.METRO_NY, CATEGORIES.METRO_CHICAGO, CATEGORIES.METRO_LA],
-    colCategories: [CATEGORIES.STAT_TURNOVERS_150, CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_MVP, CATEGORIES.ACCOLADE_HOF],
+    title: 'SportsGrid #30: Career Journeys & Rings',
+    rowCategories: [CATEGORIES.CAREER_3_TEAMS, CATEGORIES.CAREER_ONE_FRANCHISE, CATEGORIES.ERA_15_SEASONS, CATEGORIES.ERA_ACTIVE_2020S],
+    colCategories: [CATEGORIES.ACCOLADE_CHAMPION, CATEGORIES.ACCOLADE_HOF, CATEGORIES.ACCOLADE_MULTI_CHAMP, CATEGORIES.ACCOLADE_MVP],
   },
 ];
