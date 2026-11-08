@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, Volume2, VolumeX, Clock } from 'lucide-react';
+import { HelpCircle, Trophy, RotateCcw, Flame, Sparkles, Dices, Eye, Volume2, VolumeX, Clock, Calendar } from 'lucide-react';
 import { PlayMode, Sport, DailyPuzzle } from '@/types';
 
 interface HeaderProps {
   currentPuzzle: DailyPuzzle;
   onNewRandomPuzzle: () => void;
+  onOpenArchive: () => void;
   onGiveUp: () => void;
   isGameOver: boolean;
   soundEnabled: boolean;
@@ -30,6 +31,7 @@ const ALL_SPORTS: Sport[] = ['NFL', 'NBA', 'MLB', 'NHL'];
 export const Header: React.FC<HeaderProps> = ({
   currentPuzzle,
   onNewRandomPuzzle,
+  onOpenArchive,
   onGiveUp,
   isGameOver,
   soundEnabled,
@@ -105,6 +107,16 @@ export const Header: React.FC<HeaderProps> = ({
             <Clock className="h-3.5 w-3.5 text-zinc-500" />
             <span>{timeLeft || '24:00:00'}</span>
           </div>
+
+          {/* Past Grids Archive Button */}
+          <button
+            onClick={onOpenArchive}
+            title="Browse and play past daily SportsGrids"
+            className="flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/90 px-3 py-2 text-xs font-semibold text-zinc-300 transition hover:border-zinc-700 hover:text-white"
+          >
+            <Calendar className="h-4 w-4 text-cyan-400" />
+            <span className="hidden md:inline">Past Grids</span>
+          </button>
 
           {/* Random Board Button */}
           <button

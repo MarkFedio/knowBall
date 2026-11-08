@@ -18,6 +18,7 @@ import { SearchModal } from '@/components/SearchModal';
 import { StatsModal } from '@/components/StatsModal';
 import { HowToPlayModal } from '@/components/HowToPlayModal';
 import { CellSolutionsModal } from '@/components/CellSolutionsModal';
+import { ArchiveModal } from '@/components/ArchiveModal';
 import { sound } from '@/lib/sound';
 
 export default function Home() {
@@ -49,6 +50,7 @@ export default function Home() {
   const [inspectCell, setInspectCell] = useState<{ row: number; col: number } | null>(null);
   const [isHowToPlayOpen, setIsHowToPlayOpen] = useState(false);
   const [isStatsOpen, setIsStatsOpen] = useState(false);
+  const [isArchiveOpen, setIsArchiveOpen] = useState(false);
 
   // Track sports used across correct guesses
   const sportsUsed = useMemo(() => {
@@ -356,6 +358,7 @@ export default function Home() {
           hasGrandSlam={hasGrandSlam}
           onOpenHowToPlay={() => setIsHowToPlayOpen(true)}
           onOpenStats={() => setIsStatsOpen(true)}
+          onOpenArchive={() => setIsArchiveOpen(true)}
           onResetGame={() => {
             if (confirm('Reset this board?')) {
               resetBoard();
@@ -455,6 +458,17 @@ export default function Home() {
         sportsUsed={sportsUsed}
         hasGrandSlam={hasGrandSlam}
         careerStats={careerStats}
+      />
+      {/* Past Grids Archive Modal */}
+      <ArchiveModal
+        isOpen={isArchiveOpen}
+        currentPuzzleId={currentPuzzle.id}
+        onClose={() => setIsArchiveOpen(false)}
+        onSelectPuzzle={(selectedPuzzle) => {
+          if (selectedPuzzle.id !== currentPuzzle.id) {
+            resetBoard(selectedPuzzle);
+          }
+        }}
       />
     </main>
   );
