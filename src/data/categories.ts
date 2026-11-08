@@ -431,95 +431,87 @@ export const CATEGORIES: Record<string, Category> = {
   },
 
   // ==========================================
-  // 5. NUMBERS & JERSEYS
+  // 5. NUMBERS & JERSEYS (RANGES OF 10)
   // ==========================================
-  NUMBER_SINGLE_DIGIT: {
-    id: 'number_single_digit',
-    name: 'Wore Single Digit Number (#1-#9)',
-    shortName: 'Wore #1–#9',
+  NUMBER_0_TO_9: {
+    id: 'number_0_to_9',
+    name: 'Wore Jersey Number #0–#9',
+    shortName: 'Wore #0–#9',
     type: 'NUMBER_ERA',
-    description: 'Wore a single digit jersey number (1 through 9) in regular season games',
-    matches: (a) => a.jerseyNumbers.some((n) => n >= 1 && n <= 9),
+    description: 'Wore a single-digit jersey number (0 through 9) in regular season games',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 0 && n <= 9),
   },
-  NUMBER_TEENS: {
-    id: 'number_teens',
-    name: 'Wore a Teen Jersey Number (#10-#19)',
+  NUMBER_10_TO_19: {
+    id: 'number_10_to_19',
+    name: 'Wore Jersey Number #10–#19',
     shortName: 'Wore #10–#19',
     type: 'NUMBER_ERA',
-    description: 'Wore a jersey number from 10 through 19 during pro career',
+    description: 'Wore a jersey number from 10 through 19 in regular season games',
     matches: (a) => a.jerseyNumbers.some((n) => n >= 10 && n <= 19),
   },
-  NUMBER_TWENTIES: {
-    id: 'number_twenties',
-    name: 'Wore a 20s Jersey Number (#20-#29)',
+  NUMBER_20_TO_29: {
+    id: 'number_20_to_29',
+    name: 'Wore Jersey Number #20–#29',
     shortName: 'Wore #20–#29',
     type: 'NUMBER_ERA',
-    description: 'Wore a jersey number from 20 through 29 during pro career',
+    description: 'Wore a jersey number from 20 through 29 in regular season games',
     matches: (a) => a.jerseyNumbers.some((n) => n >= 20 && n <= 29),
   },
-  NUMBER_THIRTIES: {
-    id: 'number_thirties',
-    name: 'Wore a 30s Jersey Number (#30-#39)',
+  NUMBER_30_TO_39: {
+    id: 'number_30_to_39',
+    name: 'Wore Jersey Number #30–#39',
     shortName: 'Wore #30–#39',
     type: 'NUMBER_ERA',
-    description: 'Wore a jersey number from 30 through 39 during pro career',
+    description: 'Wore a jersey number from 30 through 39 in regular season games',
     matches: (a) => a.jerseyNumbers.some((n) => n >= 30 && n <= 39),
   },
-  NUMBER_FORTIES: {
-    id: 'number_forties',
-    name: 'Wore a 40s Jersey Number (#40-#49)',
+  NUMBER_40_TO_49: {
+    id: 'number_40_to_49',
+    name: 'Wore Jersey Number #40–#49',
     shortName: 'Wore #40–#49',
     type: 'NUMBER_ERA',
-    description: 'Wore a jersey number from 40 through 49 during pro career',
+    description: 'Wore a jersey number from 40 through 49 in regular season games',
     matches: (a) => a.jerseyNumbers.some((n) => n >= 40 && n <= 49),
   },
-  NUMBER_FIFTIES: {
-    id: 'number_fifties',
-    name: 'Wore a 50s Jersey Number (#50-#59)',
+  NUMBER_50_TO_59: {
+    id: 'number_50_to_59',
+    name: 'Wore Jersey Number #50–#59',
     shortName: 'Wore #50–#59',
     type: 'NUMBER_ERA',
-    description: 'Wore a jersey number from 50 through 59 during pro career',
+    description: 'Wore a jersey number from 50 through 59 in regular season games',
     matches: (a) => a.jerseyNumbers.some((n) => n >= 50 && n <= 59),
   },
-  NUMBER_SIXTY_PLUS: {
-    id: 'number_sixty_plus',
-    name: 'Wore Jersey Number in 60s/70s (#60-#79)',
-    shortName: 'Wore #60–#79',
+  NUMBER_60_TO_69: {
+    id: 'number_60_to_69',
+    name: 'Wore Jersey Number #60–#69',
+    shortName: 'Wore #60–#69',
     type: 'NUMBER_ERA',
-    description: 'Wore a jersey number from 60 through 79 during pro career',
-    matches: (a) => a.jerseyNumbers.some((n) => n >= 60 && n <= 79),
+    description: 'Wore a jersey number from 60 through 69 in regular season games',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 60 && n <= 69),
   },
-  NUMBER_EIGHTY_PLUS: {
-    id: 'number_eighty_plus',
-    name: 'Wore High Jersey Number (#80-#99)',
-    shortName: 'Wore #80–#99',
+  NUMBER_70_TO_79: {
+    id: 'number_70_to_79',
+    name: 'Wore Jersey Number #70–#79',
+    shortName: 'Wore #70–#79',
     type: 'NUMBER_ERA',
-    description: 'Wore a high jersey number from 80 through 99 during pro career',
-    matches: (a) => a.jerseyNumbers.some((n) => n >= 80 && n <= 99),
+    description: 'Wore a jersey number from 70 through 79 in regular season games',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 70 && n <= 79),
   },
-  NUMBER_23_OR_24: {
-    id: 'number_23_or_24',
-    name: 'Wore Iconic #23 or #24 in Pros',
-    shortName: 'Wore #23 or #24',
+  NUMBER_80_TO_89: {
+    id: 'number_80_to_89',
+    name: 'Wore Jersey Number #80–#89',
+    shortName: 'Wore #80–#89',
     type: 'NUMBER_ERA',
-    description: 'Wore iconic jersey number 23 or 24 for at least one pro season',
-    matches: (a) => a.jerseyNumbers.includes(23) || a.jerseyNumbers.includes(24),
+    description: 'Wore a jersey number from 80 through 89 in regular season games',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 80 && n <= 89),
   },
-  NUMBER_33_OR_34: {
-    id: 'number_33_or_34',
-    name: 'Wore Legendary #33 or #34 in Pros',
-    shortName: 'Wore #33 or #34',
+  NUMBER_90_TO_99: {
+    id: 'number_90_to_99',
+    name: 'Wore Jersey Number #90–#99',
+    shortName: 'Wore #90–#99',
     type: 'NUMBER_ERA',
-    description: 'Wore legendary jersey number 33 or 34 for at least one pro season',
-    matches: (a) => a.jerseyNumbers.includes(33) || a.jerseyNumbers.includes(34),
-  },
-  NUMBER_0_OR_99: {
-    id: 'number_0_or_99',
-    name: 'Wore #0, #00, or #99 in Pros',
-    shortName: 'Wore #0 / #99',
-    type: 'NUMBER_ERA',
-    description: 'Wore jersey number 0, 00, or 99 during their major league career',
-    matches: (a) => a.jerseyNumbers.some((n) => n === 0 || n === 99),
+    description: 'Wore a jersey number from 90 through 99 in regular season games',
+    matches: (a) => a.jerseyNumbers.some((n) => n >= 90 && n <= 99),
   },
 
   // ==========================================

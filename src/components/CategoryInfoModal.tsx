@@ -276,60 +276,55 @@ const STAT_CRITERIA: Record<string, { statName: string; breakdown: string; rule:
     breakdown: 'MLB: 300+ Relief Pitching Saves | NHL: 300+ Goalie Saves',
     rule: 'Recorded 300+ saves on the mound (MLB closers) or 300+ saves in net (NHL goalies).',
   },
-  number_single_digit: {
-    statName: 'Wore Single Digit Number (#1–#9)',
-    breakdown: 'Jersey Numbers 1 through 9',
-    rule: 'Wore any single-digit number (1, 2, 3, 4, 5, 6, 7, 8, or 9) during their pro career.',
+  number_0_to_9: {
+    statName: 'Wore Jersey Number #0–#9',
+    breakdown: 'Jersey Numbers 0 through 9',
+    rule: 'Wore a single-digit jersey number (0 through 9) in regular season games.',
   },
-  number_teens: {
-    statName: 'Wore a Teen Jersey Number (#10–#19)',
+  number_10_to_19: {
+    statName: 'Wore Jersey Number #10–#19',
     breakdown: 'Jersey Numbers 10 through 19',
-    rule: 'Wore a jersey number in the teens (10, 11, 12, 13, 14, 15, 16, 17, 18, or 19) in pro games.',
+    rule: 'Wore a jersey number from 10 through 19 during pro regular season games.',
   },
-  number_twenties: {
-    statName: 'Wore a 20s Jersey Number (#20–#29)',
+  number_20_to_29: {
+    statName: 'Wore Jersey Number #20–#29',
     breakdown: 'Jersey Numbers 20 through 29',
-    rule: 'Wore a jersey number in the twenties (20 through 29) during pro regular season games.',
+    rule: 'Wore a jersey number from 20 through 29 during pro regular season games.',
   },
-  number_thirties: {
-    statName: 'Wore a 30s Jersey Number (#30–#39)',
+  number_30_to_39: {
+    statName: 'Wore Jersey Number #30–#39',
     breakdown: 'Jersey Numbers 30 through 39',
-    rule: 'Wore a jersey number in the thirties (30 through 39) during pro regular season games.',
+    rule: 'Wore a jersey number from 30 through 39 during pro regular season games.',
   },
-  number_forties: {
-    statName: 'Wore a 40s Jersey Number (#40–#49)',
+  number_40_to_49: {
+    statName: 'Wore Jersey Number #40–#49',
     breakdown: 'Jersey Numbers 40 through 49',
-    rule: 'Wore a jersey number in the forties (40 through 49) during pro regular season games.',
+    rule: 'Wore a jersey number from 40 through 49 during pro regular season games.',
   },
-  number_fifties: {
-    statName: 'Wore a 50s Jersey Number (#50–#59)',
+  number_50_to_59: {
+    statName: 'Wore Jersey Number #50–#59',
     breakdown: 'Jersey Numbers 50 through 59',
-    rule: 'Wore a jersey number in the fifties (50 through 59) during pro regular season games.',
+    rule: 'Wore a jersey number from 50 through 59 during pro regular season games.',
   },
-  number_sixty_plus: {
-    statName: 'Wore 60s/70s Jersey Number (#60–#79)',
-    breakdown: 'Jersey Numbers 60 through 79',
-    rule: 'Wore a jersey number between 60 and 79 during their major league career.',
+  number_60_to_69: {
+    statName: 'Wore Jersey Number #60–#69',
+    breakdown: 'Jersey Numbers 60 through 69',
+    rule: 'Wore a jersey number from 60 through 69 during pro regular season games.',
   },
-  number_eighty_plus: {
-    statName: 'Wore High Jersey Number (#80–#99)',
-    breakdown: 'Jersey Numbers 80 through 99',
-    rule: 'Wore a high jersey number between 80 and 99 during their major league career.',
+  number_70_to_79: {
+    statName: 'Wore Jersey Number #70–#79',
+    breakdown: 'Jersey Numbers 70 through 79',
+    rule: 'Wore a jersey number from 70 through 79 during pro regular season games.',
   },
-  number_23_or_24: {
-    statName: 'Wore Iconic #23 or #24 in Pros',
-    breakdown: 'Jersey #23 or #24',
-    rule: 'Wore number 23 or 24 for at least one official regular season game in NFL, NBA, MLB, or NHL.',
+  number_80_to_89: {
+    statName: 'Wore Jersey Number #80–#89',
+    breakdown: 'Jersey Numbers 80 through 89',
+    rule: 'Wore a jersey number from 80 through 89 during pro regular season games.',
   },
-  number_33_or_34: {
-    statName: 'Wore Legendary #33 or #34 in Pros',
-    breakdown: 'Jersey #33 or #34',
-    rule: 'Wore number 33 or 34 for at least one official regular season game in NFL, NBA, MLB, or NHL.',
-  },
-  number_0_or_99: {
-    statName: 'Wore #0, #00, or #99 in Pros',
-    breakdown: 'Jersey #0, #00, or #99',
-    rule: 'Wore jersey number 0, 00, or 99 during their pro regular season career.',
+  number_90_to_99: {
+    statName: 'Wore Jersey Number #90–#99',
+    breakdown: 'Jersey Numbers 90 through 99',
+    rule: 'Wore a jersey number from 90 through 99 during pro regular season games.',
   },
 };
 
