@@ -52,11 +52,11 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
     <div
       onClick={onClick}
       title="Grand Slam Radar: 4 Major Sports (NFL, NBA, MLB, NHL) • Click for Bonus details"
-      className="relative flex items-center justify-center w-full h-full min-h-[95px] sm:min-h-[105px] p-1 select-none group cursor-pointer"
+      className="relative flex items-center justify-center w-full h-full min-h-[64px] sm:min-h-[105px] p-0.5 sm:p-1 select-none group cursor-pointer"
     >
       {/* Outer Rounded-Square Card Container */}
       <div
-        className={`relative w-full max-w-[105px] sm:max-w-[115px] aspect-square rounded-2xl flex items-center justify-center transition-all duration-300 p-1 ${
+        className={`relative w-full max-w-[76px] sm:max-w-[115px] aspect-square rounded-xl sm:rounded-2xl flex items-center justify-center transition-all duration-300 p-0.5 sm:p-1 ${
           hasGrandSlam
             ? 'shadow-[0_0_22px_rgba(245,158,11,0.5)] border border-amber-500/70 bg-[#12151b]'
             : isScoreboard

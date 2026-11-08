@@ -55,10 +55,10 @@ export const Grid: React.FC<GridProps> = ({
   const targetRow = activeCell?.row ?? hoveredCell?.row ?? null;
 
   return (
-    <div className="w-full max-w-5xl mx-auto overflow-x-auto pb-4 scrollbar-thin">
+    <div className="w-full max-w-5xl mx-auto overflow-x-auto pb-2 sm:pb-4 scrollbar-thin">
       {/* Outer Stadium Matrix Frame */}
       <div
-        className={`p-2 sm:p-3 rounded-2xl min-w-[540px] sm:min-w-[660px] transition-all duration-300 ${
+        className={`p-1 sm:p-3 rounded-xl sm:rounded-2xl min-w-[340px] sm:min-w-[620px] transition-all duration-300 ${
           isScoreboard
             ? 'border border-amber-500/35 bg-[#0b0e14] shadow-[0_6px_30px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.06)]'
             : isNeon
@@ -67,12 +67,12 @@ export const Grid: React.FC<GridProps> = ({
         }`}
       >
         {/* 5x5 Grid: 1 for Row headers + 4 for Columns */}
-        <div className="grid grid-cols-5 gap-2 sm:gap-2.5">
+        <div className="grid grid-cols-5 gap-1 sm:gap-2.5">
           {/* ======================================================== */}
           {/* (0,0) TOP-LEFT CORNER: 4-SPORT RADAR COMPASS DIAL        */}
           {/* ======================================================== */}
           <div
-            className={`flex items-center justify-center rounded-xl min-h-[95px] sm:min-h-[105px] border overflow-visible ${
+            className={`flex items-center justify-center rounded-lg sm:rounded-xl min-h-[66px] sm:min-h-[105px] border overflow-visible ${
               isScoreboard
                 ? 'border-amber-500/30 bg-[#0c0f16] shadow-inner'
                 : isNeon
@@ -99,7 +99,7 @@ export const Grid: React.FC<GridProps> = ({
                 type="button"
                 onClick={() => setSelectedCategory(col)}
                 title="Click to view exact criteria requirement"
-                className={`group relative flex flex-col items-center justify-center p-2.5 rounded-xl border text-center transition-all duration-200 min-h-[95px] sm:min-h-[105px] select-none cursor-pointer ${
+                className={`group relative flex flex-col items-center justify-center p-1 sm:p-2.5 rounded-lg sm:rounded-xl border text-center transition-all duration-200 min-h-[66px] sm:min-h-[105px] select-none cursor-pointer ${
                   isColHighlighted
                     ? isScoreboard
                       ? 'bg-[#221a0d] border-amber-400 shadow-[0_0_14px_rgba(245,158,11,0.3)] ring-1 ring-amber-400/50 scale-[1.01]'
@@ -114,18 +114,18 @@ export const Grid: React.FC<GridProps> = ({
                 }`}
               >
                 {/* Help Hint Icon Indicator */}
-                <span className="absolute top-1.5 right-1.5 opacity-40 group-hover:opacity-100 transition-opacity">
-                  <HelpCircle className="w-3 h-3 text-cyan-400/80" />
+                <span className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5 opacity-30 sm:opacity-40 group-hover:opacity-100 transition-opacity">
+                  <HelpCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-cyan-400/80" />
                 </span>
 
                 {/* Centered Category Icon */}
-                <div className="mb-1.5 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
-                  <CategoryIcon category={col} className="w-6 h-6 sm:w-7 sm:h-7" />
+                <div className="mb-0.5 sm:mb-1.5 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
+                  <CategoryIcon category={col} className="w-4 h-4 sm:w-7 sm:h-7" />
                 </div>
 
                 {/* Bold Category Name */}
                 <h3
-                  className={`text-[11px] sm:text-xs font-black uppercase tracking-wider leading-tight ${
+                  className={`text-[9px] sm:text-xs font-black uppercase tracking-wider leading-[1.1] sm:leading-tight line-clamp-2 ${
                     isColHighlighted && isScoreboard
                       ? 'text-amber-300'
                       : isColHighlighted && isNeon
@@ -152,7 +152,7 @@ export const Grid: React.FC<GridProps> = ({
                   type="button"
                   onClick={() => setSelectedCategory(row)}
                   title="Click to view exact criteria requirement"
-                  className={`group relative flex flex-col items-center justify-center p-2.5 rounded-xl border text-center transition-all duration-200 min-h-[95px] sm:min-h-[110px] select-none cursor-pointer ${
+                  className={`group relative flex flex-col items-center justify-center p-1 sm:p-2.5 rounded-lg sm:rounded-xl border text-center transition-all duration-200 min-h-[66px] sm:min-h-[110px] select-none cursor-pointer ${
                     isRowHighlighted
                       ? isScoreboard
                         ? 'bg-[#221a0d] border-amber-400 shadow-[0_0_14px_rgba(245,158,11,0.3)] ring-1 ring-amber-400/50 scale-[1.01]'
@@ -167,18 +167,18 @@ export const Grid: React.FC<GridProps> = ({
                   }`}
                 >
                   {/* Help Hint Icon Indicator */}
-                  <span className="absolute top-1.5 right-1.5 opacity-40 group-hover:opacity-100 transition-opacity">
-                    <HelpCircle className="w-3 h-3 text-cyan-400/80" />
+                  <span className="absolute top-1 right-1 sm:top-1.5 sm:right-1.5 opacity-30 sm:opacity-40 group-hover:opacity-100 transition-opacity">
+                    <HelpCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-cyan-400/80" />
                   </span>
 
                   {/* Centered Category Icon */}
-                  <div className="mb-1.5 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
-                    <CategoryIcon category={row} className="w-6 h-6 sm:w-7 sm:h-7" />
+                  <div className="mb-0.5 sm:mb-1.5 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
+                    <CategoryIcon category={row} className="w-4 h-4 sm:w-7 sm:h-7" />
                   </div>
 
                   {/* Bold Category Name */}
                   <h3
-                    className={`text-[11px] sm:text-xs font-black uppercase tracking-wider leading-tight ${
+                    className={`text-[9px] sm:text-xs font-black uppercase tracking-wider leading-[1.1] sm:leading-tight line-clamp-2 ${
                       isRowHighlighted && isScoreboard
                         ? 'text-amber-300'
                         : isRowHighlighted && isNeon
@@ -202,7 +202,7 @@ export const Grid: React.FC<GridProps> = ({
                       onClick={() => onCellClick(rIdx, cIdx)}
                       onMouseEnter={() => setHoveredCell({ row: rIdx, col: cIdx })}
                       onMouseLeave={() => setHoveredCell(null)}
-                      className={`relative flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-xl border min-h-[95px] sm:min-h-[110px] transition-all duration-150 select-none ${
+                      className={`relative flex flex-col items-center justify-center p-1 sm:p-2.5 rounded-lg sm:rounded-xl border min-h-[66px] sm:min-h-[110px] transition-all duration-150 select-none ${
                         isCurrentActive
                           ? isScoreboard
                             ? 'border-amber-400 bg-amber-500/20 ring-2 ring-amber-400/60 shadow-[0_0_20px_rgba(245,158,11,0.35)] scale-[1.03] z-10'
@@ -238,20 +238,20 @@ export const Grid: React.FC<GridProps> = ({
                           const { first, last } = splitPlayerName(cell.athlete.name);
 
                           return (
-                            <div className="flex flex-col items-center justify-between w-full h-full py-1 animate-in fade-in zoom-in-95 duration-200">
+                            <div className="flex flex-col items-center justify-between w-full h-full py-0.5 sm:py-1 animate-in fade-in zoom-in-95 duration-200">
                               {/* Top Row: League Badge on left + Player Name on right */}
-                              <div className="flex items-center gap-1.5 sm:gap-2 w-full justify-start px-1">
+                              <div className="flex items-center gap-1 sm:gap-2 w-full justify-start px-0.5 sm:px-1">
                                 <LeagueIcon
                                   sport={primarySport}
                                   size="sm"
                                   variant="badge"
                                 />
-                                <div className="flex flex-col text-left leading-[1.15] overflow-hidden">
-                                  <span className="font-extrabold text-[11px] sm:text-xs text-white drop-shadow truncate">
+                                <div className="flex flex-col text-left leading-[1.05] sm:leading-[1.15] overflow-hidden min-w-0">
+                                  <span className="font-extrabold text-[9px] sm:text-xs text-white drop-shadow truncate">
                                     {first}
                                   </span>
                                   {last && (
-                                    <span className="font-extrabold text-[11px] sm:text-xs text-white drop-shadow truncate">
+                                    <span className="font-extrabold text-[9px] sm:text-xs text-white drop-shadow truncate">
                                       {last}
                                     </span>
                                   )}
@@ -259,10 +259,10 @@ export const Grid: React.FC<GridProps> = ({
                               </div>
 
                               {/* Bottom: Rarity Pill matching image e.g. "0.4% MYTHIC", "1.2% RARE" */}
-                              <div className="mt-1.5 flex justify-center w-full">
-                                <span className={tier.pillClass}>
+                              <div className="mt-0.5 sm:mt-1.5 flex justify-center w-full">
+                                <span className={`${tier.pillClass} text-[8px] sm:text-[10px] px-1 sm:px-2 py-0.2 sm:py-0.5`}>
                                   {cell.rarity !== undefined ? `${cell.rarity.toFixed(1)}% ` : ''}
-                                  {tier.label}
+                                  <span className="hidden sm:inline">{tier.label}</span>
                                 </span>
                               </div>
                             </div>
@@ -273,10 +273,10 @@ export const Grid: React.FC<GridProps> = ({
                         /* 2. BURNT (INCORRECT) STATE                               */
                         /* ======================================================== */
                         <div className="flex flex-col items-center justify-center animate-in fade-in zoom-in-90 duration-200">
-                          <span className="text-2xl font-black text-rose-500 drop-shadow-[0_0_8px_rgba(244,63,94,0.6)]">
+                          <span className="text-lg sm:text-2xl font-black text-rose-500 drop-shadow-[0_0_8px_rgba(244,63,94,0.6)]">
                             ✕
                           </span>
-                          <span className="text-[10px] font-black tracking-widest text-rose-400 uppercase mt-0.5">
+                          <span className="text-[8px] sm:text-[10px] font-black tracking-widest text-rose-400 uppercase mt-0.5">
                             BURNT
                           </span>
                         </div>
@@ -286,7 +286,7 @@ export const Grid: React.FC<GridProps> = ({
                         /* ======================================================== */
                         <div className="flex flex-col items-center justify-center text-zinc-600 transition group-hover:text-zinc-400">
                           <span
-                            className={`text-xl sm:text-2xl font-light leading-none transition-colors ${
+                            className={`text-lg sm:text-2xl font-light leading-none transition-colors ${
                               isScoreboard
                                 ? 'text-amber-500/40 group-hover:text-amber-400'
                                 : isNeon
@@ -297,7 +297,7 @@ export const Grid: React.FC<GridProps> = ({
                             +
                           </span>
                           <span
-                            className={`text-[9px] font-mono tracking-wider uppercase mt-0.5 transition-colors ${
+                            className={`text-[8px] sm:text-[9px] font-mono tracking-wider uppercase mt-0.5 transition-colors ${
                               isScoreboard
                                 ? 'text-amber-500/30 group-hover:text-amber-400/70'
                                 : 'text-zinc-600'

@@ -465,11 +465,11 @@ export const CategoryInfoModal: React.FC<CategoryInfoModalProps> = ({ category, 
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-4 backdrop-blur-sm animate-in fade-in duration-150"
       onClick={onClose}
     >
       <div
-        className="relative flex max-h-[90vh] w-full max-w-md flex-col rounded-2xl border border-[#00e5a3]/50 bg-[#091524]/95 p-5 sm:p-6 shadow-[0_0_40px_rgba(0,229,163,0.18)] backdrop-blur-md overflow-hidden animate-in zoom-in-95 duration-150"
+        className="relative flex max-h-[90dvh] overflow-y-auto w-full max-w-md flex-col rounded-2xl border border-[#00e5a3]/50 bg-[#091524]/95 p-4 sm:p-6 shadow-[0_0_40px_rgba(0,229,163,0.18)] backdrop-blur-md animate-in zoom-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glowing Top Neon Rim */}

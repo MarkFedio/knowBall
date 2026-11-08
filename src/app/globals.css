@@ -7,6 +7,11 @@
   --amber-glow: rgba(245, 158, 11, 0.5);
 }
 
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 /* Scoreboard typography */
 .font-scoreboard {
   font-family: 'Bebas Neue', 'Impact', -apple-system, BlinkMacSystemFont, sans-serif;

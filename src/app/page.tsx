@@ -323,7 +323,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen text-zinc-100 flex flex-col justify-between px-3 sm:px-6 py-5 font-sans relative overflow-x-hidden neon-mesh">
+    <main className="min-h-screen text-zinc-100 flex flex-col justify-between px-1.5 sm:px-6 py-2.5 sm:py-5 font-sans relative overflow-x-hidden neon-mesh">
       {/* Stadium Corner Floodlight Rigs and Atmospheric Beams (Cyber Neon theme) */}
       <div className="absolute top-0 left-0 w-80 h-80 pointer-events-none overflow-hidden select-none z-0">
         <div className="absolute -top-12 -left-12 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl" />

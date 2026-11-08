@@ -39,11 +39,11 @@ export const GrandSlamModal: React.FC<GrandSlamModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-4 backdrop-blur-sm animate-in fade-in duration-150"
       onClick={onClose}
     >
       <div
-        className="relative flex max-h-[90vh] w-full max-w-md flex-col rounded-2xl border border-amber-500/50 bg-[#091524]/95 p-5 sm:p-6 shadow-[0_0_40px_rgba(245,158,11,0.25)] backdrop-blur-md overflow-hidden animate-in zoom-in-95 duration-150 text-zinc-100"
+        className="relative flex max-h-[90dvh] overflow-y-auto w-full max-w-md flex-col rounded-2xl border border-amber-500/50 bg-[#091524]/95 p-4 sm:p-6 shadow-[0_0_40px_rgba(245,158,11,0.25)] backdrop-blur-md animate-in zoom-in-95 duration-150 text-zinc-100"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glowing Top Amber Neon Rim */}

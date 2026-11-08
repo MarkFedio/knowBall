@@ -3,7 +3,7 @@ import { Sport } from '@/types';
 
 interface LeagueIconProps {
   sport: Sport;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   variant?: 'circle' | 'badge';
   active?: boolean;
 }
@@ -16,9 +16,10 @@ export const LeagueIcon: React.FC<LeagueIconProps> = ({
 }) => {
   // Dimension classes
   const sizeClasses = {
-    sm: 'w-6 h-6 text-[9px]',
-    md: 'w-8 h-8 text-[11px]',
-    lg: 'w-10 h-10 text-xs',
+    xs: 'w-3.5 h-3.5 sm:w-4 sm:h-4 text-[7px]',
+    sm: 'w-4 h-4 sm:w-6 sm:h-6 text-[8px] sm:text-[9px]',
+    md: 'w-6 h-6 sm:w-8 sm:h-8 text-[10px] sm:text-[11px]',
+    lg: 'w-8 h-8 sm:w-10 sm:h-10 text-xs',
   }[size];
 
   // Colors per sport

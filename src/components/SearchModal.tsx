@@ -175,40 +175,40 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/35 p-4 backdrop-blur-[2px] transition-opacity duration-200">
-      <div className="relative flex max-h-[85vh] w-full max-w-xl flex-col rounded-2xl border border-zinc-700/80 bg-zinc-950/95 p-6 shadow-2xl backdrop-blur-md">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-2 sm:p-4 backdrop-blur-[2px] transition-opacity duration-200">
+      <div className="relative flex max-h-[90dvh] sm:max-h-[85vh] w-full max-w-xl flex-col rounded-2xl border border-zinc-700/80 bg-zinc-950/95 p-4 sm:p-6 shadow-2xl backdrop-blur-md">
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 rounded-lg p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white"
+          className="absolute right-3 top-3 sm:right-4 sm:top-4 rounded-lg p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white"
         >
           <X className="h-5 w-5" />
         </button>
 
         {/* Header criteria reminder */}
-        <div className="mb-4 pr-10">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+        <div className="mb-3 sm:mb-4 pr-10">
+          <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Selecting answer for:
           </div>
-          <div className="mt-1.5 flex flex-wrap items-center gap-2">
+          <div className="mt-1 flex flex-wrap items-center gap-1.5 sm:gap-2">
             <button
               type="button"
               onClick={() => setInfoCategory(rowCategory)}
               title="Click to view criteria requirement"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 px-3 py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm transition cursor-pointer group"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 px-2.5 sm:px-3 py-0.5 sm:py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm transition cursor-pointer group"
             >
               <span>{rowCategory.name}</span>
-              <HelpCircle className="w-3.5 h-3.5 text-emerald-400/70 group-hover:text-emerald-300 transition" />
+              <HelpCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400/70 group-hover:text-emerald-300 transition" />
             </button>
             <span className="text-zinc-500 font-bold">×</span>
             <button
               type="button"
               onClick={() => setInfoCategory(colCategory)}
               title="Click to view criteria requirement"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 px-3 py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm transition cursor-pointer group"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 px-2.5 sm:px-3 py-0.5 sm:py-1 text-xs sm:text-sm font-semibold text-emerald-300 shadow-sm transition cursor-pointer group"
             >
               <span>{colCategory.name}</span>
-              <HelpCircle className="w-3.5 h-3.5 text-emerald-400/70 group-hover:text-emerald-300 transition" />
+              <HelpCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400/70 group-hover:text-emerald-300 transition" />
             </button>
           </div>
 
