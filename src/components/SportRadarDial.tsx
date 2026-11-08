@@ -256,24 +256,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               <line x1="6" y1="-3.5" x2="6" y2="3.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
             </g>
 
-            {/* Prominent Glowing Checkmark Badge when Used */}
-            {isNflUsed && (
-              <g
-                transform="translate(126, 126)"
-                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
-                pointerEvents="none"
-              >
-                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
-                <path
-                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
-                  stroke="#FFFFFF"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </g>
-            )}
+
           </g>
 
           {/* -------------------------------------------------------- */}
@@ -358,24 +341,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               <path d="M 9 -15.5 C 3 -7 3 7 9 15.5" stroke="#120c07" strokeWidth="1.8" fill="none" />
             </g>
 
-            {/* Prominent Glowing Checkmark Badge when Used */}
-            {isNbaUsed && (
-              <g
-                transform="translate(174, 126)"
-                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
-                pointerEvents="none"
-              >
-                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
-                <path
-                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
-                  stroke="#FFFFFF"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </g>
-            )}
+
           </g>
 
           {/* -------------------------------------------------------- */}
@@ -469,24 +435,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               <line x1="12" y1="10" x2="9" y2="12" stroke="#c52834" strokeWidth="1.3" />
             </g>
 
-            {/* Prominent Glowing Checkmark Badge when Used */}
-            {isMlbUsed && (
-              <g
-                transform="translate(126, 174)"
-                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
-                pointerEvents="none"
-              >
-                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
-                <path
-                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
-                  stroke="#FFFFFF"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </g>
-            )}
+
           </g>
 
           {/* -------------------------------------------------------- */}
@@ -582,24 +531,7 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
               <ellipse cx="-2" cy="0.5" rx="12" ry="5.5" fill="rgba(255,255,255,0.08)" />
             </g>
 
-            {/* Prominent Glowing Checkmark Badge when Used */}
-            {isNhlUsed && (
-              <g
-                transform="translate(174, 174)"
-                style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
-                pointerEvents="none"
-              >
-                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
-                <path
-                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
-                  stroke="#FFFFFF"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </g>
-            )}
+
           </g>
 
           {/* ======================================================== */}
