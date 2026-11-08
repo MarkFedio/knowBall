@@ -45,15 +45,107 @@ export function getAllPastPuzzles(currentDate?: string | Date): { puzzle: DailyP
   return [{ puzzle: DAILY_PUZZLE, puzzleNumber: 1 }];
 }
 
+// Metropolitan markets code mapping
+const METRO_MARKET_CODES: Record<string, { codes: string[]; label: string }> = {
+  metro_ny: { codes: ['NY'], label: 'NY / NJ' },
+  metro_boston: { codes: ['BOS'], label: 'Boston' },
+  metro_chicago: { codes: ['CHI'], label: 'Chicago' },
+  metro_la: { codes: ['LA'], label: 'Los Angeles' },
+  metro_bay_area: { codes: ['BAY'], label: 'Bay Area' },
+  metro_philly: { codes: ['PHI'], label: 'Philadelphia' },
+  metro_detroit: { codes: ['DET'], label: 'Detroit' },
+  metro_florida: { codes: ['FLA', 'MIA', 'TB'], label: 'Florida' },
+  metro_texas: { codes: ['DAL', 'HOU', 'SA'], label: 'Texas' },
+  metro_ohio: { codes: ['CLE', 'CIN'], label: 'Ohio' },
+  metro_dc_baltimore: { codes: ['WAS', 'BAL'], label: 'DC / Baltimore' },
+  metro_canada: { codes: ['TOR', 'MTL', 'VAN', 'CAL', 'EDM', 'OTT', 'WPG', 'CAN'], label: 'Canadian' },
+};
+
+const CHAMPIONSHIP_CATEGORY_IDS = new Set([
+  'accolade_champion',
+  'accolade_multi_champ_2',
+  'accolade_multi_champ',
+  'accolade_multi_champ_4',
+]);
+
 /**
- * Returns all athletes matching both the row and column categories.
+ * Returns metadata if a row/col pair intersects a Metro market with a Championship accolade.
+ */
+export function getMetroChampIntersection(
+  rowCat: Category,
+  colCat: Category
+): { metroId: string; metroLabel: string; champId: string } | null {
+  const isMetroRow = rowCat.type === 'METRO';
+  const isMetroCol = colCat.type === 'METRO';
+  const isChampRow = CHAMPIONSHIP_CATEGORY_IDS.has(rowCat.id.toLowerCase());
+  const isChampCol = CHAMPIONSHIP_CATEGORY_IDS.has(colCat.id.toLowerCase());
+
+  if (isMetroRow && isChampCol) {
+    const meta = METRO_MARKET_CODES[rowCat.id.toLowerCase()];
+    return {
+      metroId: rowCat.id.toLowerCase(),
+      metroLabel: meta?.label || rowCat.shortName,
+      champId: colCat.id.toLowerCase(),
+    };
+  }
+
+  if (isMetroCol && isChampRow) {
+    const meta = METRO_MARKET_CODES[colCat.id.toLowerCase()];
+    return {
+      metroId: colCat.id.toLowerCase(),
+      metroLabel: meta?.label || colCat.shortName,
+      champId: rowCat.id.toLowerCase(),
+    };
+  }
+
+  return null;
+}
+
+/**
+ * Validates an athlete against cell criteria, enforcing Immaculate Grid rules:
+ * When a Metro/Team intersects with a Championship, the player must have won
+ * the championship while playing for a team in that market.
+ */
+export function doesAthleteMatchCell(
+  rowCat: Category,
+  colCat: Category,
+  athlete: Athlete
+): { isMatch: boolean; failureReason?: string } {
+  if (!rowCat.matches(athlete) || !colCat.matches(athlete)) {
+    return { isMatch: false, failureReason: 'Player does not meet one or both categories.' };
+  }
+
+  // Immaculate Grid Rule:
+  // When a Metro category intersects with a World Championship category,
+  // player must have won the championship while on a team in that metro market!
+  const intersection = getMetroChampIntersection(rowCat, colCat);
+  if (intersection) {
+    const meta = METRO_MARKET_CODES[intersection.metroId];
+    if (meta) {
+      const champMarkets = athlete.championshipMarkets || [];
+      const wonInMarket = champMarkets.some((m) => meta.codes.includes(m));
+      if (!wonInMarket) {
+        return {
+          isMatch: false,
+          failureReason: `${athlete.name} won a championship, but not while playing for a ${meta.label} team.`,
+        };
+      }
+    }
+  }
+
+  return { isMatch: true };
+}
+
+/**
+ * Returns all athletes matching both the row and column categories,
+ * enforcing Immaculate Grid rules for Team/Metro × Accolade intersections.
  */
 export function getValidAthletesForCell(
   rowCat: Category,
   colCat: Category,
   athletes: Athlete[] = ATHLETES
 ): Athlete[] {
-  return athletes.filter((a) => rowCat.matches(a) && colCat.matches(a));
+  return athletes.filter((a) => doesAthleteMatchCell(rowCat, colCat, a).isMatch);
 }
 
 /**
@@ -63,16 +155,20 @@ export function validateGuess(
   rowCat: Category,
   colCat: Category,
   athlete: Athlete
-): { isCorrect: boolean; validAnswersCount: number; rarityPercentage: number } {
-  const matchesRow = rowCat.matches(athlete);
-  const matchesCol = colCat.matches(athlete);
-  const isCorrect = matchesRow && matchesCol;
+): { isCorrect: boolean; validAnswersCount: number; rarityPercentage: number; failureReason?: string } {
+  const matchResult = doesAthleteMatchCell(rowCat, colCat, athlete);
+  const isCorrect = matchResult.isMatch;
 
   const validPool = getValidAthletesForCell(rowCat, colCat);
   const validAnswersCount = validPool.length;
 
   if (!isCorrect) {
-    return { isCorrect: false, validAnswersCount, rarityPercentage: 0 };
+    return {
+      isCorrect: false,
+      validAnswersCount,
+      rarityPercentage: 0,
+      failureReason: matchResult.failureReason,
+    };
   }
 
   // Calculate simulated rarity score based on popularity score relative to the valid pool

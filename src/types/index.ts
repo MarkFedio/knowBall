@@ -36,6 +36,7 @@ export interface Athlete {
   
   // Accolades
   championships: number;       // 7
+  championshipMarkets?: string[]; // e.g. ['NY', 'BOS'] - Markets where athlete won championship(s)
   mvps: number;                // 3
   hallOfFame: boolean;         // false
   rookieOfTheYear: boolean;    // false

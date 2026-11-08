@@ -140,7 +140,8 @@ const ACCOLADE_CRITERIA: Record<string, { award: string; leagues: string; notes:
   accolade_champion: {
     award: 'World Championship Ring / Trophy',
     leagues: 'Super Bowl (NFL), NBA Finals, World Series (MLB), Stanley Cup (NHL)',
-    notes: 'Won at least 1 official World Championship in their pro career.',
+    notes:
+      'Won at least 1 official World Championship in their pro career. (When intersected with a metropolitan market on the grid, the player must have won the championship while playing for a team from that market).',
   },
   accolade_multi_champ_2: {
     award: '2+ World Championship Titles',

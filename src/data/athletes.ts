@@ -30,6 +30,7 @@ const MULTI_SPORT_ATHLETES: Athlete[] = [
     draftRound: 1,
     draftYear: 1986,
     championships: 0,
+    championshipMarkets: [],
     mvps: 0,
     hallOfFame: false,
     rookieOfTheYear: false,
@@ -52,6 +53,7 @@ const MULTI_SPORT_ATHLETES: Athlete[] = [
     draftRound: 1,
     draftYear: 1989,
     championships: 2, // 2 Super Bowls (49ers, Cowboys)
+    championshipMarkets: ['BAY', 'DAL'],
     mvps: 0,
     hallOfFame: true, // Pro Football Hall of Fame
     rookieOfTheYear: false,
@@ -74,6 +76,7 @@ const MULTI_SPORT_ATHLETES: Athlete[] = [
     draftRound: 2,
     draftYear: 1981,
     championships: 2, // 2 NBA Championships (Celtics 1984, 1986)
+    championshipMarkets: ['BOS'],
     mvps: 0,
     hallOfFame: false,
     rookieOfTheYear: false,
@@ -93,6 +96,7 @@ const MULTI_SPORT_ATHLETES: Athlete[] = [
     college: 'Washington State',
     collegeConference: 'Pac-12',
     championships: 4, // 1 World Series (1957 Braves) + 3 NBA Championships (1959, 1960, 1961 Celtics)
+    championshipMarkets: ['ATL', 'BOS'],
     mvps: 0,
     hallOfFame: false,
     rookieOfTheYear: false,
@@ -115,6 +119,7 @@ const MULTI_SPORT_ATHLETES: Athlete[] = [
     draftRound: 7,
     draftYear: 1989,
     championships: 0,
+    championshipMarkets: [],
     mvps: 0,
     hallOfFame: false,
     rookieOfTheYear: false,
@@ -134,6 +139,7 @@ const MULTI_SPORT_ATHLETES: Athlete[] = [
     college: 'Seton Hall',
     collegeConference: 'Big East',
     championships: 0,
+    championshipMarkets: [],
     mvps: 0,
     hallOfFame: false,
     rookieOfTheYear: false,
