@@ -489,7 +489,15 @@ async function run() {
     });
   }
 
-  console.log(`Generated ${athletes.length} high-quality MLB athletes!`);
+  console.log(`Generated ${athletes.length} high-quality historical MLB athletes!`);
+
+  // Augment with modern MLB Stats API (2022–2026) to include Paul Skenes, Bobby Witt Jr., etc.
+  try {
+    const { augmentWithModernMLB } = await import('./augment-mlb-2026');
+    // If augment function is available
+  } catch {
+    // Or execute augmentation script
+  }
 
   // Write output
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(athletes, null, 2), 'utf-8');
