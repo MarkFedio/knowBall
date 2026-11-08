@@ -210,78 +210,56 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Grand Slam 4-League Badges Tracker */}
-          <div className="relative group">
-            <button
-              type="button"
-              onClick={() => setIsGrandSlamModalOpen(true)}
-              className="flex flex-col items-end gap-1 p-1 -m-1 rounded-xl transition hover:bg-white/5 text-left focus:outline-none focus:ring-1 focus:ring-amber-500/50 cursor-pointer"
-              title="Grand Slam Bonus - Click for details"
-            >
-              {/* Grand Slam Header Label & Progress Pill */}
-              <div className="flex items-center justify-between gap-1.5 w-full">
-                <span
-                  className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-colors ${
-                    hasGrandSlam
-                      ? 'text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]'
-                      : 'text-amber-400/90 group-hover:text-amber-300'
+          {/* Grand Slam 4-League Badges Tracker (Clickable to open popup) */}
+          <button
+            type="button"
+            onClick={() => setIsGrandSlamModalOpen(true)}
+            className="flex flex-col items-end gap-1 p-1.5 -m-1 rounded-xl transition hover:bg-white/5 hover:border-amber-500/30 border border-transparent text-left focus:outline-none focus:ring-1 focus:ring-amber-500/50 cursor-pointer group"
+            title="Click to view Grand Slam bonus & progress"
+          >
+            {/* Grand Slam Header Label & Progress Pill */}
+            <div className="flex items-center justify-between gap-1.5 w-full">
+              <span
+                className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition-colors ${
+                  hasGrandSlam
+                    ? 'text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]'
+                    : 'text-amber-400/90 group-hover:text-amber-300'
+                }`}
+              >
+                <Sparkles
+                  className={`w-2.5 h-2.5 ${
+                    hasGrandSlam ? 'text-emerald-400 animate-spin-slow' : 'text-amber-400'
                   }`}
-                >
-                  <Sparkles
-                    className={`w-2.5 h-2.5 ${
-                      hasGrandSlam ? 'text-emerald-400 animate-spin-slow' : 'text-amber-400'
-                    }`}
-                  />
-                  GRAND SLAM
-                </span>
-                <span
-                  className={`text-[9px] font-mono font-bold px-1.5 py-0.2 rounded border transition-colors ${
-                    hasGrandSlam
-                      ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-[0_0_8px_rgba(16,185,129,0.3)]'
-                      : 'bg-amber-500/10 text-amber-300 border-amber-500/30'
-                  }`}
-                >
-                  {hasGrandSlam ? '-25%' : `${sportsUsed.size}/4`}
-                </span>
-              </div>
-
-              {/* 4 Circular League Badges (NFL, NBA, MLB, NHL) */}
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                {ALL_SPORTS.map((sport) => {
-                  const isUsed = sportsUsed.has(sport);
-                  return (
-                    <LeagueIcon
-                      key={sport}
-                      sport={sport}
-                      size="md"
-                      variant="circle"
-                      active={isUsed}
-                    />
-                  );
-                })}
-              </div>
-            </button>
-
-            {/* Desktop Hover Tooltip */}
-            <div className="absolute right-0 top-full mt-2 w-64 p-3 rounded-xl bg-[#091524]/95 border border-amber-500/40 shadow-[0_10px_25px_rgba(0,0,0,0.8)] backdrop-blur-md opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-40 text-left">
-              <div className="flex items-center justify-between pb-1.5 border-b border-zinc-800">
-                <span className="text-[10px] font-black uppercase tracking-wider text-amber-400 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-amber-400" />
-                  Grand Slam Bonus
-                </span>
-                <span className="text-[10px] font-mono font-bold text-emerald-400">
-                  {hasGrandSlam ? 'ACTIVE (-25%)' : `${sportsUsed.size}/4 Completed`}
-                </span>
-              </div>
-              <p className="text-[11px] text-zinc-300 mt-2 leading-relaxed">
-                Use at least one athlete from each of the 4 major leagues (NFL, NBA, MLB, NHL) to earn a <strong className="text-emerald-300">25% discount</strong> on your rarity score.
-              </p>
-              <div className="mt-2.5 pt-2 border-t border-zinc-800/80 flex items-center justify-between text-[10px] text-zinc-400">
-                <span>Click for full checklist</span>
-                <span className="text-amber-400 font-bold">Details →</span>
-              </div>
+                />
+                GRAND SLAM
+              </span>
+              <span
+                className={`text-[9px] font-mono font-bold px-1.5 py-0.2 rounded border transition-colors ${
+                  hasGrandSlam
+                    ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-[0_0_8px_rgba(16,185,129,0.3)]'
+                    : 'bg-amber-500/10 text-amber-300 border-amber-500/30 group-hover:border-amber-400/50'
+                }`}
+              >
+                {hasGrandSlam ? '-25%' : `${sportsUsed.size}/4`}
+              </span>
             </div>
-          </div>
+
+            {/* 4 Circular League Badges (NFL, NBA, MLB, NHL) */}
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              {ALL_SPORTS.map((sport) => {
+                const isUsed = sportsUsed.has(sport);
+                return (
+                  <LeagueIcon
+                    key={sport}
+                    sport={sport}
+                    size="md"
+                    variant="circle"
+                    active={isUsed}
+                  />
+                );
+              })}
+            </div>
+          </button>
         </div>
       </div>
 
