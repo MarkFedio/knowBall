@@ -165,15 +165,15 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                   : 'none',
             }}
           >
-            {/* Wedge Background: Authentic Vibrant Blue matching reference image */}
+            {/* Wedge Background: High contrast between vibrant Used (#2563eb) and dimmed Unused (#17345d) */}
             <path
               d="M 150 150 L 30 150 A 120 120 0 0 1 150 30 Z"
               fill={
                 hoveredSport === 'NFL'
-                  ? '#2563eb'
+                  ? '#3b82f6'
                   : isNflUsed
-                  ? '#1d4ed8'
-                  : '#1b498b'
+                  ? '#2563eb'
+                  : '#17345d'
               }
               stroke="#0a0c10"
               strokeWidth="1"
@@ -185,8 +185,8 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 d="M 30 150 A 120 120 0 0 1 150 30"
                 fill="none"
                 stroke="#60a5fa"
-                strokeWidth="3.5"
-                filter="drop-shadow(0 0 6px #3b82f6)"
+                strokeWidth="4"
+                filter="drop-shadow(0 0 8px #3b82f6)"
                 pointerEvents="none"
               />
             )}
@@ -263,11 +263,11 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
-                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
                 <path
-                  d="M -3 0 L -1 2 L 3 -2"
+                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
                   stroke="#FFFFFF"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   fill="none"
@@ -292,15 +292,15 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                   : 'none',
             }}
           >
-            {/* Wedge Background: Authentic Vibrant Orange matching reference image */}
+            {/* Wedge Background: High contrast between vibrant Used (#f97316) and dimmed Unused (#78350c) */}
             <path
               d="M 150 150 L 150 30 A 120 120 0 0 1 270 150 Z"
               fill={
                 hoveredSport === 'NBA'
-                  ? '#ea580c'
+                  ? '#fb923c'
                   : isNbaUsed
                   ? '#f97316'
-                  : '#e86c1f'
+                  : '#78350c'
               }
               stroke="#0a0c10"
               strokeWidth="1"
@@ -312,8 +312,8 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 d="M 150 30 A 120 120 0 0 1 270 150"
                 fill="none"
                 stroke="#fde047"
-                strokeWidth="3.5"
-                filter="drop-shadow(0 0 6px #f59e0b)"
+                strokeWidth="4"
+                filter="drop-shadow(0 0 8px #f59e0b)"
                 pointerEvents="none"
               />
             )}
@@ -365,11 +365,11 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
-                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
                 <path
-                  d="M -3 0 L -1 2 L 3 -2"
+                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
                   stroke="#FFFFFF"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   fill="none"
@@ -394,15 +394,15 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                   : 'none',
             }}
           >
-            {/* Wedge Background: Authentic Vibrant Crimson Red matching reference image */}
+            {/* Wedge Background: High contrast between vibrant Used (#dc2626) and dimmed Unused (#701a26) */}
             <path
               d="M 150 150 L 150 270 A 120 120 0 0 1 30 150 Z"
               fill={
                 hoveredSport === 'MLB'
-                  ? '#dc2626'
+                  ? '#ef4444'
                   : isMlbUsed
-                  ? '#e11d48'
-                  : '#c52834'
+                  ? '#dc2626'
+                  : '#701a26'
               }
               stroke="#0a0c10"
               strokeWidth="1"
@@ -414,8 +414,8 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 d="M 30 150 A 120 120 0 0 0 150 270"
                 fill="none"
                 stroke="#fca5a5"
-                strokeWidth="3.5"
-                filter="drop-shadow(0 0 6px #ef4444)"
+                strokeWidth="4"
+                filter="drop-shadow(0 0 8px #ef4444)"
                 pointerEvents="none"
               />
             )}
@@ -476,11 +476,11 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
-                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
                 <path
-                  d="M -3 0 L -1 2 L 3 -2"
+                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
                   stroke="#FFFFFF"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   fill="none"
@@ -505,15 +505,15 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                   : 'none',
             }}
           >
-            {/* Wedge Background: Authentic Steel Slate Blue matching reference image */}
+            {/* Wedge Background: High contrast between vibrant Used (#0284c7) and dimmed Unused (#243340) */}
             <path
               d="M 150 150 L 270 150 A 120 120 0 0 1 150 270 Z"
               fill={
                 hoveredSport === 'NHL'
-                  ? '#0284c7'
+                  ? '#38bdf8'
                   : isNhlUsed
-                  ? '#2563eb'
-                  : '#354b5e'
+                  ? '#0284c7'
+                  : '#243340'
               }
               stroke="#0a0c10"
               strokeWidth="1"
@@ -525,8 +525,8 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 d="M 150 270 A 120 120 0 0 0 270 150"
                 fill="none"
                 stroke="#7dd3fc"
-                strokeWidth="3.5"
-                filter="drop-shadow(0 0 6px #0ea5e9)"
+                strokeWidth="4"
+                filter="drop-shadow(0 0 8px #0ea5e9)"
                 pointerEvents="none"
               />
             )}
@@ -589,11 +589,11 @@ export const SportRadarDial: React.FC<SportRadarDialProps> = ({
                 style={{ filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.95))' }}
                 pointerEvents="none"
               >
-                <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.4" />
+                <circle cx="0" cy="0" r="9" fill="#10b981" stroke="#34d399" strokeWidth="1.6" />
                 <path
-                  d="M -3 0 L -1 2 L 3 -2"
+                  d="M -3.5 0 L -1 2.5 L 3.5 -2.5"
                   stroke="#FFFFFF"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   fill="none"
