@@ -28,6 +28,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: '500+ career stolen bases (MLB) or 500+ defensive steals (NBA)',
     matches: (a) => (a.stats.steals ?? 0) >= 500,
   },
+  STAT_ASSISTS_100: {
+    id: 'stat_assists_100',
+    name: '100+ Career Assists (NBA/NHL)',
+    shortName: '100+ Assists',
+    type: 'CROSS_STAT',
+    description: '100+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 100,
+  },
   STAT_ASSISTS_250: {
     id: 'stat_assists_250',
     name: '250+ Career Assists (NBA/NHL)',
@@ -44,6 +52,14 @@ export const CATEGORIES: Record<string, Category> = {
     description: '500+ career assists in NBA or NHL',
     matches: (a) => (a.stats.assists ?? 0) >= 500,
   },
+  STAT_ASSISTS_750: {
+    id: 'stat_assists_750',
+    name: '750+ Career Assists (NBA/NHL)',
+    shortName: '750+ Assists',
+    type: 'CROSS_STAT',
+    description: '750+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 750,
+  },
   STAT_ASSISTS_1000: {
     id: 'stat_assists_1000',
     name: '1,000+ Career Assists (NBA/NHL)',
@@ -54,63 +70,75 @@ export const CATEGORIES: Record<string, Category> = {
   },
   STAT_ASSISTS_2500: {
     id: 'stat_assists_2500',
-    name: '2,500+ Career Assists (NBA/NHL)',
-    shortName: '2,500+ Assists',
+    name: '750+ Career Assists (NBA/NHL)',
+    shortName: '750+ Assists',
     type: 'CROSS_STAT',
-    description: '2,500+ career assists in NBA or NHL',
-    matches: (a) => (a.stats.assists ?? 0) >= 2500,
+    description: '750+ career assists in NBA or NHL',
+    matches: (a) => (a.stats.assists ?? 0) >= 750,
+  },
+  STAT_POINTS_500: {
+    id: 'stat_points_500',
+    name: '500+ Career Points (NBA/NHL/NFL)',
+    shortName: '500+ Points',
+    type: 'CROSS_STAT',
+    description: '500+ career points scored in NBA, NHL, or NFL',
+    matches: (a) => (a.stats.points ?? 0) >= 500,
+  },
+  STAT_POINTS_750: {
+    id: 'stat_points_750',
+    name: '750+ Career Points (NBA/NHL/NFL)',
+    shortName: '750+ Points',
+    type: 'CROSS_STAT',
+    description: '750+ career points scored in NBA, NHL, or NFL',
+    matches: (a) => (a.stats.points ?? 0) >= 750,
   },
   STAT_POINTS_1K: {
     id: 'stat_points_1k',
-    name: '1,000+ Career Points (NBA/NHL)',
-    shortName: '1K+ Points',
+    name: '1,000+ Career Points (NBA/NHL/NFL)',
+    shortName: '1,000+ Points',
     type: 'CROSS_STAT',
-    description: '1,000+ points scored in NBA (or 100+ points in NHL)',
-    matches: (a) => {
-      if (a.sports.includes('NHL')) {
-        return (a.stats.points ?? 0) >= 100;
-      }
-      return (a.stats.points ?? 0) >= 1000;
-    },
+    description: '1,000+ career points scored in NBA, NHL, or NFL',
+    matches: (a) => (a.stats.points ?? 0) >= 1000,
+  },
+  STAT_POINTS_1200: {
+    id: 'stat_points_1200',
+    name: '1,200+ Career Points (NBA/NHL)',
+    shortName: '1,200+ Points',
+    type: 'CROSS_STAT',
+    description: '1,200+ career points scored in NBA or NHL',
+    matches: (a) => (a.stats.points ?? 0) >= 1200,
+  },
+  STAT_POINTS_1500: {
+    id: 'stat_points_1500',
+    name: '1,500+ Career Points (NBA/NHL)',
+    shortName: '1,500+ Points',
+    type: 'CROSS_STAT',
+    description: '1,500+ career points scored in NBA or NHL',
+    matches: (a) => (a.stats.points ?? 0) >= 1500,
   },
   STAT_POINTS_5K: {
     id: 'stat_points_5k',
-    name: '5,000+ Career Points (NBA/NHL)',
-    shortName: '5K+ Points',
+    name: '500+ Career Points (NBA/NHL/NFL)',
+    shortName: '500+ Points',
     type: 'CROSS_STAT',
-    description: '5,000+ points scored in NBA (or 500+ points in NHL)',
-    matches: (a) => {
-      if (a.sports.includes('NHL')) {
-        return (a.stats.points ?? 0) >= 500;
-      }
-      return (a.stats.points ?? 0) >= 5000;
-    },
+    description: '500+ career points scored in NBA, NHL, or NFL',
+    matches: (a) => (a.stats.points ?? 0) >= 500,
   },
   STAT_POINTS_10K: {
     id: 'stat_points_10k',
-    name: '10,000+ Career Points (NBA/NHL)',
-    shortName: '10K+ Points',
+    name: '1,000+ Career Points (NBA/NHL/NFL)',
+    shortName: '1,000+ Points',
     type: 'CROSS_STAT',
-    description: '10,000+ points scored in NBA (or 1,000+ in NHL)',
-    matches: (a) => {
-      if (a.sports.includes('NHL')) {
-        return (a.stats.points ?? 0) >= 1000;
-      }
-      return (a.stats.points ?? 0) >= 10000;
-    },
+    description: '1,000+ career points scored in NBA, NHL, or NFL',
+    matches: (a) => (a.stats.points ?? 0) >= 1000,
   },
   STAT_POINTS_15K: {
     id: 'stat_points_15k',
-    name: '15,000+ Career Points (NBA/NHL)',
-    shortName: '15K+ Points',
+    name: '1,200+ Career Points (NBA/NHL)',
+    shortName: '1,200+ Points',
     type: 'CROSS_STAT',
-    description: '15,000+ points scored in NBA (or 1,200+ in NHL)',
-    matches: (a) => {
-      if (a.sports.includes('NHL')) {
-        return (a.stats.points ?? 0) >= 1200;
-      }
-      return (a.stats.points ?? 0) >= 15000;
-    },
+    description: '1,200+ career points scored in NBA or NHL',
+    matches: (a) => (a.stats.points ?? 0) >= 1200,
   },
   STAT_TURNOVERS_100: {
     id: 'stat_turnovers_100',
