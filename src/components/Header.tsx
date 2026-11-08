@@ -103,10 +103,10 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="w-full max-w-5xl mx-auto mb-4 select-none">
       {/* ======================================================== */}
-      {/* KNOWBALL LINEAR COMMAND BAR (SINGLE HORIZONTAL DECK)     */}
+      {/* KNOWBALL LINEAR COMMAND BAR (2-TIER STADIUM DECK)        */}
       {/* ======================================================== */}
       <div
-        className={`w-full flex flex-wrap items-center justify-between gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 ${
+        className={`w-full flex flex-col gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 ${
           isScoreboard
             ? 'bg-[#0e121a]/95 border border-amber-500/35 shadow-[0_6px_24px_rgba(0,0,0,0.85),inset_0_1px_0_rgba(255,255,255,0.06)]'
             : isNeon
@@ -115,53 +115,55 @@ export const Header: React.FC<HeaderProps> = ({
         }`}
       >
         {/* ---------------------------------------------------- */}
-        {/* SECTION 1: THE ARENA MARQUEE BRAND & CATCHPHRASE     */}
+        {/* TIER 1: BRAND, MODE, CLOCK, STATS & GRAND SLAM       */}
         {/* ---------------------------------------------------- */}
-        <div className="flex items-center gap-2.5 shrink-0">
-          <div
-            onClick={onOpenHowToPlay}
-            className="cursor-pointer group flex flex-col transition transform active:scale-95"
-            title="KNOWBALL • 'Think you know ball? Prove it.' (Click for rules)"
-          >
-            {/* The Arena Marquee Logo */}
-            <div className="font-scoreboard text-2xl sm:text-3xl font-black tracking-wider text-white leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-              KNOW<span className="text-amber-400">BALL</span>
+        <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-between gap-2.5 sm:gap-3.5">
+          {/* SECTION 1: THE ARENA MARQUEE BRAND & CATCHPHRASE */}
+          <div className="flex items-center gap-2.5 shrink-0">
+            <div
+              onClick={onOpenHowToPlay}
+              className="cursor-pointer group flex flex-col transition transform active:scale-95"
+              title="KNOWBALL • 'Think you know ball? Prove it.' (Click for rules)"
+            >
+              {/* The Arena Marquee Logo */}
+              <div className="font-scoreboard text-2xl sm:text-3xl font-black tracking-wider text-white leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                KNOW<span className="text-amber-400">BALL</span>
+              </div>
+
+              {/* Official Catchphrase */}
+              <span className="text-[8px] sm:text-[9px] font-black uppercase tracking-wider text-amber-400/90 drop-shadow-[0_0_6px_rgba(245,158,11,0.4)] mt-0.5">
+                Think you know ball? Prove it.
+              </span>
             </div>
 
-            {/* Official Catchphrase */}
-            <span className="text-[8px] sm:text-[9px] font-black uppercase tracking-wider text-amber-400/90 drop-shadow-[0_0_6px_rgba(245,158,11,0.4)] mt-0.5">
-              Think you know ball? Prove it.
-            </span>
-          </div>
+            {/* Vertical Divider */}
+            <div className="hidden sm:block h-7 w-px bg-zinc-800/80 mx-0.5" />
 
-          {/* Vertical Divider */}
-          <div className="hidden sm:block h-7 w-px bg-zinc-800/80 mx-0.5" />
-
-          {/* Play Mode Switcher (Ball Knower vs Unlimited) */}
-          <div className="flex rounded-lg bg-zinc-950/70 p-0.5 border border-zinc-800/80 text-[10px] sm:text-[11px] shrink-0">
-            <button
-              onClick={() => onToggleMode('IMMACULATE')}
-              title="Ball Knower: 16 Guesses, 0 Strikes (Official Rank & Shareable)"
-              className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
-                playMode === 'IMMACULATE'
-                  ? isScoreboard
-                    ? 'bg-amber-400 text-black shadow-sm'
-                    : isNeon
-                    ? 'bg-[#00f5b8] text-black shadow-sm'
-                    : 'bg-white text-black'
-                  : 'text-zinc-400 hover:text-white'
-              }`}
-            >
-              <Flame className="h-3 w-3 shrink-0" />
-              <span>Ball Knower</span>
-            </button>
-            <button
-              onClick={() => onToggleMode('UNLIMITED')}
-              title="Unlimited Mode: Unlimited guesses for risky picks (Non-shareable)"
-              className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
-                playMode === 'UNLIMITED' || playMode === 'STRIKES'
-                  ? isScoreboard
-                    ? 'bg-amber-400 text-black shadow-sm'
+            {/* Play Mode Switcher (Ball Knower vs Unlimited) */}
+            <div className="flex rounded-lg bg-zinc-950/70 p-0.5 border border-zinc-800/80 text-[10px] sm:text-[11px] shrink-0">
+              <button
+                onClick={() => onToggleMode('IMMACULATE')}
+                title="Ball Knower: 16 Guesses, 0 Strikes (Official Rank & Shareable)"
+                className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
+                  playMode === 'IMMACULATE'
+                    ? isScoreboard
+                      ? 'bg-amber-400 text-black shadow-sm'
+                      : isNeon
+                      ? 'bg-[#00f5b8] text-black shadow-sm'
+                      : 'bg-white text-black'
+                    : 'text-zinc-400 hover:text-white'
+                }`}
+              >
+                <Flame className="h-3 w-3 shrink-0" />
+                <span>Ball Knower</span>
+              </button>
+              <button
+                onClick={() => onToggleMode('UNLIMITED')}
+                title="Unlimited Mode: Unlimited guesses for risky picks (Non-shareable)"
+                className={`flex items-center gap-1 px-1.5 sm:px-2 py-1 rounded-md font-bold transition ${
+                  playMode === 'UNLIMITED' || playMode === 'STRIKES'
+                    ? isScoreboard
+                      ? 'bg-amber-400 text-black shadow-sm'
                     : isNeon
                     ? 'bg-cyan-400 text-black shadow-sm'
                     : 'bg-white text-black'
@@ -174,9 +176,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* SECTION 2: DIGITAL CLOCK & PUZZLE IDENTIFIER         */}
-        {/* ---------------------------------------------------- */}
+        {/* SECTION 2: DIGITAL CLOCK & PUZZLE IDENTIFIER */}
         <div className="flex items-center gap-2.5 shrink-0">
           <LedScoreboardClock timeStr={timeLeft} theme={theme} />
 
@@ -191,98 +191,95 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Vertical Divider */}
-        <div className="hidden md:block h-7 w-px bg-zinc-800/80" />
+        {/* GROUP 3: STATS & GRAND SLAM (LOCKED TOGETHER ON RIGHT) */}
+        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+          {/* Vertical Divider before stats on md+ */}
+          <div className="hidden md:block h-7 w-px bg-zinc-800/80" />
 
-        {/* ---------------------------------------------------- */}
-        {/* SECTION 3: LIVE STATS (GUESSES & RARITY)             */}
-        {/* ---------------------------------------------------- */}
-        <div className="flex flex-col text-right font-mono text-xs leading-tight shrink-0">
-          <div className="flex items-center justify-end gap-1.5">
-            <span className="text-zinc-400 text-[11px] font-sans">
-              Guesses:
-            </span>
-            <span
-              className={`font-bold font-mono text-xs sm:text-sm ${
-                isScoreboard
-                  ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
-                  : isNeon
-                  ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
-                  : 'text-zinc-200'
-              }`}
-            >
-              {playMode === 'IMMACULATE' ? guessesRemaining : `${guessesUsed} (∞)`}
-            </span>
-          </div>
-
-          <div className="flex items-center justify-end gap-1.5 mt-0.5">
-            <span className="text-zinc-400 text-[11px] font-sans">Rarity:</span>
-            <span
-              className={`font-bold font-mono text-xs sm:text-sm ${
-                isScoreboard
-                  ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
-                  : isNeon
-                  ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
-                  : 'text-zinc-200'
-              }`}
-            >
-              {totalRarityScore.toFixed(1)}
-            </span>
-          </div>
-        </div>
-
-        {/* Vertical Divider */}
-        <div className="hidden sm:block h-7 w-px bg-zinc-800/80" />
-
-        {/* ---------------------------------------------------- */}
-        {/* SECTION 4: GRAND SLAM & 4 LEAGUE TOKENS              */}
-        {/* ---------------------------------------------------- */}
-        <div className="flex items-center shrink-0">
-          <div className="flex flex-col w-full min-w-[124px]">
-            {/* Title & Pill Header */}
-            <div className="flex items-center justify-between w-full text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
-              <div className="flex items-center gap-1">
-                <Sparkles
-                  className={`w-2.5 h-2.5 ${hasGrandSlam ? 'text-emerald-400 animate-pulse' : 'text-amber-400'}`}
-                />
-                <span>GRAND SLAM</span>
-              </div>
+          {/* SECTION 3: LIVE STATS (GUESSES & RARITY) */}
+          <div className="flex flex-col text-right font-mono text-xs leading-tight shrink-0">
+            <div className="flex items-center justify-end gap-1.5">
+              <span className="text-zinc-400 text-[11px] font-sans">
+                Guesses:
+              </span>
               <span
-                className={`ml-1 px-1.5 py-0.5 rounded border text-[9px] font-mono transition-all ${
-                  hasGrandSlam
-                    ? 'bg-emerald-500/25 border-emerald-400 text-emerald-300 font-bold shadow-[0_0_8px_rgba(52,211,153,0.5)]'
-                    : 'bg-amber-500/15 border-amber-500/40 text-amber-200'
+                className={`font-bold font-mono text-xs sm:text-sm ${
+                  isScoreboard
+                    ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
+                    : isNeon
+                    ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
+                    : 'text-zinc-200'
                 }`}
               >
-                {hasGrandSlam ? '-25%' : `${sportsUsed.size}/4`}
+                {playMode === 'IMMACULATE' ? guessesRemaining : '∞'}
               </span>
             </div>
 
-            {/* 4 League Medallions: Spanning full width under text */}
-            <div className="flex items-center justify-between w-full mt-1.5 px-0.5">
-              {ALL_SPORTS.map((sport) => {
-                const isUsed = sportsUsed.has(sport);
-                return (
-                  <LeagueIcon
-                    key={sport}
-                    sport={sport}
-                    size="md"
-                    variant="circle"
-                    active={isUsed}
+            <div className="flex items-center justify-end gap-1.5 mt-0.5">
+              <span className="text-zinc-400 text-[11px] font-sans">Rarity:</span>
+              <span
+                className={`font-bold font-mono text-xs sm:text-sm ${
+                  isScoreboard
+                    ? 'text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.5)]'
+                    : isNeon
+                    ? 'text-[#00f5b8] drop-shadow-[0_0_6px_rgba(0,245,184,0.4)]'
+                    : 'text-zinc-200'
+                }`}
+              >
+                {totalRarityScore.toFixed(1)}
+              </span>
+            </div>
+          </div>
+
+          {/* Vertical Divider between Stats & Grand Slam */}
+          <div className="hidden sm:block h-7 w-px bg-zinc-800/80" />
+
+          {/* SECTION 4: GRAND SLAM & 4 LEAGUE TOKENS */}
+          <div className="flex items-center shrink-0">
+            <div className="flex flex-col w-full min-w-[124px]">
+              {/* Title & Pill Header */}
+              <div className="flex items-center justify-between w-full text-[10px] font-black tracking-wide text-amber-300 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]">
+                <div className="flex items-center gap-1">
+                  <Sparkles
+                    className={`w-2.5 h-2.5 ${hasGrandSlam ? 'text-emerald-400 animate-pulse' : 'text-amber-400'}`}
                   />
-                );
-              })}
+                  <span>GRAND SLAM</span>
+                </div>
+                <span
+                  className={`ml-1 px-1.5 py-0.5 rounded border text-[9px] font-mono transition-all ${
+                    hasGrandSlam
+                      ? 'bg-emerald-500/25 border-emerald-400 text-emerald-300 font-bold shadow-[0_0_8px_rgba(52,211,153,0.5)]'
+                      : 'bg-amber-500/15 border-amber-500/40 text-amber-200'
+                  }`}
+                >
+                  {hasGrandSlam ? '-25%' : `${sportsUsed.size}/4`}
+                </span>
+              </div>
+
+              {/* 4 League Medallions: Spanning full width under text */}
+              <div className="flex items-center justify-between w-full mt-1.5 px-0.5">
+                {ALL_SPORTS.map((sport) => {
+                  const isUsed = sportsUsed.has(sport);
+                  return (
+                    <LeagueIcon
+                      key={sport}
+                      sport={sport}
+                      size="md"
+                      variant="circle"
+                      active={isUsed}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Vertical Divider */}
-        <div className="hidden md:block h-7 w-px bg-zinc-800/80" />
-
-        {/* ---------------------------------------------------- */}
-        {/* SECTION 5: ACTION SUITE TOOLBAR                      */}
-        {/* ---------------------------------------------------- */}
-        <div className="w-full sm:w-auto flex items-center justify-start gap-1.5 shrink-0 mt-1 sm:mt-0">
+      {/* ---------------------------------------------------- */}
+      {/* TIER 2: ACTION SUITE TOOLBAR                         */}
+      {/* ---------------------------------------------------- */}
+      <div className="w-full flex items-center justify-start sm:justify-end gap-1.5 shrink-0 pt-0.5">
           {/* Theme Switcher */}
           {onToggleTheme && (
             <button
