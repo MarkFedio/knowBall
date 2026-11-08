@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNOWBALL • "Think you know ball? Prove it." - Brand & UI Design Showcase</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #06090e;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+    .wrapper { max-width: 1150px; margin: 0 auto; }
+    
+    header.showcase-hero {
+      text-align: center;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .brand-title {
+      font-size: 52px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-shadow: 0 0 25px rgba(0, 245, 184, 0.45);
+    }
+    .brand-title span.accent {
+      color: #00f5b8;
+    }
+    .catchphrase-hero {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      margin-top: 10px;
+      text-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
+    }
+    .hero-subtext {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 900;
+      margin: 45px 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .tag.cyan { background: rgba(0, 245, 184, 0.15); color: #00f5b8; border: 1px solid rgba(0, 245, 184, 0.35); }
+    .tag.gold { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.35); }
+
+    .card-box {
+      background: #090e17;
+      border: 1px solid #1e293b;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    /* ========================================================= */
+    /* LOGO & BRAND IDENTITY EXPLORATION                         */
+    /* ========================================================= */
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .logo-card {
+      background: #0c121d;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+    .logo-card .logo-render {
+      padding: 25px 15px;
+      margin-bottom: 14px;
+      background: #06090e;
+      border-radius: 12px;
+      border: 1px dashed #1e293b;
+    }
+
+    /* Logo 1: The Modern Speedmark */
+    .logo-style-1 {
+      font-size: 34px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: 0.06em;
+      color: #fff;
+    }
+    .logo-style-1 span { color: #00f5b8; text-shadow: 0 0 15px rgba(0, 245, 184, 0.6); }
+
+    /* Logo 2: The Varsity Stencil */
+    .logo-style-2 {
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: #fff;
+      font-family: Impact, "Arial Black", sans-serif;
+    }
+    .logo-style-2 span { color: #f59e0b; text-shadow: 0 0 15px rgba(245, 158, 11, 0.6); }
+
+    /* Logo 3: The FinTech Crosshair */
+    .logo-style-3 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #22d3ee;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .catchphrase-sub {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #94a3b8;
+      margin-top: 6px;
+    }
+
+    /* ========================================================= */
+    /* NEW KNOWBALL HEADER (VARIATION 3 LINEAR COMMAND BAR)       */
+    /* ========================================================= */
+    .knowball-header-bar {
+      background: linear-gradient(180deg, #0e1522 0%, #080d16 100%);
+      border: 1px solid rgba(0, 245, 184, 0.35);
+      border-radius: 18px;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .divider-v {
+      width: 1px;
+      height: 36px;
+      background: #1e293b;
+    }
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      color: #cbd5e1;
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-pill.primary {
+      background: #00f5b8;
+      border-color: #00f5b8;
+      color: #06090e;
+      font-weight: 800;
+      box-shadow: 0 0 10px rgba(0, 245, 184, 0.4);
+    }
+    .clock-bezel {
+      background: linear-gradient(180deg, #0c121c 0%, #06090e 100%);
+      border: 1.5px solid #1e293b;
+      border-radius: 12px;
+      padding: 5px 12px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.8);
+      font-family: monospace;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #22d3ee;
+      text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+    }
+    .stat-val {
+      font-family: monospace;
+      font-size: 15px;
+      font-weight: 800;
+      color: #00f5b8;
+      text-shadow: 0 0 8px rgba(0, 245, 184, 0.5);
+    }
+    .token {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      border: 1.5px solid #334155;
+      background: #0f172a;
+    }
+    .token.active {
+      border-color: #ef4444;
+      background: #450a0a;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+    }
+
+    /* ========================================================= */
+    /* CULTURAL RARITY TIERS                                     */
+    /* ========================================================= */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .tier-card {
+      background: #0c121d;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+    }
+    .tier-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .tier-badge.sicko {
+      background: linear-gradient(135deg, #78350f, #d97706);
+      color: #fef08a;
+      border: 1px solid #facc15;
+      box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+    }
+    .tier-badge.knower {
+      background: #064e3b;
+      color: #6ee7b7;
+      border: 1px solid #10b981;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    }
+    .tier-badge.solid {
+      background: #0c4a6e;
+      color: #7dd3fc;
+      border: 1px solid #0284c7;
+    }
+    .tier-badge.casual {
+      background: #1e293b;
+      color: #94a3b8;
+      border: 1px solid #334155;
+    }
+
+    /* ========================================================= */
+    /* VIRAL POST-GAME REPORT CARD                               */
+    /* ========================================================= */
+    .share-card-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #090e17;
+      border: 2px solid #00f5b8;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 0 35px rgba(0, 245, 184, 0.25);
+      text-align: center;
+    }
+    .verdict-banner {
+      background: rgba(0, 245, 184, 0.15);
+      border: 1px solid #00f5b8;
+      color: #00f5b8;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 12px 0 16px;
+      text-shadow: 0 0 10px rgba(0, 245, 184, 0.6);
+    }
+    .grid-emoji-preview {
+      font-size: 20px;
+      letter-spacing: 6px;
+      line-height: 1.6;
+      background: #06080d;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      margin: 14px 0;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- HERO HEADER -->
+    <header class="showcase-hero">
+      <div class="brand-title">
+        <span>KNOW</span><span class="accent">BALL</span>
+      </div>
+      <div class="catchphrase-hero">
+        "Think you know ball? Prove it."
+      </div>
+      <p class="hero-subtext">
+        The ultimate 4-sport trivia gauntlet separating certified ball knowers from casuals across NFL, NBA, MLB, and NHL.
+      </p>
+    </header>
+
+    <!-- SECTION 1: LOGO & BRAND DESIGN CONCEPTS -->
+    <div class="section-title">
+      <span>1. Brand Identity & Lockup Studies</span>
+      <span class="tag cyan">3 Visual Styles</span>
+    </div>
+
+    <div class="brand-grid">
+      <!-- Style 1: Modern Speedmark -->
+      <div class="logo-card">
+        <div class="logo-render">
+          <div class="logo-style-1">KNOW<span>BALL</span></div>
+          <div class="catchphrase-sub">Think you know ball? Prove it.</div>
+        </div>
+        <h4 style="font-size: 15px; color: #fff;">The Speedmark (Recommended)</h4>
+        <p style="font-size: 13px; color: #94a3b8; margin-top: 4px;">Modern athletic sans with forward italic slant. Clean, viral, authoritative.</p>
+      </div>
+
+      <!-- Style 2: Varsity Stencil -->
+      <div class="logo-card">
+        <div class="logo-render">
+          <div class="logo-style-2">KNOW<span>BALL</span></div>
+          <div class="catchphrase-sub" style="color: #fbbf24;">Think you know ball? Prove it.</div>
+        </div>
+        <h4 style="font-size: 15px; color: #fff;">The Arena Marquee</h4>
+        <p style="font-size: 13px; color: #94a3b8; margin-top: 4px;">Heavy collegiate slab/stencil lettering inspired by stadium scoreboards.</p>
+      </div>
+
+      <!-- Style 3: FinTech Crosshair -->
+      <div class="logo-card">
+        <div class="logo-render">
+          <div class="logo-style-3">
+            <span>[+]</span>
+            <span>KNOWBALL</span>
+          </div>
+          <div class="catchphrase-sub" style="color: #38bdf8;">The 4-Sport Credibility Test</div>
+        </div>
+        <h4 style="font-size: 15px; color: #fff;">The Sportsbook Pro</h4>
+        <p style="font-size: 13px; color: #94a3b8; margin-top: 4px;">Minimalist, precision-engineered sports analytics and betting platform aesthetic.</p>
+      </div>
+    </div>
+
+
+    <!-- SECTION 2: THE NEW KNOWBALL HEADER (VARIATION 3 LINEAR TICKER) -->
+    <div class="section-title">
+      <span>2. The KnowBall Linear Command Header</span>
+      <span class="tag gold">Variation 3 Layout</span>
+    </div>
+
+    <div class="card-box">
+      <p style="font-size: 13px; color: #94a3b8; margin-bottom: 16px;">
+        Featuring the new <strong>KNOWBALL</strong> brand, the <strong>"Think you know ball? Prove it."</strong> subtext, the <strong>Live Credibility Rank</strong>, and all screenshot features in 1 streamlined row:
+      </p>
+
+      <div class="knowball-header-bar">
+        <!-- Section 1: Brand & Catchphrase -->
+        <div style="display: flex; flex-direction: column;">
+          <div style="font-size: 24px; font-weight: 900; font-style: italic; color: #fff; letter-spacing: 0.05em; line-height: 1;">
+            KNOW<span style="color: #00f5b8;">BALL</span>
+          </div>
+          <div style="font-size: 9px; font-weight: 800; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;">
+            Think you know ball? Prove it.
+          </div>
+        </div>
+
+        <div class="divider-v"></div>
+
+        <!-- Section 2: Mode Toggle -->
+        <div style="display: flex; border-radius: 8px; background: #070c14; padding: 2px; border: 1px solid #1e293b;">
+          <button class="btn-pill primary" style="padding: 4px 10px; font-size: 11px;">🔥 Ball Knower</button>
+          <button class="btn-pill" style="border: none; background: transparent; padding: 4px 10px; font-size: 11px; color: #94a3b8;">Casual</button>
+        </div>
+
+        <!-- Section 3: Digital Clock & Board ID -->
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="clock-bezel">14:07:55</div>
+          <div style="font-size: 11px; color: #94a3b8; font-weight: 600;">#9067</div>
+        </div>
+
+        <div class="divider-v"></div>
+
+        <!-- Section 4: Live Stats & Credibility Rank -->
+        <div style="text-align: right; line-height: 1.25;">
+          <div><span style="font-size: 11px; color: #94a3b8;">Guesses: </span><span class="stat-val">15</span></div>
+          <div><span style="font-size: 11px; color: #94a3b8;">Rarity: </span><span class="stat-val">0.1</span></div>
+        </div>
+
+        <div class="divider-v"></div>
+
+        <!-- Section 5: Grand Slam Module -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 900; color: #fbbf24;">
+            <span>✨ GRAND SLAM</span>
+            <span style="background: rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.4); padding: 1px 5px; border-radius: 4px; font-size: 9px;">1/4</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 5px; margin-top: 4px;">
+            <div class="token" title="NFL">🏈</div>
+            <div class="token" title="NBA">🏀</div>
+            <div class="token active" title="MLB (Active!)">⚾</div>
+            <div class="token" title="NHL">🏒</div>
+          </div>
+        </div>
+
+        <div class="divider-v"></div>
+
+        <!-- Section 6: Action Controls with KnowBall Microcopy -->
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button class="btn-pill" style="padding: 4px 8px; font-size: 11px;" title="Admit Defeat">🏳️ Tap Out</button>
+          <button class="btn-pill" style="padding: 4px 8px; font-size: 11px; background: rgba(0, 245, 184, 0.12); border-color: rgba(0, 245, 184, 0.35); color: #00f5b8;">🏆 Stats</button>
+          <button class="btn-pill" style="padding: 4px 8px; font-size: 11px;" title="Run It Back">🔄</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SECTION 3: CULTURAL RARITY TIERS -->
+    <div class="section-title">
+      <span>3. "Know Ball" Slang Rarity Tiers</span>
+      <span class="tag cyan">Debate Culture</span>
+    </div>
+
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-badge sicko">★ CERTIFIED SICKO</div>
+        <div style="font-size: 13px; font-weight: 800; color: #fef08a;">Under 1.0% Pick Rate</div>
+        <p style="font-size: 12px; color: #94a3b8; margin-top: 6px;">
+          For knowing obscure 90s bench players and backup defensive ends. True sports purist status.
+        </p>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge knower">◆ BALL KNOWER</div>
+        <div style="font-size: 13px; font-weight: 800; color: #6ee7b7;">1.0% – 5.0% Pick Rate</div>
+        <p style="font-size: 12px; color: #94a3b8; margin-top: 6px;">
+          High-IQ pick. You don't just watch highlights; you actually follow the sport.
+        </p>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge solid">SOLID PULL</div>
+        <div style="font-size: 13px; font-weight: 800; color: #7dd3fc;">5.0% – 15.0% Pick Rate</div>
+        <p style="font-size: 12px; color: #94a3b8; margin-top: 6px;">
+          Respectable starter or fan-favorite answer. Keeps your score clean.
+        </p>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge casual">CASUAL PICK</div>
+        <div style="font-size: 13px; font-weight: 800; color: #cbd5e1;">Over 15.0% Pick Rate</div>
+        <p style="font-size: 12px; color: #94a3b8; margin-top: 6px;">
+          Picking LeBron, Brady, or Jeter. Correct, but your friends will tease you for it.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- SECTION 4: VIRAL POST-GAME SHARE CARD -->
+    <div class="section-title">
+      <span>4. The "Know Ball Certification" Share Card</span>
+      <span class="tag gold">Group Chat & Twitter</span>
+    </div>
+
+    <div class="share-card-wrap">
+      <div style="font-size: 26px; font-weight: 900; font-style: italic; color: #fff;">
+        KNOW<span style="color: #00f5b8;">BALL</span>
+      </div>
+      <div style="font-size: 10px; font-weight: 800; color: #94a3b8; letter-spacing: 0.1em; text-transform: uppercase;">
+        Daily Gauntlet #142
+      </div>
+
+      <div class="verdict-banner">
+        VERDICT: CERTIFIED BALL KNOWER
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 20px; font-size: 13px;">
+        <div><strong>Result:</strong> 16/16</div>
+        <div><strong>Rarity:</strong> <span style="color: #00f5b8; font-weight: 900;">8.4</span></div>
+        <div><strong>Grand Slam:</strong> 🏈🏀⚾🏒</div>
+      </div>
+
+      <div class="grid-emoji-preview">
+        🟩 🟨 🟩 🟩<br>
+        🟩 🟩 🟩 🟨<br>
+        🟩 🟩 🟩 🟩<br>
+        🟨 🟩 🟩 🟩
+      </div>
+
+      <div style="font-size: 11px; color: #64748b; margin-top: 8px;">
+        "Think you know ball? Prove it." • knowball.app
+      </div>
+
+      <button class="btn-pill primary" style="margin-top: 16px; width: 100%; justify-content: center; padding: 10px;">
+        📋 Copy Flex Card to Clipboard
+      </button>
+    </div>
+  </div>
+</body>
+</html>
