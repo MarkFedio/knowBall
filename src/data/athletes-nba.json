@@ -59,9 +59,10 @@
       "Indianapolis Jets"
     ],
     "markets": [
-      "WAS",
+      "CHI",
+      "IND",
       "NY",
-      "IND"
+      "WAS"
     ],
     "positions": [],
     "activeYears": [
@@ -2437,6 +2438,7 @@
       "St. Louis Bombers"
     ],
     "markets": [
+      "CHI",
       "STL"
     ],
     "positions": [],
@@ -2491,8 +2493,9 @@
     ],
     "markets": [
       "BOS",
-      "IND",
+      "CHI",
       "DET",
+      "IND",
       "WAS"
     ],
     "positions": [
@@ -4435,10 +4438,11 @@
       "Toronto Huskies"
     ],
     "markets": [
-      "WAS",
-      "MIL",
+      "CHI",
       "CLE",
-      "TOR"
+      "MIL",
+      "TOR",
+      "WAS"
     ],
     "positions": [],
     "activeYears": [
@@ -6568,8 +6572,9 @@
       "Pittsburgh Ironmen"
     ],
     "markets": [
-      "PHI",
+      "CHI",
       "MIL",
+      "PHI",
       "PIT"
     ],
     "positions": [
@@ -11254,9 +11259,10 @@
       "Indianapolis Jets"
     ],
     "markets": [
-      "MIL",
+      "CHI",
+      "DET",
       "IND",
-      "DET"
+      "MIL"
     ],
     "positions": [
       "PG"
@@ -12399,6 +12405,7 @@
     ],
     "markets": [
       "BOS",
+      "CHI",
       "MIL",
       "WAS"
     ],
@@ -12451,6 +12458,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "DET"
     ],
     "positions": [],
@@ -12911,7 +12919,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1950,
@@ -13030,6 +13040,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "DET",
       "MIL"
     ],
@@ -13074,7 +13085,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1950,
@@ -13160,8 +13173,9 @@
       "Minneapolis Lakers"
     ],
     "markets": [
-      "WAS",
-      "MIN"
+      "CHI",
+      "MIN",
+      "WAS"
     ],
     "positions": [],
     "activeYears": [
@@ -13208,6 +13222,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "DET",
       "WAS"
     ],
@@ -13306,8 +13321,9 @@
       "TRI"
     ],
     "markets": [
-      "MIL",
+      "CHI",
       "DET",
+      "MIL",
       "WAS"
     ],
     "positions": [
@@ -13354,6 +13370,7 @@
       "St. Louis Bombers"
     ],
     "markets": [
+      "CHI",
       "STL"
     ],
     "positions": [],
@@ -13400,9 +13417,10 @@
       "Anderson Packers"
     ],
     "markets": [
-      "WAS",
+      "CHI",
+      "IND",
       "MIL",
-      "IND"
+      "WAS"
     ],
     "positions": [
       "SG"
@@ -13447,7 +13465,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1950,
@@ -13485,7 +13505,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1950,
@@ -13569,6 +13591,7 @@
       "Baltimore Bullets"
     ],
     "markets": [
+      "CHI",
       "WAS"
     ],
     "positions": [],
@@ -13609,7 +13632,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1950,
@@ -14804,6 +14829,7 @@
       "St. Louis Bombers"
     ],
     "markets": [
+      "CHI",
       "STL"
     ],
     "positions": [],
@@ -16048,6 +16074,7 @@
       "Anderson Packers"
     ],
     "markets": [
+      "CHI",
       "DET",
       "IND"
     ],
@@ -16096,6 +16123,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "DET"
     ],
     "positions": [],
@@ -16273,9 +16301,10 @@
       "Syracuse Nationals"
     ],
     "markets": [
+      "CHI",
       "DET",
-      "WAS",
-      "PHI"
+      "PHI",
+      "WAS"
     ],
     "positions": [],
     "activeYears": [
@@ -16513,6 +16542,7 @@
       "Anderson Packers"
     ],
     "markets": [
+      "CHI",
       "DET",
       "IND"
     ],
@@ -16891,6 +16921,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "PHI"
     ],
     "positions": [],
@@ -17334,6 +17365,7 @@
       "Sheboygan Red Skins"
     ],
     "markets": [
+      "CHI",
       "MIL"
     ],
     "positions": [],
@@ -17757,7 +17789,8 @@
       "TRI"
     ],
     "markets": [
-      "BOS"
+      "BOS",
+      "CHI"
     ],
     "positions": [],
     "activeYears": [
@@ -18374,6 +18407,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "MIN"
     ],
     "positions": [],
@@ -19106,8 +19140,9 @@
       "TRI"
     ],
     "markets": [
-      "ROC",
-      "MIL"
+      "CHI",
+      "MIL",
+      "ROC"
     ],
     "positions": [
       "SF"
@@ -19152,7 +19187,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1951,
@@ -19470,7 +19507,9 @@
     "teamNames": [
       "TRI"
     ],
-    "markets": [],
+    "markets": [
+      "CHI"
+    ],
     "positions": [],
     "activeYears": [
       1951,
@@ -19510,6 +19549,7 @@
       "TRI"
     ],
     "markets": [
+      "CHI",
       "NY"
     ],
     "positions": [
@@ -27935,7 +27975,8 @@
       "St. Louis Hawks"
     ],
     "markets": [
-      "ATL"
+      "ATL",
+      "DAL"
     ],
     "positions": [
       "SF"
@@ -32129,7 +32170,8 @@
       "Detroit Pistons"
     ],
     "markets": [
-      "DET"
+      "DET",
+      "NO"
     ],
     "positions": [
       "SF",
@@ -34587,7 +34629,8 @@
       "Chicago Zephyrs"
     ],
     "markets": [
-      "CHI"
+      "CHI",
+      "NY"
     ],
     "positions": [
       "PG",
@@ -34639,6 +34682,7 @@
     ],
     "markets": [
       "BAY",
+      "DAL",
       "LA"
     ],
     "positions": [
@@ -34875,12 +34919,13 @@
       "Syracuse Nationals"
     ],
     "markets": [
-      "CLE",
       "ATL",
-      "MIL",
-      "CIN",
-      "DET",
       "CHI",
+      "CIN",
+      "CLE",
+      "DAL",
+      "DET",
+      "MIL",
       "NY",
       "PHI"
     ],
@@ -35339,13 +35384,14 @@
       "San Francisco Warriors"
     ],
     "markets": [
+      "BAY",
       "CHA",
-      "UTA",
       "DAL",
       "DEN",
-      "WAS",
       "DET",
-      "BAY"
+      "LA",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "PF"
@@ -35532,9 +35578,10 @@
       "San Francisco Warriors"
     ],
     "markets": [
-      "PIT",
+      "BAY",
+      "MEM",
       "PHI",
-      "BAY"
+      "PIT"
     ],
     "positions": [
       "SG"
@@ -35598,13 +35645,14 @@
       "Chicago Zephyrs"
     ],
     "markets": [
-      "PIT",
-      "DEN",
       "ATL",
+      "CHI",
+      "DAL",
+      "DEN",
       "LA",
-      "WAS",
       "NY",
-      "CHI"
+      "PIT",
+      "WAS"
     ],
     "positions": [
       "C"
@@ -36651,11 +36699,12 @@
       "New York Knicks"
     ],
     "markets": [
-      "PIT",
-      "MIN",
       "CIN",
+      "MEM",
+      "MIN",
+      "NY",
       "PHI",
-      "NY"
+      "PIT"
     ],
     "positions": [
       "SG",
@@ -37010,6 +37059,7 @@
     ],
     "markets": [
       "BAY",
+      "LA",
       "WAS"
     ],
     "positions": [
@@ -37127,10 +37177,11 @@
       "New York Knicks"
     ],
     "markets": [
-      "MIN",
-      "NY",
+      "ATL",
       "DEN",
-      "ATL"
+      "HOU",
+      "MIN",
+      "NY"
     ],
     "positions": [
       "C"
@@ -37325,10 +37376,11 @@
       "Denver Rockets"
     ],
     "markets": [
-      "PHI",
-      "UTA",
+      "DAL",
+      "DEN",
       "MIA",
-      "DEN"
+      "PHI",
+      "UTA"
     ],
     "positions": [
       "PG",
@@ -37608,8 +37660,9 @@
     ],
     "markets": [
       "IND",
-      "NY",
+      "MEM",
       "MIN",
+      "NY",
       "WAS"
     ],
     "positions": [
@@ -38850,8 +38903,9 @@
       "San Francisco Warriors"
     ],
     "markets": [
-      "NY",
-      "BAY"
+      "BAY",
+      "HOU",
+      "NY"
     ],
     "positions": [
       "C",
@@ -39070,6 +39124,7 @@
       "Philadelphia 76ers"
     ],
     "markets": [
+      "NO",
       "PHI"
     ],
     "positions": [
@@ -39412,6 +39467,7 @@
       "Baltimore Bullets"
     ],
     "markets": [
+      "HOU",
       "NY",
       "WAS"
     ],
@@ -39906,10 +39962,11 @@
       "Detroit Pistons"
     ],
     "markets": [
-      "MIL",
-      "PHX",
       "BAY",
-      "DET"
+      "DET",
+      "LA",
+      "MIL",
+      "PHX"
     ],
     "positions": [
       "SG"
@@ -40007,6 +40064,7 @@
       "Baltimore Bullets"
     ],
     "markets": [
+      "NY",
       "WAS"
     ],
     "positions": [
@@ -40391,11 +40449,12 @@
       "Los Angeles Lakers"
     ],
     "markets": [
-      "DET",
-      "WAS",
-      "SEA",
       "CHI",
-      "LA"
+      "DET",
+      "LA",
+      "MEM",
+      "SEA",
+      "WAS"
     ],
     "positions": [
       "PF",
@@ -40455,11 +40514,12 @@
       "Chicago Bulls"
     ],
     "markets": [
-      "LA",
-      "WAS",
+      "CHI",
       "CIN",
+      "LA",
       "MIL",
-      "CHI"
+      "SD",
+      "WAS"
     ],
     "positions": [
       "SG",
@@ -40572,8 +40632,9 @@
       "Cincinnati Royals"
     ],
     "markets": [
-      "HOU",
-      "CIN"
+      "CIN",
+      "DAL",
+      "HOU"
     ],
     "positions": [
       "PF"
@@ -40700,10 +40761,11 @@
       "Los Angeles Lakers"
     ],
     "markets": [
-      "SA",
-      "LA",
       "ATL",
-      "PHX"
+      "LA",
+      "PHX",
+      "SA",
+      "SD"
     ],
     "positions": [
       "SF"
@@ -40756,9 +40818,10 @@
       "Cincinnati Royals"
     ],
     "markets": [
+      "CIN",
       "IND",
-      "STL",
-      "CIN"
+      "MEM",
+      "STL"
     ],
     "positions": [
       "PG",
@@ -41041,6 +41104,7 @@
     ],
     "markets": [
       "BAY",
+      "HOU",
       "NY"
     ],
     "positions": [
@@ -41756,7 +41820,9 @@
       "Oakland Oaks"
     ],
     "markets": [
-      "BAY"
+      "BAY",
+      "LA",
+      "MEM"
     ],
     "positions": [
       "SG",
@@ -41907,7 +41973,9 @@
       "Anaheim Amigos"
     ],
     "markets": [
+      "DAL",
       "DEN",
+      "HOU",
       "LA"
     ],
     "positions": [
@@ -42031,10 +42099,11 @@
       "Anaheim Amigos"
     ],
     "markets": [
-      "UTA",
-      "NY",
+      "DAL",
       "DEN",
-      "LA"
+      "LA",
+      "NY",
+      "UTA"
     ],
     "positions": [
       "PG"
@@ -42133,8 +42202,11 @@
       "Oakland Oaks"
     ],
     "markets": [
+      "BAY",
+      "DAL",
+      "MEM",
       "MIA",
-      "BAY"
+      "NO"
     ],
     "positions": [
       "SF"
@@ -42284,11 +42356,14 @@
       "Oakland Oaks"
     ],
     "markets": [
-      "POR",
-      "STL",
+      "BAY",
       "CHA",
+      "DAL",
       "DEN",
-      "BAY"
+      "MEM",
+      "NO",
+      "POR",
+      "STL"
     ],
     "positions": [
       "SG"
@@ -42337,6 +42412,7 @@
     ],
     "markets": [
       "CHA",
+      "HOU",
       "LA"
     ],
     "positions": [
@@ -42387,9 +42463,10 @@
       "San Francisco Warriors"
     ],
     "markets": [
-      "PIT",
+      "BAY",
+      "MEM",
       "PHX",
-      "BAY"
+      "PIT"
     ],
     "positions": [
       "PF"
@@ -42536,8 +42613,9 @@
       "Pittsburgh Pipers"
     ],
     "markets": [
-      "MIN",
       "BAY",
+      "HOU",
+      "MIN",
       "PIT"
     ],
     "positions": [
@@ -42780,10 +42858,11 @@
       "NJA"
     ],
     "markets": [
-      "NY",
+      "BAY",
       "DAL",
       "DEN",
-      "BAY"
+      "HOU",
+      "NY"
     ],
     "positions": [
       "SG"
@@ -43091,8 +43170,9 @@
       "Indiana Pacers"
     ],
     "markets": [
-      "UTA",
-      "IND"
+      "IND",
+      "MEM",
+      "UTA"
     ],
     "positions": [
       "SF"
@@ -43139,7 +43219,8 @@
       "DLC"
     ],
     "markets": [
-      "CHI"
+      "CHI",
+      "DAL"
     ],
     "positions": [
       "SG"
@@ -43187,7 +43268,8 @@
       "Kentucky Colonels"
     ],
     "markets": [
-      "IND"
+      "IND",
+      "MEM"
     ],
     "positions": [
       "SG"
@@ -43535,11 +43617,14 @@
       "NJA"
     ],
     "markets": [
-      "SA",
-      "PIT",
       "CHA",
+      "HOU",
+      "IND",
+      "MEM",
       "NY",
-      "IND"
+      "PIT",
+      "SA",
+      "SD"
     ],
     "positions": [
       "PF"
@@ -43600,7 +43685,9 @@
     ],
     "markets": [
       "BAY",
-      "HOU"
+      "DAL",
+      "HOU",
+      "MEM"
     ],
     "positions": [
       "PG",
@@ -43708,9 +43795,11 @@
       "St. Louis Hawks"
     ],
     "markets": [
+      "ATL",
       "CHA",
-      "NY",
-      "ATL"
+      "LA",
+      "MEM",
+      "NY"
     ],
     "positions": [
       "PG",
@@ -43865,9 +43954,10 @@
       "St. Louis Hawks"
     ],
     "markets": [
+      "ATL",
       "IND",
-      "MIL",
-      "ATL"
+      "LA",
+      "MIL"
     ],
     "positions": [
       "SF"
@@ -43918,6 +44008,7 @@
       "DLC"
     ],
     "markets": [
+      "DAL",
       "IND",
       "SA"
     ],
@@ -43970,8 +44061,9 @@
       "Carolina Cougars"
     ],
     "markets": [
-      "IND",
-      "CHA"
+      "CHA",
+      "DAL",
+      "IND"
     ],
     "positions": [
       "C"
@@ -44113,6 +44205,7 @@
       "Kentucky Colonels"
     ],
     "markets": [
+      "HOU",
       "IND"
     ],
     "positions": [
@@ -44265,7 +44358,8 @@
     ],
     "markets": [
       "BOS",
-      "HOU"
+      "HOU",
+      "SD"
     ],
     "positions": [
       "PG"
@@ -44505,8 +44599,9 @@
       "Denver Rockets"
     ],
     "markets": [
+      "DEN",
       "IND",
-      "DEN"
+      "MEM"
     ],
     "positions": [
       "SF"
@@ -44740,7 +44835,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "PG"
     ],
@@ -44780,7 +44877,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "PF"
     ],
@@ -44822,7 +44921,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "SF"
     ],
@@ -44862,7 +44963,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "C"
     ],
@@ -44912,9 +45015,10 @@
       "DLC"
     ],
     "markets": [
-      "WAS",
+      "DAL",
+      "IND",
       "UTA",
-      "IND"
+      "WAS"
     ],
     "positions": [
       "SF",
@@ -44964,6 +45068,7 @@
       "Kentucky Colonels"
     ],
     "markets": [
+      "DAL",
       "IND"
     ],
     "positions": [
@@ -45022,11 +45127,13 @@
       "DLC"
     ],
     "markets": [
-      "POR",
       "CHA",
-      "PIT",
+      "DAL",
       "DEN",
-      "NY"
+      "HOU",
+      "NY",
+      "PIT",
+      "POR"
     ],
     "positions": [
       "SG",
@@ -45075,7 +45182,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "PF"
     ],
@@ -45181,9 +45290,11 @@
       "HSM"
     ],
     "markets": [
-      "NY",
+      "DAL",
       "DEN",
-      "IND"
+      "HOU",
+      "IND",
+      "NY"
     ],
     "positions": [
       "PF",
@@ -45237,8 +45348,9 @@
       "Denver Rockets"
     ],
     "markets": [
-      "NY",
-      "DEN"
+      "DEN",
+      "NO",
+      "NY"
     ],
     "positions": [
       "PF"
@@ -45295,12 +45407,13 @@
       "Detroit Pistons"
     ],
     "markets": [
-      "UTA",
-      "WAS",
+      "CHA",
+      "DET",
+      "MEM",
       "NY",
       "PIT",
-      "CHA",
-      "DET"
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "SF"
@@ -45515,7 +45628,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "PG"
     ],
@@ -45607,7 +45722,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "SG"
     ],
@@ -45647,7 +45764,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -45779,6 +45898,7 @@
       "New York Nets"
     ],
     "markets": [
+      "HOU",
       "NY"
     ],
     "positions": [
@@ -45876,7 +45996,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "SF"
     ],
@@ -46004,7 +46126,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "SG"
     ],
@@ -46046,7 +46170,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "PF"
     ],
@@ -46089,7 +46215,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "PG"
     ],
@@ -46249,11 +46377,12 @@
       "St. Louis Hawks"
     ],
     "markets": [
-      "UTA",
+      "ATL",
       "DEN",
       "DET",
-      "WAS",
-      "ATL"
+      "LA",
+      "UTA",
+      "WAS"
     ],
     "positions": [],
     "activeYears": [
@@ -46659,9 +46788,10 @@
       "NOB"
     ],
     "markets": [
+      "BAY",
       "DEN",
-      "WAS",
-      "BAY"
+      "NO",
+      "WAS"
     ],
     "positions": [
       "PG"
@@ -46707,7 +46837,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -46747,7 +46879,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -46795,8 +46929,10 @@
       "NOB"
     ],
     "markets": [
-      "WAS",
-      "UTA"
+      "MEM",
+      "NO",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "C",
@@ -46847,8 +46983,10 @@
       "NOB"
     ],
     "markets": [
-      "WAS",
-      "UTA"
+      "MEM",
+      "NO",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "PG",
@@ -46892,7 +47030,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [
       "SG"
     ],
@@ -46942,9 +47082,10 @@
       "NOB"
     ],
     "markets": [
-      "WAS",
+      "BAY",
       "CHA",
-      "BAY"
+      "NO",
+      "WAS"
     ],
     "positions": [
       "SF"
@@ -46991,7 +47132,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [
       "SG"
     ],
@@ -47043,8 +47186,10 @@
     ],
     "markets": [
       "IND",
-      "WAS",
-      "UTA"
+      "NO",
+      "SD",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "C",
@@ -47093,7 +47238,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -47282,9 +47429,10 @@
       "Minnesota Muskies"
     ],
     "markets": [
-      "NY",
       "IND",
-      "MIN"
+      "MEM",
+      "MIN",
+      "NY"
     ],
     "positions": [
       "C"
@@ -47348,12 +47496,13 @@
       "Minnesota Muskies"
     ],
     "markets": [
-      "LA",
-      "SA",
-      "IND",
-      "UTA",
       "DAL",
-      "MIN"
+      "IND",
+      "LA",
+      "MEM",
+      "MIN",
+      "SA",
+      "UTA"
     ],
     "positions": [
       "SG",
@@ -47404,6 +47553,7 @@
       "Minnesota Muskies"
     ],
     "markets": [
+      "MEM",
       "MIN"
     ],
     "positions": [
@@ -47448,6 +47598,7 @@
       "Minnesota Muskies"
     ],
     "markets": [
+      "MEM",
       "MIN"
     ],
     "positions": [
@@ -47551,9 +47702,11 @@
     ],
     "markets": [
       "CHA",
-      "NY",
       "IND",
-      "MIN"
+      "MEM",
+      "MIN",
+      "NO",
+      "NY"
     ],
     "positions": [
       "SG",
@@ -47658,6 +47811,7 @@
       "Minnesota Muskies"
     ],
     "markets": [
+      "MEM",
       "MIN"
     ],
     "positions": [
@@ -47976,8 +48130,9 @@
       "NJA"
     ],
     "markets": [
-      "NY",
-      "MIN"
+      "HOU",
+      "MIN",
+      "NY"
     ],
     "positions": [
       "SF",
@@ -48030,8 +48185,9 @@
       "Oakland Oaks"
     ],
     "markets": [
-      "PIT",
-      "BAY"
+      "BAY",
+      "NY",
+      "PIT"
     ],
     "positions": [
       "SG",
@@ -48127,7 +48283,9 @@
     "teamNames": [
       "NJA"
     ],
-    "markets": [],
+    "markets": [
+      "NY"
+    ],
     "positions": [
       "PF"
     ],
@@ -48305,7 +48463,9 @@
     "teamNames": [
       "NJA"
     ],
-    "markets": [],
+    "markets": [
+      "NY"
+    ],
     "positions": [
       "SF"
     ],
@@ -48348,7 +48508,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -48448,10 +48610,11 @@
       "Minnesota Pipers"
     ],
     "markets": [
-      "NY",
+      "LA",
       "MIA",
-      "PIT",
-      "MIN"
+      "MIN",
+      "NY",
+      "PIT"
     ],
     "positions": [
       "PF",
@@ -48501,6 +48664,7 @@
       "Pittsburgh Pipers"
     ],
     "markets": [
+      "NY",
       "PIT"
     ],
     "positions": [],
@@ -48557,9 +48721,10 @@
       "Minnesota Pipers"
     ],
     "markets": [
-      "UTA",
+      "MEM",
+      "MIN",
       "PIT",
-      "MIN"
+      "UTA"
     ],
     "positions": [
       "PG",
@@ -48607,6 +48772,7 @@
       "Minnesota Muskies"
     ],
     "markets": [
+      "HOU",
       "MIN"
     ],
     "positions": [
@@ -48702,8 +48868,9 @@
     ],
     "markets": [
       "CHA",
-      "MIN",
-      "IND"
+      "IND",
+      "MEM",
+      "MIN"
     ],
     "positions": [
       "C"
@@ -48745,7 +48912,9 @@
     "teamNames": [
       "NJA"
     ],
-    "markets": [],
+    "markets": [
+      "NY"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -48923,7 +49092,8 @@
       "DLC"
     ],
     "markets": [
-      "BAY"
+      "BAY",
+      "DAL"
     ],
     "positions": [],
     "activeYears": [
@@ -49111,7 +49281,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "C"
     ],
@@ -49209,9 +49381,10 @@
     ],
     "markets": [
       "CHA",
+      "LA",
+      "MEM",
       "MIA",
-      "PIT",
-      "LA"
+      "PIT"
     ],
     "positions": [
       "SF",
@@ -49353,6 +49526,7 @@
       "Pittsburgh Pipers"
     ],
     "markets": [
+      "LA",
       "MIN",
       "PIT"
     ],
@@ -49445,7 +49619,8 @@
       "Oakland Oaks"
     ],
     "markets": [
-      "BAY"
+      "BAY",
+      "NO"
     ],
     "positions": [
       "SF"
@@ -49541,8 +49716,10 @@
       "New York Nets"
     ],
     "markets": [
-      "PIT",
-      "NY"
+      "DAL",
+      "MEM",
+      "NY",
+      "PIT"
     ],
     "positions": [
       "PG",
@@ -49721,6 +49898,7 @@
     ],
     "markets": [
       "CHA",
+      "HOU",
       "NY"
     ],
     "positions": [
@@ -49896,7 +50074,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [],
     "activeYears": [
       1968,
@@ -50085,8 +50265,9 @@
       "Minnesota Pipers"
     ],
     "markets": [
-      "PIT",
-      "MIN"
+      "MEM",
+      "MIN",
+      "PIT"
     ],
     "positions": [
       "PG"
@@ -50137,7 +50318,9 @@
       "Kentucky Colonels"
     ],
     "markets": [
-      "IND"
+      "DAL",
+      "IND",
+      "NO"
     ],
     "positions": [
       "C"
@@ -51615,8 +51798,9 @@
     "markets": [
       "ATL",
       "CHI",
-      "POR",
-      "PHI"
+      "DAL",
+      "PHI",
+      "POR"
     ],
     "positions": [
       "SF",
@@ -51774,11 +51958,12 @@
       "Oakland Oaks"
     ],
     "markets": [
+      "BAY",
       "DEN",
-      "MIA",
       "IND",
-      "WAS",
-      "BAY"
+      "MIA",
+      "SD",
+      "WAS"
     ],
     "positions": [
       "SG",
@@ -52054,9 +52239,12 @@
     ],
     "markets": [
       "IND",
+      "LA",
+      "MEM",
       "MIA",
+      "PHI",
       "PIT",
-      "PHI"
+      "SD"
     ],
     "positions": [
       "C"
@@ -52484,10 +52672,11 @@
       "Kentucky Colonels"
     ],
     "markets": [
-      "STL",
-      "NY",
       "DAL",
-      "IND"
+      "IND",
+      "NY",
+      "SD",
+      "STL"
     ],
     "positions": [
       "C"
@@ -52543,10 +52732,11 @@
       "Milwaukee Bucks"
     ],
     "markets": [
-      "MIA",
       "BOS",
       "CHA",
+      "DAL",
       "DET",
+      "MIA",
       "MIL"
     ],
     "positions": [
@@ -52705,6 +52895,7 @@
       "NOB"
     ],
     "markets": [
+      "NO",
       "UTA"
     ],
     "positions": [
@@ -52757,7 +52948,11 @@
       "MMP",
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "MEM",
+      "NO",
+      "SD"
+    ],
     "positions": [
       "PF",
       "C"
@@ -52930,7 +53125,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "PG"
     ],
@@ -52977,8 +53174,9 @@
       "MMF"
     ],
     "markets": [
+      "DEN",
       "IND",
-      "DEN"
+      "MEM"
     ],
     "positions": [
       "C",
@@ -53026,7 +53224,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "PF"
     ],
@@ -53068,7 +53268,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SF"
     ],
@@ -53217,6 +53419,7 @@
       "HSM"
     ],
     "markets": [
+      "HOU",
       "MIN"
     ],
     "positions": [
@@ -53263,7 +53466,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [
       "SG"
     ],
@@ -53305,7 +53510,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [],
     "activeYears": [
       1969,
@@ -53345,7 +53552,9 @@
     "teamNames": [
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "HOU"
+    ],
     "positions": [],
     "activeYears": [
       1969,
@@ -53389,6 +53598,7 @@
       "HSM"
     ],
     "markets": [
+      "HOU",
       "IND"
     ],
     "positions": [
@@ -53433,7 +53643,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [
       "SF"
     ],
@@ -53572,6 +53784,7 @@
       "Baltimore Bullets"
     ],
     "markets": [
+      "DAL",
       "DET",
       "WAS"
     ],
@@ -53680,6 +53893,7 @@
       "LAS"
     ],
     "markets": [
+      "LA",
       "NY"
     ],
     "positions": [
@@ -53722,7 +53936,9 @@
     "teamNames": [
       "LAS"
     ],
-    "markets": [],
+    "markets": [
+      "LA"
+    ],
     "positions": [],
     "activeYears": [
       1969,
@@ -53764,6 +53980,8 @@
       "LAS"
     ],
     "markets": [
+      "LA",
+      "MEM",
       "UTA"
     ],
     "positions": [
@@ -53808,7 +54026,9 @@
     "teamNames": [
       "LAS"
     ],
-    "markets": [],
+    "markets": [
+      "LA"
+    ],
     "positions": [
       "SF"
     ],
@@ -53860,9 +54080,11 @@
       "LAS"
     ],
     "markets": [
+      "CHA",
+      "LA",
+      "SD",
       "UTA",
-      "WAS",
-      "CHA"
+      "WAS"
     ],
     "positions": [
       "SG"
@@ -53912,8 +54134,9 @@
       "LAS"
     ],
     "markets": [
-      "UTA",
-      "CHA"
+      "CHA",
+      "LA",
+      "UTA"
     ],
     "positions": [
       "SF"
@@ -53969,9 +54192,13 @@
       "LAS"
     ],
     "markets": [
+      "CHA",
+      "DAL",
+      "LA",
+      "MEM",
       "SA",
-      "UTA",
-      "CHA"
+      "SD",
+      "UTA"
     ],
     "positions": [
       "SG"
@@ -54019,7 +54246,10 @@
       "DLC",
       "HSM"
     ],
-    "markets": [],
+    "markets": [
+      "DAL",
+      "HOU"
+    ],
     "positions": [
       "PG"
     ],
@@ -54133,9 +54363,10 @@
       "DLC"
     ],
     "markets": [
-      "WAS",
+      "DAL",
+      "MEM",
       "UTA",
-      "DAL"
+      "WAS"
     ],
     "positions": [
       "SG",
@@ -54231,8 +54462,9 @@
       "New York Nets"
     ],
     "markets": [
-      "PIT",
-      "NY"
+      "DAL",
+      "NY",
+      "PIT"
     ],
     "positions": [
       "C"
@@ -54412,7 +54644,9 @@
     "teamNames": [
       "LAS"
     ],
-    "markets": [],
+    "markets": [
+      "LA"
+    ],
     "positions": [],
     "activeYears": [
       1969,
@@ -54542,7 +54776,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [],
     "activeYears": [
       1969,
@@ -54671,8 +54907,9 @@
       "LAS"
     ],
     "markets": [
-      "NY",
-      "DAL"
+      "DAL",
+      "LA",
+      "NY"
     ],
     "positions": [
       "C"
@@ -55128,8 +55365,9 @@
       "Buffalo Braves"
     ],
     "markets": [
-      "WAS",
-      "LA"
+      "LA",
+      "MEM",
+      "WAS"
     ],
     "positions": [
       "SG"
@@ -55288,10 +55526,11 @@
       "Cincinnati Royals"
     ],
     "markets": [
-      "PHI",
-      "NY",
+      "CIN",
       "CLE",
-      "CIN"
+      "MEM",
+      "NY",
+      "PHI"
     ],
     "positions": [
       "C"
@@ -55606,9 +55845,10 @@
       "Chicago Bulls"
     ],
     "markets": [
+      "CHI",
       "IND",
-      "NY",
-      "CHI"
+      "MEM",
+      "NY"
     ],
     "positions": [
       "SF"
@@ -55655,7 +55895,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "C"
     ],
@@ -55778,9 +56020,10 @@
       "MMF"
     ],
     "markets": [
-      "PHI",
+      "DEN",
       "IND",
-      "DEN"
+      "MEM",
+      "PHI"
     ],
     "positions": [
       "SG"
@@ -56031,7 +56274,11 @@
       "MMF"
     ],
     "markets": [
-      "SA"
+      "DAL",
+      "LA",
+      "MEM",
+      "SA",
+      "SD"
     ],
     "positions": [
       "SF"
@@ -56216,7 +56463,9 @@
     "teamNames": [
       "NOB"
     ],
-    "markets": [],
+    "markets": [
+      "NO"
+    ],
     "positions": [],
     "activeYears": [
       1970,
@@ -56257,7 +56506,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [],
     "activeYears": [
       1970,
@@ -56307,8 +56558,11 @@
       "NOB"
     ],
     "markets": [
-      "SA",
-      "PIT"
+      "DAL",
+      "MEM",
+      "NO",
+      "PIT",
+      "SA"
     ],
     "positions": [
       "SG"
@@ -56363,10 +56617,11 @@
       "LAS"
     ],
     "markets": [
-      "SEA",
       "DEN",
-      "WAS",
-      "UTA"
+      "LA",
+      "SEA",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "SF",
@@ -56471,6 +56726,7 @@
       "Washington Caps"
     ],
     "markets": [
+      "SD",
       "WAS"
     ],
     "positions": [
@@ -56569,7 +56825,9 @@
       "MMP",
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "C"
     ],
@@ -57059,9 +57317,10 @@
       "New York Nets"
     ],
     "markets": [
-      "PHX",
       "ATL",
-      "NY"
+      "DAL",
+      "NY",
+      "PHX"
     ],
     "positions": [
       "C"
@@ -57606,7 +57865,8 @@
       "Denver Rockets"
     ],
     "markets": [
-      "DEN"
+      "DEN",
+      "MEM"
     ],
     "positions": [
       "PF",
@@ -57824,8 +58084,9 @@
       "MMF"
     ],
     "markets": [
+      "IND",
       "LA",
-      "IND"
+      "MEM"
     ],
     "positions": [
       "PF",
@@ -58058,6 +58319,7 @@
       "Pittsburgh Pipers"
     ],
     "markets": [
+      "MEM",
       "MIL",
       "PIT"
     ],
@@ -58398,7 +58660,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SF"
     ],
@@ -58438,7 +58702,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "PF"
     ],
@@ -58535,7 +58801,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SF"
     ],
@@ -58578,7 +58846,9 @@
     "teamNames": [
       "MMF"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "C"
     ],
@@ -59072,7 +59342,8 @@
       "Boston Celtics"
     ],
     "markets": [
-      "BOS"
+      "BOS",
+      "SD"
     ],
     "positions": [
       "C",
@@ -60743,6 +61014,7 @@
     ],
     "markets": [
       "IND",
+      "MEM",
       "UTA"
     ],
     "positions": [
@@ -61124,8 +61396,9 @@
       "SDA"
     ],
     "markets": [
+      "CHA",
       "NY",
-      "CHA"
+      "SD"
     ],
     "positions": [
       "SG"
@@ -61316,10 +61589,12 @@
       "Pittsburgh Condors"
     ],
     "markets": [
-      "LA",
       "DEN",
       "IND",
-      "PIT"
+      "LA",
+      "MEM",
+      "PIT",
+      "SD"
     ],
     "positions": [
       "PG"
@@ -61463,6 +61738,7 @@
     "markets": [
       "BOS",
       "CHI",
+      "MEM",
       "NY"
     ],
     "positions": [
@@ -62391,8 +62667,10 @@
       "MMP"
     ],
     "markets": [
-      "SA",
-      "CHI"
+      "CHI",
+      "DAL",
+      "MEM",
+      "SA"
     ],
     "positions": [
       "C",
@@ -62447,9 +62725,10 @@
       "Carolina Cougars"
     ],
     "markets": [
-      "NY",
+      "CHA",
       "IND",
-      "CHA"
+      "MEM",
+      "NY"
     ],
     "positions": [
       "SF"
@@ -63098,6 +63377,7 @@
       "Virginia Squires"
     ],
     "markets": [
+      "DAL",
       "WAS"
     ],
     "positions": [
@@ -63323,6 +63603,7 @@
       "Baltimore Bullets"
     ],
     "markets": [
+      "DAL",
       "HOU",
       "WAS"
     ],
@@ -64612,12 +64893,13 @@
       "Denver Rockets"
     ],
     "markets": [
-      "DEN",
-      "SA",
-      "KC",
       "CLE",
+      "DEN",
+      "IND",
+      "KC",
       "LA",
-      "IND"
+      "SA",
+      "SD"
     ],
     "positions": [
       "C",
@@ -64764,7 +65046,9 @@
       "MMT",
       "MMP"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SG"
     ],
@@ -64817,10 +65101,11 @@
       "Phoenix Suns"
     ],
     "markets": [
-      "SA",
+      "MEM",
       "NY",
+      "PHX",
       "POR",
-      "PHX"
+      "SA"
     ],
     "positions": [
       "PG",
@@ -64981,8 +65266,9 @@
     "markets": [
       "IND",
       "LA",
-      "WAS",
-      "UTA"
+      "MEM",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "SG",
@@ -65101,13 +65387,14 @@
       "MMP"
     ],
     "markets": [
+      "CHA",
       "DET",
-      "IND",
-      "POR",
       "HOU",
+      "IND",
+      "MEM",
+      "POR",
       "SA",
-      "STL",
-      "CHA"
+      "STL"
     ],
     "positions": [
       "C",
@@ -65471,9 +65758,10 @@
     ],
     "markets": [
       "ATL",
-      "UTA",
+      "CHA",
+      "MEM",
       "STL",
-      "CHA"
+      "UTA"
     ],
     "positions": [
       "C"
@@ -65732,7 +66020,9 @@
       "DLC"
     ],
     "markets": [
-      "IND"
+      "DAL",
+      "IND",
+      "MEM"
     ],
     "positions": [
       "SF",
@@ -66067,7 +66357,8 @@
     ],
     "markets": [
       "IND",
-      "PIT"
+      "PIT",
+      "SD"
     ],
     "positions": [
       "PG"
@@ -66206,7 +66497,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "SG"
     ],
@@ -66957,7 +67250,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [],
     "activeYears": [
       1972,
@@ -67145,7 +67440,8 @@
       "Detroit Pistons"
     ],
     "markets": [
-      "DET"
+      "DET",
+      "MEM"
     ],
     "positions": [
       "SG"
@@ -67242,10 +67538,11 @@
       "DLC"
     ],
     "markets": [
+      "DAL",
       "HOU",
-      "UTA",
+      "SA",
       "STL",
-      "SA"
+      "UTA"
     ],
     "positions": [
       "SF",
@@ -67481,6 +67778,7 @@
       "MMP"
     ],
     "markets": [
+      "MEM",
       "NY"
     ],
     "positions": [
@@ -67524,7 +67822,9 @@
     "teamNames": [
       "MMP"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "PG"
     ],
@@ -68164,7 +68464,8 @@
     ],
     "markets": [
       "IND",
-      "LA"
+      "LA",
+      "SD"
     ],
     "positions": [
       "SF"
@@ -68528,7 +68829,9 @@
     "teamNames": [
       "MMT"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "PF"
     ],
@@ -68571,7 +68874,9 @@
     "teamNames": [
       "MMT"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SF"
     ],
@@ -68667,6 +68972,8 @@
       "Virginia Squires"
     ],
     "markets": [
+      "MEM",
+      "SD",
       "WAS"
     ],
     "positions": [
@@ -68861,7 +69168,9 @@
     "teamNames": [
       "SDA"
     ],
-    "markets": [],
+    "markets": [
+      "SD"
+    ],
     "positions": [
       "SG"
     ],
@@ -69009,8 +69318,9 @@
       "Kentucky Colonels"
     ],
     "markets": [
-      "PHX",
-      "IND"
+      "IND",
+      "MEM",
+      "PHX"
     ],
     "positions": [
       "SF"
@@ -69507,7 +69817,9 @@
     "teamNames": [
       "SDA"
     ],
-    "markets": [],
+    "markets": [
+      "SD"
+    ],
     "positions": [
       "PF"
     ],
@@ -69552,7 +69864,8 @@
       "Phoenix Suns"
     ],
     "markets": [
-      "PHX"
+      "PHX",
+      "SD"
     ],
     "positions": [
       "SF"
@@ -69800,8 +70113,9 @@
       "MMT"
     ],
     "markets": [
-      "WAS",
-      "UTA"
+      "MEM",
+      "UTA",
+      "WAS"
     ],
     "positions": [
       "PF"
@@ -69892,7 +70206,9 @@
     "teamNames": [
       "DLC"
     ],
-    "markets": [],
+    "markets": [
+      "DAL"
+    ],
     "positions": [
       "PF"
     ],
@@ -69940,8 +70256,9 @@
       "Phoenix Suns"
     ],
     "markets": [
-      "WAS",
-      "PHX"
+      "PHX",
+      "SD",
+      "WAS"
     ],
     "positions": [
       "SF"
@@ -70137,8 +70454,9 @@
       "Detroit Pistons"
     ],
     "markets": [
+      "DET",
       "KC",
-      "DET"
+      "SD"
     ],
     "positions": [
       "SF"
@@ -70235,8 +70553,10 @@
       "Seattle SuperSonics"
     ],
     "markets": [
-      "WAS",
-      "SEA"
+      "MEM",
+      "SD",
+      "SEA",
+      "WAS"
     ],
     "positions": [
       "PF"
@@ -70386,6 +70706,7 @@
     ],
     "markets": [
       "CLE",
+      "DAL",
       "SA"
     ],
     "positions": [
@@ -70492,7 +70813,9 @@
     "teamNames": [
       "SDA"
     ],
-    "markets": [],
+    "markets": [
+      "SD"
+    ],
     "positions": [
       "SF"
     ],
@@ -71254,8 +71577,9 @@
       "Atlanta Hawks"
     ],
     "markets": [
-      "STL",
-      "ATL"
+      "ATL",
+      "SD",
+      "STL"
     ],
     "positions": [
       "PG"
@@ -71756,7 +72080,8 @@
     ],
     "markets": [
       "NY",
-      "SA"
+      "SA",
+      "SD"
     ],
     "positions": [
       "PF"
@@ -72029,7 +72354,9 @@
       "MMS",
       "MMT"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SG"
     ],
@@ -72133,12 +72460,13 @@
       "SDA"
     ],
     "markets": [
-      "SA",
-      "POR",
       "CHI",
       "HOU",
-      "PHI",
       "IND",
+      "PHI",
+      "POR",
+      "SA",
+      "SD",
       "STL"
     ],
     "positions": [
@@ -72254,8 +72582,9 @@
       "SDA"
     ],
     "markets": [
+      "IND",
       "LA",
-      "IND"
+      "SD"
     ],
     "positions": [
       "PG",
@@ -72347,7 +72676,9 @@
     "teamNames": [
       "SDA"
     ],
-    "markets": [],
+    "markets": [
+      "SD"
+    ],
     "positions": [
       "SG"
     ],
@@ -72394,6 +72725,7 @@
       "MMT"
     ],
     "markets": [
+      "MEM",
       "UTA"
     ],
     "positions": [
@@ -72551,7 +72883,8 @@
       "Denver Rockets"
     ],
     "markets": [
-      "DEN"
+      "DEN",
+      "SD"
     ],
     "positions": [
       "SG"
@@ -72860,6 +73193,7 @@
       "MMT"
     ],
     "markets": [
+      "MEM",
       "PHX"
     ],
     "positions": [
@@ -73738,7 +74072,8 @@
       "MMT"
     ],
     "markets": [
-      "IND"
+      "IND",
+      "MEM"
     ],
     "positions": [
       "SF"
@@ -73832,7 +74167,8 @@
       "Indiana Pacers"
     ],
     "markets": [
-      "IND"
+      "IND",
+      "SD"
     ],
     "positions": [
       "PG",
@@ -74010,7 +74346,9 @@
     "teamNames": [
       "MMT"
     ],
-    "markets": [],
+    "markets": [
+      "MEM"
+    ],
     "positions": [
       "SG"
     ],
@@ -74191,6 +74529,7 @@
       "New York Nets"
     ],
     "markets": [
+      "MEM",
       "NY"
     ],
     "positions": [
@@ -77082,7 +77421,9 @@
     "teamNames": [
       "SDA"
     ],
-    "markets": [],
+    "markets": [
+      "SD"
+    ],
     "positions": [
       "SG"
     ],
@@ -77196,7 +77537,9 @@
     "teamNames": [
       "SDA"
     ],
-    "markets": [],
+    "markets": [
+      "SD"
+    ],
     "positions": [
       "C"
     ],
@@ -77421,7 +77764,8 @@
       "SDA"
     ],
     "markets": [
-      "POR"
+      "POR",
+      "SD"
     ],
     "positions": [
       "PG"
@@ -79215,10 +79559,11 @@
       "SDS"
     ],
     "markets": [
-      "SAC",
-      "KC",
       "CHI",
-      "SA"
+      "KC",
+      "SA",
+      "SAC",
+      "SD"
     ],
     "positions": [
       "PF",

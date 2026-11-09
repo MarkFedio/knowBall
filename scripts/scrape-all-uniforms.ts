@@ -79,6 +79,7 @@ async function scrapeSport(sportKey: string) {
   // Build lookups
   const byId = new Map<string, Athlete>();
   const byName = new Map<string, Athlete[]>();
+  const byCleanName = new Map<string, Athlete[]>();
 
   for (const a of athletes) {
     byId.set(a.id, a);
@@ -86,6 +87,11 @@ async function scrapeSport(sportKey: string) {
     const existing = byName.get(norm) || [];
     existing.push(a);
     byName.set(norm, existing);
+
+    const stripped = a.name.toLowerCase().replace(/[\s.'"-]+/g, '');
+    const strippedExisting = byCleanName.get(stripped) || [];
+    strippedExisting.push(a);
+    byCleanName.set(stripped, strippedExisting);
   }
 
   // Track player numbers: Map<Athlete, Set<number>>
@@ -170,6 +176,15 @@ async function scrapeSport(sportKey: string) {
         if (candidates && candidates.length === 1) {
           matchedAthlete = candidates[0];
         } else if (candidates && candidates.length > 1) {
+          matchedAthlete = candidates[0];
+        }
+      }
+
+      // Match 3: By Stripped Name (e.g. "R.A. Dickey" vs "R. A. Dickey")
+      if (!matchedAthlete) {
+        const strippedClean = cleanName.toLowerCase().replace(/[\s.'"-]+/g, '');
+        const candidates = byCleanName.get(strippedClean);
+        if (candidates && candidates.length >= 1) {
           matchedAthlete = candidates[0];
         }
       }

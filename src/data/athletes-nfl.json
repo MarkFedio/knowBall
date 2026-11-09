@@ -1119651,7 +1119651,10 @@
       "turnovers": 0,
       "wins": 118
     },
-    "popularityScore": 92
+    "popularityScore": 92,
+    "mvpMarkets": [
+      "BAL"
+    ]
   },
   {
     "id": "ath_nfl_starr_bart",
@@ -1119690,7 +1119693,11 @@
       "turnovers": 0,
       "wins": 94
     },
-    "popularityScore": 90
+    "popularityScore": 90,
+    "mvpMarkets": [
+      "GB",
+      "MIL"
+    ]
   },
   {
     "id": "ath_nfl_tittle_ya",
@@ -1119734,7 +1119741,10 @@
       "turnovers": 0,
       "wins": 78
     },
-    "popularityScore": 82
+    "popularityScore": 82,
+    "mvpMarkets": [
+      "NY"
+    ]
   },
   {
     "id": "ath_nfl_graham_otto",
@@ -1119774,7 +1119784,10 @@
       "turnovers": 0,
       "wins": 57
     },
-    "popularityScore": 88
+    "popularityScore": 88,
+    "mvpMarkets": [
+      "CLE"
+    ]
   },
   {
     "id": "ath_nfl_layne_bobby",
@@ -1119868,7 +1119881,10 @@
       "turnovers": 0,
       "wins": 61
     },
-    "popularityScore": 82
+    "popularityScore": 82,
+    "mvpMarkets": [
+      "PHI"
+    ]
   },
   {
     "id": "ath_nfl_brodie_john",
@@ -1119905,7 +1119921,10 @@
       "turnovers": 0,
       "wins": 86
     },
-    "popularityScore": 75
+    "popularityScore": 75,
+    "mvpMarkets": [
+      "BAY"
+    ]
   },
   {
     "id": "ath_nfl_kemp_jack",
@@ -1119951,6 +1119970,10 @@
       "turnovers": 0,
       "wins": 62
     },
-    "popularityScore": 76
+    "popularityScore": 76,
+    "mvpMarkets": [
+      "BUF",
+      "NY"
+    ]
   }
 ]
