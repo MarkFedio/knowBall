@@ -359045,26 +359045,29 @@
       "CBJ",
       "LAK",
       "OTT",
-      "BOS"
+      "BOS",
+      "NYR"
     ],
     "teamNames": [
       "Columbus Blue Jackets",
       "Los Angeles Kings",
       "Ottawa Senators",
-      "Boston Bruins"
+      "Boston Bruins",
+      "New York Rangers"
     ],
     "markets": [
       "CLE",
       "LA",
       "OTT",
-      "BOS"
+      "BOS",
+      "NY"
     ],
     "positions": [
       "G"
     ],
     "activeYears": [
       2015,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       70
@@ -359080,7 +359083,7 @@
       "wins": 140,
       "blocks": 0
     },
-    "popularityScore": 20,
+    "popularityScore": 35,
     "championshipMarkets": [],
     "mvpMarkets": []
   },

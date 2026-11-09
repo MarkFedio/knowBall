@@ -5,6 +5,8 @@
 // Common sports nicknames & aliases mapped to canonical search terms
 export const NICKNAME_ALIASES: Record<string, string> = {
   // Basketball
+  'porzingis': 'kristaps porzingis',
+  'tingus pingus': 'kristaps porzingis',
   'aunonoby': 'og anunoby',
   'og aunonoby': 'og anunoby',
   'the joker': 'nikola jokic',
@@ -116,6 +118,7 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'edoo': 'edgerrin james',
 
   // Hockey
+  'korpisalo': 'joonas korpisalo',
   'ovi': 'alexander ovechkin',
   'ovie': 'alexander ovechkin',
   'the great one': 'wayne gretzky',
