@@ -215036,7 +215036,7 @@
     "draftPick": 46,
     "draftRound": 2,
     "draftYear": 2014,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -215048,7 +215048,9 @@
       "blocks": 126
     },
     "popularityScore": 50,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "NY"
+    ],
     "mvpMarkets": []
   },
   {
@@ -252267,7 +252269,7 @@
     ],
     "college": "Georgia Tech",
     "collegeConference": "ACC",
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -252278,8 +252280,10 @@
       "turnovers": 328,
       "blocks": 54
     },
-    "popularityScore": 20,
-    "championshipMarkets": [],
+    "popularityScore": 35,
+    "championshipMarkets": [
+      "NY"
+    ],
     "mvpMarkets": []
   },
   {
@@ -256236,7 +256240,7 @@
     "draftPick": 9,
     "draftRound": 1,
     "draftYear": 2022,
-    "championships": 0,
+    "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -256247,8 +256251,10 @@
       "turnovers": 342,
       "blocks": 97
     },
-    "popularityScore": 20,
-    "championshipMarkets": [],
+    "popularityScore": 35,
+    "championshipMarkets": [
+      "NY"
+    ],
     "mvpMarkets": []
   },
   {

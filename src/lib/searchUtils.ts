@@ -38,6 +38,8 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'sga': 'shai gilgeous-alexander',
   'kat': 'karl-anthony towns',
   'bam adebayo': 'edrice adebayo',
+  'grand theft alvarado': 'jose alvarado',
+  'alvarado': 'jose alvarado',
 
   // Baseball
   'chourio': 'jackson chourio',
