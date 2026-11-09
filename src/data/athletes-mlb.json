@@ -971013,36 +971013,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_693739",
-    "name": "Alexander Alberto",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_680916",
     "name": "Franco Aleman",
     "sports": [
@@ -971259,38 +971229,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_699130",
-    "name": "Jadher Areinamo",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "2B"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      45
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_695490",
     "name": "Edwin Arroyo",
     "sports": [
@@ -971399,38 +971337,6 @@
     "draftPick": 54,
     "draftRound": 2,
     "draftYear": 2021,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_699114",
-    "name": "Leo Balcazar",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "SS"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      85
-    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -972399,38 +972305,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_691330",
-    "name": "Moisés Chace",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      75
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_703601",
     "name": "Max Clark",
     "sports": [
@@ -972891,36 +972765,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_695778",
-    "name": "Aidan Curry",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_694753",
     "name": "Khristian Curtis",
     "sports": [
@@ -973007,38 +972851,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_699314",
-    "name": "David Davalillo",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      72
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_815589",
     "name": "Bo Davidson",
     "sports": [
@@ -973104,40 +972916,6 @@
     ],
     "college": "South Florida",
     "collegeConference": "SEC",
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_680695",
-    "name": "Brennen Davis",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "CF"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "college": "Basha HS",
-    "draftPick": 62,
-    "draftRound": 2,
-    "draftYear": 2018,
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -974384,38 +974162,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_691414",
-    "name": "Yorman Gómez",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      95
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_682445",
     "name": "Domingo Gonzalez",
     "sports": [
@@ -974708,71 +974454,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_692294",
-    "name": "Luis Gutierrez",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_694633",
-    "name": "Chase Hampton",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "college": "Texas Tech",
-    "collegeConference": "Big 12",
-    "draftPick": 190,
-    "draftRound": 6,
-    "draftYear": 2022,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_690440",
     "name": "Bradley Hanner",
     "sports": [
@@ -974840,42 +974521,6 @@
       68
     ],
     "college": "UNC Pembroke",
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_678184",
-    "name": "Garrett Hawkins",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      59
-    ],
-    "college": "University of British Columbia",
-    "draftPick": 280,
-    "draftRound": 9,
-    "draftYear": 2021,
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -976108,78 +975753,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_691947",
-    "name": "Ronan Kopp",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      83
-    ],
-    "college": "South Mountain CC",
-    "draftPick": 372,
-    "draftRound": 12,
-    "draftYear": 2021,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_695667",
-    "name": "Ben Kudrna",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      59
-    ],
-    "college": "Blue Valley Southwest HS",
-    "draftPick": 43,
-    "draftRound": 2,
-    "draftYear": 2021,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_811965",
     "name": "Joshua Kuroda-Grauer",
     "sports": [
@@ -976382,38 +975955,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_699073",
-    "name": "Thayron Liranzo",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      49
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_806146",
     "name": "George Lombard Jr.",
     "sports": [
@@ -976484,38 +976025,6 @@
     "draftPick": 557,
     "draftRound": 19,
     "draftYear": 2017,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_699214",
-    "name": "Leandro Lopez",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      74
-    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -977124,68 +976633,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_694230",
-    "name": "Hendry Mendez",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "OF"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      64
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_700280",
-    "name": "Miguel Mendez",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_693686",
     "name": "Spencer Miles",
     "sports": [
@@ -977381,40 +976828,6 @@
     "draftPick": 40,
     "draftRound": 2,
     "draftYear": 2023,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_681439",
-    "name": "Zach Morgan",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "college": "Fresno State",
-    "draftPick": 226,
-    "draftRound": 7,
-    "draftYear": 2022,
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -977765,39 +977178,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_804556",
-    "name": "Braden Nett",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      78
-    ],
-    "college": "St. Charles CC",
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_807747",
     "name": "Rikuu Nishida",
     "sports": [
@@ -977991,38 +977371,6 @@
     ],
     "college": "Florida Southwestern State JC",
     "collegeConference": "SEC",
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_673662",
-    "name": "Robinson Ortiz",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      49
-    ],
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -978526,36 +977874,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_695950",
-    "name": "Nicolo Pinazzi",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_687605",
     "name": "Andrew Pinckney",
     "sports": [
@@ -979008,43 +978326,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_691009",
-    "name": "Dylan Ray",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      61
-    ],
-    "college": "Alabama",
-    "collegeConference": "SEC",
-    "draftPick": 108,
-    "draftRound": 4,
-    "draftYear": 2022,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_694397",
     "name": "Marco Raya",
     "sports": [
@@ -979073,41 +978354,6 @@
     "draftPick": 128,
     "draftRound": 4,
     "draftYear": 2020,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_682126",
-    "name": "Evan Reifert",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "college": "North Iowa Area CC",
-    "collegeConference": "Big Ten",
-    "draftPick": 899,
-    "draftRound": 30,
-    "draftYear": 2018,
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -979310,42 +978556,6 @@
     "draftPick": 338,
     "draftRound": 11,
     "draftYear": 2021,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_694358",
-    "name": "Tekoah Roby",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      38
-    ],
-    "college": "Pine Forest HS",
-    "draftPick": 86,
-    "draftRound": 3,
-    "draftYear": 2020,
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
@@ -980877,40 +980087,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_mlb_live_675455",
-    "name": "Milan Tolentino",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "SS"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [],
-    "college": "Santa Margarita HS",
-    "draftPick": 124,
-    "draftRound": 4,
-    "draftYear": 2020,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_mlb_live_680899",
     "name": "Erik Tolman",
     "sports": [
@@ -981019,43 +980195,6 @@
     "college": "James Madison HS",
     "draftPick": 56,
     "draftRound": 2,
-    "draftYear": 2021,
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_701655",
-    "name": "Reed Trimble",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "LF"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      62
-    ],
-    "college": "Southern Mississippi",
-    "collegeConference": "SEC",
-    "draftPick": 65,
-    "draftRound": null,
     "draftYear": 2021,
     "championships": 0,
     "mvps": 0,
@@ -982091,43 +981230,6 @@
     "jerseyNumbers": [
       46
     ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "hits": 0,
-      "steals": 0,
-      "saves": 0
-    },
-    "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_mlb_live_686632",
-    "name": "Steven Zobac",
-    "sports": [
-      "MLB"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "P"
-    ],
-    "activeYears": [
-      2022,
-      2026
-    ],
-    "jerseyNumbers": [
-      63
-    ],
-    "college": "California",
-    "collegeConference": "Pac-12",
-    "draftPick": 115,
-    "draftRound": 4,
-    "draftYear": 2022,
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,

@@ -52,6 +52,7 @@ const BOT_CACHE_FILE = path.join(CACHE_DIR, 'gemini-bot-cache.json');
 const REPORT_FILE = path.join(CACHE_DIR, 'gemini-report.json');
 const MISSING_CANDIDATES_FILE = path.join(CACHE_DIR, 'gemini-missing-candidates.json');
 const DISCREPANCIES_FILE = path.join(CACHE_DIR, 'gemini-discrepancies.json');
+const ENRICHMENT_EXPORT_FILE = path.join(CACHE_DIR, 'missing-athletes-for-enrichment.json');
 
 // Ensure cache directory exists
 if (!fs.existsSync(CACHE_DIR)) {
@@ -141,62 +142,94 @@ function findAthleteByName(rawName: string): Athlete | null {
 }
 
 // ============================================================================
-// Model Auto-Discovery & Validation
+// Model Auto-Discovery & Dynamic Fallback Pool
 // ============================================================================
-async function resolveAvailableModel(apiKey: string, preferredModel?: string): Promise<string> {
+let AVAILABLE_MODELS_POOL: string[] = [];
+let currentActiveModel: string = 'gemini-2.0-flash';
+
+function getNextAvailableModel(currentModel: string): string | null {
+  AVAILABLE_MODELS_POOL = AVAILABLE_MODELS_POOL.filter((m) => m !== currentModel);
+  return AVAILABLE_MODELS_POOL.length > 0 ? AVAILABLE_MODELS_POOL[0] : null;
+}
+
+async function initAvailableModelsPool(apiKey: string, preferredModel?: string): Promise<string> {
   const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
   try {
     const res = await fetch(url);
     if (!res.ok) {
       const err = await res.text();
       console.warn(`[WARN] Could not fetch models list (${res.status}): ${err}`);
+      AVAILABLE_MODELS_POOL = ['gemini-2.0-flash', 'gemini-1.5-flash-8b', 'gemini-1.5-pro'];
       return preferredModel || 'gemini-2.0-flash';
     }
 
     const data = await res.json();
-    const availableModels: string[] = (data.models || [])
+    const all: string[] = (data.models || [])
       .filter((m: any) => m.supportedGenerationMethods?.includes('generateContent'))
-      .map((m: any) => m.name.replace(/^models\//, ''));
+      .map((m: any) => m.name.replace(/^models\//, ''))
+      .filter(
+        (name: string) =>
+          !name.includes('2.5') &&
+          !name.includes('embedding') &&
+          !name.includes('imagen') &&
+          !name.includes('aqa') &&
+          !name.includes('tts')
+      );
 
-    if (preferredModel && availableModels.includes(preferredModel)) {
-      console.log(`🎯 Using user-requested model: ${preferredModel}`);
-      return preferredModel;
-    }
-
-    // Ranked priority of fast flash models
-    const priorities = [
-      'gemini-2.0-flash',
-      'gemini-2.5-flash',
-      'gemini-2.0-flash-001',
-      'gemini-2.0-flash-lite',
-      'gemini-1.5-flash-latest',
-      'gemini-1.5-flash',
-      'gemini-pro',
-    ];
-
-    for (const cand of priorities) {
-      if (availableModels.includes(cand)) {
-        console.log(`📡 Auto-detected Gemini model: "${cand}" (from ${availableModels.length} available models)`);
-        return cand;
+    // Sort models:
+    // 1. Preferred model (if provided)
+    // 2. High-quota / fast models (8b, lite, 2.0-flash, 1.5-pro)
+    // 3. Move known rate-limited models (gemini-3.8-flash) toward the end
+    const sorted = all.sort((a, b) => {
+      if (preferredModel) {
+        if (a === preferredModel) return -1;
+        if (b === preferredModel) return 1;
       }
-    }
 
-    // Fallback to any model with "flash" or the first available
-    const flashMatch = availableModels.find((m) => m.includes('flash'));
-    if (flashMatch) {
-      console.log(`📡 Selected Flash model: "${flashMatch}"`);
-      return flashMatch;
-    }
+      // Deprioritize 3.8-flash since it frequently hits the 5 RPM / 300 min free quota cap
+      if (a === 'gemini-3.8-flash') return 1;
+      if (b === 'gemini-3.8-flash') return -1;
 
-    if (availableModels.length > 0) {
-      console.log(`📡 Selected default model: "${availableModels[0]}"`);
-      return availableModels[0];
-    }
+      const aIsLight = a.includes('8b') || a.includes('lite') || (a.includes('flash') && !a.includes('3.8'));
+      const bIsLight = b.includes('8b') || b.includes('lite') || (b.includes('flash') && !b.includes('3.8'));
+      if (aIsLight && !bIsLight) return -1;
+      if (!aIsLight && bIsLight) return 1;
+
+      return 0;
+    });
+
+    AVAILABLE_MODELS_POOL = sorted;
+    console.log(`📡 Discovered ${all.length} compatible models for your account.`);
+    console.log(`📋 Candidate queue: ${AVAILABLE_MODELS_POOL.slice(0, 4).join(', ')}...`);
+
+    currentActiveModel = AVAILABLE_MODELS_POOL[0] || 'gemini-2.0-flash';
+    return currentActiveModel;
   } catch (err: any) {
     console.warn(`[WARN] Error querying model list:`, err.message);
   }
 
-  return preferredModel || 'gemini-2.0-flash';
+  AVAILABLE_MODELS_POOL = ['gemini-2.0-flash', 'gemini-1.5-flash-8b', 'gemini-1.5-pro'];
+  currentActiveModel = preferredModel || 'gemini-2.0-flash';
+  return currentActiveModel;
+}
+
+// ============================================================================
+// Retry & Quota Helpers
+// ============================================================================
+function parseRetryDelay(errText: string): number {
+  try {
+    const json = JSON.parse(errText);
+    const retryDetail = json?.error?.details?.find(
+      (d: any) => d['@type'] === 'type.googleapis.com/google.rpc.RetryInfo'
+    );
+    if (retryDetail?.retryDelay) {
+      const match = retryDetail.retryDelay.match(/([0-9.]+)/);
+      if (match) return Math.ceil(parseFloat(match[1]));
+    }
+  } catch {}
+  const match = errText.match(/retry in ([0-9.]+)s/i);
+  if (match) return Math.ceil(parseFloat(match[1]));
+  return 38;
 }
 
 // ============================================================================
@@ -207,7 +240,8 @@ async function queryGeminiForIntersection(
   colCat: Category,
   apiKey: string,
   modelName: string,
-  isMock: boolean = false
+  isMock: boolean = false,
+  attempt: number = 1
 ): Promise<BotAthleteAnswer[]> {
   if (isMock) {
     // Generate realistic test candidates for offline simulation
@@ -239,7 +273,17 @@ ${singleEventRule}
 Rules:
 1. Athletes must have played in the NFL, NBA, MLB, or NHL.
 2. Provide real, historically accurate athletes.
-3. Return ONLY a valid JSON array of objects. Do not include markdown code block syntax.
+3. Scoring & Points Rule: In the NFL, "Points" means direct points scored (rushing/receiving touchdowns, field goals, extra points). Passing touchdowns DO NOT count as player points.
+4. Stat Homonym Rules:
+   - "Wins" applies ONLY to MLB pitchers, NHL goalies, or NFL starting QBs.
+   - "Assists" applies ONLY to NBA players or NHL skaters.
+   - "Steals" applies ONLY to MLB stolen bases or NBA defensive steals.
+   - "Hits" applies ONLY to MLB base hits or NHL body checks.
+   - "Blocks" applies ONLY to NBA blocked shots or NHL blocked shots.
+   - "Saves" applies ONLY to MLB pitching saves or NHL goalie saves.
+   - "Turnovers" applies ONLY to NFL interceptions/fumbles lost or NBA turnovers.
+5. Multi-Sport Athletes: Ensure the athlete actually achieved the required statistic in the sport where that stat is officially recorded (e.g. do not credit an NHL forward with goalie wins).
+6. Return ONLY a valid JSON array of objects. Do not include markdown code block syntax.
 
 JSON format:
 [
@@ -265,7 +309,7 @@ JSON format:
   };
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  const timeoutId = setTimeout(() => controller.abort(), 35000); // 35s timeout
 
   let response: Response;
   try {
@@ -278,7 +322,11 @@ JSON format:
   } catch (err: any) {
     clearTimeout(timeoutId);
     if (err.name === 'AbortError') {
-      throw new Error(`Request timed out after 15s for ${rowCat.shortName} x ${colCat.shortName}`);
+      if (attempt <= 3) {
+        process.stdout.write(`\n⏳ [Timeout] Server took >35s for "${rowCat.shortName} x ${colCat.shortName}". Retrying (Attempt ${attempt}/3)...\n`);
+        return queryGeminiForIntersection(rowCat, colCat, apiKey, modelName, isMock, attempt + 1);
+      }
+      throw new Error(`Request timed out after 35s for ${rowCat.shortName} x ${colCat.shortName}`);
     }
     throw err;
   } finally {
@@ -287,6 +335,42 @@ JSON format:
 
   if (!response.ok) {
     const errText = await response.text();
+
+    // Catch 429 (Quota limit) and 503 (High demand) with automatic backoff and retry
+    if ((response.status === 429 || response.status === 503) && attempt <= 3) {
+      const waitSec = parseRetryDelay(errText) + 2;
+
+      // If quota is exhausted (waitSec > 60), switch to the next available model in the pool!
+      if (waitSec > 60) {
+        const nextModel = getNextAvailableModel(modelName);
+        if (nextModel) {
+          process.stdout.write(
+            `\n🔄 [Quota Exhausted] "${modelName}" is locked for ${Math.round(waitSec / 60)} mins. Auto-switching to "${nextModel}"...\n`
+          );
+          currentActiveModel = nextModel;
+          return queryGeminiForIntersection(rowCat, colCat, apiKey, nextModel, isMock, 1);
+        }
+        throw new Error(
+          `Google Free Tier limit reached for all candidate models (retry in ${Math.round(waitSec / 60)} mins).`
+        );
+      }
+
+      process.stdout.write(
+        `\n⏳ [Quota/Demand: ${response.status}] Waiting ${waitSec}s before retrying "${rowCat.shortName} x ${colCat.shortName}" (Attempt ${attempt}/3)...\n`
+      );
+      await new Promise((r) => setTimeout(r, waitSec * 1000));
+      return queryGeminiForIntersection(rowCat, colCat, apiKey, modelName, isMock, attempt + 1);
+    }
+
+    // Catch Google's model update recommendation dynamically
+    const suggestedModelMatch = errText.match(/models\/([a-zA-Z0-9.-]+) for the latest/);
+    if (suggestedModelMatch && suggestedModelMatch[1] && suggestedModelMatch[1] !== modelName) {
+      const newModel = suggestedModelMatch[1];
+      console.log(`\n🔄 Switching to recommended model "${newModel}"...`);
+      currentActiveModel = newModel;
+      return queryGeminiForIntersection(rowCat, colCat, apiKey, newModel, isMock, attempt);
+    }
+
     throw new Error(`Gemini API error (${response.status}): ${errText}`);
   }
 
@@ -307,25 +391,41 @@ JSON format:
 }
 
 // ============================================================================
-// Concurrency Controller
+// Rate-Limited Concurrency Controller
 // ============================================================================
-async function runWithConcurrency<T, R>(
+async function runWithRateLimit<T, R>(
   items: T[],
-  limit: number,
+  concurrency: number,
+  delayBetweenCallsMs: number,
   fn: (item: T, idx: number) => Promise<R>
 ): Promise<R[]> {
   const results: R[] = [];
   let index = 0;
+  let lastDispatchTime = 0;
 
   async function worker() {
     while (index < items.length) {
       const currentIndex = index++;
+
+      // Enforce rate limit delay between start times
+      if (delayBetweenCallsMs > 0) {
+        const now = Date.now();
+        const timeSinceLast = now - lastDispatchTime;
+        if (timeSinceLast < delayBetweenCallsMs) {
+          const waitTime = delayBetweenCallsMs - timeSinceLast;
+          lastDispatchTime = now + waitTime;
+          await new Promise((r) => setTimeout(r, waitTime));
+        } else {
+          lastDispatchTime = now;
+        }
+      }
+
       const res = await fn(items[currentIndex], currentIndex);
       results[currentIndex] = res;
     }
   }
 
-  const workers = Array.from({ length: Math.min(limit, items.length) }, () => worker());
+  const workers = Array.from({ length: Math.min(concurrency, items.length) }, () => worker());
   await Promise.all(workers);
   return results;
 }
@@ -397,10 +497,17 @@ async function main() {
   };
 
   const isMock = args.includes('--mock');
+  const isPaid = args.includes('--paid');
+  const isAll = args.includes('--all');
   const apiKey = getArg('key', process.env.GEMINI_API_KEY || (isMock ? 'mock_key' : ''));
   const mode = args.includes('--daily') ? 'daily' : args.includes('--metro') ? 'metro' : 'sample';
-  const sampleCount = parseInt(getArg('sample', mode === 'daily' ? '16' : '15'), 10);
-  const concurrency = parseInt(getArg('concurrency', '4'), 10);
+  const sampleCount = isAll ? 99999 : parseInt(getArg('sample', mode === 'daily' ? '16' : '15'), 10);
+  
+  // Rate limiting & concurrency: Free tier limit is 5 RPM (1 request every 12s)
+  const defaultConcurrency = isPaid ? 4 : 1;
+  const defaultDelay = isMock ? 0 : (isPaid ? 300 : 12500);
+  const concurrency = parseInt(getArg('concurrency', String(defaultConcurrency)), 10);
+  const delayMs = parseInt(getArg('delay', String(defaultDelay)), 10);
   const requestedModel = getArg('model', '');
 
   console.log('================================================================');
@@ -418,30 +525,75 @@ async function main() {
     process.exit(1);
   }
 
+  if (args.includes('--list-models')) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log('\n📋 AVAILABLE GEMINI MODELS FOR YOUR ACCOUNT:');
+      for (const m of data.models || []) {
+        if (m.supportedGenerationMethods?.includes('generateContent')) {
+          const id = m.name.replace(/^models\//, '');
+          console.log(`  • ${id.padEnd(30)} | ${m.displayName || ''}`);
+        }
+      }
+      console.log('\n💡 Run with any model: npm run verify:gemini -- --model=<model_name>\n');
+    } catch (e: any) {
+      console.error('Failed to list models:', e.message);
+    }
+    process.exit(0);
+  }
+
   let activeModel = requestedModel || 'gemini-2.0-flash';
   if (!isMock) {
-    activeModel = await resolveAvailableModel(apiKey, requestedModel || undefined);
+    activeModel = await initAvailableModelsPool(apiKey, requestedModel || undefined);
   }
 
   const intersections = getTestIntersections(mode, sampleCount);
-  console.log(`\n📋 Mode: [${mode.toUpperCase()}]`);
+  console.log(`\n📋 Mode: [${isAll ? 'ALL RANDOM' : mode.toUpperCase()}]`);
   console.log(`⚡ Testing ${intersections.length} Category Intersections`);
-  console.log(`🤖 Model: ${activeModel} | Concurrency: ${concurrency} workers`);
+  console.log(`🤖 Starting Model: ${activeModel}`);
+  if (isPaid) {
+    console.log(`🚀 Mode: [PAID TIER] | Concurrency: ${concurrency} workers | Delay: ${delayMs}ms`);
+  } else {
+    console.log(`⏱️  Pacing: [FREE TIER] | 1 request every ${(delayMs / 1000).toFixed(1)}s (prevents 429 quota exhaustion)`);
+    console.log(`💡 Tip: If you have billing enabled on Google AI Studio, add --paid to run at full speed!`);
+  }
   console.log(`📊 Athlete Database Size: ${ATHLETES.length.toLocaleString()} athletes\n`);
 
   const startTime = Date.now();
 
-  const results: CellVerificationResult[] = await runWithConcurrency(
+  let completedCount = 0;
+  let liveAccepted = 0;
+  let liveMissing = 0;
+  let liveRejected = 0;
+
+  function renderProgressBar(currentLabel: string = '') {
+    const total = intersections.length;
+    const percent = total > 0 ? completedCount / total : 0;
+    const barLength = 20;
+    const filled = Math.round(barLength * percent);
+    const bar = '█'.repeat(filled) + '░'.repeat(barLength - filled);
+    const pctStr = (percent * 100).toFixed(1).padStart(5, ' ');
+    const label = currentLabel ? ` | ${currentLabel.slice(0, 32)}` : '';
+    const line = `\r[${bar}] ${pctStr}% (${completedCount}/${total}) | ✅ ${liveAccepted} | ⚠️ ${liveMissing} | 🚨 ${liveRejected}${label}`;
+    process.stdout.write(line.padEnd(100, ' '));
+  }
+
+  renderProgressBar('Starting...');
+
+  const results: CellVerificationResult[] = await runWithRateLimit(
     intersections,
     concurrency,
+    delayMs,
     async ([rowCat, colCat], index) => {
-      process.stdout.write(`[Worker] Testing [${index + 1}/${intersections.length}] "${rowCat.shortName}" × "${colCat.shortName}"...\n`);
-
       let botAnswers: BotAthleteAnswer[] = [];
       try {
-        botAnswers = await queryGeminiForIntersection(rowCat, colCat, apiKey, activeModel, isMock);
+        botAnswers = await queryGeminiForIntersection(rowCat, colCat, apiKey, currentActiveModel, isMock);
       } catch (err: any) {
-        console.error(`  ⚠️  Gemini call failed for ${rowCat.shortName} × ${colCat.shortName}:`, err.message);
+        process.stdout.write(`\n  ⚠️  Failed: ${rowCat.shortName} × ${colCat.shortName} (${err.message})\n`);
+        completedCount++;
+        renderProgressBar(`${rowCat.shortName} × ${colCat.shortName}`);
         return {
           rowCategory: { id: rowCat.id, name: rowCat.name },
           colCategory: { id: colCat.id, name: colCat.name },
@@ -491,10 +643,17 @@ async function main() {
         }
       }
 
+      completedCount++;
+      liveAccepted += cellResult.accepted.length;
+      liveMissing += cellResult.missingFromDb.length;
+      liveRejected += cellResult.rejectedByGrid.length;
+      renderProgressBar(`${rowCat.shortName} × ${colCat.shortName}`);
+
       return cellResult;
     }
   );
 
+  process.stdout.write('\n');
   const durationSec = ((Date.now() - startTime) / 1000).toFixed(1);
 
   // ============================================================================
@@ -534,10 +693,46 @@ async function main() {
     }
   }
 
+  // Group missing candidates uniquely by sport for direct ingestion into augmentation
+  const enrichmentBySport: Record<string, { name: string; sport: string; reasonings: string[]; cells: string[] }[]> = {
+    NFL: [],
+    NBA: [],
+    MLB: [],
+    NHL: [],
+  };
+
+  const seenMissing = new Map<string, { name: string; sport: string; reasonings: string[]; cells: string[] }>();
+  for (const m of allMissing) {
+    const key = `${m.player.toLowerCase()}___${m.sport}`;
+    if (!seenMissing.has(key)) {
+      seenMissing.set(key, {
+        name: m.player,
+        sport: m.sport,
+        reasonings: [m.reasoning],
+        cells: [m.cell],
+      });
+    } else {
+      const entry = seenMissing.get(key)!;
+      if (!entry.cells.includes(m.cell)) entry.cells.push(m.cell);
+      if (!entry.reasonings.includes(m.reasoning)) entry.reasonings.push(m.reasoning);
+    }
+  }
+
+  for (const entry of seenMissing.values()) {
+    const sp = entry.sport.toUpperCase();
+    if (enrichmentBySport[sp]) {
+      enrichmentBySport[sp].push(entry);
+    } else {
+      if (!enrichmentBySport['OTHER']) enrichmentBySport['OTHER'] = [];
+      enrichmentBySport['OTHER'].push(entry);
+    }
+  }
+
   // Write detailed reports
   fs.writeFileSync(REPORT_FILE, JSON.stringify(results, null, 2), 'utf-8');
   fs.writeFileSync(MISSING_CANDIDATES_FILE, JSON.stringify(allMissing, null, 2), 'utf-8');
   fs.writeFileSync(DISCREPANCIES_FILE, JSON.stringify(allDiscrepancies, null, 2), 'utf-8');
+  fs.writeFileSync(ENRICHMENT_EXPORT_FILE, JSON.stringify(enrichmentBySport, null, 2), 'utf-8');
 
   console.log('\n================================================================');
   console.log('🏁  VERIFICATION RUN COMPLETE');
@@ -571,6 +766,7 @@ async function main() {
   console.log(`  • ${REPORT_FILE}`);
   console.log(`  • ${MISSING_CANDIDATES_FILE}`);
   console.log(`  • ${DISCREPANCIES_FILE}`);
+  console.log(`  • ${ENRICHMENT_EXPORT_FILE} (Grouped by sport for auto-augmentation)`);
   console.log('');
 }
 

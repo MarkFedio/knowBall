@@ -83980,40 +83980,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8481715",
-    "name": "Hunter Skinner",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      43,
-      48
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8481716",
     "name": "Dmitri Voronkov",
     "sports": [
@@ -84125,39 +84091,6 @@
       "blocks": 3
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8481721",
-    "name": "Arseny Gritsyuk",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      81
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 43,
-      "assists": 22,
-      "hits": 187,
-      "blocks": 27
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -85686,39 +85619,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482100",
-    "name": "Alexander Nikishin",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      21
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 33,
-      "assists": 22,
-      "hits": 122,
-      "blocks": 96
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482101",
     "name": "Danil Gushchin",
     "sports": [
@@ -85870,39 +85770,6 @@
       "blocks": 591
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482107",
-    "name": "Michael Benning",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      20
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 6,
-      "assists": 4,
-      "hits": 15,
-      "blocks": 16
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -86193,39 +86060,6 @@
       "blocks": 23
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482121",
-    "name": "Dylan Peterson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      32
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -87029,39 +86863,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482160",
-    "name": "Martin Chromiak",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      42
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 3,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482162",
     "name": "Roby Jarventie",
     "sports": [
@@ -87180,72 +86981,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482167",
-    "name": "Bogdan Trineyev",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      87
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482168",
-    "name": "Maxim Groshev",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      52
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 1,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482169",
     "name": "Helge Grans",
     "sports": [
@@ -87285,39 +87020,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482171",
-    "name": "William Wallinder",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      54
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 4,
-      "assists": 2,
-      "hits": 10,
-      "blocks": 24
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482172",
     "name": "Landon Slaggert",
     "sports": [
@@ -87353,39 +87055,6 @@
       "blocks": 43
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482174",
-    "name": "William Villeneuve",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      76
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 2,
-      "blocks": 5
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -87630,39 +87299,6 @@
       "blocks": 3
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482187",
-    "name": "Ronan Seeley",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      91
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -88544,39 +88180,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482459",
-    "name": "Tyrel Bauer",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      77
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 6,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482460",
     "name": "Matt Rempe",
     "sports": [
@@ -88731,37 +88334,6 @@
       "blocks": 84
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482479",
-    "name": "Trevor Kuntar",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 0
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -88957,39 +88529,6 @@
       "blocks": 118
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482525",
-    "name": "Ryan Tverberg",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      77
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 1
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -89615,39 +89154,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482673",
-    "name": "Xavier Bourgault",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 3,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482679",
     "name": "Matt Coronato",
     "sports": [
@@ -89766,39 +89272,6 @@
       "blocks": 28
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482698",
-    "name": "Tristan Broz",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      26
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 2,
-      "blocks": 0
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -90284,40 +89757,6 @@
       "blocks": 378
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482731",
-    "name": "Tyson Hinds",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      55,
-      60
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 25,
-      "blocks": 27
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -90833,39 +90272,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482766",
-    "name": "William Stromgren",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      65
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 0,
-      "hits": 6,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482768",
     "name": "Fedor Svechkov",
     "sports": [
@@ -90941,41 +90347,6 @@
       "blocks": 79
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482781",
-    "name": "Carson Lambos",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      28,
-      55,
-      71
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 1
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -91173,72 +90544,6 @@
       "blocks": 208
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482804",
-    "name": "Ty Murchison",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      96
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482806",
-    "name": "William Trudeau",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      85
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 2,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -91641,39 +90946,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482873",
-    "name": "Topias Vilen",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      38
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482874",
     "name": "Jacob Melanson",
     "sports": [
@@ -91709,39 +90981,6 @@
       "blocks": 14
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482877",
-    "name": "Jaroslav Chmelar",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      49
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 6,
-      "assists": 2,
-      "hits": 28,
-      "blocks": 18
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -91785,39 +91024,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482911",
-    "name": "Joel Nystrom",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      64
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 10,
-      "assists": 9,
-      "hits": 43,
-      "blocks": 22
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8482929",
     "name": "Emil Lilleberg",
     "sports": [
@@ -91851,105 +91057,6 @@
       "blocks": 156
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482941",
-    "name": "Shane Lachance",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      20
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482947",
-    "name": "Zakhar Bardakov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      93
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 10,
-      "assists": 9,
-      "hits": 35,
-      "blocks": 22
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482953",
-    "name": "Taylor Makar",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      16
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 8,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -91989,39 +91096,6 @@
       "blocks": 214
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482993",
-    "name": "Avery Hayes",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      85
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 0,
-      "hits": 30,
-      "blocks": 9
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -92103,39 +91177,6 @@
       "blocks": 22
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483039",
-    "name": "Tristen Nielsen",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      57
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 3,
-      "blocks": 1
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -92498,39 +91539,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483428",
-    "name": "Filip Bystedt",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      18
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 5,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8483429",
     "name": "Seamus Casey",
     "sports": [
@@ -92648,138 +91656,6 @@
       "blocks": 25
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483433",
-    "name": "Jack Devine",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      38
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 6,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483435",
-    "name": "Jorian Donovan",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      56
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483436",
-    "name": "Artem Duda",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      84
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 4,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483444",
-    "name": "Nathan Gaucher",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      41
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 2,
-      "blocks": 1
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -92944,73 +91820,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483452",
-    "name": "Hunter Haight",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      37,
-      43
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 13,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483455",
-    "name": "Isaac Howard",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 8,
-      "assists": 5,
-      "hits": 48,
-      "blocks": 8
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8483457",
     "name": "Lane Hutson",
     "sports": [
@@ -93125,40 +91934,6 @@
       "blocks": 0
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483463",
-    "name": "Aleksanteri Kaskimaki",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      41,
-      65
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 15,
-      "blocks": 8
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -93470,39 +92245,6 @@
       "blocks": 16
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483478",
-    "name": "Rieger Lorenz",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      61
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 2,
-      "blocks": 3
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -94098,39 +92840,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483510",
-    "name": "Elias Salomonsson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      57
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 4,
-      "hits": 51,
-      "blocks": 32
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8483512",
     "name": "Matt Savoie",
     "sports": [
@@ -94167,72 +92876,6 @@
       "blocks": 38
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483513",
-    "name": "Reid Schaefer",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      49
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 10,
-      "assists": 3,
-      "hits": 49,
-      "blocks": 36
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483514",
-    "name": "Matthew Seminoff",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      43
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 4,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -94313,39 +92956,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483521",
-    "name": "Noah Warren",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      47
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 5,
-      "hits": 12,
-      "blocks": 27
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8483524",
     "name": "Shane Wright",
     "sports": [
@@ -94382,72 +92992,6 @@
       "blocks": 148
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483525",
-    "name": "Danila Yurov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      22
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 34,
-      "assists": 16,
-      "hits": 108,
-      "blocks": 53
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483526",
-    "name": "Danil Zhilkin",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 4,
-      "blocks": 4
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -95091,106 +93635,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483669",
-    "name": "Adam Sykora",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      38
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 4,
-      "assists": 1,
-      "hits": 15,
-      "blocks": 10
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483675",
-    "name": "Kenny Connors",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      34
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 5,
-      "blocks": 4
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483676",
-    "name": "Stephen Halliday",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      34,
-      83
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 16,
-      "assists": 9,
-      "hits": 59,
-      "blocks": 20
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8483678",
     "name": "Elias Pettersson",
     "sports": [
@@ -95227,369 +93671,6 @@
       "blocks": 132
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483679",
-    "name": "Anton Johansson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      42
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 3,
-      "hits": 17,
-      "blocks": 20
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483686",
-    "name": "Adam Engstrom",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      42
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 3,
-      "assists": 2,
-      "hits": 22,
-      "blocks": 15
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483687",
-    "name": "Marek Alscher",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      4
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 3,
-      "assists": 3,
-      "hits": 6,
-      "blocks": 6
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483690",
-    "name": "Noah Laba",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      42
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 28,
-      "assists": 19,
-      "hits": 84,
-      "blocks": 56
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483695",
-    "name": "Amadeus Lombardi",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      93
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 4,
-      "assists": 4,
-      "hits": 24,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483696",
-    "name": "Cole O'Hara",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      19
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483699",
-    "name": "Angus Booth",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      81
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483709",
-    "name": "Abram Wiebe",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      52
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483712",
-    "name": "Ludvig Jansson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      54
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 3,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483728",
-    "name": "Jared Davidson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      49
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 9,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483731",
-    "name": "Alex Bump",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      20
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 9,
-      "assists": 4,
-      "hits": 42,
-      "blocks": 9
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -95635,108 +93716,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483752",
-    "name": "Dominic James",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      17
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 17,
-      "assists": 10,
-      "hits": 62,
-      "blocks": 13
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483756",
-    "name": "Jared Wright",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      25,
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 5,
-      "hits": 39,
-      "blocks": 20
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483760",
-    "name": "Hunter McDonald",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      19,
-      41,
-      75
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 3,
-      "blocks": 7
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8483763",
     "name": "Maksymilian Szuber",
     "sports": [
@@ -95772,39 +93751,6 @@
       "blocks": 1
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483766",
-    "name": "David Spacek",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      82
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 9,
-      "blocks": 13
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -95847,72 +93793,6 @@
       "blocks": 74
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483771",
-    "name": "Sandis Vilmanis",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      95
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 12,
-      "assists": 6,
-      "hits": 37,
-      "blocks": 13
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483787",
-    "name": "Cole Knuble",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      54
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 3,
-      "assists": 0,
-      "hits": 15,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -95962,72 +93842,6 @@
       "blocks": 71
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483841",
-    "name": "Xavier Parent",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      67
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 2,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483890",
-    "name": "Braeden Bowman",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      42
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 33,
-      "assists": 21,
-      "hits": 97,
-      "blocks": 28
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -96228,40 +94042,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484142",
-    "name": "Denver Barkey",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      52,
-      86
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 24,
-      "assists": 18,
-      "hits": 54,
-      "blocks": 21
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484144",
     "name": "Connor Bedard",
     "sports": [
@@ -96337,39 +94117,6 @@
       "blocks": 96
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484148",
-    "name": "Oliver Bonk",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      59
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 8,
-      "assists": 6,
-      "hits": 15,
-      "blocks": 14
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -96531,105 +94278,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484154",
-    "name": "Jonathan Castagna",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      38
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 3,
-      "assists": 3,
-      "hits": 10,
-      "blocks": 11
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484158",
-    "name": "Easton Cowan",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 43,
-      "assists": 26,
-      "hits": 127,
-      "blocks": 40
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484160",
-    "name": "Nate Danielson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      29
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 9,
-      "assists": 7,
-      "hits": 37,
-      "blocks": 12
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484164",
     "name": "Dalibor Dvorsky",
     "sports": [
@@ -96710,105 +94358,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484168",
-    "name": "Oscar Fisker Molgaard",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      78
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 2,
-      "hits": 6,
-      "blocks": 8
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484169",
-    "name": "Drew Fortescue",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      45
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 2,
-      "hits": 3,
-      "blocks": 7
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484177",
-    "name": "Lenni Hameenaho",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      29
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 8,
-      "assists": 6,
-      "hits": 47,
-      "blocks": 16
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484180",
     "name": "Samuel Honzek",
     "sports": [
@@ -96845,39 +94394,6 @@
       "blocks": 10
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484185",
-    "name": "Nick Lardis",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      76
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 17,
-      "assists": 7,
-      "hits": 63,
-      "blocks": 15
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -96921,40 +94437,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484188",
-    "name": "Theo Lindstein",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      4,
-      41
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 6,
-      "assists": 4,
-      "hits": 26,
-      "blocks": 16
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484197",
     "name": "Oliver Moore",
     "sports": [
@@ -96990,39 +94472,6 @@
       "blocks": 20
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484201",
-    "name": "Nico Myatovic",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      48
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 1
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -97103,72 +94552,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484214",
-    "name": "Luca Pinelli",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 6,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484220",
-    "name": "David Reinbacher",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      64
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 4,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484221",
     "name": "Calum Ritchie",
     "sports": [
@@ -97209,39 +94592,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484223",
-    "name": "Axel Sandin-Pellikka",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      44
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 22,
-      "assists": 15,
-      "hits": 74,
-      "blocks": 61
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484227",
     "name": "Will Smith",
     "sports": [
@@ -97277,39 +94627,6 @@
       "blocks": 33
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484230",
-    "name": "Otto Stenberg",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      28
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 11,
-      "assists": 8,
-      "hits": 33,
-      "blocks": 16
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -97354,39 +94671,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484240",
-    "name": "Tom Willander",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      5
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 24,
-      "assists": 19,
-      "hits": 71,
-      "blocks": 95
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484241",
     "name": "Matthew Wood",
     "sports": [
@@ -97423,39 +94707,6 @@
       "blocks": 35
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484242",
-    "name": "Brayden Yager",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      29
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 5,
-      "blocks": 0
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -97658,40 +94909,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484262",
-    "name": "Travis Mitchell",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      34,
-      38
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 9,
-      "blocks": 17
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484287",
     "name": "Cole McWard",
     "sports": [
@@ -97771,39 +94988,6 @@
     "championshipMarkets": [
       "FLA"
     ],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484305",
-    "name": "Zach Metsa",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      73
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 8,
-      "assists": 6,
-      "hits": 33,
-      "blocks": 44
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -97963,70 +95147,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484380",
-    "name": "Wilmer Skoog",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      32
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 2,
-      "hits": 4,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484386",
-    "name": "Dmitri Simashev",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 6,
-      "assists": 3,
-      "hits": 44,
-      "blocks": 41
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484387",
     "name": "Matvei Michkov",
     "sports": [
@@ -98066,134 +95186,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484388",
-    "name": "Daniil But",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 11,
-      "assists": 6,
-      "hits": 56,
-      "blocks": 27
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484390",
-    "name": "Roman Kantserov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      80
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 10,
-      "assists": 2,
-      "hits": 29,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484392",
-    "name": "Felix Unger Sörum",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 3,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484403",
-    "name": "Florian Xhekaj",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      63
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 4,
-      "assists": 3,
-      "hits": 13,
-      "blocks": 9
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484406",
     "name": "Ty Mueller",
     "sports": [
@@ -98229,105 +95221,6 @@
       "blocks": 8
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484409",
-    "name": "Hoyt Stanley",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      73
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484421",
-    "name": "Eric Pohlkamp",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      48
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 4,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484428",
-    "name": "Charles Alexis Legault",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      62
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 14,
-      "blocks": 12
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -104188,7 +101081,7 @@
     ],
     "championships": 4,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 193,
@@ -104325,7 +101218,7 @@
     "jerseyNumbers": [],
     "championships": 4,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 205,
@@ -115190,7 +112083,7 @@
     "jerseyNumbers": [],
     "championships": 2,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 304,
@@ -133805,7 +130698,7 @@
     "jerseyNumbers": [],
     "championships": 1,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 208,
@@ -147813,7 +144706,7 @@
     "jerseyNumbers": [],
     "championships": 1,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 367,
@@ -155154,7 +152047,7 @@
     "jerseyNumbers": [],
     "championships": 2,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 86,
@@ -155584,7 +152477,7 @@
     "jerseyNumbers": [],
     "championships": 3,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 463,
@@ -208708,7 +205601,7 @@
     "jerseyNumbers": [],
     "championships": 0,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 40,
@@ -213604,7 +210497,7 @@
     ],
     "championships": 2,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 114,
@@ -219021,7 +215914,7 @@
     ],
     "championships": 5,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 443,
@@ -333251,39 +330144,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8480426",
-    "name": "Charle-Edouard D'Astous",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      51
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 37,
-      "assists": 29,
-      "hits": 101,
-      "blocks": 96
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8480434",
     "name": "Sean Durzi",
     "sports": [
@@ -335906,39 +332766,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8480876",
-    "name": "Curtis Douglas",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      42
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 4,
-      "assists": 3,
-      "hits": 30,
-      "blocks": 17
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8480878",
     "name": "Nils Lundkvist",
     "sports": [
@@ -338514,39 +335341,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8481219",
-    "name": "Jonathan Aspirot",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      45
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 13,
-      "assists": 10,
-      "hits": 55,
-      "blocks": 94
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8481237",
     "name": "Kyle MacLean",
     "sports": [
@@ -339952,39 +336746,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8481538",
-    "name": "Judd Caulfield",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      28
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 9,
-      "assists": 5,
-      "hits": 20,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8481540",
     "name": "Cole Caufield",
     "sports": [
@@ -340175,39 +336936,6 @@
       "blocks": 574
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8481547",
-    "name": "Simon Lundmark",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      7
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -340804,39 +337532,6 @@
       "blocks": 479
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8481569",
-    "name": "Marshall Warren",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      41
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 3,
-      "assists": 3,
-      "hits": 7,
-      "blocks": 5
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -349549,172 +346244,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484471",
-    "name": "Emmitt Finnie",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      58
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 41,
-      "assists": 21,
-      "hits": 157,
-      "blocks": 51
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484509",
-    "name": "Josh Samanski",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      81
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 3,
-      "hits": 9,
-      "blocks": 18
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484529",
-    "name": "Connor Clattenburg",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      64
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 0,
-      "hits": 3,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484759",
-    "name": "Carter Yakemchuk",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      26,
-      58
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 3,
-      "hits": 27,
-      "blocks": 18
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484762",
-    "name": "Beckett Sennecke",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      45
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 81,
-      "assists": 48,
-      "hits": 240,
-      "blocks": 31
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484768",
     "name": "Zayne Parekh",
     "sports": [
@@ -349834,237 +346363,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484786",
-    "name": "Cole Beaudoin",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      53
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484790",
-    "name": "Adam Jiricek",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      36
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 3,
-      "assists": 2,
-      "hits": 23,
-      "blocks": 14
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484793",
-    "name": "Sacha Boisvert",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      12
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 6,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484794",
-    "name": "Michael Brandsegg-Nygård",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 11,
-      "assists": 8,
-      "hits": 50,
-      "blocks": 8
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484797",
-    "name": "Konsta Helenius",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      94
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 7,
-      "assists": 5,
-      "hits": 27,
-      "blocks": 7
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484798",
-    "name": "Zeev Buium",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      8,
-      24
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 30,
-      "assists": 24,
-      "hits": 89,
-      "blocks": 73
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484800",
-    "name": "Berkly Catton",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      27,
-      77
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 29,
-      "assists": 17,
-      "hits": 104,
-      "blocks": 37
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8484801",
     "name": "Macklin Celebrini",
     "sports": [
@@ -350100,72 +346398,6 @@
       "blocks": 120
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484803",
-    "name": "Trevor Connelly",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      24
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 12,
-      "assists": 5,
-      "hits": 33,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484806",
-    "name": "Sam Dickinson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      6
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 17,
-      "assists": 15,
-      "hits": 85,
-      "blocks": 92
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -350244,105 +346476,6 @@
       "blocks": 55
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484839",
-    "name": "Harrison Brunicke",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      45
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 0,
-      "hits": 8,
-      "blocks": 13
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484860",
-    "name": "Matvei Gridin",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      92
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 30,
-      "assists": 19,
-      "hits": 107,
-      "blocks": 36
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484873",
-    "name": "Cole Hutson",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      44
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 19,
-      "assists": 12,
-      "hits": 51,
-      "blocks": 16
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -350462,39 +346595,6 @@
       "blocks": 3
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484933",
-    "name": "Mikulas Hovorka",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      96
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 3,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -350654,72 +346754,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484994",
-    "name": "Igor Chernyshov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      92
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 23,
-      "assists": 12,
-      "hits": 58,
-      "blocks": 20
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484999",
-    "name": "Ilya Protas",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      62
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 10,
-      "assists": 8,
-      "hits": 19,
-      "blocks": 12
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8485105",
     "name": "Nikita Prishchepov",
     "sports": [
@@ -350755,435 +346789,6 @@
       "blocks": 2
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485251",
-    "name": "Kai Uchacz",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      77
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 2,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485366",
-    "name": "Matthew Schaefer",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      48
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 74,
-      "assists": 47,
-      "hits": 276,
-      "blocks": 125
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485385",
-    "name": "Braeden Cootes",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      80
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485388",
-    "name": "Victor Eklund",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      38,
-      73
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 8,
-      "assists": 4,
-      "hits": 24,
-      "blocks": 7
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485391",
-    "name": "Anton Frondell",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      15,
-      16
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 17,
-      "assists": 11,
-      "hits": 70,
-      "blocks": 27
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485395",
-    "name": "James Hagens",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      44
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 13,
-      "assists": 7,
-      "hits": 36,
-      "blocks": 19
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485400",
-    "name": "Roger McQueen",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      95
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 0,
-      "hits": 17,
-      "blocks": 6
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485402",
-    "name": "Michael Misa",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      77
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 31,
-      "assists": 19,
-      "hits": 80,
-      "blocks": 29
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485405",
-    "name": "Brady Martin",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      44
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 2,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485406",
-    "name": "Porter Martone",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      94
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 18,
-      "assists": 11,
-      "hits": 55,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485414",
-    "name": "Ben Kindel",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 41,
-      "assists": 21,
-      "hits": 179,
-      "blocks": 65
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485467",
-    "name": "Luke Haymes",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      43
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 3,
-      "blocks": 2
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485468",
-    "name": "Trey Taylor",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      27
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -351267,39 +346872,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8485493",
-    "name": "David Tomasek",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      86
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 5,
-      "assists": 2,
-      "hits": 30,
-      "blocks": 6
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8485511",
     "name": "Quinn Hutson",
     "sports": [
@@ -351375,466 +346947,6 @@
       "blocks": 46
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485554",
-    "name": "Dillon Boucher",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      36
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485702",
-    "name": "Maxim Shabanov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 29,
-      "assists": 18,
-      "hits": 80,
-      "blocks": 25
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8485957",
-    "name": "Alberts Smits",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      12
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 8,
-      "blocks": 10
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486025",
-    "name": "Viggo Björck",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "hits": 13,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486052",
-    "name": "Nikita Klepov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      40
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486056",
-    "name": "Tyson Gross",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      0,
-      39
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 0,
-      "hits": 5,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486067",
-    "name": "Gavin McKenna",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      92
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 11,
-      "assists": 6,
-      "hits": 31,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486103",
-    "name": "Ivar Stenberg",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "L"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      41
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 10,
-      "assists": 6,
-      "hits": 26,
-      "blocks": 5
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486130",
-    "name": "Dylan Hryckowian",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      46
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486161",
-    "name": "Owen Michaels",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      43
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 4,
-      "assists": 2,
-      "hits": 13,
-      "blocks": 9
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486166",
-    "name": "Viking Gustafsson Nyberg",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      6
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 3
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486169",
-    "name": "Jake Livanavage",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "D"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      4,
-      57
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "hits": 0,
-      "blocks": 1
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486171",
-    "name": "T.J. Hughes",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "R"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      13
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 6,
-      "assists": 4,
-      "hits": 42,
-      "blocks": 7
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8486189",
-    "name": "Vitali Pinchuk",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "C"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      51
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 2,
-      "assists": 1,
-      "hits": 10,
-      "blocks": 2
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -357001,41 +352113,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8482949",
-    "name": "Arsenii Sergeev",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      35,
-      40
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 56,
-      "wins": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8447066",
     "name": "John Garrett",
     "sports": [
@@ -360014,40 +355091,6 @@
       "assists": 0,
       "saves": 17,
       "wins": 0,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8481551",
-    "name": "Colten Ellis",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      92
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "saves": 542,
-      "wins": 11,
       "blocks": 0
     },
     "popularityScore": 5,
@@ -369451,40 +364494,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8485545",
-    "name": "Michal Postava",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      35
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 31,
-      "wins": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8481020",
     "name": "Justus Annunen",
     "sports": [
@@ -369887,40 +364896,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483548",
-    "name": "Brandon Bussi",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      32
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 1,
-      "assists": 1,
-      "saves": 968,
-      "wins": 34,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8450115",
     "name": "Normie Smith",
     "sports": [
@@ -370206,40 +365181,6 @@
       "assists": 0,
       "saves": 546,
       "wins": 4,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482761",
-    "name": "Carl Lindbom",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      30
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 165,
-      "wins": 2,
       "blocks": 0
     },
     "popularityScore": 5,
@@ -371536,40 +366477,6 @@
       "blocks": 0
     },
     "popularityScore": 15,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8484170",
-    "name": "Jacob Fowler",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      32
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 654,
-      "wins": 16,
-      "blocks": 0
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -377403,40 +372310,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8483703",
-    "name": "Sergei Murashov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      1
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 232,
-      "wins": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8469658",
     "name": "Cristobal Huet",
     "sports": [
@@ -379335,40 +374208,6 @@
     "championshipMarkets": [
       "CHI"
     ],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483114",
-    "name": "Thomas Milic",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      32
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 54,
-      "wins": 0,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -381300,7 +376139,7 @@
     "jerseyNumbers": [],
     "championships": 0,
     "mvps": 0,
-    "hallOfFame": false,
+    "hallOfFame": true,
     "rookieOfTheYear": false,
     "stats": {
       "points": 0,
@@ -382092,40 +376931,6 @@
     "mvpMarkets": []
   },
   {
-    "id": "ath_nhl_8484900",
-    "name": "Cooper Black",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      31
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 18,
-      "wins": 0,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
     "id": "ath_nhl_8449861",
     "name": "Wilf Cude",
     "sports": [
@@ -382172,40 +376977,6 @@
       "blocks": 0
     },
     "popularityScore": 15,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482193",
-    "name": "Dylan Garand",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      33
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 371,
-      "wins": 8,
-      "blocks": 0
-    },
-    "popularityScore": 5,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -383396,40 +378167,6 @@
     "championshipMarkets": [
       "CAN"
     ],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8483746",
-    "name": "Vyacheslav Buteyets",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      32
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 10,
-      "wins": 0,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -388174,40 +382911,6 @@
       "assists": 1,
       "saves": 219,
       "wins": 1,
-      "blocks": 0
-    },
-    "popularityScore": 5,
-    "championshipMarkets": [],
-    "mvpMarkets": []
-  },
-  {
-    "id": "ath_nhl_8482515",
-    "name": "Artur Akhtyamov",
-    "sports": [
-      "NHL"
-    ],
-    "teams": [],
-    "teamNames": [],
-    "markets": [],
-    "positions": [
-      "G"
-    ],
-    "activeYears": [
-      0,
-      0
-    ],
-    "jerseyNumbers": [
-      70
-    ],
-    "championships": 0,
-    "mvps": 0,
-    "hallOfFame": false,
-    "rookieOfTheYear": false,
-    "stats": {
-      "points": 0,
-      "assists": 0,
-      "saves": 71,
-      "wins": 0,
       "blocks": 0
     },
     "popularityScore": 5,
