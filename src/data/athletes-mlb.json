@@ -24884,7 +24884,7 @@
     "jerseyNumbers": [
       26
     ],
-    "championships": 1,
+    "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -24899,9 +24899,7 @@
     "draftRound": 4,
     "draftYear": 2018,
     "college": "Crowder College",
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -46347,7 +46345,7 @@
       10,
       61
     ],
-    "championships": 1,
+    "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -46361,9 +46359,7 @@
     "draftRound": 7,
     "draftYear": 2013,
     "college": "Marina (CA) HS",
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -163452,8 +163448,7 @@
     },
     "popularityScore": 15,
     "championshipMarkets": [
-      "ATL",
-      "MIL"
+      "ATL"
     ],
     "mvpMarkets": []
   },
@@ -548108,7 +548103,7 @@
       58,
       74
     ],
-    "championships": 1,
+    "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -548123,9 +548118,7 @@
     "draftRound": 3,
     "draftYear": 2014,
     "college": "Loyola Marymount",
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -908047,7 +908040,7 @@
       21,
       22
     ],
-    "championships": 1,
+    "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -908061,9 +908054,7 @@
     "draftRound": 1,
     "draftYear": 2010,
     "college": "Westlake HS",
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": [
       "MIL"
     ]
@@ -929031,7 +929022,7 @@
     "draftPick": 411,
     "draftRound": 14,
     "draftYear": 2017,
-    "championships": 1,
+    "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -929041,9 +929032,7 @@
       "saves": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -947691,7 +947680,7 @@
     "draftPick": 21,
     "draftRound": 1,
     "draftYear": 2018,
-    "championships": 1,
+    "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -947701,9 +947690,7 @@
       "saves": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -951456,7 +951443,7 @@
     "jerseyNumbers": [
       11
     ],
-    "championships": 1,
+    "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
@@ -951466,9 +951453,7 @@
       "saves": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [
-      "MIL"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {

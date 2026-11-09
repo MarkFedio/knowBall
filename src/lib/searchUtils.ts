@@ -104,6 +104,10 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   // Football
   'diggs': 'stefon diggs',
   'saquon': 'saquon barkley',
+  'kamren curl': 'kam curl',
+  'lloyd cushenberry': 'lloyd cushenberry iii',
+  'carlton davis': 'carlton davis iii',
+  'willie gay': 'willie gay jr',
   'charbonnet': 'zach charbonnet',
   'mitch trubisky': 'mitchell trubisky',
   'chad ochocinco': 'chad johnson',
@@ -120,6 +124,9 @@ export const NICKNAME_ALIASES: Record<string, string> = {
 
   // Hockey
   'korpisalo': 'joonas korpisalo',
+  'matt dumba': 'mathew dumba',
+  'pat maroon': 'patrick maroon',
+  'zach aston reese': 'zachary aston-reese',
   'ovi': 'alexander ovechkin',
   'ovie': 'alexander ovechkin',
   'the great one': 'wayne gretzky',

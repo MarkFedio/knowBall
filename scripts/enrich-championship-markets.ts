@@ -20,7 +20,7 @@ const NBA_CHAMPIONS: Record<number, string[]> = {
   2006: ['MIA'], 2007: ['SAS'], 2008: ['BOS'], 2009: ['LAL'], 2010: ['LAL'],
   2011: ['DAL'], 2012: ['MIA'], 2013: ['MIA'], 2014: ['SAS'], 2015: ['GSW'],
   2016: ['CLE'], 2017: ['GSW'], 2018: ['GSW'], 2019: ['TOR'], 2020: ['LAL'],
-  2021: ['MIL'], 2022: ['GSW'], 2023: ['DEN'], 2024: ['BOS'],
+  2021: ['MIL'], 2022: ['GSW'], 2023: ['DEN'], 2024: ['BOS'], 2025: ['BOS'], 2026: ['NYK'],
 };
 
 const NBA_MARKETS: Record<string, string> = {
@@ -143,7 +143,7 @@ const SUPER_BOWL_WINNERS: Record<number, string[]> = {
   2006: ['IND'], 2007: ['NYG'], 2008: ['PIT'], 2009: ['NO'], 2010: ['GB'],
   2011: ['NYG'], 2012: ['BAL'], 2013: ['SEA'], 2014: ['NE', 'NWE'], 2015: ['DEN'],
   2016: ['NE', 'NWE'], 2017: ['PHI'], 2018: ['NE', 'NWE'], 2019: ['KC'], 2020: ['TB'],
-  2021: ['LAR', 'LA'], 2022: ['KC'], 2023: ['KC'], 2024: ['KC'],
+  2021: ['LAR', 'LA'], 2022: ['KC'], 2023: ['KC'], 2024: ['KC'], 2025: ['PHI', 'KC'],
 };
 
 const NFL_MARKETS: Record<string, string> = {
@@ -158,6 +158,8 @@ const NFL_MARKETS: Record<string, string> = {
 };
 
 const NFL_MVP_MARKETS: Record<string, string> = {
+  'otto graham': 'CLE',
+  'jack kemp': 'NY',
   'jim brown': 'CLE',
   'johnny unitas': 'BAL',
   'norm van brocklin': 'PHI',
@@ -234,7 +236,7 @@ const STANLEY_CUPS: Record<number, string[]> = {
   2009: ['PIT'], 2010: ['CHI'], 2011: ['BOS'], 2012: ['LAK'], 2013: ['CHI'],
   2014: ['LAK'], 2015: ['CHI'], 2016: ['PIT'], 2017: ['PIT'], 2018: ['WSH'],
   2019: ['STL'], 2020: ['TBL'], 2021: ['TBL'], 2022: ['COL'], 2023: ['VGK'],
-  2024: ['FLA'],
+  2024: ['FLA'], 2025: ['FLA'],
 };
 
 const NHL_MARKETS: Record<string, string> = {

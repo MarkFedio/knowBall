@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:gemini": "tsx scripts/verify-grid-gemini.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.5",

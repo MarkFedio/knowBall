@@ -186516,7 +186516,7 @@
       "turnovers": 816,
       "blocks": 263
     },
-    "popularityScore": 35,
+    "popularityScore": 80,
     "championshipMarkets": [
       "MIL"
     ],
@@ -192495,7 +192495,7 @@
       "turnovers": 1703,
       "blocks": 720
     },
-    "popularityScore": 65,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -193334,7 +193334,7 @@
       "turnovers": 1679,
       "blocks": 326
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -197533,7 +197533,8 @@
       "WAS",
       "MIN",
       "CHI",
-      "OKC"
+      "OKC",
+      "CHA"
     ],
     "teamNames": [
       "Memphis Grizzlies",
@@ -197583,7 +197584,7 @@
       "turnovers": 1046,
       "blocks": 965
     },
-    "popularityScore": 50,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -198753,7 +198754,7 @@
       "turnovers": 861,
       "blocks": 80
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [
       "SA"
     ],
@@ -200108,7 +200109,7 @@
       "turnovers": 2500,
       "blocks": 417
     },
-    "popularityScore": 90,
+    "popularityScore": 95,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -200222,7 +200223,7 @@
       "turnovers": 1597,
       "blocks": 321
     },
-    "popularityScore": 60,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -203309,7 +203310,7 @@
       "turnovers": 1492,
       "blocks": 466
     },
-    "popularityScore": 90,
+    "popularityScore": 95,
     "championshipMarkets": [
       "BAY"
     ],
@@ -204668,7 +204669,8 @@
       "PHI",
       "UTA",
       "CLE",
-      "SAC"
+      "SAC",
+      "FLA"
     ],
     "positions": [
       "SG",
@@ -204702,7 +204704,7 @@
       "turnovers": 903,
       "blocks": 159
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -205952,7 +205954,7 @@
       "turnovers": 1407,
       "blocks": 565
     },
-    "popularityScore": 65,
+    "popularityScore": 85,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -207457,7 +207459,7 @@
       "turnovers": 1185,
       "blocks": 191
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [
       "BAY"
     ],
@@ -207650,7 +207652,7 @@
       "turnovers": 1685,
       "blocks": 1200
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -211757,7 +211759,7 @@
       "turnovers": 988,
       "blocks": 274
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [
       "DEN",
       "LA"
@@ -212077,7 +212079,7 @@
       "turnovers": 846,
       "blocks": 122
     },
-    "popularityScore": 50,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -212613,7 +212615,8 @@
       "BOS",
       "HOU",
       "OKC",
-      "ATL"
+      "ATL",
+      "BKN"
     ],
     "teamNames": [
       "Charlotte Hornets",
@@ -212671,7 +212674,7 @@
       "turnovers": 2032,
       "blocks": 133
     },
-    "popularityScore": 50,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -212783,26 +212786,29 @@
       "MIA",
       "POR",
       "CHO",
-      "CHA"
+      "CHA",
+      "ATL"
     ],
     "teamNames": [
       "New Orleans Pelicans",
       "Miami Heat",
       "Portland Trail Blazers",
-      "Charlotte Hornets"
+      "Charlotte Hornets",
+      "Atlanta Hawks"
     ],
     "markets": [
       "NO",
       "MIA",
       "POR",
-      "CHA"
+      "CHA",
+      "ATL"
     ],
     "positions": [
       "C"
     ],
     "activeYears": [
       2014,
-      2024
+      2025
     ],
     "jerseyNumbers": [
       40,
@@ -212824,7 +212830,7 @@
       "turnovers": 552,
       "blocks": 330
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -213541,7 +213547,8 @@
       "DET",
       "DEN",
       "POR",
-      "BRK"
+      "BRK",
+      "PHX"
     ],
     "teamNames": [
       "Charlotte Hornets",
@@ -213594,7 +213601,7 @@
       "turnovers": 1211,
       "blocks": 703
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -214438,7 +214445,8 @@
       "SAC",
       "PHO",
       "MEM",
-      "CLE"
+      "CLE",
+      "CHA"
     ],
     "teamNames": [
       "Golden State Warriors",
@@ -214462,7 +214470,8 @@
       "SAC",
       "PHX",
       "MEM",
-      "CLE"
+      "CLE",
+      "CHI"
     ],
     "positions": [
       "SG",
@@ -214491,7 +214500,7 @@
       "turnovers": 531,
       "blocks": 73
     },
-    "popularityScore": 35,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -215393,7 +215402,7 @@
       "turnovers": 1480,
       "blocks": 126
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [
       "NY"
     ],
@@ -215717,7 +215726,8 @@
       "UTA",
       "IND",
       "BRK",
-      "WAS"
+      "WAS",
+      "BKN"
     ],
     "teamNames": [
       "Detroit Pistons",
@@ -215740,7 +215750,7 @@
     ],
     "activeYears": [
       2015,
-      2024
+      2025
     ],
     "jerseyNumbers": [
       44
@@ -215760,7 +215770,7 @@
       "turnovers": 1205,
       "blocks": 55
     },
-    "popularityScore": 50,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -215818,7 +215828,7 @@
       "turnovers": 1007,
       "blocks": 167
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -217468,7 +217478,7 @@
       "turnovers": 754,
       "blocks": 468
     },
-    "popularityScore": 70,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -220910,7 +220920,7 @@
     ],
     "activeYears": [
       2016,
-      2026
+      2027
     ],
     "jerseyNumbers": [
       6,
@@ -220932,7 +220942,7 @@
       "turnovers": 876,
       "blocks": 947
     },
-    "popularityScore": 85,
+    "popularityScore": 90,
     "championshipMarkets": [
       "BOS"
     ],
@@ -221097,7 +221107,7 @@
       "turnovers": 1957,
       "blocks": 815
     },
-    "popularityScore": 90,
+    "popularityScore": 95,
     "championshipMarkets": [
       "NY"
     ],
@@ -221800,7 +221810,7 @@
       "turnovers": 538,
       "blocks": 105
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [
       "NY"
     ],
@@ -221937,10 +221947,9 @@
       "turnovers": 477,
       "blocks": 188
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [
-      "TOR",
-      "NY"
+      "TOR"
     ],
     "mvpMarkets": []
   },
@@ -222183,7 +222192,7 @@
       "turnovers": 528,
       "blocks": 276
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -222241,7 +222250,8 @@
       "PHO",
       "WAS",
       "MEM",
-      "MIN"
+      "MIN",
+      "PHX"
     ],
     "teamNames": [
       "Denver Nuggets",
@@ -223965,7 +223975,7 @@
     ],
     "activeYears": [
       2017,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       7,
@@ -223989,7 +223999,7 @@
       "turnovers": 789,
       "blocks": 108
     },
-    "popularityScore": 35,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -224038,7 +224048,7 @@
       "turnovers": 1554,
       "blocks": 258
     },
-    "popularityScore": 90,
+    "popularityScore": 95,
     "championshipMarkets": [
       "BOS"
     ],
@@ -224304,7 +224314,7 @@
       "turnovers": 756,
       "blocks": 189
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -224692,7 +224702,7 @@
       "turnovers": 1210,
       "blocks": 236
     },
-    "popularityScore": 75,
+    "popularityScore": 85,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -225061,7 +225071,7 @@
       "turnovers": 723,
       "blocks": 97
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -225449,7 +225459,7 @@
       "turnovers": 834,
       "blocks": 230
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -225913,7 +225923,7 @@
       "turnovers": 1119,
       "blocks": 146
     },
-    "popularityScore": 80,
+    "popularityScore": 85,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -226462,7 +226472,7 @@
       "turnovers": 474,
       "blocks": 67
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -226934,7 +226944,7 @@
       "turnovers": 356,
       "blocks": 367
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -228140,7 +228150,7 @@
       "turnovers": 1439,
       "blocks": 388
     },
-    "popularityScore": 95,
+    "popularityScore": 98,
     "championshipMarkets": [
       "BOS"
     ],
@@ -229224,7 +229234,7 @@
       "turnovers": 325,
       "blocks": 339
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -229273,7 +229283,7 @@
       "turnovers": 843,
       "blocks": 545
     },
-    "popularityScore": 85,
+    "popularityScore": 90,
     "championshipMarkets": [
       "BOS"
     ],
@@ -229327,8 +229337,8 @@
     },
     "popularityScore": 85,
     "championshipMarkets": [
-      "TOR",
-      "NY"
+      "NY",
+      "TOR"
     ],
     "mvpMarkets": []
   },
@@ -229524,10 +229534,9 @@
       "turnovers": 535,
       "blocks": 232
     },
-    "popularityScore": 80,
+    "popularityScore": 85,
     "championshipMarkets": [
-      "LA",
-      "OKC"
+      "LA"
     ],
     "mvpMarkets": []
   },
@@ -231890,6 +231899,7 @@
     },
     "popularityScore": 20,
     "championshipMarkets": [
+      "BOS",
       "MIL"
     ],
     "mvpMarkets": []
@@ -232052,7 +232062,8 @@
       "DET",
       "MIN",
       "WAS",
-      "DEN"
+      "DEN",
+      "PHX"
     ],
     "teamNames": [
       "Indiana Pacers",
@@ -232100,7 +232111,7 @@
       "turnovers": 308,
       "blocks": 74
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -233086,7 +233097,7 @@
       "turnovers": 167,
       "blocks": 366
     },
-    "popularityScore": 60,
+    "popularityScore": 70,
     "championshipMarkets": [
       "BOS"
     ],
@@ -233998,7 +234009,7 @@
       "turnovers": 302,
       "blocks": 67
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [
       "NY"
     ],
@@ -234288,7 +234299,7 @@
       "turnovers": 291,
       "blocks": 468
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -234888,7 +234899,7 @@
       "turnovers": 505,
       "blocks": 389
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [
       "OKC"
     ],
@@ -236025,7 +236036,7 @@
       "turnovers": 354,
       "blocks": 339
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -236457,7 +236468,7 @@
       "turnovers": 586,
       "blocks": 194
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -236527,7 +236538,7 @@
       "turnovers": 333,
       "blocks": 36
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [
       "BOS"
     ],
@@ -237232,7 +237243,7 @@
       "turnovers": 326,
       "blocks": 78
     },
-    "popularityScore": 70,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -237486,7 +237497,8 @@
       "MIN",
       "DET",
       "NYK",
-      "PHI"
+      "PHI",
+      "BKN"
     ],
     "teamNames": [
       "Brooklyn Nets",
@@ -237508,7 +237520,7 @@
     ],
     "activeYears": [
       2019,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       5,
@@ -237532,7 +237544,7 @@
       "turnovers": 365,
       "blocks": 73
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -240097,7 +240109,7 @@
       "turnovers": 810,
       "blocks": 93
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -240559,7 +240571,7 @@
       "turnovers": 160,
       "blocks": 102
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -240982,7 +240994,7 @@
       "turnovers": 176,
       "blocks": 135
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -241170,7 +241182,7 @@
       "turnovers": 352,
       "blocks": 147
     },
-    "popularityScore": 70,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -241286,19 +241298,22 @@
       "WAS",
       "TOR",
       "CHO",
-      "PHI"
+      "PHI",
+      "SAC"
     ],
     "teamNames": [
       "Washington Wizards",
       "Toronto Raptors",
       "Charlotte Hornets",
-      "Philadelphia 76ers"
+      "Philadelphia 76ers",
+      "Sacramento Kings"
     ],
     "markets": [
       "WAS",
       "TOR",
       "CHA",
-      "PHI"
+      "PHI",
+      "SAC"
     ],
     "positions": [
       "SF"
@@ -241328,7 +241343,7 @@
       "turnovers": 215,
       "blocks": 84
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -242213,7 +242228,7 @@
       "turnovers": 203,
       "blocks": 34
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -242765,7 +242780,7 @@
       "turnovers": 133,
       "blocks": 74
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [
       "BOS"
     ],
@@ -245054,7 +245069,7 @@
       "turnovers": 184,
       "blocks": 104
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -245109,7 +245124,7 @@
       "turnovers": 385,
       "blocks": 264
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [
       "NY"
     ],
@@ -245600,7 +245615,8 @@
     "teams": [
       "UTA",
       "CHO",
-      "DAL"
+      "DAL",
+      "CHA"
     ],
     "teamNames": [
       "Utah Jazz",
@@ -245610,7 +245626,8 @@
     "markets": [
       "UTA",
       "CHA",
-      "DAL"
+      "DAL",
+      "CHI"
     ],
     "positions": [
       "SG"
@@ -245640,7 +245657,7 @@
       "turnovers": 300,
       "blocks": 53
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -246138,7 +246155,7 @@
       "turnovers": 396,
       "blocks": 47
     },
-    "popularityScore": 70,
+    "popularityScore": 80,
     "championshipMarkets": [
       "BOS"
     ],
@@ -246243,7 +246260,7 @@
       "turnovers": 261,
       "blocks": 236
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -246689,17 +246706,20 @@
     "teams": [
       "NOP",
       "ATL",
-      "DET"
+      "DET",
+      "WAS"
     ],
     "teamNames": [
       "New Orleans Pelicans",
       "Atlanta Hawks",
-      "Detroit Pistons"
+      "Detroit Pistons",
+      "Washington Wizards"
     ],
     "markets": [
       "NO",
       "ATL",
-      "DET"
+      "DET",
+      "WAS"
     ],
     "positions": [
       "SF"
@@ -246727,7 +246747,7 @@
       "turnovers": 358,
       "blocks": 62
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -247956,7 +247976,7 @@
     ],
     "activeYears": [
       2021,
-      2026
+      2027
     ],
     "jerseyNumbers": [
       2,
@@ -247978,7 +247998,7 @@
       "turnovers": 179,
       "blocks": 131
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [
       "BOS"
     ],
@@ -248074,7 +248094,7 @@
       "turnovers": 230,
       "blocks": 252
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -248508,7 +248528,7 @@
       "turnovers": 483,
       "blocks": 61
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -250079,7 +250099,7 @@
       "turnovers": 158,
       "blocks": 27
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -250178,7 +250198,7 @@
       "turnovers": 962,
       "blocks": 168
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -250285,7 +250305,7 @@
       "turnovers": 406,
       "blocks": 95
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -250586,7 +250606,7 @@
       "turnovers": 472,
       "blocks": 72
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -251037,7 +251057,8 @@
     "teams": [
       "LAL",
       "BRK",
-      "MEM"
+      "MEM",
+      "BKN"
     ],
     "teamNames": [
       "Los Angeles Lakers",
@@ -251077,7 +251098,7 @@
       "turnovers": 273,
       "blocks": 77
     },
-    "popularityScore": 20,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -252627,7 +252648,7 @@
       "turnovers": 328,
       "blocks": 54
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [
       "NY"
     ],
@@ -253134,7 +253155,7 @@
       "turnovers": 122,
       "blocks": 84
     },
-    "popularityScore": 65,
+    "popularityScore": 75,
     "championshipMarkets": [
       "BOS"
     ],
@@ -253641,7 +253662,7 @@
       "turnovers": 141,
       "blocks": 181
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [
       "BOS"
     ],
@@ -255829,6 +255850,7 @@
       2027
     ],
     "jerseyNumbers": [
+      4,
       5,
       11
     ],
@@ -255847,7 +255869,7 @@
       "turnovers": 412,
       "blocks": 124
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -256458,7 +256480,7 @@
       "turnovers": 138,
       "blocks": 40
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -256598,7 +256620,7 @@
       "turnovers": 342,
       "blocks": 97
     },
-    "popularityScore": 70,
+    "popularityScore": 75,
     "championshipMarkets": [
       "NY"
     ],
@@ -257568,7 +257590,7 @@
       "turnovers": 40,
       "blocks": 13
     },
-    "popularityScore": 10,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -263587,7 +263609,9 @@
       "blocks": 45
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "NY"
+    ],
     "mvpMarkets": []
   },
   {
@@ -263680,7 +263704,9 @@
       "blocks": 15
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "NY"
+    ],
     "mvpMarkets": []
   },
   {
@@ -264229,7 +264255,7 @@
       "turnovers": 7,
       "blocks": 3
     },
-    "popularityScore": 10,
+    "popularityScore": 60,
     "championshipMarkets": [
       "NY"
     ],
@@ -264255,7 +264281,7 @@
     ],
     "activeYears": [
       2025,
-      2026
+      2027
     ],
     "jerseyNumbers": [
       55
@@ -264275,7 +264301,7 @@
       "turnovers": 53,
       "blocks": 41
     },
-    "popularityScore": 10,
+    "popularityScore": 60,
     "championshipMarkets": [
       "NY"
     ],
@@ -264395,6 +264421,7 @@
       2027
     ],
     "jerseyNumbers": [
+      8,
       13
     ],
     "college": "George Mason, Marquette",
@@ -264413,7 +264440,7 @@
       "turnovers": 75,
       "blocks": 8
     },
-    "popularityScore": 20,
+    "popularityScore": 65,
     "championshipMarkets": [
       "NY"
     ],
@@ -265892,7 +265919,7 @@
     },
     "popularityScore": 10,
     "championshipMarkets": [
-      "OKC"
+      "NY"
     ],
     "mvpMarkets": []
   },
@@ -266028,7 +266055,9 @@
       "blocks": 8
     },
     "popularityScore": 20,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "BOS"
+    ],
     "mvpMarkets": []
   },
   {
@@ -268478,7 +268507,9 @@
       "blocks": 1
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "BOS"
+    ],
     "mvpMarkets": []
   },
   {
@@ -271235,7 +271266,9 @@
       "blocks": 6
     },
     "popularityScore": 10,
-    "championshipMarkets": [],
+    "championshipMarkets": [
+      "NY"
+    ],
     "mvpMarkets": []
   },
   {
