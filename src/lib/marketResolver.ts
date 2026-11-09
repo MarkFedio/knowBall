@@ -92,63 +92,67 @@ export const MASTER_TEAM_TO_MARKET: Record<string, string> = {
   // Louisville / Kentucky
   LS1: 'KEN', LS2: 'KEN', LS3: 'KEN',
 
-  // Richmond
-  RIC: 'WAS',
+  // Richmond / Keokuk
+  RIC: 'WAS', KEO: 'CHI',
 
   // ==========================================
   // NBA / ABA FRANCHISES & HISTORICAL CODES
   // ==========================================
-  NYK: 'NY', BKN: 'NY', NJN: 'NY', NJA: 'NY',
+  NYK: 'NY', BKN: 'NY', BRK: 'NY', NJN: 'NY', NJA: 'NY',
   BOS_NBA: 'BOS',
-  CHI_NBA: 'CHI', CHZ: 'CHI', CHP_NBA: 'CHI', TRI: 'CHI',
-  LAL: 'LA', LAC: 'LA', SDC: 'SD', BUF_NBA: 'BUF', LAS: 'LA',
+  CHI: 'CHI', CHI_NBA: 'CHI', CHZ: 'CHI', CHP_NBA: 'CHI', TRI: 'CHI', WAT: 'CHI',
+  LAL: 'LA', LAC: 'LA', SDC: 'SD', SDR: 'SD', BUF_NBA: 'BUF', LAS: 'LA',
   GSW: 'BAY', SFW: 'BAY', PHW: 'PHI',
   PHI_NBA: 'PHI', SYR: 'BUF',
-  DET_NBA: 'DET', FTW: 'IND',
+  DET_NBA: 'DET', DTF: 'DET', FTW: 'IND', INJ: 'IND', INO: 'IND', AND: 'IND',
   MIA_NBA: 'FLA', ORL: 'FLA',
-  DAL_NBA: 'DAL', DLC: 'DAL', HOU_NBA: 'HOU', HSM: 'HOU', SAS: 'SA', TEX_ABA: 'DAL',
-  CLE_NBA: 'CLE', CIN_NBA: 'CIN', ROR: 'BUF',
-  WAS_NBA: 'WAS', BAL_NBA: 'BAL', CAP: 'WAS', CHS: 'CHI',
-  TOR_NBA: 'TOR', VAN_NBA: 'VAN',
-  MIL_NBA: 'MIL', MIN_NBA: 'MIN', PHO: 'PHX', PHX_NBA: 'PHX',
+  DAL: 'DAL', DAL_NBA: 'DAL', DLC: 'DAL', HOU_NBA: 'HOU', HSM: 'HOU', SAS: 'SA', SAA: 'SA', TEX_ABA: 'DAL',
+  CLE_NBA: 'CLE', CIN_NBA: 'CIN', ROR: 'BUF', ROC: 'BUF',
+  WAS_NBA: 'WAS', WSB: 'WAS', WSC: 'WAS', WSA: 'WAS', BAL_NBA: 'BAL', BLB: 'BAL', CAP: 'WAS', CHS: 'CHI',
+  TOR_NBA: 'TOR', TRH: 'TOR', VAN: 'VAN', VAN_NBA: 'VAN',
+  MIL_NBA: 'MIL', SHE: 'MIL', MIN_NBA: 'MIN', MNL: 'MIN', MNP: 'MIN', MNM: 'MIN', PHO: 'PHX', PHX_NBA: 'PHX',
   POR: 'POR', SAC: 'SAC', KCK: 'KC', KCO: 'KC', CIN_ROYALS: 'CIN',
-  UTA: 'UTA', NOJ: 'NO', NOH: 'NO', NOK: 'NO', NOP: 'NO', NOB: 'NO',
+  UTA: 'UTA', UTS: 'UTA', NOJ: 'NO', NOH: 'NO', NOK: 'NO', NOP: 'NO', NOB: 'NO',
   MEM: 'MEM', VAN_GRIZZLIES: 'VAN', MMF: 'MEM', MMT: 'MEM', MMP: 'MEM', MMS: 'MEM',
   OKC: 'OKC', SEA_NBA: 'SEA',
-  DEN_NBA: 'DEN', DNA: 'DEN',
-  ATL_NBA: 'ATL', STL_HAWKS: 'STL', MLH: 'MIL',
-  CHA_NBA: 'CAR', CHH: 'CAR',
+  DEN: 'DEN', DEN_NBA: 'DEN', DNA: 'DEN', DNR: 'DEN', DNN: 'DEN',
+  ATL_NBA: 'ATL', STL_HAWKS: 'STL', STB: 'STL', SSL: 'STL', MLH: 'MIL',
+  CAR: 'CAR', CHA_NBA: 'CAR', CHH: 'CAR', CHO: 'CAR', CAR_COUGARS: 'CAR',
   IND_NBA: 'IND', INA: 'IND',
   SDA: 'SD', SDS: 'SD',
-  VIR: 'WAS', CAR_COUGARS: 'CAR',
+  VIR: 'WAS',
+  KEN: 'KEN',
+  PTC: 'PIT',
 
   // ==========================================
   // NFL / AFL FRANCHISES & HISTORICAL CODES
   // ==========================================
-  NYG: 'NY', NYJ: 'NY',
+  NY: 'NY', NYG: 'NY', NYJ: 'NY', BRK_NFL: 'NY', NYB: 'NY', NYT: 'NY', SI: 'NY', ORG: 'NY', OOR: 'NY',
   NE: 'BOS', BOS_NFL: 'BOS',
-  CHI_NFL: 'CHI', CRD: 'CHI', CHC_NFL: 'CHI',
-  LAR: 'LA', LAC_NFL: 'LA', RAM: 'LA', SD_NFL: 'SD',
+  CHI_NFL: 'CHI', CRD: 'CHI', CHC_NFL: 'CHI', CHB: 'CHI', CHR: 'CHI', DEC: 'CHI', RI: 'CHI', ECG: 'CHI', 'C-P': 'CHI',
+  LA: 'LA', LAR: 'LA', LAC_NFL: 'LA', RAM: 'LA', SD: 'SD', SD_NFL: 'SD', DON: 'LA',
   SF: 'BAY', OAK_NFL: 'BAY', RAI: 'BAY', LV: 'LV',
-  PHI_NFL: 'PHI',
+  PHI_NFL: 'PHI', FYJ: 'PHI', POT: 'PHI',
   DET_NFL: 'DET', POR_NFL: 'DET',
   MIA_NFL: 'FLA', TB: 'FLA', TBL_NFL: 'FLA', JAX: 'FLA',
-  DAL_NFL: 'DAL', HOU_NFL: 'HOU', HST: 'HOU', TEX_NFL: 'DAL',
-  CLE_NFL: 'CLE', CIN_NFL: 'CIN',
+  DAL_NFL: 'DAL', COW: 'DAL', HOU_NFL: 'HOU', HST: 'HOU', TEX_NFL: 'DAL',
+  CLE_NFL: 'CLE', CLV: 'CLE', CIN_NFL: 'CIN', CAN: 'CLE', AKR: 'CLE', TOL: 'CLE', DAY: 'CIN',
   WAS_NFL: 'WAS', BAL_NFL: 'BAL', BLT: 'BAL',
   BUF_NFL: 'BUF',
-  GB: 'GB',
+  GB: 'GB', RAC: 'GB',
   IND_NFL: 'IND',
-  KC_NFL: 'KC',
+  KC: 'KC', KC_NFL: 'KC',
   DEN_NFL: 'DEN',
   SEA_NFL: 'SEA',
   ARI_NFL: 'PHX', ARZ: 'PHX', PHO_NFL: 'PHX',
-  MIN_NFL: 'MIN',
+  MIN_NFL: 'MIN', DUL: 'MIN',
   ATL_NFL: 'ATL',
   CAR_NFL: 'CAR',
-  NO_NFL: 'NO',
+  NO: 'NO', NO_NFL: 'NO',
   PIT_NFL: 'PIT',
   TEN: 'TEN', OTL: 'TEN',
+  SL: 'STL',
+  LOU: 'KEN',
 
   // ==========================================
   // NHL / WHA FRANCHISES & HISTORICAL CODES
@@ -157,32 +161,34 @@ export const MASTER_TEAM_TO_MARKET: Record<string, string> = {
   BOS_NHL: 'BOS',
   CHI_NHL: 'CHI',
   LAK: 'LA', ANA_NHL: 'LA',
-  SJS: 'BAY', OAK_NHL: 'BAY',
+  SJS: 'BAY', OAK_NHL: 'BAY', CGS: 'BAY',
   PHI_NHL: 'PHI', QUA: 'PHI',
   DET_NHL: 'DET', DCG: 'DET', DFL: 'DET',
-  FLA_NHL: 'FLA', TBL: 'FLA',
+  FLA: 'FLA', FLA_NHL: 'FLA', TBL: 'FLA',
   DAL_NHL: 'DAL',
   CBJ: 'CLE', CLE_NHL: 'CLE',
   WSH: 'WAS',
   TOR_NHL: 'TOR', TSP: 'TOR', TAN: 'TOR',
-  MTL_NHL: 'MTL', MWN: 'MTL',
+  MTL: 'MTL', MTL_NHL: 'MTL', MWN: 'MTL', MMR: 'MTL',
   VAN_NHL: 'VAN',
   CGY: 'CGY', CAL_NHL: 'CGY',
   EDM: 'EDM',
   OTT: 'OTT', SEN: 'OTT',
-  WPG: 'WPG',
+  WPG: 'WPG', WIN: 'WPG',
   COL_NHL: 'DEN', CLR: 'DEN',
   VGK: 'LV',
   SEA_NHL: 'SEA',
-  ARI_NHL: 'PHX', PHX_NHL: 'PHX',
+  PHX: 'PHX', ARI_NHL: 'PHX', PHX_NHL: 'PHX',
   MIN_NHL: 'MIN', MNS: 'MIN',
   NSH: 'TEN',
   CAR_NHL: 'CAR', HFD: 'BOS',
-  STL_NHL: 'STL',
+  STL_NHL: 'STL', SLE: 'STL',
   PIT_NHL: 'PIT', PIR: 'PIT',
   BUF_NHL: 'BUF',
   UTA_NHL: 'UTA',
-  QBD: 'CAN',
+  QUE: 'CAN', QBD: 'CAN', HAM: 'CAN',
+  AFM: 'ATL',
+  KCS: 'KC',
 };
 
 // Normalized metro code mapping for Category matching
@@ -198,33 +204,34 @@ const METRO_TO_CODES: Record<string, string[]> = {
   metro_texas: ['DAL', 'HOU', 'SA'],
   metro_ohio: ['CLE', 'CIN'],
   metro_dc_baltimore: ['WAS', 'BAL'],
-  metro_canada: ['TOR', 'MTL', 'VAN', 'CAL', 'CGY', 'EDM', 'OTT', 'WPG', 'CAN'],
+  metro_canada: ['TOR', 'MTL', 'VAN', 'CAL', 'CGY', 'EDM', 'OTT', 'WPG', 'CAN', 'QUE'],
 };
 
 // Text keywords in teamNames that definitively identify the metro area
+// Note: Unambiguous franchise names are used to prevent cross-metro or cross-sport false positives
 const METRO_KEYWORDS: Record<string, string[]> = {
-  NY: ['new york', 'brooklyn', 'new jersey', 'yankees', 'mets', 'giants', 'jets', 'knicks', 'nets', 'rangers', 'islanders', 'devils'],
-  BOS: ['boston', 'new england', 'red sox', 'celtics', 'patriots', 'bruins'],
-  CHI: ['chicago', 'cubs', 'white sox', 'bulls', 'bears', 'blackhawks'],
-  LA: ['los angeles', 'anaheim', 'dodgers', 'angels', 'lakers', 'clippers', 'rams', 'chargers', 'kings', 'ducks'],
-  BAY: ['san francisco', 'oakland', 'golden state', 'san jose', 'giants', 'athletics', 'warriors', '49ers', 'raiders', 'sharks'],
-  PHI: ['philadelphia', 'phillies', '76ers', 'sixers', 'eagles', 'flyers'],
+  NY: ['new york', 'brooklyn', 'new jersey', 'yankees', 'mets', 'knicks', 'nets', 'islanders', 'devils', 'ny rangers', 'new york rangers', 'ny giants', 'new york giants', 'ny jets', 'new york jets', 'brooklyn dodgers', 'brooklyn americans', 'new york titans', 'new york bulldogs'],
+  BOS: ['boston', 'new england', 'red sox', 'celtics', 'patriots', 'bruins', 'hartford whalers'],
+  CHI: ['chicago', 'cubs', 'white sox', 'bulls', 'bears', 'blackhawks', 'chicago cardinals', 'chicago stags'],
+  LA: ['los angeles', 'anaheim', 'la dodgers', 'los angeles dodgers', 'angels', 'lakers', 'clippers', 'la rams', 'los angeles rams', 'la chargers', 'los angeles chargers', 'la kings', 'los angeles kings', 'ducks'],
+  BAY: ['san francisco', 'oakland', 'golden state', 'san jose', 'sf giants', 'san francisco giants', 'athletics', 'oakland a', 'warriors', '49ers', 'oakland raiders', 'raiders', 'sharks', 'california golden seals'],
+  PHI: ['philadelphia', 'phillies', '76ers', 'sixers', 'eagles', 'flyers', 'philadelphia athletics', 'philadelphia warriors'],
   DET: ['detroit', 'tigers', 'pistons', 'lions', 'red wings'],
-  FLA: ['florida', 'miami', 'tampa', 'tampa bay', 'orlando', 'jacksonville', 'marlins', 'rays', 'heat', 'magic', 'dolphins', 'buccaneers', 'jaguars', 'panthers', 'lightning'],
-  TEX: ['texas', 'dallas', 'houston', 'san antonio', 'rangers', 'astros', 'mavericks', 'rockets', 'spurs', 'cowboys', 'texans', 'stars'],
+  FLA: ['florida', 'miami', 'tampa', 'tampa bay', 'orlando', 'jacksonville', 'marlins', 'rays', 'heat', 'magic', 'dolphins', 'buccaneers', 'jaguars', 'florida panthers', 'lightning'],
+  TEX: ['texas', 'dallas', 'houston', 'san antonio', 'texas rangers', 'astros', 'mavericks', 'rockets', 'spurs', 'cowboys', 'texans', 'dallas stars'],
   OHIO: ['cleveland', 'cincinnati', 'columbus', 'guardians', 'indians', 'reds', 'cavaliers', 'browns', 'bengals', 'blue jackets'],
   DC_BAL: ['washington', 'baltimore', 'nationals', 'orioles', 'wizards', 'bullets', 'commanders', 'redskins', 'ravens', 'capitals'],
-  CAN: ['toronto', 'montreal', 'vancouver', 'calgary', 'edmonton', 'ottawa', 'winnipeg', 'blue jays', 'expos', 'raptors', 'maple leafs', 'canadiens', 'canucks', 'flames', 'oilers', 'senators', 'jets'],
+  CAN: ['toronto', 'montreal', 'vancouver', 'calgary', 'edmonton', 'ottawa', 'winnipeg', 'quebec', 'nordiques', 'blue jays', 'expos', 'raptors', 'maple leafs', 'canadiens', 'canucks', 'flames', 'oilers', 'senators', 'winnipeg jets'],
 };
 
 /**
  * Returns all unique metropolitan market codes for an athlete by dynamically
- * combining pre-computed athlete.markets, team abbreviation mapping, and team name analysis.
+ * combining team abbreviation mapping and unambiguous team name analysis.
  */
 export function getMarketsForAthlete(athlete: Athlete): Set<string> {
-  const markets = new Set<string>(athlete.markets || []);
+  const markets = new Set<string>();
 
-  // 1. Resolve all team abbreviations in athlete.teams
+  // 1. Resolve all team abbreviations in athlete.teams using master mapping
   for (const team of athlete.teams || []) {
     const directMarket = MASTER_TEAM_TO_MARKET[team];
     if (directMarket) {
@@ -232,7 +239,7 @@ export function getMarketsForAthlete(athlete: Athlete): Set<string> {
     }
   }
 
-  // 2. Fallback: Scan athlete.teamNames for explicit city/metro indicators
+  // 2. Scan athlete.teamNames for unambiguous city/franchise indicators
   for (const tName of athlete.teamNames || []) {
     const lower = tName.toLowerCase();
     for (const [metroKey, keywords] of Object.entries(METRO_KEYWORDS)) {
@@ -258,6 +265,13 @@ export function getMarketsForAthlete(athlete: Athlete): Set<string> {
           markets.add(metroKey);
         }
       }
+    }
+  }
+
+  // 3. Fallback to pre-existing markets only if teams mapping yielded nothing
+  if (markets.size === 0 && athlete.markets) {
+    for (const m of athlete.markets) {
+      markets.add(m);
     }
   }
 

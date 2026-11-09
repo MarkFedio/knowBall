@@ -109,20 +109,28 @@ const ATHLETE_INDEX: IndexedAthlete[] = ATHLETES.map((a) => {
   };
 });
 
-function findAthleteByName(rawName: string): Athlete | null {
+function findAthletesByName(rawName: string): Athlete[] {
   const resolved = resolveAlias(rawName);
   const qNorm = normalizeSearchString(resolved);
 
+  const matched: Athlete[] = [];
+
   // 1. Exact match
   for (const item of ATHLETE_INDEX) {
-    if (item.normName === qNorm) return item.athlete;
+    if (item.normName === qNorm) matched.push(item.athlete);
+  }
+  if (matched.length > 0) {
+    return matched.sort((a, b) => (b.popularityScore || 50) - (a.popularityScore || 50));
   }
 
   // 2. Starts with query or full match
   for (const item of ATHLETE_INDEX) {
     if (item.normName.startsWith(qNorm) && Math.abs(item.normName.length - qNorm.length) <= 3) {
-      return item.athlete;
+      matched.push(item.athlete);
     }
+  }
+  if (matched.length > 0) {
+    return matched.sort((a, b) => (b.popularityScore || 50) - (a.popularityScore || 50));
   }
 
   // 3. Last name + First initial or token matching
@@ -132,13 +140,13 @@ function findAthleteByName(rawName: string): Athlete | null {
     for (const item of ATHLETE_INDEX) {
       if (item.tokens[item.tokens.length - 1] === lastName) {
         if (item.normName.includes(qTokens[0])) {
-          return item.athlete;
+          matched.push(item.athlete);
         }
       }
     }
   }
 
-  return null;
+  return matched.sort((a, b) => (b.popularityScore || 50) - (a.popularityScore || 50));
 }
 
 // ============================================================================
@@ -283,7 +291,8 @@ Rules:
    - "Saves" applies ONLY to MLB pitching saves or NHL goalie saves.
    - "Turnovers" applies ONLY to NFL interceptions/fumbles lost or NBA turnovers.
 5. Multi-Sport Athletes: Ensure the athlete actually achieved the required statistic in the sport where that stat is officially recorded (e.g. do not credit an NHL forward with goalie wins).
-6. Return ONLY a valid JSON array of objects. Do not include markdown code block syntax.
+6. CRITICAL - Accurate Names Only: Only put an athlete into the "name" field if you are 100% certain they satisfy BOTH categories. Never output an athlete into "name" and then explain in "reasoning" that they are disqualified, wore a different jersey number, or should be replaced. If unsure, name a different athlete.
+7. Return ONLY a valid JSON array of objects. Do not include markdown code block syntax.
 
 JSON format:
 [
@@ -614,9 +623,9 @@ async function main() {
       };
 
       for (const botAns of botAnswers) {
-        const found = findAthleteByName(botAns.name);
+        const candidates = findAthletesByName(botAns.name);
 
-        if (!found) {
+        if (candidates.length === 0) {
           cellResult.missingFromDb.push({
             athleteName: botAns.name,
             sport: botAns.sport,
@@ -625,18 +634,24 @@ async function main() {
           continue;
         }
 
-        const match = doesAthleteMatchCell(rowCat, colCat, found);
+        // Check if ANY matching athlete with this name satisfies the cell criteria
+        // (handles multiple athletes with identical names, e.g. Randy Johnson the 300-win pitcher vs the 1980s batter)
+        const bestMatch =
+          candidates.find((a) => doesAthleteMatchCell(rowCat, colCat, a).isMatch) ||
+          candidates[0]; // fallback to the most popular player
+
+        const match = doesAthleteMatchCell(rowCat, colCat, bestMatch);
         if (match.isMatch) {
           cellResult.accepted.push({
-            athleteName: found.name,
-            athleteId: found.id,
+            athleteName: bestMatch.name,
+            athleteId: bestMatch.id,
             sport: botAns.sport,
             reasoning: botAns.reasoning,
           });
         } else {
           cellResult.rejectedByGrid.push({
-            athleteName: found.name,
-            athleteId: found.id,
+            athleteName: bestMatch.name,
+            athleteId: bestMatch.id,
             failureReason: match.failureReason,
             reasoning: botAns.reasoning,
           });
