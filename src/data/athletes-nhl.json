@@ -466,8 +466,8 @@
       "Ottawa Senators"
     ],
     "markets": [
-      "OTT",
       "TOR",
+      "OTT",
       "CAN"
     ],
     "positions": [
@@ -1344,12 +1344,12 @@
       "VAN",
       "DAL",
       "PHX",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
       "HOU",
       "SA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -2296,9 +2296,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -2703,8 +2701,8 @@
     ],
     "markets": [
       "MTL",
-      "TOR",
       "CAN",
+      "TOR",
       "DET"
     ],
     "positions": [
@@ -3006,10 +3004,10 @@
     ],
     "markets": [
       "OTT",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -4858,9 +4856,9 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "ATL",
-      "BUF"
+      "NY"
     ],
     "positions": [
       "D"
@@ -5064,9 +5062,9 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
-      "MIN",
       "FLA",
+      "MIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -5196,8 +5194,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -7259,9 +7257,9 @@
       "NY",
       "TOR",
       "DAL",
+      "CAN",
       "HOU",
-      "SA",
-      "CAN"
+      "SA"
     ],
     "positions": [
       "C"
@@ -8187,13 +8185,13 @@
     ],
     "markets": [
       "EDM",
+      "CAN",
       "DEN",
       "MTL",
       "DAL",
       "NY",
       "STL",
       "VAN",
-      "CAN",
       "TOR",
       "HOU",
       "SA"
@@ -8422,10 +8420,10 @@
       "Pittsburgh Penguins"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "CGY",
       "PIT",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -8620,10 +8618,10 @@
       "STL",
       "MTL",
       "CHI",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -8679,9 +8677,9 @@
       "MTL",
       "FLA",
       "CHI",
-      "MIA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -8994,8 +8992,8 @@
     "markets": [
       "BOS",
       "LA",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -9860,10 +9858,10 @@
       "STL",
       "OTT",
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -10149,10 +10147,10 @@
     ],
     "markets": [
       "LA",
+      "BUF",
       "NY",
       "PHI",
-      "ATL",
-      "BUF"
+      "ATL"
     ],
     "positions": [
       "D"
@@ -10876,10 +10874,10 @@
     "markets": [
       "PHI",
       "TOR",
-      "MIA",
-      "LA",
       "FLA",
+      "LA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -11286,8 +11284,8 @@
     ],
     "markets": [
       "PHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -12326,11 +12324,11 @@
       "Tampa Bay Lightning"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "OTT",
       "PIT",
       "FLA",
-      "CAN",
       "TOR",
       "MIA",
       "TB"
@@ -14245,12 +14243,12 @@
     "markets": [
       "MTL",
       "CGY",
-      "MIA",
+      "FLA",
       "STL",
       "DAL",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -14527,11 +14525,11 @@
     ],
     "markets": [
       "VAN",
+      "BUF",
       "NY",
       "EDM",
       "TOR",
       "CLE",
-      "BUF",
       "CAN",
       "CIN"
     ],
@@ -15745,9 +15743,9 @@
       "Toronto Maple Leafs"
     ],
     "markets": [
-      "MIA",
-      "TOR",
       "FLA",
+      "TOR",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -15922,13 +15920,13 @@
       "Dallas Stars"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "PIT",
       "FLA",
+      "NY",
       "DEN",
       "CHI",
       "DAL",
-      "BUF",
       "MIA",
       "TB",
       "HOU",
@@ -18621,8 +18619,8 @@
       "LA",
       "PIT",
       "BAY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -19835,12 +19833,12 @@
       "Buffalo Sabres"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "CGY",
       "LA",
       "NY",
-      "FLA",
       "BUF",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -19895,10 +19893,10 @@
     ],
     "markets": [
       "BAY",
-      "MIA",
+      "FLA",
       "NY",
       "WAS",
-      "FLA",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -20252,9 +20250,9 @@
       "Los Angeles Kings"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "LA",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -20628,13 +20626,13 @@
     "markets": [
       "NY",
       "VAN",
-      "MIA",
+      "FLA",
       "DET",
       "LA",
       "CGY",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -22024,12 +22022,12 @@
       "NY",
       "OTT",
       "BOS",
-      "MIA",
+      "FLA",
       "DET",
       "PHX",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -22514,10 +22512,10 @@
       "Philadelphia Flyers"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "VAN",
       "PHI",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -22886,10 +22884,10 @@
       "San Jose Sharks"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "PIT",
       "BAY",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -22982,10 +22980,10 @@
     ],
     "markets": [
       "EDM",
+      "BUF",
       "NY",
       "PIT",
       "BOS",
-      "BUF",
       "CAN",
       "TOR"
     ],
@@ -24343,11 +24341,11 @@
       "New York Islanders"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "STL",
       "PIT",
       "NY",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -24509,12 +24507,12 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "LA",
       "WAS",
       "OTT",
       "DET",
-      "FLA",
+      "MIA",
       "TB",
       "BAL",
       "CAN",
@@ -25578,8 +25576,8 @@
     ],
     "markets": [
       "DEN",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -25779,8 +25777,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -26447,10 +26445,10 @@
       "Phoenix Coyotes"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "VAN",
       "PHX",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -26711,9 +26709,9 @@
     "markets": [
       "FLA",
       "CGY",
-      "MIA",
       "NY",
       "MIN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -27322,8 +27320,8 @@
     ],
     "markets": [
       "DET",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -27370,8 +27368,8 @@
     ],
     "markets": [
       "PIT",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -27676,11 +27674,11 @@
       "New York Islanders"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "TOR",
       "LA",
       "NY",
-      "FLA",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -27883,11 +27881,11 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "MIA",
       "FLA",
       "STL",
       "VAN",
       "CHI",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -27940,8 +27938,8 @@
     ],
     "markets": [
       "NY",
-      "LA",
-      "BUF"
+      "BUF",
+      "LA"
     ],
     "positions": [
       "D"
@@ -29052,8 +29050,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -29288,10 +29286,10 @@
     ],
     "markets": [
       "WAS",
-      "MIA",
-      "BOS",
       "FLA",
+      "BOS",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -29433,8 +29431,8 @@
     ],
     "markets": [
       "LA",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -30596,9 +30594,9 @@
       "New York Islanders"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "ATL",
-      "BUF"
+      "NY"
     ],
     "positions": [
       "L"
@@ -30691,11 +30689,11 @@
       "WAS",
       "MTL",
       "NY",
-      "MIA",
       "FLA",
       "BAL",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -30877,10 +30875,10 @@
       "Ottawa Senators"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "TOR",
       "OTT",
-      "FLA",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -31206,15 +31204,15 @@
     ],
     "markets": [
       "CGY",
-      "MIA",
+      "FLA",
       "PHX",
       "LA",
       "OTT",
       "CHI",
       "MTL",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -32233,9 +32231,9 @@
     ],
     "markets": [
       "TOR",
-      "MIA",
       "FLA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -33066,10 +33064,10 @@
     ],
     "markets": [
       "WAS",
-      "MIA",
       "FLA",
       "CGY",
       "BAL",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -33883,10 +33881,10 @@
     ],
     "markets": [
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -34057,8 +34055,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -35299,9 +35297,9 @@
       "Colorado Avalanche"
     ],
     "markets": [
-      "MIA",
-      "DEN",
       "FLA",
+      "DEN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -35566,10 +35564,10 @@
       "Ottawa Senators"
     ],
     "markets": [
-      "MIA",
-      "MIN",
       "FLA",
+      "MIN",
       "OTT",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -36992,12 +36990,12 @@
       "BOS",
       "TOR",
       "PIT",
-      "MIA",
-      "LA",
       "FLA",
+      "LA",
       "HOU",
       "SA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -37147,10 +37145,10 @@
     ],
     "markets": [
       "LA",
-      "MIA",
+      "FLA",
       "DEN",
       "DET",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -37193,9 +37191,9 @@
       "Anaheim Ducks"
     ],
     "markets": [
-      "MIA",
-      "LA",
       "FLA",
+      "LA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -37396,11 +37394,11 @@
       "EDM",
       "BOS",
       "ATL",
-      "MIA",
-      "NY",
       "FLA",
+      "NY",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -37447,9 +37445,9 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "LA",
-      "BUF"
+      "NY"
     ],
     "positions": [
       "C"
@@ -37763,9 +37761,9 @@
       "PHI",
       "MTL",
       "WAS",
+      "BUF",
       "NY",
       "BAY",
-      "BUF",
       "CAN",
       "TOR",
       "BAL"
@@ -37828,11 +37826,11 @@
       "LA",
       "WAS",
       "VAN",
-      "MIA",
       "FLA",
       "BAL",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -37876,8 +37874,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -38613,9 +38611,9 @@
     ],
     "markets": [
       "NY",
-      "MIA",
-      "MTL",
       "FLA",
+      "MTL",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -38812,8 +38810,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -38902,10 +38900,10 @@
       "Phoenix Coyotes"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "NY",
       "PHX",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -39136,13 +39134,13 @@
       "Buffalo Sabres"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "NY",
       "LA",
       "MIN",
       "DAL",
-      "FLA",
       "BUF",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -39704,9 +39702,9 @@
       "BAY",
       "PIT",
       "WAS",
-      "MIA",
       "FLA",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -40315,13 +40313,13 @@
     "markets": [
       "OTT",
       "WAS",
-      "MIA",
+      "FLA",
       "PIT",
       "ATL",
-      "FLA",
       "CAN",
       "TOR",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -40498,9 +40496,9 @@
       "Washington Capitals"
     ],
     "markets": [
-      "MIA",
-      "WAS",
       "FLA",
+      "WAS",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -40685,12 +40683,12 @@
       "DAL",
       "VAN",
       "LA",
-      "MIA",
       "FLA",
       "HOU",
       "SA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -41319,9 +41317,9 @@
       "Calgary Flames"
     ],
     "markets": [
-      "MIA",
-      "CGY",
       "FLA",
+      "CGY",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -41525,8 +41523,8 @@
     "markets": [
       "CHI",
       "DEN",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -41570,10 +41568,10 @@
       "Vancouver Canucks"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "ATL",
       "VAN",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -41669,8 +41667,8 @@
       "CHI",
       "LA",
       "BOS",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -42219,9 +42217,9 @@
       "BOS",
       "BAY",
       "TOR",
-      "MIA",
       "FLA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -42557,11 +42555,11 @@
     "markets": [
       "BOS",
       "PHX",
-      "MIA",
+      "FLA",
       "LA",
       "CHI",
       "PHI",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -42609,10 +42607,10 @@
       "Calgary Flames"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "PHX",
       "CGY",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -42869,8 +42867,8 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -43580,10 +43578,10 @@
       "Columbus Blue Jackets"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "CGY",
       "CLE",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR",
@@ -43629,8 +43627,8 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
-      "BUF"
+      "BUF",
+      "NY"
     ],
     "positions": [
       "D"
@@ -43952,9 +43950,9 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -44227,8 +44225,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -44577,8 +44575,8 @@
     "markets": [
       "TOR",
       "LA",
-      "NY",
       "BUF",
+      "NY",
       "CAN"
     ],
     "positions": [
@@ -44660,9 +44658,9 @@
       "Phoenix Coyotes"
     ],
     "markets": [
-      "MIA",
-      "PHX",
       "FLA",
+      "PHX",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -45842,8 +45840,8 @@
     ],
     "markets": [
       "ATL",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -46193,8 +46191,8 @@
       "NY",
       "CHI",
       "MIN",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -46640,9 +46638,9 @@
       "Ottawa Senators"
     ],
     "markets": [
-      "MIA",
-      "OTT",
       "FLA",
+      "OTT",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -48182,8 +48180,8 @@
     "markets": [
       "NY",
       "FLA",
-      "MIA",
       "WAS",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -48403,9 +48401,9 @@
     ],
     "markets": [
       "STL",
-      "MIA",
-      "TOR",
       "FLA",
+      "TOR",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -48665,8 +48663,8 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
-      "BUF"
+      "BUF",
+      "NY"
     ],
     "positions": [
       "L"
@@ -48804,9 +48802,9 @@
       "Atlanta Thrashers"
     ],
     "markets": [
-      "MIA",
-      "ATL",
       "FLA",
+      "ATL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -49022,8 +49020,8 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -50223,8 +50221,8 @@
     "markets": [
       "NY",
       "MTL",
-      "BOS",
       "BUF",
+      "BOS",
       "CAN",
       "TOR"
     ],
@@ -50379,8 +50377,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -50466,8 +50464,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -50790,11 +50788,11 @@
     ],
     "markets": [
       "DAL",
-      "MIA",
-      "NY",
       "FLA",
+      "NY",
       "HOU",
       "SA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -53627,8 +53625,8 @@
     ],
     "markets": [
       "NY",
-      "TOR",
       "BUF",
+      "TOR",
       "CAN"
     ],
     "positions": [
@@ -53849,8 +53847,8 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -53940,8 +53938,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -54759,11 +54757,11 @@
     ],
     "markets": [
       "EDM",
-      "MIA",
-      "BAY",
       "FLA",
+      "BAY",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -54812,10 +54810,10 @@
     "markets": [
       "WAS",
       "PHX",
-      "MIA",
-      "LA",
       "FLA",
+      "LA",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -55643,12 +55641,12 @@
       "Anaheim Ducks"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "DAL",
       "TOR",
       "CGY",
       "LA",
-      "FLA",
+      "MIA",
       "TB",
       "HOU",
       "SA",
@@ -56232,8 +56230,8 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -56418,9 +56416,9 @@
     "markets": [
       "ATL",
       "CLE",
-      "MIA",
       "FLA",
       "CIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -57216,9 +57214,9 @@
     "markets": [
       "LA",
       "DEN",
-      "MIA",
-      "MTL",
       "FLA",
+      "MTL",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -58658,10 +58656,10 @@
       "DEN",
       "CGY",
       "PHX",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -59199,11 +59197,11 @@
       "LA",
       "VAN",
       "STL",
-      "MIA",
-      "MTL",
       "FLA",
+      "MTL",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -59415,10 +59413,10 @@
       "NY",
       "EDM",
       "CLE",
+      "BUF",
       "VAN",
       "PHX",
       "BAY",
-      "BUF",
       "CAN",
       "TOR",
       "CIN"
@@ -59599,8 +59597,8 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -59790,8 +59788,8 @@
     ],
     "markets": [
       "DEN",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -60235,11 +60233,11 @@
       "BAY",
       "BOS",
       "STL",
-      "NY",
-      "MIA",
-      "TOR",
       "BUF",
+      "NY",
       "FLA",
+      "TOR",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -60799,8 +60797,8 @@
     "markets": [
       "DET",
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -61184,10 +61182,10 @@
     ],
     "markets": [
       "LA",
-      "MIA",
+      "FLA",
       "DET",
       "PHI",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -61496,8 +61494,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -62990,8 +62988,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -63398,8 +63396,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -64907,9 +64905,9 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "MIA",
-      "DET",
       "FLA",
+      "DET",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -65694,10 +65692,10 @@
       "Philadelphia Flyers"
     ],
     "markets": [
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
       "PHI",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -66452,8 +66450,8 @@
     ],
     "markets": [
       "LA",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -66498,9 +66496,9 @@
     ],
     "markets": [
       "PIT",
-      "MIA",
       "FLA",
       "ATL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -66820,8 +66818,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -69423,10 +69421,10 @@
       "Washington Capitals"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "ATL",
       "WAS",
-      "FLA",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -69940,10 +69938,10 @@
     "markets": [
       "STL",
       "BOS",
-      "MIA",
+      "FLA",
       "WAS",
       "CGY",
-      "FLA",
+      "MIA",
       "TB",
       "BAL",
       "CAN",
@@ -70184,8 +70182,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -70821,8 +70819,8 @@
     "markets": [
       "CHI",
       "PHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -71004,12 +71002,12 @@
     "markets": [
       "WAS",
       "DEN",
-      "MIA",
+      "FLA",
       "LA",
       "MTL",
       "CHI",
-      "FLA",
       "BAL",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -71155,10 +71153,10 @@
     ],
     "markets": [
       "PHX",
-      "MIA",
+      "FLA",
       "VAN",
       "MIN",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -71660,8 +71658,8 @@
     "markets": [
       "NY",
       "BAY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -71792,12 +71790,12 @@
     "markets": [
       "EDM",
       "MIN",
-      "MIA",
+      "FLA",
       "MTL",
       "LA",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -72435,10 +72433,10 @@
       "St. Louis Blues"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "CGY",
       "STL",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -72585,10 +72583,10 @@
       "ATL",
       "TOR",
       "WAS",
-      "MIA",
       "FLA",
       "CAN",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -72773,10 +72771,10 @@
       "Columbus Blue Jackets"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "BOS",
       "CLE",
-      "FLA",
+      "MIA",
       "TB",
       "CIN"
     ],
@@ -72959,8 +72957,8 @@
     "markets": [
       "NY",
       "FLA",
-      "MIA",
       "MIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -73301,11 +73299,11 @@
     "markets": [
       "DET",
       "CGY",
-      "MIA",
-      "DAL",
       "FLA",
+      "DAL",
       "CAN",
       "TOR",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -73857,8 +73855,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -74704,8 +74702,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -74754,10 +74752,10 @@
       "PIT",
       "LA",
       "EDM",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -76166,10 +76164,10 @@
       "Columbus Blue Jackets"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "BOS",
       "CLE",
-      "FLA",
+      "MIA",
       "TB",
       "CIN"
     ],
@@ -76272,17 +76270,17 @@
       "Columbus Blue Jackets"
     ],
     "markets": [
+      "BUF",
       "NY",
       "MTL",
       "MIN",
       "DET",
-      "MIA",
+      "FLA",
       "VAN",
       "CLE",
-      "BUF",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB",
       "CIN"
     ],
@@ -76627,8 +76625,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -76806,13 +76804,13 @@
     ],
     "markets": [
       "BAY",
-      "NY",
-      "VAN",
-      "MIA",
       "BUF",
+      "VAN",
       "FLA",
+      "NY",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -77817,8 +77815,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -78394,9 +78392,9 @@
       "Calgary Flames"
     ],
     "markets": [
-      "MIA",
-      "CGY",
       "FLA",
+      "CGY",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -79421,8 +79419,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -79517,9 +79515,9 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -81418,8 +81416,8 @@
     "markets": [
       "LA",
       "NY",
-      "MIN",
-      "BUF"
+      "BUF",
+      "MIN"
     ],
     "positions": [
       "L"
@@ -81800,11 +81798,11 @@
     ],
     "markets": [
       "EDM",
-      "MIA",
-      "PIT",
       "FLA",
+      "PIT",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -82123,9 +82121,9 @@
       "Boston Bruins"
     ],
     "markets": [
-      "MIA",
-      "BOS",
       "FLA",
+      "BOS",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -82957,10 +82955,10 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "CHI",
       "NY",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -83164,10 +83162,10 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "WPG",
       "BOS",
-      "BUF",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -83382,10 +83380,10 @@
       "EDM",
       "DAL",
       "CLE",
-      "HOU",
-      "SA",
       "CAN",
       "TOR",
+      "HOU",
+      "SA",
       "CIN"
     ],
     "positions": [
@@ -83850,9 +83848,9 @@
     "markets": [
       "CHI",
       "TOR",
-      "MIA",
       "FLA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -84351,11 +84349,11 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "VAN",
       "TOR",
       "DET",
-      "FLA",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -84402,9 +84400,9 @@
       "Vancouver Canucks"
     ],
     "markets": [
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -85493,8 +85491,8 @@
     "markets": [
       "LA",
       "LV",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -85595,7 +85593,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -86333,10 +86331,10 @@
       "Vegas Golden Knights"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "CGY",
       "LV",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -88205,8 +88203,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -88821,8 +88819,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -91566,7 +91564,7 @@
     },
     "popularityScore": 65,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -91667,8 +91665,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -91695,9 +91693,7 @@
       "blocks": 59
     },
     "popularityScore": 10,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -92540,8 +92536,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -96635,8 +96631,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -98017,8 +98013,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -98357,11 +98353,11 @@
       "New York Islanders"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "BOS",
       "FLA",
       "PHI",
-      "BUF",
+      "NY",
       "MIA",
       "TB"
     ],
@@ -98501,8 +98497,8 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
-      "PIT"
+      "PIT",
+      "CHI"
     ],
     "positions": [
       "L"
@@ -99579,12 +99575,12 @@
       "Tampa Bay Lightning"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "TOR",
+      "NY",
       "BOS",
       "DEN",
       "FLA",
-      "BUF",
       "CAN",
       "MIA",
       "TB"
@@ -101245,8 +101241,8 @@
       "DCG"
     ],
     "markets": [
-      "DET",
-      "TOR"
+      "TOR",
+      "DET"
     ],
     "positions": [
       "R"
@@ -103026,8 +103022,8 @@
     ],
     "markets": [
       "MTL",
-      "TOR",
       "STL",
+      "TOR",
       "CAN"
     ],
     "positions": [
@@ -104202,10 +104198,10 @@
     ],
     "markets": [
       "MTL",
+      "CAN",
       "NY",
       "PIT",
       "TOR",
-      "CAN",
       "DET"
     ],
     "positions": [
@@ -104778,8 +104774,8 @@
     ],
     "markets": [
       "OTT",
-      "DET",
       "STL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -105889,8 +105885,8 @@
       "DCG"
     ],
     "markets": [
-      "DET",
       "MTL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -106678,9 +106674,9 @@
       "New York Americans"
     ],
     "markets": [
+      "TOR",
       "DET",
-      "NY",
-      "TOR"
+      "NY"
     ],
     "positions": [
       "D"
@@ -108006,10 +108002,10 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
       "MTL",
-      "OTT",
       "PIT",
+      "OTT",
+      "CHI",
       "CAN",
       "TOR"
     ],
@@ -108503,10 +108499,10 @@
     ],
     "markets": [
       "PHI",
-      "MIA",
+      "FLA",
       "PIT",
       "LA",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -109657,9 +109653,9 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "MTL",
-      "OTT",
       "TOR",
+      "OTT",
+      "MTL",
       "CAN"
     ],
     "positions": [
@@ -109683,9 +109679,7 @@
       "blocks": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -112472,10 +112466,10 @@
       "LA",
       "PHI",
       "EDM",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -112572,6 +112566,7 @@
       "Washington Capitals"
     ],
     "markets": [
+      "BUF",
       "NY",
       "TOR",
       "DAL",
@@ -112579,7 +112574,6 @@
       "PHX",
       "BOS",
       "WAS",
-      "BUF",
       "CAN",
       "HOU",
       "SA",
@@ -114276,10 +114270,10 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "MTL",
       "OTT",
       "TOR",
+      "MTL",
+      "BOS",
       "CAN"
     ],
     "positions": [
@@ -114896,10 +114890,10 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
-      "MTL",
-      "NY",
       "PIT",
+      "NY",
+      "MTL",
+      "CHI",
       "CAN",
       "TOR"
     ],
@@ -115284,8 +115278,8 @@
       "DCG"
     ],
     "markets": [
-      "DET",
-      "NY"
+      "NY",
+      "DET"
     ],
     "positions": [
       "L"
@@ -115627,8 +115621,8 @@
     ],
     "markets": [
       "BOS",
-      "DET",
       "MTL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -116124,11 +116118,11 @@
     ],
     "markets": [
       "PIT",
-      "NY",
+      "BUF",
       "BAY",
+      "NY",
       "LA",
       "VAN",
-      "BUF",
       "CAN",
       "TOR"
     ],
@@ -116177,8 +116171,8 @@
     ],
     "markets": [
       "MTL",
-      "TOR",
       "CAN",
+      "TOR",
       "DET"
     ],
     "positions": [
@@ -117795,8 +117789,8 @@
       "TSP"
     ],
     "markets": [
-      "TOR",
       "CAN",
+      "TOR",
       "DET"
     ],
     "positions": [
@@ -117838,9 +117832,9 @@
       "New York Americans"
     ],
     "markets": [
-      "NY",
       "PIT",
       "TOR",
+      "NY",
       "CAN"
     ],
     "positions": [
@@ -119039,8 +119033,8 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -119857,9 +119851,9 @@
       "Montreal Canadiens"
     ],
     "markets": [
+      "TOR",
       "CAN",
-      "MTL",
-      "TOR"
+      "MTL"
     ],
     "positions": [
       "R"
@@ -119882,9 +119876,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -120022,9 +120014,9 @@
     ],
     "markets": [
       "MTL",
-      "TOR",
-      "BOS",
       "CAN",
+      "BOS",
+      "TOR",
       "DET"
     ],
     "positions": [
@@ -120331,8 +120323,8 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "STL"
+      "STL",
+      "BOS"
     ],
     "positions": [
       "C"
@@ -121107,9 +121099,7 @@
       "blocks": 0
     },
     "popularityScore": 35,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -122550,9 +122540,9 @@
       "Toronto Maple Leafs"
     ],
     "markets": [
-      "BOS",
-      "PHI",
       "PIT",
+      "PHI",
+      "BOS",
       "TOR",
       "CAN"
     ],
@@ -123720,8 +123710,8 @@
     ],
     "markets": [
       "TOR",
-      "CHI",
       "CAN",
+      "CHI",
       "DET"
     ],
     "positions": [
@@ -123743,9 +123733,7 @@
       "blocks": 0
     },
     "popularityScore": 15,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -125995,8 +125983,8 @@
       "QUA"
     ],
     "markets": [
-      "PHI",
-      "PIT"
+      "PIT",
+      "PHI"
     ],
     "positions": [
       "D"
@@ -126655,9 +126643,9 @@
     ],
     "markets": [
       "TOR",
+      "CAN",
       "CHI",
       "NY",
-      "CAN",
       "DET"
     ],
     "positions": [
@@ -126679,9 +126667,7 @@
       "blocks": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -128035,11 +128021,11 @@
       "FLA",
       "NY",
       "DAL",
-      "HOU",
-      "SA",
       "BAL",
       "MIA",
-      "TB"
+      "TB",
+      "HOU",
+      "SA"
     ],
     "positions": [
       "D"
@@ -130774,12 +130760,12 @@
       "Atlanta Thrashers"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "LA",
       "PHI",
       "PHX",
-      "ATL",
-      "BUF"
+      "NY",
+      "ATL"
     ],
     "positions": [
       "C"
@@ -132377,11 +132363,11 @@
       "St. Louis Blues"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "CHI",
+      "NY",
       "FLA",
       "STL",
-      "BUF",
       "MIA",
       "TB"
     ],
@@ -132554,9 +132540,9 @@
       "Hartford Whalers"
     ],
     "markets": [
-      "BOS",
       "CLE",
-      "STL"
+      "STL",
+      "BOS"
     ],
     "positions": [
       "R"
@@ -132765,9 +132751,9 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
       "DET",
-      "NY"
+      "NY",
+      "BOS"
     ],
     "positions": [
       "R"
@@ -133243,8 +133229,8 @@
       "BOS",
       "NY",
       "TOR",
-      "WAS",
       "BUF",
+      "WAS",
       "CAN",
       "BAL"
     ],
@@ -134005,8 +133991,8 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "STL"
+      "STL",
+      "BOS"
     ],
     "positions": [
       "L"
@@ -136068,10 +136054,10 @@
     "markets": [
       "MTL",
       "PHI",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -136929,9 +136915,9 @@
     ],
     "markets": [
       "NY",
+      "BUF",
       "LA",
       "DAL",
-      "BUF",
       "HOU",
       "SA"
     ],
@@ -137824,8 +137810,8 @@
       "CHI",
       "DET",
       "MTL",
-      "PHI",
       "PIT",
+      "PHI",
       "CAN",
       "TOR"
     ],
@@ -137947,8 +137933,8 @@
       "DFL"
     ],
     "markets": [
-      "BOS",
       "DET",
+      "BOS",
       "PIT"
     ],
     "positions": [
@@ -138684,10 +138670,10 @@
       "DFL"
     ],
     "markets": [
-      "BOS",
-      "DET",
       "MTL",
+      "BOS",
       "OTT",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -140683,8 +140669,8 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "MTL"
+      "MTL",
+      "BOS"
     ],
     "positions": [
       "C"
@@ -141762,8 +141748,8 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "DET"
+      "DET",
+      "BOS"
     ],
     "positions": [
       "R"
@@ -142352,8 +142338,8 @@
     ],
     "markets": [
       "OTT",
-      "TOR",
       "CAN",
+      "TOR",
       "DET"
     ],
     "positions": [
@@ -142446,9 +142432,9 @@
       "CHI",
       "MTL",
       "DET",
+      "STL",
       "BOS",
       "NY",
-      "STL",
       "CAN",
       "TOR"
     ],
@@ -142986,10 +142972,10 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "BOS",
-      "DET",
+      "TOR",
       "NY",
-      "TOR"
+      "BOS",
+      "DET"
     ],
     "positions": [
       "L"
@@ -145399,11 +145385,11 @@
     ],
     "markets": [
       "PIT",
-      "NY",
+      "BUF",
       "BAY",
       "DET",
       "DAL",
-      "BUF",
+      "NY",
       "HOU",
       "SA"
     ],
@@ -147361,8 +147347,8 @@
     ],
     "markets": [
       "BOS",
-      "DET",
       "TOR",
+      "DET",
       "CAN"
     ],
     "positions": [
@@ -149101,8 +149087,8 @@
       "DFL"
     ],
     "markets": [
-      "DET",
       "MTL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -150753,9 +150739,9 @@
       "PIR"
     ],
     "markets": [
+      "TOR",
       "MTL",
       "PIT",
-      "TOR",
       "CAN"
     ],
     "positions": [
@@ -151381,11 +151367,11 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "DET",
       "OTT",
       "PHI",
       "TOR",
       "STL",
+      "DET",
       "CAN"
     ],
     "positions": [
@@ -152947,8 +152933,8 @@
       "St. Louis Blues"
     ],
     "markets": [
-      "BAY",
       "CHI",
+      "BAY",
       "CLE",
       "STL"
     ],
@@ -153400,12 +153386,12 @@
       "DAL",
       "TOR",
       "CGY",
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
       "HOU",
       "SA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -153628,8 +153614,8 @@
       "WAS",
       "BOS",
       "PHI",
-      "NY",
       "BUF",
+      "NY",
       "BAL"
     ],
     "positions": [
@@ -154609,9 +154595,9 @@
       "Ottawa Senators"
     ],
     "markets": [
+      "TOR",
       "BOS",
       "OTT",
-      "TOR",
       "CAN"
     ],
     "positions": [
@@ -154861,11 +154847,11 @@
       "Philadelphia Flyers"
     ],
     "markets": [
+      "MTL",
+      "STL",
       "BAY",
       "CLE",
-      "MTL",
       "PHI",
-      "STL",
       "CAN",
       "TOR"
     ],
@@ -155199,8 +155185,8 @@
       "Toronto Maple Leafs"
     ],
     "markets": [
-      "PHI",
       "PIT",
+      "PHI",
       "TOR",
       "CAN"
     ],
@@ -155778,9 +155764,9 @@
     "markets": [
       "DET",
       "BAY",
-      "MIA",
-      "ATL",
       "FLA",
+      "ATL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -157429,9 +157415,9 @@
     ],
     "markets": [
       "OTT",
+      "STL",
       "NY",
       "BOS",
-      "STL",
       "CAN",
       "TOR"
     ],
@@ -157519,9 +157505,9 @@
     ],
     "markets": [
       "OTT",
+      "STL",
       "BOS",
       "MTL",
-      "STL",
       "CAN",
       "TOR"
     ],
@@ -157928,8 +157914,8 @@
     ],
     "markets": [
       "BOS",
-      "CHI",
-      "DET"
+      "DET",
+      "CHI"
     ],
     "positions": [
       "C"
@@ -158150,9 +158136,9 @@
       "Brooklyn Americans"
     ],
     "markets": [
+      "STL",
       "DET",
-      "NY",
-      "STL"
+      "NY"
     ],
     "positions": [
       "R"
@@ -159135,8 +159121,8 @@
     ],
     "markets": [
       "OTT",
-      "TOR",
       "DET",
+      "TOR",
       "CAN"
     ],
     "positions": [
@@ -159222,11 +159208,11 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "DET",
-      "MTL",
-      "NY",
       "OTT",
       "PHI",
+      "NY",
+      "MTL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -159872,8 +159858,8 @@
       "TOR",
       "NY",
       "CHI",
-      "MTL",
       "BUF",
+      "MTL",
       "CAN"
     ],
     "positions": [
@@ -160014,8 +160000,8 @@
       "DCG"
     ],
     "markets": [
-      "DET",
       "MTL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -161054,10 +161040,10 @@
     "markets": [
       "TOR",
       "CGY",
-      "MIA",
-      "BOS",
       "FLA",
+      "BOS",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -162720,8 +162706,8 @@
       "OTT",
       "NY",
       "BOS",
-      "DET",
       "STL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -163241,12 +163227,12 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "MTL",
+      "CAN",
       "NY",
       "PIT",
-      "TOR",
-      "CAN",
-      "DET"
+      "MTL",
+      "DET",
+      "TOR"
     ],
     "positions": [
       "R"
@@ -165210,9 +165196,9 @@
     ],
     "markets": [
       "WAS",
-      "MIA",
       "FLA",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -166410,12 +166396,12 @@
       "New York Islanders"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "LA",
       "TOR",
       "DET",
       "FLA",
-      "BUF",
+      "NY",
       "CAN",
       "MIA",
       "TB"
@@ -166498,9 +166484,7 @@
     },
     "popularityScore": 5,
     "championshipMarkets": [],
-    "mvpMarkets": [
-      "NY"
-    ]
+    "mvpMarkets": []
   },
   {
     "id": "ath_nhl_8447464",
@@ -168273,8 +168257,8 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
-      "DET"
+      "DET",
+      "CHI"
     ],
     "positions": [
       "D"
@@ -168522,11 +168506,11 @@
       "Ottawa Senators"
     ],
     "markets": [
+      "TOR",
+      "PIT",
+      "PHI",
       "CHI",
       "OTT",
-      "PHI",
-      "PIT",
-      "TOR",
       "CAN"
     ],
     "positions": [
@@ -169450,9 +169434,9 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
       "CHI",
-      "PIT"
+      "PIT",
+      "BOS"
     ],
     "positions": [
       "C"
@@ -170722,8 +170706,8 @@
       "Hamilton Tigers"
     ],
     "markets": [
-      "CAN",
       "MTL",
+      "CAN",
       "TOR",
       "DET"
     ],
@@ -171054,8 +171038,8 @@
       "QUA"
     ],
     "markets": [
-      "PHI",
-      "PIT"
+      "PIT",
+      "PHI"
     ],
     "positions": [
       "C"
@@ -171585,9 +171569,9 @@
       "QBD"
     ],
     "markets": [
-      "CAN",
       "MTL",
-      "TOR"
+      "TOR",
+      "CAN"
     ],
     "positions": [
       "L"
@@ -171608,9 +171592,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -172458,9 +172440,9 @@
     ],
     "markets": [
       "TOR",
+      "CAN",
       "BOS",
       "MTL",
-      "CAN",
       "DET"
     ],
     "positions": [
@@ -172500,8 +172482,8 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
-      "DET"
+      "DET",
+      "CHI"
     ],
     "positions": [
       "D"
@@ -173101,9 +173083,9 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "MTL",
-      "PIT",
       "TOR",
+      "PIT",
+      "MTL",
       "CAN"
     ],
     "positions": [
@@ -173857,14 +173839,14 @@
       "BOS",
       "EDM",
       "PHI",
-      "MIA",
+      "FLA",
       "PIT",
       "BAY",
       "VAN",
       "DAL",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -175428,8 +175410,8 @@
       "TSP"
     ],
     "markets": [
-      "CAN",
       "MTL",
+      "CAN",
       "TOR"
     ],
     "positions": [
@@ -176097,10 +176079,10 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
       "DET",
       "NY",
       "OTT",
+      "BOS",
       "CAN",
       "TOR"
     ],
@@ -176684,8 +176666,8 @@
     ],
     "markets": [
       "MTL",
-      "PHI",
       "PIT",
+      "PHI",
       "CAN",
       "TOR"
     ],
@@ -178101,9 +178083,9 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
+      "TOR",
       "DET",
-      "TOR"
+      "BOS"
     ],
     "positions": [
       "L"
@@ -178124,9 +178106,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -180848,9 +180828,9 @@
       "Hamilton Tigers"
     ],
     "markets": [
+      "TOR",
       "CAN",
       "MTL",
-      "TOR",
       "DET"
     ],
     "positions": [
@@ -180876,9 +180856,7 @@
       "wins": 2
     },
     "popularityScore": 15,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -181575,13 +181553,13 @@
       "Philadelphia Flyers"
     ],
     "markets": [
-      "CGY",
       "CHI",
       "CLE",
-      "LA",
-      "PHI",
       "VAN",
+      "LA",
+      "CGY",
       "WAS",
+      "PHI",
       "CAN",
       "TOR",
       "BAL"
@@ -182629,8 +182607,8 @@
       "DET",
       "BOS",
       "LA",
-      "NY",
-      "BUF"
+      "BUF",
+      "NY"
     ],
     "positions": [
       "D"
@@ -182823,14 +182801,14 @@
       "Toronto Maple Leafs"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "WPG",
       "STL",
       "CGY",
+      "NY",
       "WAS",
       "CHI",
       "TOR",
-      "BUF",
       "CAN",
       "BAL"
     ],
@@ -183148,8 +183126,8 @@
       "New York Americans"
     ],
     "markets": [
-      "NY",
-      "TOR"
+      "TOR",
+      "NY"
     ],
     "positions": [
       "C"
@@ -183742,9 +183720,9 @@
       "Detroit Red Wings"
     ],
     "markets": [
-      "DET",
-      "MTL",
       "TOR",
+      "MTL",
+      "DET",
       "CAN"
     ],
     "positions": [
@@ -184190,9 +184168,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -185126,8 +185102,8 @@
     "markets": [
       "WPG",
       "BOS",
-      "NY",
       "BUF",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -186056,9 +186032,9 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
-      "DET",
       "MTL",
+      "DET",
+      "CHI",
       "CAN",
       "TOR"
     ],
@@ -186261,10 +186237,10 @@
       "CLE"
     ],
     "markets": [
-      "BAY",
-      "CHI",
-      "CLE",
       "TOR",
+      "CHI",
+      "BAY",
+      "CLE",
       "CAN"
     ],
     "positions": [
@@ -186605,9 +186581,9 @@
       "CLE"
     ],
     "markets": [
+      "STL",
       "BAY",
-      "CLE",
-      "STL"
+      "CLE"
     ],
     "positions": [
       "D"
@@ -187175,9 +187151,9 @@
       "Colorado Avalanche"
     ],
     "markets": [
-      "DEN",
-      "WAS",
       "CAN",
+      "WAS",
+      "DEN",
       "TOR",
       "BAL"
     ],
@@ -190136,12 +190112,12 @@
       "PHI",
       "DAL",
       "BOS",
-      "MIA",
-      "CGY",
       "FLA",
+      "CGY",
       "BAL",
       "HOU",
       "SA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -190752,8 +190728,8 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "CHI",
-      "STL"
+      "STL",
+      "CHI"
     ],
     "positions": [
       "R"
@@ -191256,8 +191232,8 @@
     ],
     "markets": [
       "TOR",
-      "NY",
       "CAN",
+      "NY",
       "DET"
     ],
     "positions": [
@@ -191279,9 +191255,7 @@
       "blocks": 0
     },
     "popularityScore": 15,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -192254,8 +192228,8 @@
       "CLE"
     ],
     "markets": [
-      "CLE",
-      "DEN"
+      "DEN",
+      "CLE"
     ],
     "positions": [
       "R"
@@ -193815,10 +193789,10 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "CAN",
       "MTL",
       "OTT",
-      "TOR"
+      "TOR",
+      "CAN"
     ],
     "positions": [
       "D"
@@ -194111,8 +194085,8 @@
     ],
     "markets": [
       "TOR",
-      "NY",
       "CAN",
+      "NY",
       "DET"
     ],
     "positions": [
@@ -194243,12 +194217,12 @@
       "CLE"
     ],
     "markets": [
-      "CLE",
-      "DEN",
-      "DET",
-      "KC",
       "MTL",
       "STL",
+      "DET",
+      "KC",
+      "DEN",
+      "CLE",
       "CAN",
       "TOR"
     ],
@@ -195100,8 +195074,8 @@
       "MTL",
       "BOS",
       "OTT",
-      "DET",
       "STL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -195896,8 +195870,8 @@
     "markets": [
       "MTL",
       "OTT",
-      "DET",
       "STL",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -197033,8 +197007,8 @@
     ],
     "markets": [
       "MTL",
-      "NY",
       "PIT",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -197265,8 +197239,8 @@
       "Edmonton Oilers"
     ],
     "markets": [
-      "CHI",
       "CLE",
+      "CHI",
       "EDM",
       "CAN",
       "TOR"
@@ -198459,9 +198433,9 @@
     "markets": [
       "DET",
       "TOR",
+      "BUF",
       "NY",
       "CGY",
-      "BUF",
       "CAN"
     ],
     "positions": [
@@ -199303,10 +199277,10 @@
     "markets": [
       "LA",
       "OTT",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -199359,12 +199333,12 @@
       "Atlanta Thrashers"
     ],
     "markets": [
+      "BUF",
       "NY",
+      "CAN",
       "DEN",
       "DET",
       "ATL",
-      "BUF",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -199632,11 +199606,11 @@
     ],
     "markets": [
       "MTL",
+      "BUF",
       "NY",
       "TOR",
       "VAN",
       "LA",
-      "BUF",
       "CAN"
     ],
     "positions": [
@@ -200599,10 +200573,10 @@
       "CLE"
     ],
     "markets": [
-      "BAY",
-      "CLE",
       "STL",
       "TOR",
+      "BAY",
+      "CLE",
       "CAN"
     ],
     "positions": [
@@ -202036,11 +202010,11 @@
       "VAN",
       "BAY",
       "DET",
-      "MIA",
-      "NY",
       "FLA",
+      "NY",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -202154,11 +202128,11 @@
       "Philadelphia Flyers"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "CGY",
       "NY",
       "PHI",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -203725,15 +203699,15 @@
       "NY",
       "LA",
       "WAS",
+      "BUF",
       "DAL",
       "VAN",
       "BOS",
       "OTT",
       "FLA",
-      "BUF",
+      "BAL",
       "HOU",
       "SA",
-      "BAL",
       "CAN",
       "TOR",
       "MIA",
@@ -204593,8 +204567,8 @@
     "markets": [
       "PIT",
       "BOS",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -204757,11 +204731,11 @@
     "markets": [
       "MTL",
       "CGY",
-      "MIA",
-      "PIT",
       "FLA",
+      "PIT",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -206265,12 +206239,12 @@
     "markets": [
       "VAN",
       "STL",
-      "MIA",
+      "FLA",
       "BAY",
       "CGY",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -208500,8 +208474,8 @@
     ],
     "markets": [
       "TOR",
-      "MTL",
       "CAN",
+      "MTL",
       "DET"
     ],
     "positions": [
@@ -209715,9 +209689,9 @@
     ],
     "markets": [
       "OTT",
+      "STL",
       "BOS",
       "MTL",
-      "STL",
       "CAN",
       "TOR"
     ],
@@ -209980,10 +209954,10 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "BOS",
-      "CHI",
       "DET",
-      "NY"
+      "NY",
+      "BOS",
+      "CHI"
     ],
     "positions": [
       "L"
@@ -210270,11 +210244,11 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "MTL",
-      "NY",
       "OTT",
       "PHI",
+      "NY",
+      "MTL",
+      "BOS",
       "CAN",
       "TOR"
     ],
@@ -211269,10 +211243,10 @@
       "PIR"
     ],
     "markets": [
+      "TOR",
       "BOS",
       "MTL",
       "PIT",
-      "TOR",
       "CAN"
     ],
     "positions": [
@@ -211294,9 +211268,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -211695,10 +211667,10 @@
       "New York Americans"
     ],
     "markets": [
-      "BOS",
-      "DET",
-      "NY",
       "OTT",
+      "DET",
+      "BOS",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -212316,9 +212288,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -212431,8 +212401,8 @@
     "markets": [
       "NY",
       "LA",
-      "BOS",
-      "BUF"
+      "BUF",
+      "BOS"
     ],
     "positions": [
       "R"
@@ -212510,8 +212480,8 @@
       "QUA"
     ],
     "markets": [
-      "PHI",
-      "PIT"
+      "PIT",
+      "PHI"
     ],
     "positions": [
       "D"
@@ -212833,8 +212803,8 @@
       "Ottawa Senators"
     ],
     "markets": [
-      "OTT",
       "TOR",
+      "OTT",
       "CAN"
     ],
     "positions": [
@@ -212856,9 +212826,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -214217,8 +214185,8 @@
       "New York Americans"
     ],
     "markets": [
-      "NY",
-      "TOR"
+      "TOR",
+      "NY"
     ],
     "positions": [
       "D"
@@ -214423,10 +214391,10 @@
       "CLE"
     ],
     "markets": [
-      "BAY",
       "BOS",
-      "CLE",
-      "STL"
+      "STL",
+      "BAY",
+      "CLE"
     ],
     "positions": [
       "R"
@@ -214519,10 +214487,10 @@
       "New York Americans"
     ],
     "markets": [
-      "NY",
+      "CAN",
       "PIT",
       "TOR",
-      "CAN",
+      "NY",
       "DET"
     ],
     "positions": [
@@ -214714,9 +214682,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -216681,8 +216647,8 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "TOR"
+      "TOR",
+      "BOS"
     ],
     "positions": [
       "D"
@@ -216703,9 +216669,7 @@
       "blocks": 0
     },
     "popularityScore": 15,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -220658,13 +220622,13 @@
       "Toronto Maple Leafs"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "PIT",
       "DET",
       "CGY",
+      "NY",
       "WAS",
       "TOR",
-      "BUF",
       "CAN",
       "BAL"
     ],
@@ -222425,9 +222389,9 @@
       "QUA"
     ],
     "markets": [
+      "PIT",
       "NY",
-      "PHI",
-      "PIT"
+      "PHI"
     ],
     "positions": [
       "R"
@@ -224347,8 +224311,8 @@
     ],
     "markets": [
       "DET",
-      "BOS",
-      "STL"
+      "STL",
+      "BOS"
     ],
     "positions": [
       "D"
@@ -224586,10 +224550,10 @@
     "markets": [
       "PIT",
       "WPG",
+      "BUF",
       "NY",
       "TOR",
       "OTT",
-      "BUF",
       "CAN"
     ],
     "positions": [
@@ -225122,10 +225086,10 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "BOS",
       "VAN",
-      "BUF",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -225428,12 +225392,12 @@
     "markets": [
       "PHI",
       "EDM",
-      "MIA",
+      "FLA",
       "STL",
       "ATL",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -225575,10 +225539,10 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "MTL",
       "TOR",
-      "CHI",
+      "MTL",
       "CAN",
+      "CHI",
       "DET"
     ],
     "positions": [
@@ -226058,10 +226022,10 @@
       "New York Islanders"
     ],
     "markets": [
+      "STL",
       "BAY",
       "CLE",
-      "NY",
-      "STL"
+      "NY"
     ],
     "positions": [
       "C"
@@ -228080,10 +228044,10 @@
       "Toronto Maple Leafs"
     ],
     "markets": [
-      "NY",
-      "VAN",
-      "TOR",
       "BUF",
+      "VAN",
+      "NY",
+      "TOR",
       "CAN"
     ],
     "positions": [
@@ -229888,10 +229852,10 @@
       "NY",
       "MTL",
       "TOR",
-      "MIA",
-      "DAL",
       "FLA",
+      "DAL",
       "CAN",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -230296,9 +230260,9 @@
     "markets": [
       "PHI",
       "BOS",
-      "MIA",
-      "ATL",
       "FLA",
+      "ATL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -231858,11 +231822,11 @@
       "DAL",
       "NY",
       "TOR",
-      "MIA",
       "FLA",
       "CAN",
       "HOU",
       "SA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -231978,13 +231942,13 @@
       "Minnesota Wild"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "BAY",
       "TOR",
       "PHX",
       "CGY",
-      "MIN",
-      "CAN"
+      "MIN"
     ],
     "positions": [
       "R"
@@ -232090,11 +232054,11 @@
       "STL",
       "EDM",
       "FLA",
-      "MIA",
       "PIT",
       "BOS",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -232823,14 +232787,14 @@
       "CLE",
       "CHI",
       "DAL",
-      "MIA",
-      "PIT",
       "FLA",
+      "PIT",
       "CAN",
       "TOR",
       "CIN",
       "HOU",
       "SA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -239318,11 +239282,11 @@
       "Chicago Blackhawks"
     ],
     "markets": [
+      "BUF",
       "NY",
       "FLA",
       "WAS",
       "CHI",
-      "BUF",
       "MIA",
       "TB",
       "BAL"
@@ -239946,10 +239910,10 @@
     ],
     "markets": [
       "PHI",
+      "CAN",
       "DEN",
       "BAY",
       "PHX",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -242640,8 +242604,8 @@
       "Colorado Avalanche"
     ],
     "markets": [
-      "DEN",
       "CAN",
+      "DEN",
       "TOR"
     ],
     "positions": [
@@ -242669,9 +242633,7 @@
     "championshipMarkets": [
       "DEN"
     ],
-    "mvpMarkets": [
-      "DEN"
-    ]
+    "mvpMarkets": []
   },
   {
     "id": "ath_nhl_8451102",
@@ -244710,14 +244672,14 @@
       "Dallas Stars"
     ],
     "markets": [
-      "DEN",
-      "MIA",
-      "NY",
-      "LA",
-      "DAL",
       "CAN",
       "FLA",
+      "NY",
+      "DEN",
+      "LA",
+      "DAL",
       "TOR",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -246286,9 +246248,9 @@
     ],
     "markets": [
       "BAY",
-      "BOS",
       "CLE",
       "LA",
+      "BOS",
       "PIT"
     ],
     "positions": [
@@ -246977,12 +246939,12 @@
     "markets": [
       "MTL",
       "CGY",
-      "MIA",
+      "FLA",
       "NY",
       "DAL",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -248415,8 +248377,8 @@
     "markets": [
       "TOR",
       "NY",
-      "PIT",
       "BUF",
+      "PIT",
       "CAN"
     ],
     "positions": [
@@ -249629,11 +249591,11 @@
       "Pittsburgh Penguins"
     ],
     "markets": [
-      "BAY",
       "BOS",
+      "BAY",
       "CLE",
-      "PIT",
-      "STL"
+      "STL",
+      "PIT"
     ],
     "positions": [
       "D"
@@ -251082,11 +251044,11 @@
       "New York Islanders"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "EDM",
       "STL",
+      "NY",
       "BAY",
-      "BUF",
       "CAN",
       "TOR"
     ],
@@ -251186,9 +251148,9 @@
     ],
     "markets": [
       "BOS",
+      "BUF",
       "NY",
       "CGY",
-      "BUF",
       "CAN",
       "TOR"
     ],
@@ -254190,10 +254152,10 @@
       "Tampa Bay Lightning"
     ],
     "markets": [
-      "NY",
-      "WAS",
-      "FLA",
       "BUF",
+      "WAS",
+      "NY",
+      "FLA",
       "BAL",
       "MIA",
       "TB"
@@ -254347,12 +254309,12 @@
       "Colorado Avalanche"
     ],
     "markets": [
+      "BUF",
       "NY",
       "MTL",
       "STL",
       "DAL",
       "DEN",
-      "BUF",
       "CAN",
       "TOR",
       "HOU",
@@ -257481,9 +257443,9 @@
     "markets": [
       "STL",
       "BOS",
+      "CAN",
       "DEN",
       "NY",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -258647,9 +258609,9 @@
     ],
     "markets": [
       "NY",
+      "BUF",
       "TOR",
       "DAL",
-      "BUF",
       "CAN",
       "HOU",
       "SA"
@@ -258843,10 +258805,10 @@
     ],
     "markets": [
       "NY",
+      "CAN",
       "DEN",
       "FLA",
       "TOR",
-      "CAN",
       "MIA",
       "TB"
     ],
@@ -259214,11 +259176,11 @@
     "markets": [
       "BOS",
       "PIT",
+      "CAN",
       "DEN",
       "LA",
       "STL",
       "DAL",
-      "CAN",
       "TOR",
       "HOU",
       "SA"
@@ -262126,11 +262088,11 @@
       "WAS",
       "STL",
       "CGY",
-      "MIA",
       "FLA",
       "BAL",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -263978,11 +263940,11 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
+      "FLA",
       "CLE",
       "DEN",
       "VAN",
-      "FLA",
+      "MIA",
       "TB",
       "CIN",
       "CAN",
@@ -264415,8 +264377,8 @@
     ],
     "markets": [
       "DET",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -264760,8 +264722,8 @@
       "New York Islanders"
     ],
     "markets": [
-      "NY",
-      "BUF"
+      "BUF",
+      "NY"
     ],
     "positions": [
       "D"
@@ -268011,8 +267973,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -268175,9 +268137,9 @@
       "Vancouver Canucks"
     ],
     "markets": [
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -268450,10 +268412,10 @@
       "New York Islanders"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "BAY",
       "NY",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -268619,10 +268581,10 @@
     "markets": [
       "CLE",
       "ATL",
-      "MIA",
-      "CGY",
       "FLA",
+      "CGY",
       "CIN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -268840,8 +268802,8 @@
     "markets": [
       "PHX",
       "PIT",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -269507,8 +269469,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -269551,8 +269513,8 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -270006,9 +269968,9 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "BUF",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -271117,9 +271079,9 @@
     ],
     "markets": [
       "PHI",
-      "MIA",
-      "OTT",
       "FLA",
+      "OTT",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -271255,8 +271217,8 @@
     "markets": [
       "PHX",
       "DEN",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -271749,7 +271711,7 @@
     "popularityScore": 100,
     "championshipMarkets": [
       "PIT",
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -272887,8 +272849,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -273613,8 +273575,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -274107,9 +274069,9 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "MIA",
       "FLA",
       "NY",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -274665,8 +274627,8 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -277302,12 +277264,12 @@
     ],
     "markets": [
       "DAL",
-      "MIA",
+      "FLA",
       "PIT",
       "EDM",
-      "FLA",
       "HOU",
       "SA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -278187,12 +278149,12 @@
       "Dallas Stars"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "OTT",
       "LV",
       "MTL",
       "DAL",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR",
@@ -278328,8 +278290,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -278665,7 +278627,7 @@
     "popularityScore": 75,
     "championshipMarkets": [
       "LA",
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -279186,12 +279148,12 @@
     "markets": [
       "BAY",
       "DAL",
-      "MIA",
+      "FLA",
       "PHX",
       "EDM",
-      "FLA",
       "HOU",
       "SA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -279684,10 +279646,10 @@
     ],
     "markets": [
       "OTT",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -279949,11 +279911,11 @@
       "Edmonton Oilers"
     ],
     "markets": [
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
       "LV",
       "EDM",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -280178,9 +280140,9 @@
       "Arizona Coyotes"
     ],
     "markets": [
-      "MIA",
-      "PHX",
       "FLA",
+      "PHX",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -280381,7 +280343,7 @@
     "popularityScore": 100,
     "championshipMarkets": [
       "STL",
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -281919,9 +281881,9 @@
       "Anaheim Ducks"
     ],
     "markets": [
-      "MIA",
-      "LA",
       "FLA",
+      "LA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -282416,10 +282378,10 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
+      "FLA",
       "BOS",
       "NY",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -283744,8 +283706,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -285089,13 +285051,13 @@
     ],
     "markets": [
       "OTT",
-      "MIA",
+      "FLA",
       "STL",
       "MTL",
       "BAY",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -285922,9 +285884,9 @@
       "WAS",
       "NY",
       "BOS",
+      "BUF",
       "MIN",
       "SEA",
-      "BUF",
       "BAL"
     ],
     "positions": [
@@ -286061,8 +286023,8 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -286874,10 +286836,10 @@
     "markets": [
       "PHX",
       "VAN",
-      "MIA",
-      "TOR",
       "FLA",
+      "TOR",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -287264,15 +287226,15 @@
       "Pittsburgh Penguins"
     ],
     "markets": [
-      "MIA",
-      "NY",
+      "FLA",
+      "BUF",
       "WPG",
+      "NY",
       "EDM",
       "MIN",
       "LA",
       "PIT",
-      "FLA",
-      "BUF",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -287688,7 +287650,7 @@
     },
     "popularityScore": 50,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -287757,13 +287719,13 @@
     "markets": [
       "DAL",
       "BOS",
-      "MIA",
+      "FLA",
       "LV",
       "PIT",
       "NY",
-      "FLA",
       "HOU",
       "SA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -287790,7 +287752,7 @@
     },
     "popularityScore": 75,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -288930,11 +288892,11 @@
     "markets": [
       "OTT",
       "EDM",
-      "MIA",
-      "MTL",
       "FLA",
+      "MTL",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -289233,12 +289195,12 @@
       "CLE",
       "PHX",
       "DEN",
-      "MIA",
-      "PHI",
       "FLA",
+      "PHI",
       "HOU",
       "SA",
       "CIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -289408,9 +289370,9 @@
       "Pittsburgh Penguins"
     ],
     "markets": [
-      "MIA",
-      "PIT",
       "FLA",
+      "PIT",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -289511,11 +289473,11 @@
     ],
     "markets": [
       "CGY",
-      "MIA",
-      "PHI",
       "FLA",
+      "PHI",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -289893,7 +289855,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -290270,8 +290232,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -291264,8 +291226,8 @@
       "FLA",
       "PHI",
       "WAS",
-      "MIA",
       "LA",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -291356,8 +291318,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -293525,10 +293487,10 @@
       "Dallas Stars"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "EDM",
       "DAL",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR",
@@ -293575,8 +293537,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -293767,13 +293729,13 @@
       "Utah Hockey Club"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "PIT",
       "MIN",
       "PHX",
       "EDM",
       "UTA",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -294820,9 +294782,7 @@
     },
     "popularityScore": 70,
     "championshipMarkets": [],
-    "mvpMarkets": [
-      "NY"
-    ]
+    "mvpMarkets": []
   },
   {
     "id": "ath_nhl_8475792",
@@ -294848,8 +294808,8 @@
       "FLA",
       "BOS",
       "WAS",
-      "MIA",
       "CHI",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -296680,7 +296640,7 @@
     },
     "popularityScore": 85,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -296826,9 +296786,9 @@
     "markets": [
       "DEN",
       "LA",
-      "MIA",
-      "WAS",
       "FLA",
+      "WAS",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -297650,8 +297610,8 @@
     "markets": [
       "FLA",
       "OTT",
-      "NY",
       "BUF",
+      "NY",
       "MIA",
       "TB",
       "CAN",
@@ -297701,8 +297661,8 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -297714,7 +297674,7 @@
     ],
     "jerseyNumbers": [],
     "championships": 0,
-    "mvps": 1,
+    "mvps": 0,
     "hallOfFame": false,
     "rookieOfTheYear": false,
     "stats": {
@@ -297725,9 +297685,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [],
-    "mvpMarkets": [
-      "CHI"
-    ]
+    "mvpMarkets": []
   },
   {
     "id": "ath_nhl_8476205",
@@ -298959,8 +298917,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -300831,8 +300789,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -300915,9 +300873,9 @@
       "Minnesota Wild"
     ],
     "markets": [
-      "MIA",
-      "MIN",
       "FLA",
+      "MIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -301096,11 +301054,11 @@
       "MTL",
       "OTT",
       "BOS",
-      "MIA",
-      "NY",
       "FLA",
+      "NY",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -302114,7 +302072,7 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -302450,9 +302408,9 @@
       "Calgary Flames"
     ],
     "markets": [
-      "MIA",
-      "CGY",
       "FLA",
+      "CGY",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -303544,10 +303502,10 @@
       "WPG",
       "MIA",
       "TB",
-      "HOU",
-      "SA",
       "CAN",
-      "TOR"
+      "TOR",
+      "HOU",
+      "SA"
     ],
     "positions": [
       "C"
@@ -303869,10 +303827,10 @@
     "markets": [
       "BOS",
       "LV",
-      "NY",
-      "DAL",
-      "WPG",
       "BUF",
+      "DAL",
+      "NY",
+      "WPG",
       "HOU",
       "SA",
       "CAN",
@@ -304036,7 +303994,7 @@
     },
     "popularityScore": 85,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -306038,10 +305996,10 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "PIT",
       "MTL",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -306965,7 +306923,7 @@
     "popularityScore": 75,
     "championshipMarkets": [
       "WAS",
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -307379,12 +307337,12 @@
     "markets": [
       "BAY",
       "OTT",
-      "MIA",
+      "FLA",
       "MTL",
       "NY",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -307677,7 +307635,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -308719,8 +308677,8 @@
     ],
     "markets": [
       "STL",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -309093,7 +309051,7 @@
     },
     "popularityScore": 50,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -309211,8 +309169,8 @@
       "BAY",
       "SEA",
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -309241,9 +309199,7 @@
       "blocks": 314
     },
     "popularityScore": 20,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -309262,8 +309218,8 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -310197,9 +310153,7 @@
       "blocks": 1045
     },
     "popularityScore": 75,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -310969,9 +310923,9 @@
       "Calgary Flames"
     ],
     "markets": [
-      "MIA",
-      "CGY",
       "FLA",
+      "CGY",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -311402,12 +311356,12 @@
       "Edmonton Oilers"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "OTT",
       "BOS",
       "PHX",
       "EDM",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -311494,9 +311448,9 @@
       "New York Islanders"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "PHX",
-      "BUF"
+      "NY"
     ],
     "positions": [
       "R"
@@ -311589,8 +311543,8 @@
       "CHI",
       "NY",
       "PHX",
-      "SEA",
-      "BUF"
+      "BUF",
+      "SEA"
     ],
     "positions": [
       "C"
@@ -312623,7 +312577,7 @@
     },
     "popularityScore": 60,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -312831,8 +312785,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -313724,7 +313678,7 @@
     },
     "popularityScore": 70,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -314015,8 +313969,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -314145,9 +314099,7 @@
       "blocks": 1504
     },
     "popularityScore": 45,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -314757,10 +314709,10 @@
     "markets": [
       "OTT",
       "CGY",
-      "NY",
+      "BUF",
       "BOS",
       "VAN",
-      "BUF",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -315002,8 +314954,8 @@
     "markets": [
       "PIT",
       "NY",
-      "PHX",
-      "BUF"
+      "BUF",
+      "PHX"
     ],
     "positions": [
       "C"
@@ -315320,8 +315272,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -316817,8 +316769,8 @@
       "LV",
       "BOS",
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -316842,9 +316794,7 @@
       "blocks": 229
     },
     "popularityScore": 70,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -316860,8 +316810,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -316996,10 +316946,10 @@
     ],
     "markets": [
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -317888,12 +317838,12 @@
     ],
     "markets": [
       "VAN",
-      "MIA",
+      "FLA",
       "PIT",
       "SEA",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -318247,10 +318197,10 @@
       "Vancouver Canucks"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "OTT",
       "VAN",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -318322,7 +318272,7 @@
     "popularityScore": 60,
     "championshipMarkets": [
       "STL",
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -318956,9 +318906,9 @@
       "Vancouver Canucks"
     ],
     "markets": [
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -319357,7 +319307,7 @@
     },
     "popularityScore": 70,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -320037,8 +319987,8 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -321912,13 +321862,13 @@
     ],
     "markets": [
       "OTT",
-      "MIA",
+      "FLA",
       "PIT",
       "MTL",
       "BAY",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -322070,7 +322020,7 @@
     },
     "popularityScore": 85,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -322501,10 +322451,10 @@
       "NY",
       "BOS",
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -322532,9 +322482,7 @@
       "blocks": 127
     },
     "popularityScore": 65,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -322857,7 +322805,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -323481,11 +323429,11 @@
     ],
     "markets": [
       "MTL",
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -323695,7 +323643,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -325380,11 +325328,11 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
+      "FLA",
       "STL",
       "TOR",
       "PIT",
-      "FLA",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -325652,8 +325600,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -325828,10 +325776,10 @@
       "Colorado Avalanche"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "TOR",
       "DEN",
-      "FLA",
+      "MIA",
       "TB",
       "CAN"
     ],
@@ -326336,10 +326284,10 @@
     "markets": [
       "OTT",
       "BAY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -326706,9 +326654,9 @@
     ],
     "markets": [
       "CLE",
-      "MIA",
       "FLA",
       "CIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -327116,10 +327064,10 @@
     ],
     "markets": [
       "TOR",
-      "MIA",
-      "DAL",
       "FLA",
+      "DAL",
       "CAN",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -327311,10 +327259,10 @@
     ],
     "markets": [
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -327799,10 +327747,10 @@
     ],
     "markets": [
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -328445,9 +328393,7 @@
       "blocks": 37
     },
     "popularityScore": 20,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -328761,9 +328707,7 @@
       "blocks": 135
     },
     "popularityScore": 20,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -329035,7 +328979,7 @@
     },
     "popularityScore": 50,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -329057,11 +329001,11 @@
     ],
     "markets": [
       "VAN",
-      "MIA",
-      "DET",
       "FLA",
+      "DET",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -329414,10 +329358,10 @@
     ],
     "markets": [
       "VAN",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -329657,9 +329601,9 @@
     ],
     "markets": [
       "LA",
-      "MIA",
-      "SEA",
       "FLA",
+      "SEA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -329877,10 +329821,10 @@
     ],
     "markets": [
       "DET",
-      "MIA",
+      "FLA",
       "BAY",
       "DEN",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -330496,10 +330440,10 @@
       "Washington Capitals"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "CHI",
       "WAS",
-      "FLA",
+      "MIA",
       "TB",
       "BAL"
     ],
@@ -331100,10 +331044,10 @@
       "San Jose Sharks"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "DEN",
       "BAY",
-      "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -331865,9 +331809,9 @@
     ],
     "markets": [
       "CHI",
-      "MIA",
-      "BAY",
       "FLA",
+      "BAY",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -332339,8 +332283,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -332827,8 +332771,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -334282,7 +334226,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -334305,10 +334249,10 @@
     "markets": [
       "VAN",
       "BAY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -334654,7 +334598,7 @@
     },
     "popularityScore": 25,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -334983,8 +334927,8 @@
     "markets": [
       "NY",
       "BOS",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -335009,9 +334953,7 @@
       "blocks": 141
     },
     "popularityScore": 70,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -335090,7 +335032,7 @@
     },
     "popularityScore": 25,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -335335,9 +335277,9 @@
       "Philadelphia Flyers"
     ],
     "markets": [
-      "MIA",
-      "PHI",
       "FLA",
+      "PHI",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -335929,8 +335871,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -337510,8 +337452,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -339685,7 +339627,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -339958,7 +339900,7 @@
     },
     "popularityScore": 25,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -340716,9 +340658,9 @@
       "San Jose Sharks"
     ],
     "markets": [
-      "MIA",
-      "BAY",
       "FLA",
+      "BAY",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -340743,9 +340685,7 @@
       "blocks": 9
     },
     "popularityScore": 10,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -341224,9 +341164,9 @@
       "Vegas Golden Knights"
     ],
     "markets": [
-      "MIA",
-      "LV",
       "FLA",
+      "LV",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -341825,10 +341765,10 @@
     "markets": [
       "CHI",
       "CLE",
-      "MIA",
-      "NY",
       "FLA",
+      "NY",
       "CIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -341853,9 +341793,7 @@
       "blocks": 250
     },
     "popularityScore": 20,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -342840,8 +342778,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -343647,7 +343585,7 @@
     },
     "popularityScore": 70,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -344446,7 +344384,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -344882,8 +344820,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -345016,8 +344954,8 @@
       "MIN",
       "DEN",
       "BAY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -345671,7 +345609,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -347465,13 +347403,13 @@
     ],
     "markets": [
       "MTL",
-      "MIA",
+      "FLA",
       "VAN",
       "EDM",
       "NY",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -347946,9 +347884,9 @@
       "PHI",
       "BAY",
       "LA",
-      "MIA",
-      "OTT",
       "FLA",
+      "OTT",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -348142,8 +348080,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -350025,8 +349963,8 @@
     "markets": [
       "NY",
       "BOS",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -350241,10 +350179,10 @@
     "markets": [
       "MTL",
       "CGY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -350371,9 +350309,9 @@
       "Columbus Blue Jackets"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "CLE",
-      "CAN",
       "TOR",
       "CIN"
     ],
@@ -350994,9 +350932,9 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
-      "CLE",
       "FLA",
+      "CLE",
+      "MIA",
       "TB",
       "CIN"
     ],
@@ -352018,8 +351956,8 @@
     ],
     "markets": [
       "VAN",
-      "NY",
       "BUF",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -352400,10 +352338,10 @@
       "New Jersey Devils"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "NY",
       "DAL",
-      "CAN",
       "TOR",
       "HOU",
       "SA"
@@ -352761,11 +352699,11 @@
       "Los Angeles Kings"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "CHI",
       "DAL",
       "LA",
-      "CAN",
       "TOR",
       "HOU",
       "SA"
@@ -353053,8 +352991,8 @@
     "markets": [
       "CGY",
       "NY",
-      "BAY",
       "BUF",
+      "BAY",
       "CAN",
       "TOR"
     ],
@@ -353489,8 +353427,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -354940,10 +354878,10 @@
       "Vancouver Canucks"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "LA",
       "VAN",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -357174,11 +357112,11 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "MIA",
+      "FLA",
       "VAN",
       "CGY",
       "NY",
-      "FLA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -357267,9 +357205,9 @@
     "markets": [
       "NY",
       "TOR",
-      "MIA",
       "FLA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -357940,10 +357878,10 @@
     ],
     "markets": [
       "OTT",
+      "BUF",
       "NY",
       "CHI",
       "LV",
-      "BUF",
       "CAN",
       "TOR"
     ],
@@ -358412,8 +358350,8 @@
       "Ottawa Senators"
     ],
     "markets": [
-      "OTT",
       "TOR",
+      "OTT",
       "CAN"
     ],
     "positions": [
@@ -358436,9 +358374,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -358571,8 +358507,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -360786,9 +360722,9 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "MTL",
-      "NY",
       "PIT",
+      "NY",
+      "MTL",
       "CAN",
       "TOR"
     ],
@@ -361282,8 +361218,8 @@
     ],
     "markets": [
       "WPG",
-      "NY",
       "BUF",
+      "NY",
       "CAN",
       "TOR"
     ],
@@ -362608,10 +362544,10 @@
       "QUA"
     ],
     "markets": [
-      "NY",
-      "PHI",
       "TOR",
       "CAN",
+      "NY",
+      "PHI",
       "DET"
     ],
     "positions": [
@@ -362708,10 +362644,10 @@
       "Montreal Maroons"
     ],
     "markets": [
-      "DET",
-      "MTL",
-      "NY",
       "OTT",
+      "DET",
+      "NY",
+      "MTL",
       "CAN",
       "TOR"
     ],
@@ -362775,9 +362711,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -363133,9 +363067,9 @@
       "Chicago Blackhawks"
     ],
     "markets": [
-      "MIA",
-      "CHI",
       "FLA",
+      "CHI",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -363160,9 +363094,7 @@
       "blocks": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -363984,10 +363916,10 @@
     ],
     "markets": [
       "OTT",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -364752,9 +364684,9 @@
       "NY",
       "EDM",
       "STL",
+      "BUF",
       "VAN",
       "OTT",
-      "BUF",
       "CAN",
       "TOR"
     ],
@@ -364804,10 +364736,10 @@
       "New Jersey Devils"
     ],
     "markets": [
-      "NY",
+      "BUF",
       "DET",
       "CHI",
-      "BUF"
+      "NY"
     ],
     "positions": [
       "G"
@@ -366295,8 +366227,8 @@
       "DCG"
     ],
     "markets": [
-      "DET",
-      "TOR"
+      "TOR",
+      "DET"
     ],
     "positions": [
       "G"
@@ -366318,9 +366250,7 @@
       "blocks": 0
     },
     "popularityScore": 45,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -367087,11 +367017,11 @@
       "VAN",
       "WAS",
       "DAL",
-      "HOU",
-      "SA",
       "CAN",
       "TOR",
-      "BAL"
+      "BAL",
+      "HOU",
+      "SA"
     ],
     "positions": [
       "G"
@@ -367463,7 +367393,7 @@
     },
     "popularityScore": 70,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -368930,9 +368860,9 @@
       "WAS",
       "NY",
       "BAY",
-      "MIA",
       "FLA",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -368955,9 +368885,7 @@
       "blocks": 0
     },
     "popularityScore": 20,
-    "championshipMarkets": [
-      "FLA"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -369198,11 +369126,11 @@
     "markets": [
       "CGY",
       "DEN",
-      "MIA",
-      "LA",
       "FLA",
+      "LA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -370393,11 +370321,11 @@
     ],
     "markets": [
       "CGY",
-      "NY",
+      "BUF",
       "MIN",
       "EDM",
+      "NY",
       "FLA",
-      "BUF",
       "CAN",
       "TOR",
       "MIA",
@@ -370564,9 +370492,9 @@
     ],
     "markets": [
       "BOS",
-      "MIA",
-      "DAL",
       "FLA",
+      "DAL",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -370992,7 +370920,7 @@
     },
     "popularityScore": 75,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -371041,7 +370969,7 @@
     },
     "popularityScore": 35,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -372089,10 +372017,10 @@
       "Montreal Canadiens"
     ],
     "markets": [
+      "CAN",
       "DEN",
       "LA",
       "MTL",
-      "CAN",
       "TOR"
     ],
     "positions": [
@@ -372405,8 +372333,8 @@
     ],
     "markets": [
       "NY",
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -372498,10 +372426,10 @@
       "LA",
       "EDM",
       "PHX",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -373801,10 +373729,10 @@
       "CGY",
       "DET",
       "BAY",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -377708,16 +377636,16 @@
     ],
     "markets": [
       "VAN",
-      "MIA",
+      "FLA",
       "PHX",
       "BOS",
       "OTT",
       "DAL",
       "NY",
       "MTL",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB",
       "HOU",
       "SA"
@@ -379002,11 +378930,11 @@
     ],
     "markets": [
       "OTT",
-      "MIA",
-      "SEA",
       "FLA",
+      "SEA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -379369,10 +379297,10 @@
       "PHI",
       "EDM",
       "LA",
-      "MIA",
-      "TOR",
       "FLA",
+      "TOR",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -382082,9 +382010,9 @@
     ],
     "markets": [
       "NY",
-      "MIA",
-      "VAN",
       "FLA",
+      "VAN",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -382576,7 +382504,7 @@
     },
     "popularityScore": 25,
     "championshipMarkets": [
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -384013,9 +383941,7 @@
       "blocks": 0
     },
     "popularityScore": 40,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -384257,9 +384183,9 @@
     "markets": [
       "PHI",
       "CLE",
-      "MIA",
       "FLA",
       "CIN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -384622,11 +384548,11 @@
       "DEN",
       "WAS",
       "MIN",
-      "MIA",
       "FLA",
       "CAN",
       "TOR",
       "BAL",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -386428,9 +386354,9 @@
       "Boston Bruins"
     ],
     "markets": [
-      "BOS",
-      "CAN",
       "TOR",
+      "CAN",
+      "BOS",
       "DET"
     ],
     "positions": [
@@ -386477,11 +386403,11 @@
       "Detroit Red Wings"
     ],
     "markets": [
+      "PHI",
       "BOS",
       "CHI",
-      "DET",
       "MTL",
-      "PHI",
+      "DET",
       "CAN",
       "TOR"
     ],
@@ -386813,10 +386739,10 @@
       "NY",
       "FLA",
       "DAL",
-      "HOU",
-      "SA",
       "MIA",
-      "TB"
+      "TB",
+      "HOU",
+      "SA"
     ],
     "positions": [
       "G"
@@ -387297,9 +387223,7 @@
       "blocks": 0
     },
     "popularityScore": 5,
-    "championshipMarkets": [
-      "TOR"
-    ],
+    "championshipMarkets": [],
     "mvpMarkets": []
   },
   {
@@ -388548,9 +388472,9 @@
       "Arizona Coyotes"
     ],
     "markets": [
-      "MIA",
-      "PHX",
       "FLA",
+      "PHX",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -389146,9 +389070,9 @@
       "Montreal Canadiens"
     ],
     "markets": [
-      "MIA",
-      "MTL",
       "FLA",
+      "MTL",
+      "MIA",
       "TB",
       "CAN",
       "TOR"
@@ -389760,12 +389684,12 @@
       "PHX",
       "NY",
       "WPG",
-      "MIA",
+      "FLA",
       "MTL",
       "EDM",
-      "FLA",
       "CAN",
       "TOR",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -392109,7 +392033,7 @@
     "popularityScore": 100,
     "championshipMarkets": [
       "LA",
-      "VGK"
+      "LV"
     ],
     "mvpMarkets": []
   },
@@ -392297,7 +392221,7 @@
       "DET"
     ],
     "mvpMarkets": [
-      "NY"
+      "BUF"
     ]
   },
   {
@@ -392655,9 +392579,9 @@
     ],
     "markets": [
       "WAS",
+      "BUF",
       "NY",
       "PHI",
-      "BUF",
       "BAL"
     ],
     "positions": [
@@ -393080,8 +393004,8 @@
     ],
     "markets": [
       "NY",
-      "PHI",
-      "PIT"
+      "PIT",
+      "PHI"
     ],
     "positions": [
       "G"
@@ -394015,11 +393939,11 @@
       "BAY",
       "DAL",
       "TOR",
-      "MIA",
       "FLA",
       "HOU",
       "SA",
       "CAN",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -395457,8 +395381,8 @@
       "Florida Panthers"
     ],
     "markets": [
-      "MIA",
       "FLA",
+      "MIA",
       "TB"
     ],
     "positions": [
@@ -396093,11 +396017,11 @@
       "BAY",
       "DAL",
       "PIT",
-      "MIA",
-      "MTL",
       "FLA",
+      "MTL",
       "HOU",
       "SA",
+      "MIA",
       "TB",
       "CAN",
       "TOR"

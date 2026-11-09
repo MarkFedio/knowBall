@@ -33,6 +33,7 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'giannis': 'giannis antetokounmpo',
   'the greek freak': 'giannis antetokounmpo',
   'wemby': 'victor wembanyama',
+  'brooke lopez': 'brook lopez',
   'king james': 'lebron james',
   'bron': 'lebron james',
   'spida': 'donovan mitchell',
@@ -179,6 +180,7 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'y a tittle': 'y.a. tittle',
 
   // Hockey
+  'derek engelland': 'deryk engelland',
   'alexander ovechkin': 'alex ovechkin',
   'ovi': 'alex ovechkin',
   'ovie': 'alex ovechkin',

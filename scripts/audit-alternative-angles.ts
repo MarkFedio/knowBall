@@ -68,9 +68,9 @@ function runAngle1MvpCensus() {
 
     // NFL
     { name: 'Peyton Manning', sport: 'NFL', minMvps: 5, expectedMarket: 'IND' },
-    { name: 'Aaron Rodgers', sport: 'NFL', minMvps: 4, expectedMarket: 'MIL' },
+    { name: 'Aaron Rodgers', sport: 'NFL', minMvps: 4, expectedMarket: 'GB' },
     { name: 'Tom Brady', sport: 'NFL', minMvps: 3, expectedMarket: 'BOS' },
-    { name: 'Brett Favre', sport: 'NFL', minMvps: 3, expectedMarket: 'MIL' },
+    { name: 'Brett Favre', sport: 'NFL', minMvps: 3, expectedMarket: 'GB' },
     { name: 'Jim Brown', sport: 'NFL', minMvps: 3, expectedMarket: 'CLE' },
     { name: 'Johnny Unitas', sport: 'NFL', minMvps: 3, expectedMarket: 'BAL' },
     { name: 'Patrick Mahomes', sport: 'NFL', minMvps: 2, expectedMarket: 'KC' },
@@ -111,7 +111,7 @@ function runAngle1MvpCensus() {
     { name: 'Alexander Ovechkin', sport: 'NHL', minMvps: 3, expectedMarket: 'WAS' },
     { name: 'Sidney Crosby', sport: 'NHL', minMvps: 2, expectedMarket: 'PIT' },
     { name: 'Connor McDavid', sport: 'NHL', minMvps: 3, expectedMarket: 'EDM' },
-    { name: 'Dominik Hasek', sport: 'NHL', minMvps: 2, expectedMarket: 'NY' },
+    { name: 'Dominik Hasek', sport: 'NHL', minMvps: 2, expectedMarket: 'BUF' },
     { name: 'Nathan MacKinnon', sport: 'NHL', minMvps: 1, expectedMarket: 'DEN' },
   ];
 
