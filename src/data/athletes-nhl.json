@@ -274495,7 +274495,7 @@
       "hits": 1205,
       "blocks": 1884
     },
-    "popularityScore": 65,
+    "popularityScore": 75,
     "championshipMarkets": [
       "LA",
       "VGK"
@@ -276087,14 +276087,15 @@
     ],
     "markets": [
       "FLA",
-      "NSH"
+      "NSH",
+      "TEN"
     ],
     "positions": [
       "C"
     ],
     "activeYears": [
       2008,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       91
@@ -282457,7 +282458,7 @@
     ],
     "activeYears": [
       2010,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       23,
@@ -282474,7 +282475,7 @@
       "hits": 2351,
       "blocks": 1052
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [
       "FLA"
     ],
@@ -282837,7 +282838,7 @@
     ],
     "activeYears": [
       2009,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       5,
@@ -282857,7 +282858,7 @@
       "hits": 1188,
       "blocks": 1349
     },
-    "popularityScore": 65,
+    "popularityScore": 70,
     "championshipMarkets": [
       "FLA"
     ],
@@ -283331,7 +283332,7 @@
       "hits": 1997,
       "blocks": 376
     },
-    "popularityScore": 60,
+    "popularityScore": 75,
     "championshipMarkets": [
       "VGK"
     ],
@@ -287170,20 +287171,23 @@
       "NHL"
     ],
     "teams": [
-      "PHI"
+      "PHI",
+      "DET"
     ],
     "teamNames": [
-      "Philadelphia Flyers"
+      "Philadelphia Flyers",
+      "Detroit Red Wings"
     ],
     "markets": [
-      "PHI"
+      "PHI",
+      "DET"
     ],
     "positions": [
       "D"
     ],
     "activeYears": [
       2010,
-      2014
+      2026
     ],
     "jerseyNumbers": [
       26,
@@ -287204,7 +287208,7 @@
       "hits": 86,
       "blocks": 125
     },
-    "popularityScore": 5,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -287519,7 +287523,7 @@
     ],
     "activeYears": [
       2010,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       3,
@@ -287536,7 +287540,7 @@
       "hits": 715,
       "blocks": 1875
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -289364,7 +289368,7 @@
     ],
     "activeYears": [
       2012,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       10,
@@ -289381,7 +289385,7 @@
       "hits": 2560,
       "blocks": 380
     },
-    "popularityScore": 75,
+    "popularityScore": 85,
     "championshipMarkets": [
       "STL",
       "FLA"
@@ -289880,7 +289884,7 @@
     ],
     "activeYears": [
       2010,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       53
@@ -289895,7 +289899,7 @@
       "hits": 3386,
       "blocks": 271
     },
-    "popularityScore": 75,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -299000,14 +299004,15 @@
       "FLA",
       "MIA",
       "LV",
-      "NSH"
+      "NSH",
+      "TEN"
     ],
     "positions": [
       "R"
     ],
     "activeYears": [
       2012,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       36,
@@ -299024,7 +299029,7 @@
       "hits": 2354,
       "blocks": 192
     },
-    "popularityScore": 60,
+    "popularityScore": 85,
     "championshipMarkets": [
       "VGK"
     ],
@@ -300671,14 +300676,15 @@
     "markets": [
       "NY",
       "CHA",
-      "NSH"
+      "NSH",
+      "TEN"
     ],
     "positions": [
       "D"
     ],
     "activeYears": [
       2015,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       76
@@ -300693,7 +300699,7 @@
       "hits": 1496,
       "blocks": 904
     },
-    "popularityScore": 45,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -301248,9 +301254,11 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2027
     ],
-    "jerseyNumbers": [],
+    "jerseyNumbers": [
+      86
+    ],
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
@@ -301261,7 +301269,7 @@
       "hits": 1656,
       "blocks": 310
     },
-    "popularityScore": 60,
+    "popularityScore": 80,
     "championshipMarkets": [
       "CHI"
     ],
@@ -301846,7 +301854,7 @@
     ],
     "activeYears": [
       2015,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       9,
@@ -301863,7 +301871,7 @@
       "hits": 752,
       "blocks": 388
     },
-    "popularityScore": 60,
+    "popularityScore": 75,
     "championshipMarkets": [
       "WAS",
       "VGK"
@@ -306448,7 +306456,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       59
@@ -306463,7 +306471,7 @@
       "hits": 1969,
       "blocks": 375
     },
-    "popularityScore": 75,
+    "popularityScore": 85,
     "championshipMarkets": [
       "PIT"
     ],
@@ -306606,7 +306614,7 @@
     ],
     "activeYears": [
       2019,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       23
@@ -306621,7 +306629,7 @@
       "hits": 1317,
       "blocks": 145
     },
-    "popularityScore": 60,
+    "popularityScore": 80,
     "championshipMarkets": [
       "FLA"
     ],
@@ -308443,7 +308451,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       59
@@ -308458,7 +308466,7 @@
       "hits": 1125,
       "blocks": 271
     },
-    "popularityScore": 45,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -308702,7 +308710,7 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       16
@@ -308717,7 +308725,7 @@
       "hits": 2099,
       "blocks": 527
     },
-    "popularityScore": 85,
+    "popularityScore": 90,
     "championshipMarkets": [
       "FLA"
     ],
@@ -308848,7 +308856,7 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       16,
@@ -308865,7 +308873,7 @@
       "hits": 2090,
       "blocks": 599
     },
-    "popularityScore": 70,
+    "popularityScore": 85,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -308898,7 +308906,7 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       23,
@@ -308914,7 +308922,7 @@
       "hits": 2015,
       "blocks": 362
     },
-    "popularityScore": 60,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -309357,7 +309365,7 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       16,
@@ -309375,7 +309383,7 @@
       "hits": 998,
       "blocks": 902
     },
-    "popularityScore": 35,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -311445,7 +311453,7 @@
     ],
     "activeYears": [
       2014,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       5
@@ -311460,7 +311468,7 @@
       "hits": 1915,
       "blocks": 914
     },
-    "popularityScore": 60,
+    "popularityScore": 85,
     "championshipMarkets": [
       "FLA"
     ],
@@ -311489,7 +311497,7 @@
     ],
     "activeYears": [
       2014,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       13,
@@ -311505,7 +311513,7 @@
       "hits": 2067,
       "blocks": 465
     },
-    "popularityScore": 75,
+    "popularityScore": 85,
     "championshipMarkets": [
       "FLA"
     ],
@@ -311575,7 +311583,7 @@
     ],
     "activeYears": [
       2014,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       9,
@@ -311592,7 +311600,7 @@
       "hits": 1809,
       "blocks": 357
     },
-    "popularityScore": 60,
+    "popularityScore": 75,
     "championshipMarkets": [
       "FLA"
     ],
@@ -313252,7 +313260,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       26,
@@ -313269,7 +313277,7 @@
       "hits": 1563,
       "blocks": 768
     },
-    "popularityScore": 60,
+    "popularityScore": 80,
     "championshipMarkets": [
       "FLA"
     ],
@@ -313571,7 +313579,7 @@
     ],
     "activeYears": [
       2017,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       13,
@@ -313587,7 +313595,7 @@
       "hits": 1119,
       "blocks": 182
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -314248,7 +314256,7 @@
     ],
     "activeYears": [
       2014,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       33,
@@ -314265,7 +314273,7 @@
       "hits": 2009,
       "blocks": 397
     },
-    "popularityScore": 45,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -314530,7 +314538,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       42
@@ -314545,7 +314553,7 @@
       "hits": 1123,
       "blocks": 652
     },
-    "popularityScore": 50,
+    "popularityScore": 75,
     "championshipMarkets": [
       "FLA"
     ],
@@ -319377,7 +319385,7 @@
     ],
     "activeYears": [
       2015,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       9,
@@ -319394,7 +319402,7 @@
       "hits": 1411,
       "blocks": 233
     },
-    "popularityScore": 50,
+    "popularityScore": 70,
     "championshipMarkets": [
       "FLA"
     ],
@@ -320461,7 +320469,7 @@
     ],
     "activeYears": [
       2019,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       77
@@ -320476,7 +320484,7 @@
       "hits": 452,
       "blocks": 537
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [
       "FLA"
     ],
@@ -321043,7 +321051,7 @@
     ],
     "activeYears": [
       2018,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       3,
@@ -321059,7 +321067,7 @@
       "hits": 812,
       "blocks": 938
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -322063,7 +322071,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       19
@@ -322078,7 +322086,7 @@
       "hits": 2011,
       "blocks": 182
     },
-    "popularityScore": 85,
+    "popularityScore": 95,
     "championshipMarkets": [
       "FLA"
     ],
@@ -323015,7 +323023,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       6
@@ -323030,7 +323038,7 @@
       "hits": 1567,
       "blocks": 965
     },
-    "popularityScore": 45,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -324749,7 +324757,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       22,
@@ -324765,7 +324773,7 @@
       "hits": 1183,
       "blocks": 965
     },
-    "popularityScore": 60,
+    "popularityScore": 80,
     "championshipMarkets": [
       "FLA"
     ],
@@ -359083,7 +359091,7 @@
       "wins": 140,
       "blocks": 0
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -359349,7 +359357,7 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       33,
@@ -359366,7 +359374,7 @@
       "wins": 283,
       "blocks": 0
     },
-    "popularityScore": 60,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -360414,7 +360422,7 @@
     ],
     "activeYears": [
       2015,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       35
@@ -360430,7 +360438,7 @@
       "wins": 198,
       "blocks": 0
     },
-    "popularityScore": 30,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -362866,12 +362874,14 @@
     "teams": [
       "EDM",
       "WPG",
-      "VGK"
+      "VGK",
+      "CHI"
     ],
     "teamNames": [
       "Edmonton Oilers",
       "Winnipeg Jets",
-      "Vegas Golden Knights"
+      "Vegas Golden Knights",
+      "Chicago Blackhawks"
     ],
     "markets": [
       "EDM",
@@ -362883,7 +362893,7 @@
     ],
     "activeYears": [
       2014,
-      2024
+      2026
     ],
     "jerseyNumbers": [
       1,
@@ -362903,7 +362913,7 @@
       "wins": 67,
       "blocks": 0
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [
       "VGK"
     ],
@@ -366370,7 +366380,7 @@
     ],
     "activeYears": [
       2020,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       36,
@@ -366387,7 +366397,7 @@
       "wins": 124,
       "blocks": 0
     },
-    "popularityScore": 35,
+    "popularityScore": 75,
     "championshipMarkets": [
       "VGK"
     ],
@@ -371085,7 +371095,7 @@
     ],
     "activeYears": [
       2019,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       30,
@@ -371102,7 +371112,7 @@
       "wins": 118,
       "blocks": 0
     },
-    "popularityScore": 20,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -374854,7 +374864,7 @@
     ],
     "activeYears": [
       2016,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       31,
@@ -374872,7 +374882,7 @@
       "wins": 79,
       "blocks": 0
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [
       "FLA"
     ],
@@ -379821,7 +379831,7 @@
     ],
     "activeYears": [
       2010,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       35,
@@ -390811,7 +390821,7 @@
     ],
     "activeYears": [
       2012,
-      2025
+      2027
     ],
     "jerseyNumbers": [
       35

@@ -2815,7 +2815,8 @@
       "LV",
       "GB",
       "NYJ",
-      "LA"
+      "LA",
+      "LAR"
     ],
     "teamNames": [
       "Las Vegas Raiders",
@@ -15799,8 +15800,8 @@
       2026
     ],
     "jerseyNumbers": [
-      13,
-      10
+      10,
+      13
     ],
     "college": "California",
     "collegeConference": "Pac-12",
@@ -109558,9 +109559,9 @@
       2026
     ],
     "jerseyNumbers": [
+      7,
       12,
-      14,
-      7
+      14
     ],
     "college": "N.C. State; Florida",
     "collegeConference": "ACC",
@@ -140465,6 +140466,7 @@
       2026
     ],
     "jerseyNumbers": [
+      0,
       53
     ],
     "college": "Florida State",
@@ -140480,7 +140482,7 @@
       "points": 0,
       "turnovers": 0
     },
-    "popularityScore": 50,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -204031,20 +204033,21 @@
       "DAL",
       "BAY",
       "NY",
-      "LV"
+      "LV",
+      "BUF"
     ],
     "positions": [
       "WR"
     ],
     "activeYears": [
       2015,
-      2024
+      2026
     ],
     "jerseyNumbers": [
       2,
+      18,
       19,
-      89,
-      18
+      89
     ],
     "college": "Alabama",
     "collegeConference": "SEC",
@@ -210592,8 +210595,8 @@
       2026
     ],
     "jerseyNumbers": [
-      12,
       8,
+      12,
       18
     ],
     "college": "Michigan State",
@@ -234973,9 +234976,10 @@
     ],
     "activeYears": [
       2020,
-      2025
+      2026
     ],
     "jerseyNumbers": [
+      0,
       13
     ],
     "college": "UCF",
@@ -254673,10 +254677,10 @@
       2026
     ],
     "jerseyNumbers": [
-      14,
       1,
       3,
-      8
+      8,
+      14
     ],
     "college": "Maryland",
     "collegeConference": "Big Ten",
@@ -297128,12 +297132,12 @@
     ],
     "activeYears": [
       2017,
-      2024
+      2026
     ],
     "jerseyNumbers": [
       7,
-      81,
-      14
+      14,
+      81
     ],
     "college": "South Alabama; UAB; Hutchinson CC",
     "collegeConference": "SEC",
@@ -309020,7 +309024,7 @@
       "points": 228,
       "turnovers": 86
     },
-    "popularityScore": 70,
+    "popularityScore": 85,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -312994,8 +312998,8 @@
     "jerseyNumbers": [
       5,
       15,
-      19,
-      16
+      16,
+      19
     ],
     "college": "Delaware; Pittsburgh",
     "collegeConference": "ACC",
@@ -349125,8 +349129,8 @@
       2026
     ],
     "jerseyNumbers": [
-      88,
-      86
+      86,
+      88
     ],
     "college": "Penn State",
     "collegeConference": "Big Ten",
@@ -457226,11 +457230,11 @@
     ],
     "activeYears": [
       2013,
-      2025
+      2026
     ],
     "jerseyNumbers": [
-      10,
-      8
+      8,
+      10
     ],
     "college": "Clemson",
     "collegeConference": "ACC",
@@ -470383,8 +470387,8 @@
       2026
     ],
     "jerseyNumbers": [
-      99,
-      55
+      55,
+      99
     ],
     "college": "LSU",
     "collegeConference": "SEC",
@@ -502951,8 +502955,8 @@
       2026
     ],
     "jerseyNumbers": [
-      10,
-      3
+      3,
+      10
     ],
     "college": "Alabama",
     "collegeConference": "SEC",
@@ -510179,24 +510183,30 @@
     ],
     "teams": [
       "PIT",
-      "HOU"
+      "HOU",
+      "CAR",
+      "BAL"
     ],
     "teamNames": [
       "Pittsburgh Steelers",
-      "Houston Texans"
+      "Houston Texans",
+      "Carolina Panthers",
+      "Baltimore Ravens"
     ],
     "markets": [
       "PIT",
-      "HOU"
+      "HOU",
+      "BAL"
     ],
     "positions": [
       "WR"
     ],
     "activeYears": [
       2019,
-      2024
+      2026
     ],
     "jerseyNumbers": [
+      5,
       18,
       82
     ],
@@ -524488,11 +524498,11 @@
     ],
     "activeYears": [
       1988,
-      1996
+      2026
     ],
     "jerseyNumbers": [
-      97,
-      33
+      33,
+      97
     ],
     "college": "Eastern Kentucky",
     "collegeConference": "SEC",
@@ -524507,7 +524517,7 @@
       "points": 0,
       "turnovers": 0
     },
-    "popularityScore": 30,
+    "popularityScore": 80,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -543359,9 +543369,9 @@
     ],
     "jerseyNumbers": [
       9,
-      99,
       15,
-      91
+      91,
+      99
     ],
     "college": "Grand Valley",
     "draftPick": 146,
@@ -543375,7 +543385,7 @@
       "points": 0,
       "turnovers": 0
     },
-    "popularityScore": 65,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -692653,7 +692663,7 @@
     ],
     "activeYears": [
       2017,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       28
@@ -697555,8 +697565,8 @@
       2026
     ],
     "jerseyNumbers": [
-      11,
       1,
+      11,
       17
     ],
     "college": "Tulane",
@@ -697571,7 +697581,7 @@
       "points": 204,
       "turnovers": 0
     },
-    "popularityScore": 60,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -751774,17 +751784,20 @@
     "teams": [
       "MIN",
       "WAS",
-      "TEN"
+      "TEN",
+      "NE"
     ],
     "teamNames": [
       "Minnesota Vikings",
       "Washington Commanders",
-      "Tennessee Titans"
+      "Tennessee Titans",
+      "New England Patriots"
     ],
     "markets": [
       "MIN",
       "WAS",
-      "TEN"
+      "TEN",
+      "BOS"
     ],
     "positions": [
       "WR"
@@ -751794,9 +751807,10 @@
       2026
     ],
     "jerseyNumbers": [
-      17,
+      8,
+      10,
       13,
-      8
+      17
     ],
     "college": "Miami; Buffalo",
     "collegeConference": "ACC",
@@ -751811,7 +751825,7 @@
       "points": 204,
       "turnovers": 0
     },
-    "popularityScore": 60,
+    "popularityScore": 65,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -804524,7 +804538,7 @@
       "points": 0,
       "turnovers": 0
     },
-    "popularityScore": 50,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -814542,12 +814556,12 @@
     ],
     "activeYears": [
       2017,
-      2025
+      2026
     ],
     "jerseyNumbers": [
+      5,
       7,
-      43,
-      5
+      43
     ],
     "college": "Temple",
     "draftPick": 13,
@@ -814561,7 +814575,7 @@
       "points": 0,
       "turnovers": 0
     },
-    "popularityScore": 50,
+    "popularityScore": 75,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -830093,6 +830107,7 @@
       2026
     ],
     "jerseyNumbers": [
+      0,
       18
     ],
     "college": "Alabama",
@@ -863801,19 +863816,20 @@
     "markets": [
       "WAS",
       "CHA",
-      "NY"
+      "NY",
+      "BUF"
     ],
     "positions": [
       "WR"
     ],
     "activeYears": [
       2017,
-      2025
+      2026
     ],
     "jerseyNumbers": [
+      1,
       4,
-      10,
-      1
+      10
     ],
     "college": "Ohio State",
     "collegeConference": "Big Ten",
@@ -916250,7 +916266,8 @@
       "BOS",
       "TEN",
       "MIA",
-      "MIL"
+      "MIL",
+      "FLA"
     ],
     "positions": [
       "TE"
@@ -916260,9 +916277,9 @@
       2026
     ],
     "jerseyNumbers": [
-      81,
       9,
-      18
+      18,
+      81
     ],
     "college": "Florida International",
     "collegeConference": "SEC",
@@ -925575,7 +925592,7 @@
       "points": 0,
       "turnovers": 0
     },
-    "popularityScore": 50,
+    "popularityScore": 75,
     "championshipMarkets": [
       "KC"
     ],
@@ -957999,8 +958016,8 @@
       2026
     ],
     "jerseyNumbers": [
-      32,
-      4
+      4,
+      32
     ],
     "college": "Georgia",
     "collegeConference": "SEC",
@@ -1065199,7 +1065216,7 @@
     ],
     "activeYears": [
       2019,
-      2024
+      2026
     ],
     "jerseyNumbers": [
       94
@@ -1065217,7 +1065234,7 @@
       "points": 24,
       "turnovers": 0
     },
-    "popularityScore": 35,
+    "popularityScore": 70,
     "championshipMarkets": [],
     "mvpMarkets": []
   },
@@ -1079504,7 +1079521,8 @@
       "TB",
       "SEA",
       "LAC",
-      "PIT"
+      "PIT",
+      "NYJ"
     ],
     "teamNames": [
       "San Francisco 49ers",
@@ -1079520,7 +1079538,8 @@
       "Tampa Bay Buccaneers",
       "Seattle Seahawks",
       "Los Angeles Chargers",
-      "Pittsburgh Steelers"
+      "Pittsburgh Steelers",
+      "New York Jets"
     ],
     "markets": [
       "BAY",
@@ -1079541,17 +1079560,17 @@
     ],
     "activeYears": [
       1995,
-      1995
+      2026
     ],
     "jerseyNumbers": [
+      15,
+      17,
+      18,
+      19,
       68,
       71,
-      18,
-      17,
-      88,
-      19,
       81,
-      15
+      88
     ],
     "college": "UCLA",
     "collegeConference": "Big Ten",
@@ -1079566,7 +1079585,7 @@
       "points": 198,
       "turnovers": 0
     },
-    "popularityScore": 70,
+    "popularityScore": 75,
     "championshipMarkets": [
       "WAS"
     ],
@@ -1092469,7 +1092488,7 @@
     ],
     "activeYears": [
       2012,
-      2025
+      2026
     ],
     "jerseyNumbers": [
       3

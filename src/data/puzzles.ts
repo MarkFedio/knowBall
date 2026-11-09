@@ -1,4 +1,5 @@
 import { Athlete, Category, DailyPuzzle } from '@/types';
+import { isAthleteInMarket } from '@/lib/marketResolver';
 import { ATHLETES } from './athletes';
 import { CATEGORIES } from './categories';
 
@@ -143,7 +144,11 @@ export function doesAthleteMatchCell(
     if (meta) {
       if (intersection.accoladeType === 'CHAMPION') {
         const champMarkets = athlete.championshipMarkets || [];
-        const wonInMarket = champMarkets.some((m) => meta.codes.includes(m));
+        const wonInMarket =
+          champMarkets.some((m) => meta.codes.includes(m)) ||
+          (athlete.championships > 0 &&
+            champMarkets.length === 0 &&
+            isAthleteInMarket(athlete, meta.codes));
         if (!wonInMarket) {
           return {
             isMatch: false,
@@ -152,7 +157,11 @@ export function doesAthleteMatchCell(
         }
       } else if (intersection.accoladeType === 'MVP') {
         const mvpMarkets = athlete.mvpMarkets || [];
-        const wonInMarket = mvpMarkets.some((m) => meta.codes.includes(m));
+        const wonInMarket =
+          mvpMarkets.some((m) => meta.codes.includes(m)) ||
+          (athlete.mvps > 0 &&
+            mvpMarkets.length === 0 &&
+            isAthleteInMarket(athlete, meta.codes));
         if (!wonInMarket) {
           return {
             isMatch: false,

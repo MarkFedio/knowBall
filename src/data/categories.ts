@@ -1,4 +1,5 @@
 import { Category } from '@/types';
+import { isAthleteInMetroCategory } from '@/lib/marketResolver';
 
 export const CATEGORIES: Record<string, Category> = {
   // ==========================================
@@ -322,7 +323,7 @@ export const CATEGORIES: Record<string, Category> = {
   },
 
   // ==========================================
-  // 3. METRO / MARKET
+  // 3. METRO / MARKET (Resilient Dynamic Resolution)
   // ==========================================
   METRO_BOSTON: {
     id: 'metro_boston',
@@ -330,7 +331,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in Boston',
     type: 'METRO',
     description: 'Patriots, Celtics, Red Sox, or Bruins',
-    matches: (a) => a.markets.includes('BOS'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_boston'),
   },
   METRO_CHICAGO: {
     id: 'metro_chicago',
@@ -338,7 +339,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in Chicago',
     type: 'METRO',
     description: 'Bulls, Bears, Cubs, White Sox, or Blackhawks',
-    matches: (a) => a.markets.includes('CHI'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_chicago'),
   },
   METRO_NY: {
     id: 'metro_ny',
@@ -346,7 +347,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in NY / NJ',
     type: 'METRO',
     description: 'Yankees, Mets, Giants, Jets, Knicks, Nets, Rangers, Islanders, Devils',
-    matches: (a) => a.markets.includes('NY'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_ny'),
   },
   METRO_LA: {
     id: 'metro_la',
@@ -354,7 +355,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in LA',
     type: 'METRO',
     description: 'Lakers, Clippers, Dodgers, Angels, Rams, Chargers, Kings',
-    matches: (a) => a.markets.includes('LA'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_la'),
   },
   METRO_BAY_AREA: {
     id: 'metro_bay_area',
@@ -362,7 +363,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Bay Area Team',
     type: 'METRO',
     description: '49ers, Raiders (Oakland), Warriors, Giants, A’s, Sharks',
-    matches: (a) => a.markets.includes('BAY'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_bay_area'),
   },
   METRO_PHILLY: {
     id: 'metro_philly',
@@ -370,7 +371,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in Philly',
     type: 'METRO',
     description: 'Eagles, 76ers, Phillies, or Flyers',
-    matches: (a) => a.markets.includes('PHI'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_philly'),
   },
   METRO_DETROIT: {
     id: 'metro_detroit',
@@ -378,7 +379,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in Detroit',
     type: 'METRO',
     description: 'Lions, Pistons, Tigers, or Red Wings',
-    matches: (a) => a.markets.includes('DET'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_detroit'),
   },
   METRO_FLORIDA: {
     id: 'metro_florida',
@@ -386,7 +387,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in Florida',
     type: 'METRO',
     description: 'Dolphins, Bucs, Jags, Heat, Magic, Marlins, Rays, Lightning, Panthers',
-    matches: (a) => a.markets.includes('FLA') || a.markets.includes('MIA') || a.markets.includes('TB'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_florida'),
   },
   METRO_TEXAS: {
     id: 'metro_texas',
@@ -394,7 +395,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Played in Texas',
     type: 'METRO',
     description: 'Cowboys, Texans, Oilers, Rockets, Spurs, Mavericks, Rangers, Astros, Stars',
-    matches: (a) => a.markets.includes('DAL') || a.markets.includes('HOU') || a.markets.includes('SA'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_texas'),
   },
   METRO_OHIO: {
     id: 'metro_ohio',
@@ -402,7 +403,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Ohio Team',
     type: 'METRO',
     description: 'Browns, Bengals, Cavaliers, Reds, Guardians, Blue Jackets',
-    matches: (a) => a.markets.includes('CLE') || a.markets.includes('CIN'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_ohio'),
   },
   METRO_DC_BALTIMORE: {
     id: 'metro_dc_baltimore',
@@ -410,7 +411,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'DC / Baltimore',
     type: 'METRO',
     description: 'Commanders, Ravens, Wizards, Orioles, Nationals, Capitals',
-    matches: (a) => a.markets.includes('WAS') || a.markets.includes('BAL'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_dc_baltimore'),
   },
   METRO_CANADA: {
     id: 'metro_canada',
@@ -418,9 +419,7 @@ export const CATEGORIES: Record<string, Category> = {
     shortName: 'Canadian Team',
     type: 'METRO',
     description: 'Raptors, Blue Jays, Maple Leafs, Canadiens, Canucks, Flames, Oilers, Senators, Jets, Expos',
-    matches: (a) =>
-      ['TOR', 'MTL', 'VAN', 'CAL', 'CGY', 'EDM', 'OTT', 'WPG', 'CAN'].some((m) => a.markets.includes(m)) ||
-      a.teams.includes('MON'),
+    matches: (a) => isAthleteInMetroCategory(a, 'metro_canada'),
   },
 
   // ==========================================
