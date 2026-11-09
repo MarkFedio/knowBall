@@ -102,6 +102,7 @@ export const NICKNAME_ALIASES: Record<string, string> = {
   'the say hey kid': 'willie mays',
 
   // Football
+  'diggs': 'stefon diggs',
   'saquon': 'saquon barkley',
   'charbonnet': 'zach charbonnet',
   'mitch trubisky': 'mitchell trubisky',

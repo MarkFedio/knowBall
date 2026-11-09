@@ -254648,19 +254648,22 @@
       "BUF",
       "MIN",
       "HOU",
-      "WAS"
+      "WAS",
+      "NE"
     ],
     "teamNames": [
       "Buffalo Bills",
       "Minnesota Vikings",
       "Houston Texans",
-      "Washington Commanders"
+      "Washington Commanders",
+      "New England Patriots"
     ],
     "markets": [
       "NY",
       "MIN",
       "HOU",
-      "WAS"
+      "WAS",
+      "BOS"
     ],
     "positions": [
       "WR"
@@ -254672,7 +254675,8 @@
     "jerseyNumbers": [
       14,
       1,
-      3
+      3,
+      8
     ],
     "college": "Maryland",
     "collegeConference": "Big Ten",
