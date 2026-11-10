@@ -31,7 +31,7 @@ interface AthleteAugment {
 // ============================================================
 // 1. NFL 2024-2026 ROSTER & TRANSACTION REGISTRY (155+ Players)
 // ============================================================
-const NFL_AUGMENTS: AthleteAugment[] = [
+export const NFL_AUGMENTS: AthleteAugment[] = [
   // AFC East
   { name: 'Stefon Diggs', addTeams: ['NE', 'HOU', 'WAS'], addTeamNames: ['New England Patriots', 'Houston Texans', 'Washington Commanders'], addJerseys: [8, 1, 14], activeThrough: 2026, boostPopularity: 100 },
   { name: 'Jacoby Brissett', addTeams: ['NE'], addTeamNames: ['New England Patriots'], addJerseys: [7], activeThrough: 2026, boostPopularity: 70 },
@@ -207,7 +207,7 @@ const NFL_AUGMENTS: AthleteAugment[] = [
 // ============================================================
 // 2. NBA 2024-2026 ROSTER & TRANSACTION REGISTRY (100+ Players)
 // ============================================================
-const NBA_AUGMENTS: AthleteAugment[] = [
+export const NBA_AUGMENTS: AthleteAugment[] = [
   // 2026 World Champion New York Knicks Full Playoff Roster
   { name: 'Jose Alvarado', addTeams: ['NYK'], addTeamNames: ['New York Knicks'], addJerseys: [11], addChampionships: 1, addChampionshipMarkets: ['NY'], activeThrough: 2027, boostPopularity: 80 },
   { name: 'Karl-Anthony Towns', addTeams: ['NYK'], addTeamNames: ['New York Knicks'], addJerseys: [32], addChampionships: 1, addChampionshipMarkets: ['NY'], activeThrough: 2027, boostPopularity: 95 },
@@ -314,7 +314,7 @@ const NBA_AUGMENTS: AthleteAugment[] = [
 // ============================================================
 // 3. NHL 2024-2026 ROSTER & TRANSACTION REGISTRY (134+ Players)
 // ============================================================
-const NHL_AUGMENTS: AthleteAugment[] = [
+export const NHL_AUGMENTS: AthleteAugment[] = [
   // 2024 Stanley Cup Champion Florida Panthers
   { name: 'Aleksander Barkov', addTeams: ['FLA'], addTeamNames: ['Florida Panthers'], addJerseys: [16], addChampionships: 1, addChampionshipMarkets: ['FLA'], activeThrough: 2027, boostPopularity: 95 },
   { name: 'Matthew Tkachuk', addTeams: ['FLA'], addTeamNames: ['Florida Panthers'], addJerseys: [19], addChampionships: 1, addChampionshipMarkets: ['FLA'], activeThrough: 2027, boostPopularity: 95 },
@@ -547,4 +547,6 @@ export function main() {
   applyAugments(NHL_PATH, NHL_AUGMENTS, 'NHL');
 }
 
-main();
+if (require.main === module) {
+  main();
+}

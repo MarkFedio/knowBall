@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Athlete, CellState, PlayMode, Sport, DailyPuzzle, CareerStats, VisualTheme } from '@/types';
-import { DAILY_PUZZLE } from '@/data/puzzles';
+import { DAILY_PUZZLE, getDailyPuzzle } from '@/data/puzzles';
 import { generateProceduralPuzzle } from '@/lib/gridGenerator';
 import {
   saveGameState,
@@ -119,6 +119,19 @@ export default function Home() {
 
   // Load saved puzzle state, sound preference, and career stats on mount or when puzzle changes
   useEffect(() => {
+    // Sync to user's local calendar date if playing an unstarted daily puzzle
+    const todayDaily = getDailyPuzzle();
+    if (
+      currentPuzzle.title === 'Daily' &&
+      currentPuzzle.date !== todayDaily.date
+    ) {
+      const savedCurrent = loadGameState(currentPuzzle.id);
+      if (!savedCurrent || (savedCurrent.guessesUsed === 0 && savedCurrent.strikesUsed === 0)) {
+        setCurrentPuzzle(todayDaily);
+        return;
+      }
+    }
+
     const stats = loadCareerStats();
     setCareerStats(stats);
 

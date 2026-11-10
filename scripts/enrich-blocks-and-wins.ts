@@ -211,6 +211,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
   championships: number;
   championshipMarkets: string[];
   mvps: number;
+  mvpMarkets: string[];
   hallOfFame: boolean;
   wins: number;
   popularity: number;
@@ -226,6 +227,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 3, // 1958, 1959 NFL Championships, Super Bowl V
     championshipMarkets: ['BAL'],
     mvps: 3,
+    mvpMarkets: ['BAL'],
     hallOfFame: true,
     wins: 118,
     popularity: 92,
@@ -241,6 +243,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 5, // 1961, 1962, 1965, SB I, SB II
     championshipMarkets: ['GB'],
     mvps: 1,
+    mvpMarkets: ['GB'],
     hallOfFame: true,
     wins: 94,
     popularity: 90,
@@ -256,6 +259,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 0,
     championshipMarkets: [],
     mvps: 1,
+    mvpMarkets: ['NY'],
     hallOfFame: true,
     wins: 78,
     popularity: 82,
@@ -271,6 +275,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 7, // 4 AAFC, 3 NFL (1950, 1954, 1955)
     championshipMarkets: ['CLE'],
     mvps: 3,
+    mvpMarkets: ['CLE'],
     hallOfFame: true,
     wins: 57,
     popularity: 88,
@@ -286,6 +291,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 3, // 1952, 1953, 1957 Lions
     championshipMarkets: ['DET'],
     mvps: 0,
+    mvpMarkets: [],
     hallOfFame: true,
     wins: 81,
     popularity: 84,
@@ -301,6 +307,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 2, // 1951 Rams, 1960 Eagles
     championshipMarkets: ['LA', 'PHI'],
     mvps: 1,
+    mvpMarkets: ['PHI'],
     hallOfFame: true,
     wins: 61,
     popularity: 82,
@@ -316,6 +323,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 0,
     championshipMarkets: [],
     mvps: 1,
+    mvpMarkets: ['BAY'],
     hallOfFame: false,
     wins: 86,
     popularity: 75,
@@ -331,6 +339,7 @@ const HISTORICAL_LEGEND_QBS: Array<{
     championships: 2, // 1964, 1965 Bills
     championshipMarkets: ['BUF'],
     mvps: 1,
+    mvpMarkets: ['BUF'],
     hallOfFame: false,
     wins: 62,
     popularity: 76,
@@ -366,6 +375,7 @@ for (const leg of HISTORICAL_LEGEND_QBS) {
     existing.stats.wins = leg.wins;
     existing.hallOfFame = leg.hallOfFame;
     existing.mvps = leg.mvps;
+    if (leg.mvpMarkets && leg.mvpMarkets.length > 0) existing.mvpMarkets = leg.mvpMarkets;
     existing.championships = leg.championships;
     if (leg.championshipMarkets.length > 0) existing.championshipMarkets = leg.championshipMarkets;
   } else {
@@ -382,6 +392,7 @@ for (const leg of HISTORICAL_LEGEND_QBS) {
       championships: leg.championships,
       championshipMarkets: leg.championshipMarkets,
       mvps: leg.mvps,
+      mvpMarkets: leg.mvpMarkets || [],
       hallOfFame: leg.hallOfFame,
       rookieOfTheYear: false,
       stats: {

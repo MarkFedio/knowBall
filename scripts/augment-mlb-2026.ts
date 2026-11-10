@@ -13,8 +13,70 @@
 import fs from 'fs';
 import path from 'path';
 import { Athlete } from '../src/types';
+import { getMarketsForAthlete } from '../src/lib/marketResolver';
 
 const MLB_OUTPUT_FILE = path.join(process.cwd(), 'src', 'data', 'athletes-mlb.json');
+
+const FIRST_NAME_ALIASES: Record<string, string> = {
+  matt: 'matthew',
+  matthew: 'matt',
+  mike: 'michael',
+  michael: 'mike',
+  dan: 'daniel',
+  daniel: 'dan',
+  josh: 'joshua',
+  joshua: 'josh',
+  phil: 'philip',
+  philip: 'phil',
+  nick: 'nicholas',
+  nicholas: 'nick',
+  nicklaus: 'nick',
+  jake: 'jacob',
+  jacob: 'jake',
+  tayron: 'tyron',
+  tyron: 'tayron',
+  carlos: 'yolmer',
+  yolmer: 'carlos',
+  jackson: 'clint',
+  clint: 'jackson',
+};
+
+function normalizeName(name: string): string {
+  return name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\b(jr|sr|ii|iii|iv)\b/g, '')
+    .replace(/[^a-z0-9]/g, '')
+    .trim();
+}
+
+function getSuperKeys(name: string): string[] {
+  const norm = normalizeName(name);
+  const keys = new Set<string>([norm]);
+
+  const words = name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z\s]/g, '')
+    .trim()
+    .split(/\s+/);
+
+  if (words.length >= 2) {
+    const first = words[0];
+    const last = words[words.length - 1];
+
+    keys.add(`${first}${last}`);
+
+    const alias = FIRST_NAME_ALIASES[first];
+    if (alias) {
+      keys.add(`${alias}${last}`);
+    }
+  }
+
+  return Array.from(keys);
+}
 
 // Metro mapping for MLB franchises
 const TEAM_NAME_TO_MARKET: Record<string, { abbrev: string; market: string }> = {
@@ -160,9 +222,12 @@ async function run() {
   const existingAthletes: Athlete[] = JSON.parse(existingRaw);
   console.log(`Loaded ${existingAthletes.length} existing MLB athletes.`);
 
-  const athletesByName = new Map<string, Athlete>();
+  const athletesBySuperKey = new Map<string, Athlete[]>();
   existingAthletes.forEach((a) => {
-    athletesByName.set(a.name.toLowerCase().trim(), a);
+    for (const k of getSuperKeys(a.name)) {
+      if (!athletesBySuperKey.has(k)) athletesBySuperKey.set(k, []);
+      athletesBySuperKey.get(k)!.push(a);
+    }
   });
 
   // 1. Fetch all players active in seasons 2022 through 2026
@@ -297,7 +362,21 @@ async function run() {
         const positions = [p.primaryPosition?.abbreviation || 'P'];
 
         // Check if athlete already exists
-        const existing = athletesByName.get(normName);
+        let existing: Athlete | undefined;
+        for (const k of getSuperKeys(fullName)) {
+          const candidates = athletesBySuperKey.get(k);
+          if (candidates && candidates.length > 0) {
+            const cand = candidates.find(
+              (c) =>
+                Math.abs(c.activeYears[0] - debutYear) <= 5 ||
+                c.teams.some((t) => teamsSet.has(t))
+            );
+            if (cand) {
+              existing = cand;
+              break;
+            }
+          }
+        }
 
         if (existing) {
           // Update veteran player to 2026
@@ -305,7 +384,7 @@ async function run() {
 
           // Merge jerseys
           jerseys.forEach((j) => {
-            if (!existing.jerseyNumbers.includes(j)) existing.jerseyNumbers.push(j);
+            if (!existing!.jerseyNumbers.includes(j)) existing!.jerseyNumbers.push(j);
           });
 
           // Merge draft
@@ -317,16 +396,16 @@ async function run() {
           if (!existing.college && college) existing.college = college;
           if (!existing.collegeConference && collegeConf) existing.collegeConference = collegeConf;
 
-          // Merge teams & markets
+          // Merge teams & teamNames
           teamsSet.forEach((t) => {
-            if (!existing.teams.includes(t)) existing.teams.push(t);
+            if (!existing!.teams.includes(t)) existing!.teams.push(t);
           });
           teamNamesSet.forEach((tn) => {
-            if (!existing.teamNames.includes(tn)) existing.teamNames.push(tn);
+            if (!existing!.teamNames.includes(tn)) existing!.teamNames.push(tn);
           });
-          marketsSet.forEach((m) => {
-            if (!existing.markets.includes(m)) existing.markets.push(m);
-          });
+
+          // Recalculate markets
+          existing.markets = Array.from(getMarketsForAthlete(existing));
 
           // Update awards
           existing.championships = Math.max(existing.championships, wsChampionships);
@@ -359,7 +438,7 @@ async function run() {
             sports: ['MLB'],
             teams: Array.from(teamsSet),
             teamNames: Array.from(teamNamesSet),
-            markets: Array.from(marketsSet),
+            markets: [], // Set below via getMarketsForAthlete
             positions,
             activeYears: [debutYear, activeFinalYear],
             jerseyNumbers: jerseys,
@@ -379,8 +458,14 @@ async function run() {
             },
             popularityScore: popularity,
           };
+          newAthlete.markets = Array.from(getMarketsForAthlete(newAthlete));
 
-          athletesByName.set(normName, newAthlete);
+          // Add to index so duplicate people in same batch update this athlete
+          for (const k of getSuperKeys(fullName)) {
+            if (!athletesBySuperKey.has(k)) athletesBySuperKey.set(k, []);
+            athletesBySuperKey.get(k)!.push(newAthlete);
+          }
+
           existingAthletes.push(newAthlete);
           newDebutsCount++;
         }

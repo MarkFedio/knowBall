@@ -2614,7 +2614,7 @@
     "championships": 3,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 432,
       "assists": 231,
@@ -4299,7 +4299,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1457,
       "assists": 773,
@@ -7539,7 +7539,7 @@
     "championships": 2,
     "mvps": 1,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 885,
       "assists": 636,
@@ -28882,7 +28882,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 615,
       "assists": 360,
@@ -29768,7 +29768,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1157,
       "assists": 713,
@@ -31636,7 +31636,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 323,
       "assists": 247,
@@ -41892,7 +41892,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 571,
       "assists": 336,
@@ -48487,7 +48487,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 756,
       "assists": 575,
@@ -54139,7 +54139,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 186,
       "assists": 157,
@@ -59273,7 +59273,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 791,
       "assists": 419,
@@ -82712,7 +82712,7 @@
     "championships": 1,
     "mvps": 3,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1691,
       "assists": 761,
@@ -82755,7 +82755,7 @@
     "championships": 3,
     "mvps": 1,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1418,
       "assists": 879,
@@ -91978,7 +91978,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 204,
       "assists": 118,
@@ -96690,7 +96690,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 17,
       "assists": 10,
@@ -97107,7 +97107,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 215,
       "assists": 136,
@@ -99395,7 +99395,7 @@
     "championships": 9,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 639,
       "assists": 361,
@@ -103126,7 +103126,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 125,
       "assists": 66,
@@ -103350,7 +103350,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 397,
       "assists": 255,
@@ -117016,7 +117016,7 @@
     "championships": 4,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1126,
       "assists": 553,
@@ -117339,7 +117339,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1579,
       "assists": 1169,
@@ -122395,7 +122395,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 206,
       "assists": 118,
@@ -125637,7 +125637,7 @@
     "championships": 3,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 148,
       "assists": 115,
@@ -140641,7 +140641,7 @@
     "championships": 6,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 822,
       "assists": 429,
@@ -146357,7 +146357,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 386,
       "assists": 273,
@@ -147318,7 +147318,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 528,
       "assists": 249,
@@ -163323,7 +163323,7 @@
     "championships": 6,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 282,
       "assists": 242,
@@ -163364,7 +163364,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 280,
       "assists": 172,
@@ -164109,7 +164109,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 536,
       "assists": 273,
@@ -167865,7 +167865,7 @@
     "championships": 5,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 416,
       "assists": 238,
@@ -168610,7 +168610,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 99,
       "assists": 55,
@@ -169014,7 +169014,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 70,
       "assists": 34,
@@ -173798,7 +173798,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1409,
       "assists": 891,
@@ -175723,7 +175723,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 226,
       "assists": 126,
@@ -178053,7 +178053,7 @@
     "championships": 4,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 185,
       "assists": 102,
@@ -190955,7 +190955,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 70,
       "assists": 34,
@@ -192717,7 +192717,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 136,
       "assists": 95,
@@ -197113,7 +197113,7 @@
     "championships": 4,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 703,
       "assists": 458,
@@ -197209,7 +197209,7 @@
     "championships": 4,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 986,
       "assists": 590,
@@ -202094,7 +202094,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 452,
       "assists": 250,
@@ -202964,7 +202964,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1012,
       "assists": 571,
@@ -204480,7 +204480,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1028,
       "assists": 781,
@@ -204896,7 +204896,7 @@
     "championships": 2,
     "mvps": 3,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1723,
       "assists": 1033,
@@ -208398,7 +208398,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 407,
       "assists": 206,
@@ -209004,7 +209004,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 117,
       "assists": 62,
@@ -211054,7 +211054,7 @@
     "championships": 6,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1103,
       "assists": 570,
@@ -215291,7 +215291,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 384,
       "assists": 250,
@@ -216038,7 +216038,7 @@
     "championships": 3,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 344,
       "assists": 159,
@@ -220194,7 +220194,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 105,
       "assists": 71,
@@ -221434,7 +221434,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 289,
       "assists": 142,
@@ -231843,7 +231843,7 @@
     "championships": 3,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1126,
       "assists": 562,
@@ -233323,7 +233323,7 @@
     "championships": 2,
     "mvps": 3,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 915,
       "assists": 645,
@@ -235519,7 +235519,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1326,
       "assists": 814,
@@ -236643,7 +236643,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 437,
       "assists": 215,
@@ -237217,7 +237217,7 @@
     "championships": 4,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1052,
       "assists": 742,
@@ -241007,7 +241007,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1394,
       "assists": 726,
@@ -247154,7 +247154,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1036,
       "assists": 679,
@@ -248976,7 +248976,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1239,
       "assists": 789,
@@ -251008,7 +251008,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 844,
       "assists": 641,
@@ -253878,7 +253878,7 @@
     "championships": 6,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1425,
       "assists": 901,
@@ -254934,7 +254934,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 476,
       "assists": 260,
@@ -256121,7 +256121,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 586,
       "assists": 340,
@@ -277980,7 +277980,7 @@
     "championships": 3,
     "mvps": 1,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1409,
       "assists": 900,
@@ -280744,7 +280744,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 408,
       "assists": 308,
@@ -294552,7 +294552,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 712,
       "assists": 333,
@@ -302380,7 +302380,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 616,
       "assists": 349,
@@ -302429,7 +302429,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 807,
       "assists": 544,
@@ -313941,7 +313941,7 @@
     "championships": 1,
     "mvps": 1,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1169,
       "assists": 740,
@@ -316827,7 +316827,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 411,
       "assists": 288,
@@ -323125,7 +323125,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 534,
       "assists": 381,
@@ -325046,7 +325046,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 971,
       "assists": 633,
@@ -326154,7 +326154,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 505,
       "assists": 259,
@@ -327909,7 +327909,7 @@
     "championships": 0,
     "mvps": 1,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 806,
       "assists": 367,
@@ -335206,7 +335206,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 526,
       "assists": 322,
@@ -336432,7 +336432,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 525,
       "assists": 385,
@@ -346054,7 +346054,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 250,
       "assists": 211,
@@ -347847,7 +347847,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 779,
       "assists": 342,
@@ -358040,7 +358040,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 12,
       "assists": 12,
@@ -358621,7 +358621,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 48,
       "assists": 48,
@@ -366157,7 +366157,7 @@
     "championships": 5,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 7,
       "assists": 7,
@@ -371526,7 +371526,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 3,
       "assists": 3,
@@ -372813,7 +372813,7 @@
     "championships": 3,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 47,
       "assists": 45,
@@ -374309,7 +374309,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 1,
       "assists": 1,
@@ -375309,7 +375309,7 @@
     "championships": 2,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 9,
       "assists": 9,
@@ -376352,7 +376352,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 0,
       "assists": 0,
@@ -379095,7 +379095,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 16,
       "assists": 15,
@@ -382454,7 +382454,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 0,
       "assists": 0,
@@ -387399,7 +387399,7 @@
     "championships": 0,
     "mvps": 0,
     "hallOfFame": false,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 3,
       "assists": 3,
@@ -388244,7 +388244,7 @@
     "championships": 2,
     "mvps": 1,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 0,
       "assists": 0,
@@ -390907,7 +390907,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 25,
       "assists": 25,
@@ -393245,7 +393245,7 @@
     "championships": 4,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 3,
       "assists": 3,
@@ -393962,7 +393962,7 @@
     "championships": 1,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 34,
       "assists": 34,
@@ -395524,7 +395524,7 @@
     "championships": 6,
     "mvps": 0,
     "hallOfFame": true,
-    "rookieOfTheYear": false,
+    "rookieOfTheYear": true,
     "stats": {
       "points": 19,
       "assists": 19,

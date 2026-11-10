@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { Athlete } from '../src/types';
 import { getMarketsForAthlete } from '../src/lib/marketResolver';
+import { NFL_MVP_LIST, NFL_ROOKIE_OF_THE_YEAR_LIST, HISTORICAL_PRE1970_ROTY_LEGENDS } from './scrape-nfl';
+import { CALDER_ROTY_SET } from './scrape-nhl';
 
 const MLB_PATH = path.join(process.cwd(), 'src/data/athletes-mlb.json');
 const NBA_PATH = path.join(process.cwd(), 'src/data/athletes-nba.json');
@@ -36,41 +38,20 @@ for (const a of mlb) {
     mlbFixed++;
   }
 
-  // C. Modern champion missing team updates
-  if (a.id === 'ath_mlb_hernate01') {
-    // Teoscar Hernandez: 2024 Dodgers champion
-    if (!a.teams.includes('LAN')) a.teams.push('LAN');
-    if (!a.teams.includes('SEA')) a.teams.push('SEA');
-    a.teamNames = ['Houston Astros', 'Toronto Blue Jays', 'Seattle Mariners', 'Los Angeles Dodgers'];
-    a.activeYears = [2016, 2026];
-    a.championships = 2;
-    a.championshipMarkets = ['HOU', 'LA'];
-    mlbFixed++;
-  } else if (a.id === 'ath_mlb_vazquch01') {
-    // Christian Vazquez: 2018 Red Sox, 2022 Astros champion
-    if (!a.teams.includes('HOU')) a.teams.push('HOU');
-    if (!a.teams.includes('MIN')) a.teams.push('MIN');
-    a.teamNames = ['Boston Red Sox', 'Houston Astros', 'Minnesota Twins'];
-    a.activeYears = [2014, 2026];
-    a.championships = 2;
-    a.championshipMarkets = ['BOS', 'HOU'];
-    mlbFixed++;
-  } else if (a.id === 'ath_mlb_nerishe01') {
-    // Hector Neris: 2022 Astros champion
-    if (!a.teams.includes('HOU')) a.teams.push('HOU');
-    if (!a.teams.includes('CHC')) a.teams.push('CHC');
-    a.teamNames = ['Philadelphia Phillies', 'Houston Astros', 'Chicago Cubs'];
-    a.activeYears = [2014, 2026];
-    a.championships = 1;
-    a.championshipMarkets = ['HOU'];
-    mlbFixed++;
-  } else if (a.id === 'ath_mlb_dubonma01') {
-    // Mauricio Dubon: 2022 Astros champion
-    if (!a.teams.includes('HOU')) a.teams.push('HOU');
-    a.teamNames = ['Milwaukee Brewers', 'San Francisco Giants', 'Houston Astros'];
-    a.activeYears = [2019, 2026];
-    a.championships = 1;
-    a.championshipMarkets = ['HOU'];
+  // C. Modern and Era Committee Hall of Fame sync
+  const ERA_COMMITTEE_HOF = new Set([
+    'ath_mlb_baineha01', // Harold Baines (2019)
+    'ath_mlb_smithle02', // Lee Smith (2019)
+    'ath_mlb_simmote01', // Ted Simmons (2020)
+    'ath_mlb_hodgegi01', // Gil Hodges (2022)
+    'ath_mlb_kaatji01',  // Jim Kaat (2022)
+    'ath_mlb_minosmi01', // Minnie Miñoso (2022)
+    'ath_mlb_olivato01', // Tony Oliva (2022)
+    'ath_mlb_allendi01', // Dick Allen (2025)
+    'ath_mlb_parkeda01', // Dave Parker (2025)
+  ]);
+  if (ERA_COMMITTEE_HOF.has(a.id) && !a.hallOfFame) {
+    a.hallOfFame = true;
     mlbFixed++;
   }
 
@@ -211,8 +192,20 @@ console.log('--- Processing NFL Data ---');
 const nfl: Athlete[] = JSON.parse(fs.readFileSync(NFL_PATH, 'utf8'));
 let nflFixed = 0;
 
+// Ensure pre-1970 ROTY legends are present
+const existingNflIds = new Set(nfl.map((a) => a.id));
+for (const leg of HISTORICAL_PRE1970_ROTY_LEGENDS) {
+  if (!existingNflIds.has(leg.id!)) {
+    const athlete = leg as Athlete;
+    athlete.markets = Array.from(getMarketsForAthlete(athlete));
+    nfl.push(athlete);
+    existingNflIds.add(leg.id!);
+    nflFixed++;
+  }
+}
+
 for (const a of nfl) {
-  // A. Ghost championships/mvps
+  // A. Ghost championships/mvps & missing mvpMarkets
   if ((!a.championships || a.championships === 0) && a.championshipMarkets && a.championshipMarkets.length > 0) {
     a.championshipMarkets = [];
     nflFixed++;
@@ -220,6 +213,13 @@ for (const a of nfl) {
   if ((!a.mvps || a.mvps === 0) && a.mvpMarkets && a.mvpMarkets.length > 0) {
     a.mvpMarkets = [];
     nflFixed++;
+  }
+  if (a.mvps > 0 && (!a.mvpMarkets || a.mvpMarkets.length === 0)) {
+    const match = NFL_MVP_LIST.find((m) => m.name.toLowerCase() === a.name.toLowerCase());
+    if (match) {
+      a.mvpMarkets = [...match.markets];
+      nflFixed++;
+    }
   }
 
   // B. Green Bay & Buffalo MVP markets fix
@@ -272,7 +272,28 @@ for (const a of nfl) {
     }
   }
 
-  // E. Markets refresh
+  // E. Rookie of the Year sync
+  const aNorm = a.name.toLowerCase().replace(/[^a-z]/g, '');
+  const rotyMatch = NFL_ROOKIE_OF_THE_YEAR_LIST.find((r) => {
+    const names = [r.name, ...(r.aliases || [])].map((n) => n.toLowerCase().replace(/[^a-z]/g, ''));
+    if (!names.includes(aNorm)) return false;
+    return (
+      (r.year >= a.activeYears[0] - 2 && r.year <= a.activeYears[1] + 2) ||
+      (r.year <= a.activeYears[1] && r.year >= a.activeYears[0] - 12)
+    );
+  });
+  if (rotyMatch) {
+    if (!a.rookieOfTheYear) {
+      a.rookieOfTheYear = true;
+      nflFixed++;
+    }
+    if (rotyMatch.year < a.activeYears[0]) {
+      a.activeYears[0] = rotyMatch.year;
+      nflFixed++;
+    }
+  }
+
+  // F. Markets refresh
   a.markets = Array.from(getMarketsForAthlete(a));
 }
 
@@ -325,7 +346,14 @@ for (const a of nhl) {
     }
   }
 
-  // F. Markets refresh
+  // F. Calder Memorial Trophy (Rookie of the Year) sync
+  const nameNorm = a.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '');
+  if (CALDER_ROTY_SET.has(nameNorm) && !a.rookieOfTheYear) {
+    a.rookieOfTheYear = true;
+    nhlFixed++;
+  }
+
+  // G. Markets refresh
   a.markets = Array.from(getMarketsForAthlete(a));
 }
 

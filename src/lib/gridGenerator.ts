@@ -1,7 +1,7 @@
 import { Athlete, Category, DailyPuzzle } from '@/types';
 import { ATHLETES } from '@/data/athletes';
 import { CATEGORIES } from '@/data/categories';
-import { getValidAthletesForCell, DAILY_PUZZLE } from '@/data/puzzles';
+import { getValidAthletesForCell, doesAthleteMatchCell } from '@/lib/cellValidator';
 
 export interface SolvabilityReport {
   isSolvable: boolean;
@@ -13,11 +13,21 @@ export interface SolvabilityReport {
 }
 
 const CATEGORY_MATCH_COUNT_CACHE = new Map<string, number>();
+const CATEGORY_ATHLETES_CACHE = new Map<string, Athlete[]>();
+
+export function getAthletesForCategory(cat: Category, athletes: Athlete[] = ATHLETES): Athlete[] {
+  let pool = CATEGORY_ATHLETES_CACHE.get(cat.id);
+  if (!pool) {
+    pool = athletes.filter((a) => cat.matches(a));
+    CATEGORY_ATHLETES_CACHE.set(cat.id, pool);
+  }
+  return pool;
+}
 
 export function getCategoryMatchCount(cat: Category, athletes: Athlete[] = ATHLETES): number {
   let count = CATEGORY_MATCH_COUNT_CACHE.get(cat.id);
   if (count === undefined) {
-    count = athletes.filter((a) => cat.matches(a)).length;
+    count = getAthletesForCategory(cat, athletes).length;
     CATEGORY_MATCH_COUNT_CACHE.set(cat.id, count);
   }
   return count;
@@ -176,8 +186,13 @@ export function validatePuzzleSolvability(
   let totalCombinations = 0;
 
   for (let r = 0; r < 4; r++) {
+    const poolR = getAthletesForCategory(rowCategories[r], athletes);
     for (let c = 0; c < 4; c++) {
-      const validAthletes = getValidAthletesForCell(rowCategories[r], colCategories[c], athletes);
+      const poolC = getAthletesForCategory(colCategories[c], athletes);
+      const searchPool = poolR.length <= poolC.length ? poolR : poolC;
+      const validAthletes = searchPool.filter(
+        (a) => doesAthleteMatchCell(rowCategories[r], colCategories[c], a).isMatch
+      );
       const count = validAthletes.length;
       cellCounts[r][c] = count;
       totalCombinations += count;
@@ -222,6 +237,41 @@ export function validatePuzzleSolvability(
     emptyCells,
     redundantCells,
   };
+}
+
+/**
+ * Fast-path candidate solvability validator that breaks out immediately
+ * at the first cell failing the minimum threshold or redundancy check.
+ */
+export function isPuzzleCandidateSolvable(
+  rowCategories: Category[],
+  colCategories: Category[],
+  athletes: Athlete[] = ATHLETES,
+  minThreshold: number = 5
+): boolean {
+  for (let r = 0; r < 4; r++) {
+    const poolR = getAthletesForCategory(rowCategories[r], athletes);
+    for (let c = 0; c < 4; c++) {
+      const poolC = getAthletesForCategory(colCategories[c], athletes);
+      const searchPool = poolR.length <= poolC.length ? poolR : poolC;
+      const validAthletes = searchPool.filter(
+        (a) => doesAthleteMatchCell(rowCategories[r], colCategories[c], a).isMatch
+      );
+      if (validAthletes.length < minThreshold) {
+        return false;
+      }
+      const redundancyCheck = areCategoriesTriviallyRedundant(
+        rowCategories[r],
+        colCategories[c],
+        athletes,
+        validAthletes.length
+      );
+      if (redundancyCheck.isRedundant) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
 /**
@@ -343,46 +393,101 @@ const ERAS_LONGEVITY = [
   CATEGORIES.ERA_18_SEASONS,
 ];
 
-function shuffle<T>(arr: T[]): T[] {
-  return [...arr].sort(() => Math.random() - 0.5);
+/**
+ * Hashes a date string (e.g. '2026-11-10') to a 32-bit unsigned integer seed using FNV-1a.
+ */
+export function hashDateStringToSeed(dateStr: string): number {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < dateStr.length; i++) {
+    h = Math.imul(h ^ dateStr.charCodeAt(i), 16777619) >>> 0;
+  }
+  return h;
 }
 
 /**
- * Generates a completely new, 100% solvable random board on the fly.
+ * Creates a high-quality, deterministic pseudo-random number generator (Mulberry32).
+ */
+export function createSeededRandom(seed: number): () => number {
+  let s = seed >>> 0;
+  return function () {
+    s = (s + 0x6d2b79f5) >>> 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/**
+ * Deterministic Fisher-Yates shuffle using a random generator function.
+ */
+export function seededShuffle<T>(arr: readonly T[], rng: () => number = Math.random): T[] {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+/**
+ * Generates a completely new, 100% solvable board.
+ * Can be seeded with a date string (e.g. '2026-11-10') or a numeric seed for deterministic generation.
+ * If no seed is provided, Math.random is used.
+ *
  * Enforces:
  * - At most ONE city per axis (no 4-city lines!)
- * - At least ONE stat requirement per board (points, assists, steals, turnovers, hits, saves)
+ * - At least ONE stat requirement per board (points, assists, steals, turnovers, hits, saves, blocks, wins)
  * - Zero college categories
  * - Zero draft pick categories
  * - Broad diversity: Accolades, Metros, Franchises, Jersey Numbers, Stats, and Eras.
  */
-export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyPuzzle {
+export function generateProceduralPuzzle(
+  athletes: Athlete[] = ATHLETES,
+  seedOrDate?: string | number
+): DailyPuzzle {
+  let rng: () => number;
+  let isDaily = false;
+  let targetDate = new Date().toISOString().split('T')[0];
+
+  if (typeof seedOrDate === 'string') {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(seedOrDate.trim())) {
+      targetDate = seedOrDate.trim();
+      isDaily = true;
+    }
+    const seed = hashDateStringToSeed(seedOrDate);
+    rng = createSeededRandom(seed);
+  } else if (typeof seedOrDate === 'number') {
+    rng = createSeededRandom(seedOrDate);
+  } else {
+    rng = Math.random;
+  }
+
   // Try dynamic combinations
   for (let attempt = 1; attempt <= 150; attempt++) {
     // 15% chance to feature the iconic Quad-Sport leagues on the rows
-    const isQuadSport = Math.random() < 0.15;
+    const isQuadSport = rng() < 0.15;
 
     let rows: Category[];
     let cols: Category[];
 
     if (isQuadSport) {
       rows = [CATEGORIES.SPORT_NFL, CATEGORIES.SPORT_NBA, CATEGORIES.SPORT_MLB, CATEGORIES.SPORT_NHL];
-      const cAcc = shuffle(ACCOLADES)[0];
-      const cMet = shuffle(METROS)[0];
-      const cFra = shuffle(FRANCHISES)[0];
-      const cStat = shuffle(STATS)[0]; // Guaranteed stat requirement
-      cols = shuffle([cAcc, cMet, cFra, cStat]);
+      const cAcc = seededShuffle(ACCOLADES, rng)[0];
+      const cMet = seededShuffle(METROS, rng)[0];
+      const cFra = seededShuffle(FRANCHISES, rng)[0];
+      const cStat = seededShuffle(STATS, rng)[0]; // Guaranteed stat requirement
+      cols = seededShuffle([cAcc, cMet, cFra, cStat], rng);
     } else {
       // Complementary orthogonal axes:
       // Put Franchise strictly on Rows OR Cols (never both!)
-      const franchiseOnRows = Math.random() < 0.5;
-      const statOnRows = Math.random() < 0.5;
+      const franchiseOnRows = rng() < 0.5;
+      const statOnRows = rng() < 0.5;
 
-      const rAcc = shuffle(ACCOLADES)[0];
-      const rMet = shuffle(METROS)[0];
-      const rFraOrJersey = franchiseOnRows ? shuffle(FRANCHISES)[0] : shuffle(JERSEYS)[0];
-      const rStatOrEra = statOnRows ? shuffle(STATS)[0] : shuffle(ERAS_LONGEVITY)[0];
-      rows = shuffle([rAcc, rMet, rFraOrJersey, rStatOrEra]);
+      const rAcc = seededShuffle(ACCOLADES, rng)[0];
+      const rMet = seededShuffle(METROS, rng)[0];
+      const rFraOrJersey = franchiseOnRows ? seededShuffle(FRANCHISES, rng)[0] : seededShuffle(JERSEYS, rng)[0];
+      const rStatOrEra = statOnRows ? seededShuffle(STATS, rng)[0] : seededShuffle(ERAS_LONGEVITY, rng)[0];
+      rows = seededShuffle([rAcc, rMet, rFraOrJersey, rStatOrEra], rng);
 
       // Columns must not duplicate the franchise pool if rows have franchise!
       // Nor duplicate championship milestone if rows have one!
@@ -395,12 +500,12 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
               a.id === 'accolade_rookie_of_year'
           )
         : ACCOLADES.filter((a) => a.id !== rAcc.id);
-      const cAcc = shuffle(filteredAccs)[0] || CATEGORIES.ACCOLADE_HOF;
+      const cAcc = seededShuffle(filteredAccs, rng)[0] || CATEGORIES.ACCOLADE_HOF;
 
-      const cMet = shuffle(METROS.filter((m) => m.id !== rMet.id))[0];
-      const cFraOrJersey = !franchiseOnRows ? shuffle(FRANCHISES)[0] : shuffle(JERSEYS)[0];
-      const cStatOrEra = !statOnRows ? shuffle(STATS)[0] : shuffle(ERAS_LONGEVITY)[0];
-      cols = shuffle([cAcc, cMet, cFraOrJersey, cStatOrEra]);
+      const cMet = seededShuffle(METROS.filter((m) => m.id !== rMet.id), rng)[0];
+      const cFraOrJersey = !franchiseOnRows ? seededShuffle(FRANCHISES, rng)[0] : seededShuffle(JERSEYS, rng)[0];
+      const cStatOrEra = !statOnRows ? seededShuffle(STATS, rng)[0] : seededShuffle(ERAS_LONGEVITY, rng)[0];
+      cols = seededShuffle([cAcc, cMet, cFraOrJersey, cStatOrEra], rng);
     }
 
     // Ensure at least one stat requirement is present on the board
@@ -408,12 +513,20 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
     if (!hasStat) continue;
 
     // Verify every single cell has at least 5 valid athletes and ZERO trivial redundancies
-    const report = validatePuzzleSolvability(rows, cols, athletes, 5);
-    if (report.isSolvable) {
-      const randomId = Math.floor(1000 + Math.random() * 9000);
+    if (isPuzzleCandidateSolvable(rows, cols, athletes, 5)) {
+      if (isDaily) {
+        return {
+          id: `puzzle_${targetDate}`,
+          date: targetDate,
+          title: 'Daily',
+          rowCategories: rows,
+          colCategories: cols,
+        };
+      }
+      const randomId = Math.floor(1000 + rng() * 9000);
       return {
         id: `puzzle_random_${Date.now()}_${randomId}`,
-        date: new Date().toISOString().split('T')[0],
+        date: targetDate,
         title: 'Random',
         rowCategories: rows,
         colCategories: cols,
@@ -421,10 +534,22 @@ export function generateProceduralPuzzle(athletes: Athlete[] = ATHLETES): DailyP
     }
   }
 
-  // Fallback to today's verified daily puzzle
+  // Fallback to verified canonical puzzle
   return {
-    ...DAILY_PUZZLE,
-    id: `puzzle_random_${Date.now()}`,
-    title: 'Random',
+    id: isDaily ? `puzzle_${targetDate}` : `puzzle_random_${Date.now()}`,
+    date: targetDate,
+    title: isDaily ? 'Daily' : 'Random',
+    rowCategories: [
+      CATEGORIES.METRO_NY,
+      CATEGORIES.ACCOLADE_MVP,
+      CATEGORIES.CAREER_3_TEAMS,
+      CATEGORIES.ERA_ACTIVE_2020S,
+    ],
+    colCategories: [
+      CATEGORIES.ACCOLADE_CHAMPION,
+      CATEGORIES.METRO_BOSTON,
+      CATEGORIES.NUMBER_10_TO_19,
+      CATEGORIES.STAT_STEALS_100,
+    ],
   };
 }

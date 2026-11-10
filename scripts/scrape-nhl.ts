@@ -100,6 +100,32 @@ const HART_MVPS: Record<string, number> = {
   'Billy Burch': 1,
 };
 
+// Calder Memorial Trophy (NHL Rookie of the Year) winners
+export const CALDER_ROTY_WINNERS: string[] = [
+  'Connor Bedard', 'Matty Beniers', 'Moritz Seider', 'Kirill Kaprizov', 'Cale Makar',
+  'Elias Pettersson', 'Mathew Barzal', 'Auston Matthews', 'Artemi Panarin', 'Aaron Ekblad',
+  'Nathan MacKinnon', 'Jonathan Huberdeau', 'Gabriel Landeskog', 'Jeff Skinner', 'Tyler Myers',
+  'Steve Mason', 'Patrick Kane', 'Evgeni Malkin', 'Alex Ovechkin', 'Alexander Ovechkin',
+  'Andrew Raycroft', 'Barret Jackman', 'Dany Heatley', 'Evgeni Nabokov', 'Scott Gomez',
+  'Chris Drury', 'Sergei Samsonov', 'Bryan Berard', 'Daniel Alfredsson', 'Peter Forsberg',
+  'Martin Brodeur', 'Teemu Selanne', 'Pavel Bure', 'Ed Belfour', 'Sergei Makarov',
+  'Brian Leetch', 'Joe Nieuwendyk', 'Luc Robitaille', 'Gary Suter', 'Mario Lemieux',
+  'Tom Barrasso', 'Steve Larmer', 'Dale Hawerchuk', 'Peter Stastny', 'Ray Bourque',
+  'Bobby Smith', 'Mike Bossy', 'Willi Plett', 'Bryan Trottier', 'Eric Vail',
+  'Denis Potvin', 'Steve Vickers', 'Ken Dryden', 'Gilbert Perreault', 'Tony Esposito',
+  'Danny Grant', 'Derek Sanderson', 'Bobby Orr', 'Brit Selby', 'Roger Crozier',
+  'Jacques Laperriere', 'Jacques Laperrière', 'Kent Douglas', 'Bobby Rousseau', 'Dave Keon',
+  'Bill Hay', 'Ralph Backstrom', 'Frank Mahovlich', 'Larry Regan', 'Glenn Hall',
+  'Ed Litzenberger', 'Camille Henry', 'Gump Worsley', 'Lorne Worsley', 'Bernie Geoffrion',
+  'Terry Sawchuk', 'Jack Gelineau', 'Pentti Lund', 'Jim McFadden', 'Howie Meeker',
+  'Edgar Laprade', 'Frank McCool', 'Gus Bodnar', 'Gaye Stewart', 'Grant Warwick',
+  'Johnny Quilty', 'John Quilty', 'Kilby MacDonald', 'Frank Brimsek', 'Cully Dahlstrom',
+  'Syl Apps', 'Mike Karakas', 'Sweeney Schriner', 'Russ Blinco', 'Carl Voss'
+];
+export const CALDER_ROTY_SET = new Set(
+  CALDER_ROTY_WINNERS.map((n) => n.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, ''))
+);
+
 // NHL Team Code to Metro Market & Full Name
 const NHL_TEAMS: Record<string, { market: string; name: string }> = {
   BOS: { market: 'BOS', name: 'Boston Bruins' },
@@ -400,7 +426,9 @@ async function run() {
       championships: teamMeta.championships,
       mvps,
       hallOfFame: isHof,
-      rookieOfTheYear: false,
+      rookieOfTheYear: CALDER_ROTY_SET.has(
+        name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '')
+      ),
       stats: {
         points,
         assists,
@@ -469,7 +497,9 @@ async function run() {
       championships: teamMeta.championships,
       mvps,
       hallOfFame: isHof,
-      rookieOfTheYear: false,
+      rookieOfTheYear: CALDER_ROTY_SET.has(
+        name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '')
+      ),
       stats: {
         points,
         assists,
@@ -484,7 +514,9 @@ async function run() {
   console.log(`Saved to ${OUTPUT_FILE}`);
 }
 
-run().catch((err) => {
-  console.error('Error running NHL ingestion:', err);
-  process.exit(1);
-});
+if (require.main === module) {
+  run().catch((err) => {
+    console.error('Error running NHL ingestion:', err);
+    process.exit(1);
+  });
+}
